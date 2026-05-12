@@ -10,7 +10,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 0.4
+    Versión: 0.4.1
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres, emails, teléfonos ni información personal.
@@ -45,6 +45,13 @@
     [v0.4]     Reto final: botón Limpiar ahora borra texto, desmarca checklist y limpia feedback local.
     [v0.4]     Reto final: revisión local orientativa sin API ni envío de datos externos.
     [v0.4]     Idioma/UX: ajuste de etiqueta inicial de dirección a «Demander une adresse».
+    ──────────────────────────────────────────────────────────────────────
+
+    Cambios v0.4.1:
+    ──────────────────────────────────────────────────────────────────────
+    [v0.4.1]   Créditos: versión visible corregida de 0.2 final a 0.4.1.
+    [v0.4.1]   Situaciones: respuestas correctas redistribuidas para evitar patrón explotable.
+    [v0.4.1]   Emparejar: frase de repetición unificada con la versión completa de cortesía.
     ──────────────────────────────────────────────────────────────────────
   -->
 
@@ -983,7 +990,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por <strong>Joel Concepción Villanueva</strong> como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="small muted">No es un recurso oficial de ICSE ni implica autorización institucional. Versión 0.2 final · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="small muted">No es un recurso oficial de ICSE ni implica autorización institucional. Versión 0.4.1 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
       <div class="cta-row no-print">
         <button class="ghost" type="button" id="resetAllBtn">Borrar progreso local</button>
       </div>
@@ -1415,7 +1422,7 @@
       { id: "name",   fr: "Je m'appelle…",          es: "Decir mi nombre" },
       { id: "live",   fr: "J'habite à…",            es: "Decir dónde vivo" },
       { id: "price",  fr: "Combien ça coûte ?",     es: "Preguntar precio" },
-      { id: "repeat", fr: "Pouvez-vous répéter ?",  es: "Pedir que repitan" },
+      { id: "repeat", fr: "Pouvez-vous répéter, s'il vous plaît ?",  es: "Pedir que repitan" },
       { id: "help",   fr: "Excusez-moi",            es: "Llamar la atención con educación" },
       { id: "want",   fr: "Je voudrais…",           es: "Pedir algo de forma cortés" }
     ];
@@ -1531,8 +1538,8 @@
     const scenarios = [
       {
         s:       "Llegas a clase y saludas al grupo por la mañana.",
-        options: ["Bonjour", "Au revoir", "Combien ça coûte ?", "Je ne comprends pas"],
-        answer:  0,
+        options: ["Au revoir", "Combien ça coûte ?", "Bonjour", "Je ne comprends pas"],
+        answer:  2,
         exp:     "«Bonjour» es el saludo básico durante el día."
       },
       {
@@ -1543,8 +1550,8 @@
       },
       {
         s:       "Estás comprando y quieres saber el precio.",
-        options: ["Comment ça va ?", "Où est la gare ?", "Combien ça coûte ?", "Je m'appelle Ana"],
-        answer:  2,
+        options: ["Comment ça va ?", "Où est la gare ?", "Je m'appelle Ana", "Combien ça coûte ?"],
+        answer:  3,
         exp:     "«Combien ça coûte ?» es la pregunta básica para precio."
       },
       {
@@ -1555,8 +1562,8 @@
       },
       {
         s:       "Quieres preguntar dónde está la estación.",
-        options: ["Où est la gare ?", "Je voudrais la gare", "La gare coûte combien ?", "Je suis gare"],
-        answer:  0,
+        options: ["Je voudrais la gare", "La gare coûte combien ?", "Où est la gare ?", "Je suis gare"],
+        answer:  2,
         exp:     "«Où est… ?» pregunta por ubicación. «La gare» es la estación."
       }
     ];
