@@ -10,7 +10,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 0.3
+    Versión: 0.4
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres, emails, teléfonos ni información personal.
@@ -35,6 +35,16 @@
     [v0.3]     Estado: refactor de situaciones para leer y escribir directamente en state.scenario.
     [v0.3]     Reto final: banco colapsable de frases de apoyo sobre actividad y profesión.
     [v0.3]     Flashcards: botón experimental de pronunciación con Web Speech API y mensajes de estado.
+    ──────────────────────────────────────────────────────────────────────
+
+    Cambios v0.4:
+    ──────────────────────────────────────────────────────────────────────
+    [v0.4]     Flashcards: banco de frases convertido en navegación directa por tarjeta.
+    [v0.4]     Flashcards: botones Anterior/Siguiente/Mezclar movidos junto a la tarjeta para reducir scroll en móvil.
+    [v0.4]     Reto final: UX Writing del campo de escritura aclarado y ejemplo separado del placeholder.
+    [v0.4]     Reto final: botón Limpiar ahora borra texto, desmarca checklist y limpia feedback local.
+    [v0.4]     Reto final: revisión local orientativa sin API ni envío de datos externos.
+    [v0.4]     Idioma/UX: ajuste de etiqueta inicial de dirección a «Demander une adresse».
     ──────────────────────────────────────────────────────────────────────
   -->
 
@@ -395,6 +405,18 @@
       align-items: stretch;
     }
 
+    /* [v0.4] Columna propia para tarjeta + navegación inmediata en móvil */
+    .flashcard-panel {
+      display: grid;
+      gap: 0.75rem;
+      align-content: start;
+    }
+
+    .flash-nav {
+      margin-top: 0;
+      justify-content: center;
+    }
+
     .flashcard {
       min-height: 250px;
       border-radius: 24px;
@@ -455,6 +477,26 @@
       border-radius: 16px;
       padding: 0.7rem 0.8rem;
       font-weight: 700;
+    }
+
+    /* [v0.4] Frases del banco como navegación directa a cada flashcard */
+    .phrase-btn {
+      width: 100%;
+      min-height: 44px;
+      justify-content: flex-start;
+      text-align: left;
+      color: var(--brand);
+      font-weight: 750;
+    }
+
+    .phrase-btn[aria-current="true"] {
+      border-color: rgba(15, 118, 110, 0.55);
+      background: rgba(15, 118, 110, 0.14);
+      box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.10);
+    }
+
+    .bank-help {
+      margin: 0 0 0.75rem;
     }
 
     .match-area {
@@ -605,6 +647,19 @@
       max-width: 46ch;
     }
 
+    /* [v0.4] Ejemplo separado del campo editable y feedback local del reto */
+    .draft-example {
+      border-left: 4px solid var(--brand-2);
+      background: rgba(15, 118, 110, 0.08);
+      border-radius: 14px;
+      padding: 0.75rem 0.9rem;
+      margin: 0.65rem 0 0.85rem;
+    }
+
+    .draft-feedback {
+      margin-top: 0.85rem;
+    }
+
     .footer-note {
       margin: 1.5rem auto 0;
       color: var(--muted);
@@ -712,7 +767,7 @@
         <span class="pill">Salutations (Saludos)</span>
         <span class="pill">Se présenter (Presentarse)</span>
         <span class="pill">Nombres (Números)</span>
-        <span class="pill">Demander son chemin (Pedir dirección)</span>
+        <span class="pill">Demander une adresse (Pedir una dirección)</span>
         <span class="pill">Acheter (Comprar)</span>
         <span class="pill">Demander de l'aide (Pedir ayuda)</span>
       </div>
@@ -750,36 +805,39 @@
         </div>
       </div>
       <div class="flashcard-wrap">
-        <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Tarjeta de vocabulario. Pulsa para girar.">
-          <span class="label" id="flashLabel">Francés</span>
-          <!-- MEJORA: contador de tarjeta para que el alumno sepa dónde está -->
-          <span class="counter" id="flashCounter" aria-live="polite">1 / 10</span>
-          <div>
-            <div class="flash-main" id="flashMain">Bonjour</div>
-            <div class="flash-sub" id="flashSub">Pulsa para ver la traducción</div>
-            <!-- [v0.3] Pronunciación experimental con Web Speech API, sin dependencias externas -->
-            <div class="flash-actions no-print">
-              <button
-                class="ghost flash-speak-btn"
-                type="button"
-                id="flashSpeakBtn"
-                aria-label="Escuchar pronunciación en francés (experimental)"
-                hidden
-              >🔊 Escuchar (experimental)</button>
-              <p id="flashSpeakStatus" class="small muted flash-speak-status" aria-live="polite"></p>
-              <p id="flashSpeakNote" class="small muted flash-speak-note" hidden>La pronunciación es generada por el navegador y puede sonar robótica según el sistema. Úsala como referencia aproximada. Practica siempre en voz alta.</p>
-              <p id="flashSpeakUnavailable" class="small muted flash-speak-status" hidden>La pronunciación automática no está disponible en este navegador.</p>
+        <!-- [v0.4] La tarjeta y sus botones quedan juntos para reducir desplazamiento en móvil -->
+        <div class="flashcard-panel">
+          <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Tarjeta de vocabulario. Pulsa para girar.">
+            <span class="label" id="flashLabel">Francés</span>
+            <span class="counter" id="flashCounter" aria-live="polite">1 / 10</span>
+            <div>
+              <div class="flash-main" id="flashMain">Bonjour</div>
+              <div class="flash-sub" id="flashSub">Pulsa para ver la traducción</div>
+              <!-- [v0.3] Pronunciación experimental con Web Speech API, sin dependencias externas -->
+              <div class="flash-actions no-print">
+                <button
+                  class="ghost flash-speak-btn"
+                  type="button"
+                  id="flashSpeakBtn"
+                  aria-label="Escuchar pronunciación en francés (experimental)"
+                  hidden
+                >🔊 Escuchar (experimental)</button>
+                <p id="flashSpeakStatus" class="small muted flash-speak-status" aria-live="polite"></p>
+                <p id="flashSpeakNote" class="small muted flash-speak-note" hidden>La pronunciación es generada por el navegador y puede sonar robótica según el sistema. Úsala como referencia aproximada. Practica siempre en voz alta.</p>
+                <p id="flashSpeakUnavailable" class="small muted flash-speak-status" hidden>La pronunciación automática no está disponible en este navegador.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <aside class="card">
-          <h3>Banco de frases útiles</h3>
-          <div class="phrase-bank" id="phraseBank"></div>
-          <div class="cta-row no-print">
+          <div class="cta-row flash-nav no-print" aria-label="Navegación de flashcards">
             <button class="secondary" type="button" id="prevFlashBtn">Anterior</button>
             <button class="primary" type="button" id="nextFlashBtn">Siguiente</button>
             <button class="ghost" type="button" id="shuffleFlashBtn">Mezclar</button>
           </div>
+        </div>
+        <aside class="card">
+          <h3>Banco de frases útiles</h3>
+          <p class="small muted bank-help">También puedes tocar una frase para ir directamente a esa tarjeta.</p>
+          <div class="phrase-bank" id="phraseBank"></div>
         </aside>
       </div>
     </section>
@@ -789,7 +847,7 @@
         <div>
           <span class="tag">Bloque 3</span>
           <h2>Empareja frase e intención</h2>
-          <p class="muted">Selecciona una frase en francés y luego su intención en español. Es una versión móvil, sin arrastrar.</p>
+          <p class="muted">Selecciona primero una frase en francés y después su intención en español. Si te equivocas, el feedback te orienta sin penalización.</p>
         </div>
         <button class="secondary no-print" type="button" id="resetMatchBtn">Reiniciar</button>
       </div>
@@ -863,15 +921,16 @@
           <div class="result-box" id="randomPrompt">Pulsa "Generar reto aleatorio" para recibir una situación concreta.</div>
         </article>
         <article class="card">
-          <h3>Mi respuesta de práctica</h3>
-          <!--
-            CRÍTICO: aria-label añadido para que lectores de pantalla identifiquen el textarea.
-            El placeholder no es suficiente para tecnología asistiva.
-          -->
+          <h3>Escribe tu respuesta</h3>
+          <!-- [v0.4] El ejemplo se separa del campo editable para evitar que parezca autogenerado -->
+          <div class="draft-example small">
+            <strong>Ejemplo orientativo:</strong>
+            <span lang="fr">Bonjour. Je m'appelle Ana. J'habite à Las Palmas. J'étudie le français. Pouvez-vous répéter, s'il vous plaît ?</span>
+          </div>
           <textarea
             id="studentDraft"
-            aria-label="Mi respuesta de práctica"
-            placeholder="Ejemplo: Bonjour. Je m'appelle Ana. J'habite à Las Palmas. J'étudie le français. Pouvez-vous répéter, s'il vous plaît ?"
+            aria-label="Escribe tu respuesta de práctica en francés"
+            placeholder="Escribe aquí tu presentación en francés..."
           ></textarea>
           <div class="checklist" aria-label="Autoevaluación del reto final">
             <label class="check-item"><input type="checkbox" class="retoCheck" /> Incluí un saludo.</label>
@@ -880,9 +939,11 @@
             <label class="check-item"><input type="checkbox" class="retoCheck" /> Usé una petición útil y educada.</label>
           </div>
           <div class="cta-row no-print">
+            <button class="secondary" type="button" id="reviewDraftBtn">Revisar orientación</button>
             <button class="primary" type="button" id="copyDraftBtn">Copiar mi práctica</button>
             <button class="ghost" type="button" id="clearDraftBtn">Limpiar</button>
           </div>
+          <div class="feedback draft-feedback" id="draftFeedback" aria-live="polite">Puedes escribir tu respuesta y pulsar “Revisar orientación”. La revisión es local, orientativa y no corrige oficialmente el francés.</div>
           <p class="small muted" id="draftStatus" aria-live="polite">Tu texto queda solo en este navegador. Si usas un ordenador compartido, bórralo al terminar.</p>
         </article>
       </div>
@@ -1241,11 +1302,21 @@
       const bank = document.getElementById("phraseBank");
       bank.innerHTML = "";
       flashcards.forEach((item, i) => {
-        const div = document.createElement("div");
-        div.className  = "phrase";
-        div.lang       = "fr";
-        div.textContent = item.fr;
-        bank.appendChild(div);
+        // [v0.4] El banco deja de ser una lista pasiva y permite saltar directamente a cada tarjeta.
+        const btn = document.createElement("button");
+        btn.className   = "phrase phrase-btn";
+        btn.type        = "button";
+        btn.lang        = "fr";
+        btn.textContent = item.fr;
+        btn.setAttribute("aria-label", `Ver tarjeta: ${item.fr}`);
+        btn.setAttribute("aria-current", i === flashIndex ? "true" : "false");
+        btn.addEventListener("click", () => {
+          flashIndex = i;
+          flashFlipped = false;
+          persistFlashcardUse();
+          renderFlashcard();
+        });
+        bank.appendChild(btn);
       });
     }
 
@@ -1597,6 +1668,47 @@
       });
     });
 
+    // [v0.4] Revisión local orientativa: no usa IA, no usa API y no envía texto fuera del navegador.
+    function normalizeDraftText(text) {
+      return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[’']/g, "'");
+    }
+
+    function reviewDraftLocally() {
+      markStarted("reto");
+      const feedback = document.getElementById("draftFeedback");
+      const text = normalizeDraftText(draft.value || "");
+
+      if (!text.trim()) {
+        feedback.textContent = "Escribe primero una respuesta breve. Puedes apoyarte en el ejemplo y en las frases de apoyo.";
+        return;
+      }
+
+      const checks = [
+        { label: "un saludo", ok: /\b(bonjour|bonsoir|salut)\b/.test(text) },
+        { label: "tu nombre", ok: /je m[' ]?appelle/.test(text) },
+        { label: "dónde vives", ok: /j[' ]?habite/.test(text) },
+        { label: "una actividad o situación personal", ok: /\b(je suis|j[' ]?etudie|je travaille|je cherche du travail|je suis a la retraite)\b/.test(text) },
+        { label: "una petición sencilla", ok: /(pouvez[- ]vous|s[' ]?il vous plait|combien ca coute|ou est|excusez[- ]moi)/.test(text) }
+      ];
+
+      const included = checks.filter((item) => item.ok).map((item) => item.label);
+      const missing  = checks.filter((item) => !item.ok).map((item) => item.label);
+
+      if (missing.length === 0) {
+        feedback.textContent = "Orientación local: tu respuesta incluye los elementos básicos esperados. Practícala ahora en voz alta y pide revisión docente si hace falta.";
+        return;
+      }
+
+      const includedText = included.length ? `Has incluido ${included.join(", ")}. ` : "Todavía no detecto los elementos básicos. ";
+      feedback.textContent = `${includedText}Podrías añadir: ${missing.join(", ")}. Esta revisión es orientativa y no sustituye la corrección docente.`;
+    }
+
+    document.getElementById("reviewDraftBtn").addEventListener("click", reviewDraftLocally);
+
     document.getElementById("copyDraftBtn").addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(draft.value || "");
@@ -1608,10 +1720,16 @@
     });
 
     document.getElementById("clearDraftBtn").addEventListener("click", () => {
+      // [v0.4] Limpiar borra texto, checklist y feedback local para evitar estados mezclados.
       draft.value = "";
       state.reto.draft = "";
+      document.querySelectorAll(".retoCheck").forEach((box, index) => {
+        box.checked = false;
+        state.reto[`check${index}`] = false;
+      });
       saveState();
-      document.getElementById("draftStatus").textContent = "Texto borrado de este navegador.";
+      document.getElementById("draftFeedback").textContent = "Puedes escribir tu respuesta y pulsar “Revisar orientación”. La revisión es local, orientativa y no corrige oficialmente el francés.";
+      document.getElementById("draftStatus").textContent = "Texto y checklist borrados de este navegador.";
     });
 
     // ─────────────────────────────────────────────────────────────────────────
