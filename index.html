@@ -10,49 +10,22 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 0.4.1
+    Versión: 0.5
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres, emails, teléfonos ni información personal.
-            Todo el progreso se guarda localmente en el navegador.
+    Todo el progreso se guarda localmente en el navegador.
 
-    Cambios v0.2 final respecto a v0.2:
+    Cambios v0.5:
     ──────────────────────────────────────────────────────────────────────
-    [CRÍTICO]  Quiz: opción "Salut uniquement" corregida a "Salut" (era vocabulario B1+ sin sentido como distractor A1).
-    [CRÍTICO]  Quiz: btn.lang = "fr" añadido en renderQuiz() para coherencia con lectores de pantalla
-               (ya estaba en renderScenario() pero faltaba aquí).
-    [CRÍTICO]  Textarea del reto final: añadido aria-label="Mi respuesta de práctica" para lectores de pantalla.
-    [MEJORA]   Flashcards: contador "Tarjeta X de Y" visible para orientar al alumno.
-    [MEJORA]   Bonsoir: traducción corregida a "Buenas noches / Buenas tardes (tarde-noche)".
-    [MEJORA]   Pills del bloque Objetivo: traducción al español añadida entre paréntesis.
-    ──────────────────────────────────────────────────────────────────────
-
-    Cambios v0.3:
-    ──────────────────────────────────────────────────────────────────────
-    [v0.3]     Navegación: indicador visual de desplazamiento horizontal en móvil, oculto al llegar al final.
-    [v0.3]     Emparejar: persistencia del orden de la columna derecha mediante localStorage.
-    [v0.3]     Estado: refactor del quiz para leer y escribir directamente en state.quiz.
-    [v0.3]     Estado: refactor de situaciones para leer y escribir directamente en state.scenario.
-    [v0.3]     Reto final: banco colapsable de frases de apoyo sobre actividad y profesión.
-    [v0.3]     Flashcards: botón experimental de pronunciación con Web Speech API y mensajes de estado.
-    ──────────────────────────────────────────────────────────────────────
-
-    Cambios v0.4:
-    ──────────────────────────────────────────────────────────────────────
-    [v0.4]     Flashcards: banco de frases convertido en navegación directa por tarjeta.
-    [v0.4]     Flashcards: botones Anterior/Siguiente/Mezclar movidos junto a la tarjeta para reducir scroll en móvil.
-    [v0.4]     Reto final: UX Writing del campo de escritura aclarado y ejemplo separado del placeholder.
-    [v0.4]     Reto final: botón Limpiar ahora borra texto, desmarca checklist y limpia feedback local.
-    [v0.4]     Reto final: revisión local orientativa sin API ni envío de datos externos.
-    [v0.4]     Idioma/UX: ajuste de etiqueta inicial de dirección a «Demander une adresse».
-    ──────────────────────────────────────────────────────────────────────
-
-    Cambios v0.4.1:
-    ──────────────────────────────────────────────────────────────────────
-    [v0.4.1]   Créditos: versión visible corregida de 0.2 final a 0.4.1.
-    [v0.4.1]   Situaciones: respuestas correctas redistribuidas para evitar patrón explotable.
-    [v0.4.1]   Emparejar: frase de repetición unificada con la versión completa de cortesía.
-    ──────────────────────────────────────────────────────────────────────
+    [v0.5] Informe del alumno separado de la impresión general de la página.
+    [v0.5] Botón “Preparar informe PDF” abre una vista A4 limpia con resultados y práctica.
+    [v0.5] Se aclara que el PDF se guarda desde el diálogo nativo del navegador:
+           Guardar como PDF / Microsoft Print to PDF.
+    [v0.5] Botón alternativo “Descargar informe HTML” sin dependencias externas.
+    [v0.5] Feedback de informe y ayuda visible para evitar confusión entre imprimir y guardar.
+    [v0.5] Emparejar con contador de parejas y tarjetas más claras.
+    [v0.5] Se mantiene: sin backend, sin login, sin analítica, sin APIs externas.
   -->
 
   <style>
@@ -92,7 +65,6 @@
     a:focus-visible,
     button:focus-visible,
     textarea:focus-visible,
-    input:focus-visible,
     .flashcard:focus-visible {
       outline: 3px solid rgba(15, 118, 110, 0.45);
       outline-offset: 3px;
@@ -116,9 +88,7 @@
 
     .skip-link:focus { top: 1rem; }
 
-    header {
-      padding: 2rem 1rem 1rem;
-    }
+    header { padding: 2rem 1rem 1rem; }
 
     .shell {
       width: min(1120px, calc(100% - 2rem));
@@ -246,10 +216,9 @@
       backdrop-filter: blur(10px);
       background: rgba(246, 243, 238, 0.82);
       border-bottom: 1px solid rgba(217, 209, 197, 0.65);
-      overflow: hidden; /* [v0.3] Permite superponer el indicador de desplazamiento */
+      overflow: hidden;
     }
 
-    /* [v0.3] Indicador visual de que la navegación horizontal continúa hacia la derecha */
     nav::after {
       content: "";
       position: absolute;
@@ -264,9 +233,7 @@
     }
 
     nav.nav--end::after,
-    nav.nav--no-overflow::after {
-      opacity: 0;
-    }
+    nav.nav--no-overflow::after { opacity: 0; }
 
     .nav-inner {
       width: min(1120px, calc(100% - 2rem));
@@ -275,8 +242,6 @@
       gap: 0.5rem;
       overflow-x: auto;
       padding: 0.75rem 0;
-
-      /* Oculta la scrollbar visual manteniendo funcionalidad de desplazamiento */
       scrollbar-width: none;
       -ms-overflow-style: none;
     }
@@ -363,15 +328,9 @@
       transition: width 0.25s ease;
     }
 
-    .quiz-card, .scenario-card {
-      display: grid;
-      gap: 0.8rem;
-    }
+    .quiz-card, .scenario-card { display: grid; gap: 0.8rem; }
 
-    .option-list {
-      display: grid;
-      gap: 0.6rem;
-    }
+    .option-list { display: grid; gap: 0.6rem; }
 
     .option {
       width: 100%;
@@ -412,17 +371,8 @@
       align-items: stretch;
     }
 
-    /* [v0.4] Columna propia para tarjeta + navegación inmediata en móvil */
-    .flashcard-panel {
-      display: grid;
-      gap: 0.75rem;
-      align-content: start;
-    }
-
-    .flash-nav {
-      margin-top: 0;
-      justify-content: center;
-    }
+    .flashcard-panel { display: grid; gap: 0.75rem; align-content: start; }
+    .flash-nav { margin-top: 0; justify-content: center; }
 
     .flashcard {
       min-height: 250px;
@@ -450,7 +400,6 @@
       letter-spacing: 0.08em;
     }
 
-    /* MEJORA: contador de tarjeta en la esquina superior derecha */
     .flashcard .counter {
       position: absolute;
       top: 1rem;
@@ -467,16 +416,9 @@
       line-height: 1.1;
     }
 
-    .flash-sub {
-      margin-top: 0.6rem;
-      color: var(--muted);
-      font-size: 1rem;
-    }
+    .flash-sub { margin-top: 0.6rem; color: var(--muted); font-size: 1rem; }
 
-    .phrase-bank {
-      display: grid;
-      gap: 0.55rem;
-    }
+    .phrase-bank { display: grid; gap: 0.55rem; }
 
     .phrase {
       background: var(--soft);
@@ -486,7 +428,6 @@
       font-weight: 700;
     }
 
-    /* [v0.4] Frases del banco como navegación directa a cada flashcard */
     .phrase-btn {
       width: 100%;
       min-height: 44px;
@@ -502,8 +443,14 @@
       box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.10);
     }
 
-    .bank-help {
-      margin: 0 0 0.75rem;
+    .bank-help { margin: 0 0 0.75rem; }
+
+    .match-progress {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0.25rem 0 1rem;
     }
 
     .match-area {
@@ -512,10 +459,7 @@
       gap: 1rem;
     }
 
-    .match-column {
-      display: grid;
-      gap: 0.55rem;
-    }
+    .match-column { display: grid; gap: 0.55rem; }
 
     .match-btn {
       width: 100%;
@@ -540,12 +484,12 @@
       background: rgba(35, 107, 69, 0.08);
       color: var(--ok);
       cursor: default;
-      opacity: 0.86;
+      opacity: 0.9;
     }
 
-    textarea, input[type="text"] {
+    textarea {
       width: 100%;
-      min-height: 120px;
+      min-height: 140px;
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 0.9rem;
@@ -560,11 +504,7 @@
       accent-color: var(--brand-2);
     }
 
-    .checklist {
-      display: grid;
-      gap: 0.7rem;
-      margin: 1rem 0;
-    }
+    .checklist { display: grid; gap: 0.7rem; margin: 1rem 0; }
 
     .check-item {
       display: flex;
@@ -602,10 +542,7 @@
       white-space: pre-wrap;
     }
 
-    /* [v0.3] Banco colapsable de frases de apoyo para el reto final */
-    .support-details {
-      margin: 1rem 0;
-    }
+    .support-details { margin: 1rem 0; }
 
     .support-details summary {
       display: list-item;
@@ -620,21 +557,12 @@
       border: 1px solid var(--line);
     }
 
-    .support-details[open] summary {
-      margin-bottom: 0.75rem;
-    }
+    .support-details[open] summary { margin-bottom: 0.75rem; }
 
-    .support-list {
-      display: grid;
-      gap: 0.55rem;
-    }
+    .support-list { display: grid; gap: 0.55rem; }
 
-    .support-list .phrase {
-      display: grid;
-      gap: 0.15rem;
-    }
+    .support-list .phrase { display: grid; gap: 0.15rem; }
 
-    /* [v0.3] Botón experimental de pronunciación en flashcards */
     .flash-actions {
       margin-top: 0.9rem;
       display: grid;
@@ -654,7 +582,6 @@
       max-width: 46ch;
     }
 
-    /* [v0.4] Ejemplo separado del campo editable y feedback local del reto */
     .draft-example {
       border-left: 4px solid var(--brand-2);
       background: rgba(15, 118, 110, 0.08);
@@ -663,8 +590,17 @@
       margin: 0.65rem 0 0.85rem;
     }
 
-    .draft-feedback {
-      margin-top: 0.85rem;
+    .draft-feedback { margin-top: 0.85rem; }
+
+    .report-help {
+      display: grid;
+      gap: 0.6rem;
+      margin-top: 1rem;
+      background: #fff;
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      border-left: 4px solid var(--gold);
+      border-radius: 16px;
+      padding: 0.85rem 1rem;
     }
 
     .footer-note {
@@ -681,10 +617,7 @@
         grid-template-columns: 1fr;
       }
 
-      .section-head {
-        display: grid;
-      }
-
+      .section-head { display: grid; }
       section { border-radius: 22px; }
     }
 
@@ -704,6 +637,7 @@
     }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
@@ -717,9 +651,10 @@
         <div class="cta-row no-print" aria-label="Accesos principales">
           <a class="button primary" href="#diagnostico">Empezar autodiagnóstico</a>
           <a class="button secondary" href="#flashcards">Repasar frases</a>
-          <button class="ghost" type="button" id="printBtn">Imprimir ficha</button>
+          <button class="ghost" type="button" id="reportBtn">Preparar informe PDF</button>
         </div>
       </div>
+
       <aside class="hero-card" aria-label="Ficha breve del recurso">
         <h2>Ficha breve</h2>
         <p><strong>Autor:</strong> Joel Concepción Villanueva</p>
@@ -742,6 +677,7 @@
       <a href="#emparejar">Emparejar</a>
       <a href="#situaciones">Situaciones</a>
       <a href="#reto">Reto final</a>
+      <a href="#informe">Informe</a>
       <a href="#docente">Ficha docente</a>
     </div>
   </nav>
@@ -755,6 +691,7 @@
           <p class="muted">Este material sirve para repasar de forma rápida y práctica lo esencial de Francés A1 antes de finalizar el curso.</p>
         </div>
       </div>
+
       <div class="grid">
         <article class="card">
           <h3>Comprender</h3>
@@ -769,7 +706,7 @@
           <p>Usar frases breves en voz alta, con apoyo visual y sin miedo al error, priorizando la comunicación básica.</p>
         </article>
       </div>
-      <!-- MEJORA: traducción al español entre paréntesis en cada pill para que el alumnado A1 entienda qué va a trabajar -->
+
       <div class="pill-row" aria-label="Contenidos trabajados">
         <span class="pill">Salutations (Saludos)</span>
         <span class="pill">Se présenter (Presentarse)</span>
@@ -789,6 +726,7 @@
         </div>
         <button class="secondary no-print" type="button" id="resetQuizBtn">Reiniciar autodiagnóstico</button>
       </div>
+
       <div class="card quiz-card">
         <div class="progress-wrap" id="quizProgressWrap" role="progressbar" aria-label="Progreso del autodiagnóstico" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
           <div class="progress-bar" id="quizProgress"></div>
@@ -811,8 +749,8 @@
           <p class="muted">Pulsa la tarjeta para ver la traducción. Practica la pronunciación en voz alta.</p>
         </div>
       </div>
+
       <div class="flashcard-wrap">
-        <!-- [v0.4] La tarjeta y sus botones quedan juntos para reducir desplazamiento en móvil -->
         <div class="flashcard-panel">
           <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Tarjeta de vocabulario. Pulsa para girar.">
             <span class="label" id="flashLabel">Francés</span>
@@ -820,27 +758,22 @@
             <div>
               <div class="flash-main" id="flashMain">Bonjour</div>
               <div class="flash-sub" id="flashSub">Pulsa para ver la traducción</div>
-              <!-- [v0.3] Pronunciación experimental con Web Speech API, sin dependencias externas -->
               <div class="flash-actions no-print">
-                <button
-                  class="ghost flash-speak-btn"
-                  type="button"
-                  id="flashSpeakBtn"
-                  aria-label="Escuchar pronunciación en francés (experimental)"
-                  hidden
-                >🔊 Escuchar (experimental)</button>
+                <button class="ghost flash-speak-btn" type="button" id="flashSpeakBtn" aria-label="Escuchar pronunciación en francés (experimental)" hidden>🔊 Escuchar (experimental)</button>
                 <p id="flashSpeakStatus" class="small muted flash-speak-status" aria-live="polite"></p>
                 <p id="flashSpeakNote" class="small muted flash-speak-note" hidden>La pronunciación es generada por el navegador y puede sonar robótica según el sistema. Úsala como referencia aproximada. Practica siempre en voz alta.</p>
                 <p id="flashSpeakUnavailable" class="small muted flash-speak-status" hidden>La pronunciación automática no está disponible en este navegador.</p>
               </div>
             </div>
           </div>
+
           <div class="cta-row flash-nav no-print" aria-label="Navegación de flashcards">
             <button class="secondary" type="button" id="prevFlashBtn">Anterior</button>
             <button class="primary" type="button" id="nextFlashBtn">Siguiente</button>
             <button class="ghost" type="button" id="shuffleFlashBtn">Mezclar</button>
           </div>
         </div>
+
         <aside class="card">
           <h3>Banco de frases útiles</h3>
           <p class="small muted bank-help">También puedes tocar una frase para ir directamente a esa tarjeta.</p>
@@ -858,17 +791,26 @@
         </div>
         <button class="secondary no-print" type="button" id="resetMatchBtn">Reiniciar</button>
       </div>
-      <div class="match-area">
-        <div class="card">
-          <h3>Frases en francés</h3>
-          <div class="match-column" id="leftMatch"></div>
+
+      <div class="card">
+        <div class="match-progress">
+          <span class="pill" id="matchCount">0 / 6 parejas</span>
+          <span class="small muted">Objetivo: reconocer para qué sirve cada frase.</span>
         </div>
-        <div class="card">
-          <h3>Intenciones en español</h3>
-          <div class="match-column" id="rightMatch"></div>
+
+        <div class="match-area" aria-label="Actividad de emparejar frase e intención">
+          <div>
+            <h3>Frases en francés</h3>
+            <div class="match-column" id="leftMatch"></div>
+          </div>
+          <div>
+            <h3>Intenciones en español</h3>
+            <div class="match-column" id="rightMatch"></div>
+          </div>
         </div>
+
+        <div class="feedback" id="matchFeedback" aria-live="polite">Empieza seleccionando una frase en francés.</div>
       </div>
-      <div class="feedback" id="matchFeedback" aria-live="polite">Empieza seleccionando una frase en francés.</div>
     </section>
 
     <section id="situaciones">
@@ -880,6 +822,7 @@
         </div>
         <button class="secondary no-print" type="button" id="resetScenarioBtn">Reiniciar</button>
       </div>
+
       <div class="card scenario-card">
         <p class="small muted" id="scenarioCounter">Situación 1 de 5</p>
         <h3 id="scenarioText">Cargando situación…</h3>
@@ -899,6 +842,7 @@
           <p class="muted">Actividad final para hacer en parejas, en voz alta o por escrito. No se guarda en ningún servidor.</p>
         </div>
       </div>
+
       <div class="grid two">
         <article class="card">
           <h3>Consigna</h3>
@@ -911,48 +855,78 @@
             <li>Una petición sencilla: repetir, ayudar, indicar un lugar o decir el precio.</li>
           </ul>
 
-          <!-- [v0.3] Banco de apoyo sin JavaScript adicional: ayuda a producir una frase A1 sobre actividad/profesión -->
           <details class="support-details">
-            <summary>💡 Frases de apoyo (actividad y profesión)</summary>
+            <summary>Frases de apoyo (actividad y profesión)</summary>
             <div class="support-list">
-              <div class="phrase"><span lang="fr">Je suis étudiant(e).</span><span lang="es">→ Soy estudiante.</span></div>
-              <div class="phrase"><span lang="fr">J'étudie le français.</span><span lang="es">→ Estudio francés.</span></div>
-              <div class="phrase"><span lang="fr">Je travaille.</span><span lang="es">→ Trabajo.</span></div>
-              <div class="phrase"><span lang="fr">Je suis à la retraite.</span><span lang="es">→ Estoy jubilado/a.</span></div>
-              <div class="phrase"><span lang="fr">Je cherche du travail.</span><span lang="es">→ Busco trabajo.</span></div>
+              <div class="phrase" lang="fr"><strong>Je suis étudiant(e).</strong><span>Soy estudiante.</span></div>
+              <div class="phrase" lang="fr"><strong>J'étudie le français.</strong><span>Estudio francés.</span></div>
+              <div class="phrase" lang="fr"><strong>Je travaille.</strong><span>Trabajo.</span></div>
+              <div class="phrase" lang="fr"><strong>Je suis à la retraite.</strong><span>Estoy jubilado/a.</span></div>
+              <div class="phrase" lang="fr"><strong>Je cherche du travail.</strong><span>Busco trabajo.</span></div>
             </div>
             <p class="small muted">Elige la que mejor te describa y adáptala. No hace falta que sea perfecta.</p>
           </details>
 
           <button class="secondary no-print" type="button" id="generatePromptBtn">Generar reto aleatorio</button>
-          <div class="result-box" id="randomPrompt">Pulsa "Generar reto aleatorio" para recibir una situación concreta.</div>
+          <p class="result-box" id="randomPrompt">Pulsa "Generar reto aleatorio" para recibir una situación concreta.</p>
         </article>
+
         <article class="card">
           <h3>Escribe tu respuesta</h3>
-          <!-- [v0.4] El ejemplo se separa del campo editable para evitar que parezca autogenerado -->
           <div class="draft-example small">
             <strong>Ejemplo orientativo:</strong>
             <span lang="fr">Bonjour. Je m'appelle Ana. J'habite à Las Palmas. J'étudie le français. Pouvez-vous répéter, s'il vous plaît ?</span>
           </div>
-          <textarea
-            id="studentDraft"
-            aria-label="Escribe tu respuesta de práctica en francés"
-            placeholder="Escribe aquí tu presentación en francés..."
-          ></textarea>
-          <div class="checklist" aria-label="Autoevaluación del reto final">
-            <label class="check-item"><input type="checkbox" class="retoCheck" /> Incluí un saludo.</label>
-            <label class="check-item"><input type="checkbox" class="retoCheck" /> Dije mi nombre con "Je m'appelle…".</label>
-            <label class="check-item"><input type="checkbox" class="retoCheck" /> Añadí una frase sencilla sobre mí.</label>
-            <label class="check-item"><input type="checkbox" class="retoCheck" /> Usé una petición útil y educada.</label>
+
+          <label class="small muted" for="studentDraft">Tu práctica escrita. No escribas apellidos, DNI, teléfono ni otros datos personales.</label>
+          <textarea id="studentDraft" aria-label="Mi respuesta de práctica" placeholder="Escribe aquí tu práctica. Ejemplo: Bonjour. Je m'appelle…"></textarea>
+
+          <div class="checklist">
+            <label class="check-item"><input class="retoCheck" type="checkbox" /> Incluí un saludo.</label>
+            <label class="check-item"><input class="retoCheck" type="checkbox" /> Dije mi nombre con "Je m'appelle…".</label>
+            <label class="check-item"><input class="retoCheck" type="checkbox" /> Añadí una frase sencilla sobre mí.</label>
+            <label class="check-item"><input class="retoCheck" type="checkbox" /> Usé una petición útil y educada.</label>
           </div>
+
           <div class="cta-row no-print">
-            <button class="secondary" type="button" id="reviewDraftBtn">Revisar orientación</button>
-            <button class="primary" type="button" id="copyDraftBtn">Copiar mi práctica</button>
+            <button class="primary" type="button" id="reviewDraftBtn">Revisar orientación</button>
+            <button class="secondary" type="button" id="copyDraftBtn">Copiar mi práctica</button>
             <button class="ghost" type="button" id="clearDraftBtn">Limpiar</button>
           </div>
-          <div class="feedback draft-feedback" id="draftFeedback" aria-live="polite">Puedes escribir tu respuesta y pulsar “Revisar orientación”. La revisión es local, orientativa y no corrige oficialmente el francés.</div>
+
+          <p class="feedback draft-feedback" id="draftFeedback" aria-live="polite">Puedes escribir tu respuesta y pulsar “Revisar orientación”. La revisión es local, orientativa y no corrige oficialmente el francés.</p>
           <p class="small muted" id="draftStatus" aria-live="polite">Tu texto queda solo en este navegador. Si usas un ordenador compartido, bórralo al terminar.</p>
         </article>
+      </div>
+    </section>
+
+    <section id="informe">
+      <div class="section-head">
+        <div>
+          <span class="tag">Informe</span>
+          <h2>Informe de práctica del alumno</h2>
+          <p class="muted">Genera una ficha breve con el progreso local, resultados orientativos y texto del reto final. No se envía nada a ningún servidor.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Guardar como PDF</h3>
+        <p>Por privacidad y sencillez, esta herramienta no usa librerías externas para fabricar un PDF directamente. Prepara una vista limpia de informe y utiliza el guardado PDF del navegador.</p>
+
+        <div class="cta-row no-print">
+          <button class="primary" type="button" id="reportBtn2">Preparar informe PDF</button>
+          <button class="secondary" type="button" id="downloadHtmlReportBtn">Descargar informe HTML</button>
+        </div>
+
+        <div class="report-help small">
+          <strong>Cómo guardarlo en PDF:</strong>
+          <span>1) Pulsa “Preparar informe PDF”.</span>
+          <span>2) En la ventana del informe, pulsa “Guardar / imprimir PDF”.</span>
+          <span>3) En Firefox o Windows, elige “Microsoft Print to PDF” o “Guardar como PDF”.</span>
+          <span>4) Pulsa “Imprimir” o “Guardar” y después elige la carpeta y el nombre del archivo.</span>
+        </div>
+
+        <p class="small muted" id="reportStatus" aria-live="polite">El informe se genera solo con datos locales de este navegador.</p>
       </div>
     </section>
 
@@ -964,243 +938,192 @@
           <p class="muted">Ficha breve para presentar el recurso a tutoría, coordinación o como evidencia de portfolio docente.</p>
         </div>
       </div>
+
       <div class="grid two">
         <article class="card">
           <h3>Finalidad</h3>
           <p>Reforzar contenidos básicos de Francés A1 mediante práctica breve, autoevaluación y situaciones comunicativas sencillas.</p>
+        </article>
+        <article class="card">
           <h3>Metodología</h3>
           <p>Aprendizaje activo, práctica guiada, repetición funcional, corrección inmediata y uso de tecnología ligera.</p>
+        </article>
+        <article class="card">
           <h3>Temporalización</h3>
           <p>Entre 15 y 35 minutos, según se utilice solo el autodiagnóstico o todos los bloques.</p>
         </article>
         <article class="card">
           <h3>Privacidad y límites</h3>
           <p>No solicita datos personales. No es un recurso oficial de ICSE. No sustituye la programación docente ni la evaluación oficial. Es un recurso complementario de repaso.</p>
-          <h3>Evidencias generadas</h3>
-          <p>Recurso HTML estático, ficha pedagógica, posible QR de acceso, capturas de uso y breve memoria de pilotaje si la tutora lo autoriza.</p>
-          <h3>Competencias docentes demostradas</h3>
-          <p>Diseño instruccional, adaptación a alumnado adulto, evaluación formativa, integración de tecnología, elaboración de materiales reutilizables y uso experimental pedagógicamente contextualizado de la Web Speech API.</p>
         </article>
       </div>
-      <div class="print-only">
-        <p><strong>Autor:</strong> Joel Concepción Villanueva · <strong>Recurso:</strong> Repaso Final Francés A1 · <strong>Contexto:</strong> prácticas FPE 2026.</p>
+
+      <div class="card">
+        <h3>Evidencias generadas</h3>
+        <p>Recurso HTML estático, ficha pedagógica, posible QR de acceso, capturas de uso, informe local de práctica y breve memoria de pilotaje si la tutora lo autoriza.</p>
+        <h3>Competencias docentes demostradas</h3>
+        <p>Diseño instruccional, adaptación a alumnado adulto, evaluación formativa, integración de tecnología, elaboración de materiales reutilizables y uso experimental pedagógicamente contextualizado de la Web Speech API.</p>
       </div>
     </section>
 
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
-      <p>Recurso creado por <strong>Joel Concepción Villanueva</strong> como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="small muted">No es un recurso oficial de ICSE ni implica autorización institucional. Versión 0.4.1 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
-      <div class="cta-row no-print">
-        <button class="ghost" type="button" id="resetAllBtn">Borrar progreso local</button>
-      </div>
+      <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni implica autorización institucional. Versión 0.5 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
     <p class="footer-note">Repaso Final Francés A1 · Recurso pedagógico digital complementario · Joel Concepción Villanueva</p>
   </main>
 
   <script>
-    "use strict";
+    const STORAGE_KEY = "repaso_frances_a1_v05";
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // ESTADO Y PERSISTENCIA
-    // ─────────────────────────────────────────────────────────────────────────
-    const STORAGE_KEY = "francesA1RepasoJoelV02";
+    const clone = (obj) => JSON.parse(JSON.stringify(obj));
 
     const defaultState = {
-      started: {},
+      started: {
+        diagnostico: false,
+        flashcards: false,
+        emparejar: false,
+        situaciones: false,
+        reto: false
+      },
       quiz: { index: 0, score: 0, answered: false, selected: null },
-      scenario: { index: 0, score: 0, answered: false, selected: null },
-      reto: {},
       flashIndex: 0,
       matchDone: [],
-      matchOrder: [] // [v0.3] Persiste el orden visual de la columna derecha en "Emparejar"
+      matchOrder: null,
+      scenario: { index: 0, score: 0, answered: false, selected: null },
+      reto: {
+        draft: "",
+        prompt: "",
+        check0: false,
+        check1: false,
+        check2: false,
+        check3: false,
+        feedback: ""
+      }
     };
-
-    const state = loadState();
 
     function loadState() {
       try {
-        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-        if (!saved) return structuredClone(defaultState);
-
-        // [v0.3] Mezcla profunda mínima para mantener compatibilidad con progreso v0.2.
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return clone(defaultState);
+        const parsed = JSON.parse(raw);
         return {
-          ...structuredClone(defaultState),
-          ...saved,
-          quiz:     { ...defaultState.quiz,     ...(saved.quiz || {}) },
-          scenario: { ...defaultState.scenario, ...(saved.scenario || {}) },
-          reto:     { ...defaultState.reto,     ...(saved.reto || {}) }
+          ...clone(defaultState),
+          ...parsed,
+          started: { ...defaultState.started, ...(parsed.started || {}) },
+          quiz: { ...defaultState.quiz, ...(parsed.quiz || {}) },
+          scenario: { ...defaultState.scenario, ...(parsed.scenario || {}) },
+          reto: { ...defaultState.reto, ...(parsed.reto || {}) }
         };
       } catch {
-        return structuredClone(defaultState);
+        return clone(defaultState);
       }
     }
+
+    let state = loadState();
 
     function saveState() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       updateGlobalProgress();
     }
 
-    function markStarted(block) {
-      if (!state.started[block]) {
-        state.started[block] = true;
+    function markStarted(key) {
+      if (!state.started[key]) {
+        state.started[key] = true;
+        saveState();
       }
-      saveState();
     }
 
     function setProgress(wrapId, barId, value) {
-      const pct = Math.max(0, Math.min(100, Math.round(value)));
+      const percent = Math.max(0, Math.min(100, Math.round(value)));
       const wrap = document.getElementById(wrapId);
-      const bar  = document.getElementById(barId);
-      if (bar)  bar.style.width = `${pct}%`;
-      if (wrap) wrap.setAttribute("aria-valuenow", String(pct));
+      const bar = document.getElementById(barId);
+      if (bar) bar.style.width = `${percent}%`;
+      if (wrap) wrap.setAttribute("aria-valuenow", String(percent));
     }
 
     function updateGlobalProgress() {
-      const blocks = ["diagnostico", "flashcards", "emparejar", "situaciones", "reto"];
-      const done   = blocks.filter((b) => state.started[b]).length;
-      const pct    = Math.round((done / blocks.length) * 100);
-      setProgress("globalProgressWrap", "globalProgress", pct);
-      document.getElementById("progressText").textContent = `${pct}%`;
+      const total = Object.keys(state.started).length;
+      const done = Object.values(state.started).filter(Boolean).length;
+      const percent = Math.round((done / total) * 100);
+      setProgress("globalProgressWrap", "globalProgress", percent);
+      document.getElementById("progressText").textContent = `${percent}%`;
     }
-
-    document.getElementById("printBtn").addEventListener("click", () => window.print());
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // [v0.3] NAVEGACIÓN HORIZONTAL · INDICADOR DE DESPLAZAMIENTO
-    // ─────────────────────────────────────────────────────────────────────────
-    const navElement = document.querySelector("nav");
-    const navInner   = document.querySelector(".nav-inner");
 
     function updateNavScrollHint() {
-      if (!navElement || !navInner) return;
-      const hasOverflow = navInner.scrollWidth > navInner.clientWidth + 2;
-      const atEnd = navInner.scrollLeft + navInner.clientWidth >= navInner.scrollWidth - 2;
+      const nav = document.querySelector("nav");
+      const inner = document.querySelector(".nav-inner");
+      if (!nav || !inner) return;
 
-      navElement.classList.toggle("nav--no-overflow", !hasOverflow);
-      navElement.classList.toggle("nav--end", hasOverflow && atEnd);
+      const update = () => {
+        const overflow = inner.scrollWidth > inner.clientWidth + 2;
+        const atEnd = inner.scrollLeft + inner.clientWidth >= inner.scrollWidth - 2;
+        nav.classList.toggle("nav--no-overflow", !overflow);
+        nav.classList.toggle("nav--end", overflow && atEnd);
+      };
+
+      inner.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("resize", update);
+      update();
     }
 
-    if (navInner) {
-      navInner.addEventListener("scroll", updateNavScrollHint, { passive: true });
-      window.addEventListener("resize", updateNavScrollHint);
-    }
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // BLOQUE 1 · AUTODIAGNÓSTICO
-    // ─────────────────────────────────────────────────────────────────────────
     const quizQuestions = [
-      {
-        q: '¿Cómo se dice "Buenos días" en francés?',
-        /*
-          CORRECCIÓN CRÍTICA: "Salut uniquement" sustituido por "Salut".
-          "uniquement" es vocabulario B1+ que no tiene sentido como distractor en A1.
-          "Salut" (saludo informal) es un distractor real y pedagógicamente útil:
-          obliga al alumno a diferenciar registro formal (Bonjour) vs. informal (Salut).
-        */
-        options: ["Bonsoir", "Bonjour", "Bonne nuit", "Salut"],
-        answer: 1,
-        exp: "«Bonjour» se usa para saludar durante el día. «Bonsoir» se usa por la tarde o noche. «Salut» es un saludo informal entre amigos."
-      },
-      {
-        q: "Elige la frase correcta para decir «Me llamo Joel».",
-        options: ["Je m'appelle Joel", "J'ai Joel", "Je suis appelle Joel", "Moi nom Joel"],
-        answer: 0,
-        exp: "Para presentarse se usa «Je m'appelle…» + nombre."
-      },
-      {
-        q: "¿Qué significa «J'habite à Las Palmas»?",
-        options: ["Trabajo en Las Palmas", "Vivo en Las Palmas", "Voy a Las Palmas", "Estudio en Las Palmas"],
-        answer: 1,
-        exp: "«J'habite à…» significa «Vivo en…»."
-      },
-      {
-        q: "¿Cuál es la respuesta más natural a «Comment ça va ?» en A1?",
-        options: ["Ça va bien, merci", "Je vingt ans", "Il est deux euros", "Où est la gare ?"],
-        answer: 0,
-        exp: "«Ça va bien, merci» significa «Estoy bien, gracias»."
-      },
-      {
-        q: "¿Cómo se dice «por favor»?",
-        options: ["Merci", "S'il vous plaît", "Au revoir", "Excusez-moi"],
-        answer: 1,
-        exp: "«S'il vous plaît» es la forma cortés de decir «por favor»."
-      },
-      {
-        q: "¿Qué frase usarías para pedir que repitan?",
-        options: ["Je voudrais un café", "Pouvez-vous répéter, s'il vous plaît ?", "J'habite ici", "Combien ça coûte ?"],
-        answer: 1,
-        exp: "Es una frase de supervivencia muy útil: «¿Puede repetir, por favor?»."
-      },
-      {
-        q: "¿Qué significa «Combien ça coûte ?»",
-        options: ["¿Dónde está?", "¿Cuánto cuesta?", "¿Cómo te llamas?", "¿Qué hora es?"],
-        answer: 1,
-        exp: "«Combien» se usa para preguntar cantidad o precio."
-      },
-      {
-        q: "¿Cuál es el número «dix»?",
-        options: ["2", "6", "10", "12"],
-        answer: 2,
-        exp: "«Dix» significa 10."
-      },
-      {
-        q: "Elige la forma correcta para decir «No entiendo».",
-        options: ["Je ne comprends pas", "Je ne parle pas", "Je ne coûte pas", "Je ne m'appelle pas"],
-        answer: 0,
-        exp: "«Je ne comprends pas» significa «No entiendo»."
-      },
-      {
-        q: "¿Qué frase sirve para despedirse?",
-        options: ["Au revoir", "Bonjour", "Merci beaucoup", "Je voudrais"],
-        answer: 0,
-        exp: "«Au revoir» significa «adiós» o «hasta luego»."
-      }
+      { q: "¿Qué significa Bonjour?", options: ["Buenos días / Hola", "Adiós", "Gracias", "Buenas noches"], answer: 0, exp: "«Bonjour» es el saludo básico durante el día." },
+      { q: "Elige la frase para decir tu nombre.", options: ["Je voudrais…", "Je m'appelle…", "Où est… ?", "Combien ça coûte ?"], answer: 1, exp: "«Je m'appelle…» significa «Me llamo…»." },
+      { q: "¿Cómo preguntas el precio?", options: ["Où est la gare ?", "Combien ça coûte ?", "J'habite à Gáldar", "Au revoir"], answer: 1, exp: "«Combien ça coûte ?» significa «¿Cuánto cuesta?»." },
+      { q: "¿Qué frase sirve para pedir que repitan?", options: ["Je ne comprends pas", "Pouvez-vous répéter, s'il vous plaît ?", "Bonsoir", "Je travaille"], answer: 1, exp: "Es una fórmula útil y educada para pedir repetición." },
+      { q: "¿Qué significa J'habite à…?", options: ["Me llamo…", "Vivo en…", "Quisiera…", "No entiendo"], answer: 1, exp: "«J'habite à…» significa «Vivo en…»." },
+      { q: "¿Qué frase usarías para pedir algo con cortesía?", options: ["Je voudrais…", "Au revoir", "Comment ça va ?", "Où est… ?"], answer: 0, exp: "«Je voudrais…» equivale a «Quisiera…»." },
+      { q: "Elige una despedida.", options: ["Au revoir", "Bonjour", "Merci", "Je suis étudiant(e)"], answer: 0, exp: "«Au revoir» significa «adiós» o «hasta luego»." },
+      { q: "¿Qué significa Je ne comprends pas?", options: ["No entiendo", "No trabajo", "No cuesta", "No vivo"], answer: 0, exp: "Frase básica para expresar que no entiendes." },
+      { q: "¿Qué frase pregunta por ubicación?", options: ["Où est… ?", "Je voudrais…", "Bonsoir", "Ça coûte deux euros"], answer: 0, exp: "«Où est… ?» significa «¿Dónde está…?»." },
+      { q: "¿Qué frase significa Estoy jubilado/a?", options: ["Je suis à la retraite.", "Je cherche du travail.", "Je travaille.", "J'étudie le français."], answer: 0, exp: "«Je suis à la retraite» significa «Estoy jubilado/a»." }
     ];
 
-    // [v0.3] El quiz lee y escribe directamente en state.quiz para evitar duplicación de estado.
     function renderQuiz() {
-      const finished  = state.quiz.index >= quizQuestions.length;
-      const counter   = document.getElementById("quizCounter");
-      const question  = document.getElementById("quizQuestion");
-      const options   = document.getElementById("quizOptions");
-      const feedback  = document.getElementById("quizFeedback");
-      const nextBtn   = document.getElementById("nextQuizBtn");
+      const finished = state.quiz.index >= quizQuestions.length;
+      const counter = document.getElementById("quizCounter");
+      const question = document.getElementById("quizQuestion");
+      const options = document.getElementById("quizOptions");
+      const feedback = document.getElementById("quizFeedback");
+      const nextBtn = document.getElementById("nextQuizBtn");
 
       setProgress("quizProgressWrap", "quizProgress", (state.quiz.index / quizQuestions.length) * 100);
       options.innerHTML = "";
-      nextBtn.disabled  = finished;
+      nextBtn.disabled = finished;
 
       if (finished) {
-        counter.textContent  = "Autodiagnóstico completado";
+        counter.textContent = "Autodiagnóstico completado";
         question.textContent = `Resultado orientativo: ${state.quiz.score} de ${quizQuestions.length}`;
         feedback.textContent = getQuizAdvice(state.quiz.score);
         setProgress("quizProgressWrap", "quizProgress", 100);
-        nextBtn.textContent  = "Finalizado";
+        nextBtn.textContent = "Finalizado";
         return;
       }
 
       const item = quizQuestions[state.quiz.index];
-      counter.textContent  = `Pregunta ${state.quiz.index + 1} de ${quizQuestions.length}`;
+      counter.textContent = `Pregunta ${state.quiz.index + 1} de ${quizQuestions.length}`;
       question.textContent = item.q;
-      feedback.textContent = state.quiz.answered
-        ? item.exp
-        : "Elige una respuesta para ver una explicación breve.";
+      feedback.textContent = state.quiz.answered ? item.exp : "Elige una respuesta para ver una explicación breve.";
       nextBtn.textContent = "Siguiente";
-      nextBtn.disabled    = false;
+      nextBtn.disabled = false;
 
       item.options.forEach((opt, i) => {
         const btn = document.createElement("button");
         btn.className = "option";
-        btn.type      = "button";
-        btn.lang      = "fr";   // CORRECCIÓN CRÍTICA: lang="fr" para lectores de pantalla
+        btn.type = "button";
+        btn.lang = "fr";
         btn.textContent = opt;
+
         if (state.quiz.answered) {
           btn.disabled = true;
-          if (i === item.answer)  btn.classList.add("correct");
+          if (i === item.answer) btn.classList.add("correct");
           if (i === state.quiz.selected && state.quiz.selected !== item.answer) btn.classList.add("wrong");
         }
+
         btn.addEventListener("click", () => answerQuiz(i));
         options.appendChild(btn);
       });
@@ -1226,75 +1149,57 @@
     document.getElementById("nextQuizBtn").addEventListener("click", () => {
       if (state.quiz.index >= quizQuestions.length) return;
       if (!state.quiz.answered) {
-        document.getElementById("quizFeedback").textContent =
-          "Primero elige una respuesta. El objetivo es practicar, no correr.";
+        document.getElementById("quizFeedback").textContent = "Primero elige una respuesta. El objetivo es practicar, no correr.";
         return;
       }
-      state.quiz.index    += 1;
-      state.quiz.answered  = false;
-      state.quiz.selected  = null;
+      state.quiz.index += 1;
+      state.quiz.answered = false;
+      state.quiz.selected = null;
       saveState();
       renderQuiz();
     });
 
     document.getElementById("resetQuizBtn").addEventListener("click", () => {
-      state.quiz = structuredClone(defaultState.quiz);
+      state.quiz = clone(defaultState.quiz);
       saveState();
       renderQuiz();
     });
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // BLOQUE 2 · FLASHCARDS
-    // ─────────────────────────────────────────────────────────────────────────
     const flashcards = [
-      { fr: "Bonjour",                              es: "Buenos días / Hola",                           hint: "Saludo básico durante el día" },
-      /*
-        CORRECCIÓN MEJORA: traducción de Bonsoir corregida.
-        "Buenas tardes" en español corresponde a horas de luz; bonsoir se usa al atardecer-noche.
-      */
-      { fr: "Bonsoir",                              es: "Buenas noches / Buenas tardes (tarde-noche)",  hint: "Saludo al final del día, desde el atardecer" },
-      { fr: "Au revoir",                            es: "Adiós / Hasta luego",                          hint: "Despedida" },
-      { fr: "Je m'appelle…",                        es: "Me llamo…",                                    hint: "Presentación" },
-      { fr: "J'habite à…",                          es: "Vivo en…",                                     hint: "Lugar de residencia" },
-      { fr: "Je voudrais…",                         es: "Quisiera…",                                    hint: "Petición educada" },
-      { fr: "Combien ça coûte ?",                   es: "¿Cuánto cuesta?",                              hint: "Compra básica" },
-      { fr: "Où est… ?",                            es: "¿Dónde está…?",                                hint: "Direcciones" },
-      { fr: "Je ne comprends pas",                  es: "No entiendo",                                  hint: "Pedir apoyo" },
-      { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?",                hint: "Pedir repetición" }
+      { fr: "Bonjour", es: "Buenos días / Hola", hint: "Saludo básico durante el día" },
+      { fr: "Bonsoir", es: "Buenas noches / Buenas tardes (tarde-noche)", hint: "Saludo al final del día, desde el atardecer" },
+      { fr: "Au revoir", es: "Adiós / Hasta luego", hint: "Despedida" },
+      { fr: "Je m'appelle…", es: "Me llamo…", hint: "Presentación" },
+      { fr: "J'habite à…", es: "Vivo en…", hint: "Lugar de residencia" },
+      { fr: "Je voudrais…", es: "Quisiera…", hint: "Petición educada" },
+      { fr: "Combien ça coûte ?", es: "¿Cuánto cuesta?", hint: "Compra básica" },
+      { fr: "Où est… ?", es: "¿Dónde está…?", hint: "Direcciones" },
+      { fr: "Je ne comprends pas", es: "No entiendo", hint: "Pedir apoyo" },
+      { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?", hint: "Pedir repetición" }
     ];
 
-    let flashIndex   = Number.isInteger(state.flashIndex) ? state.flashIndex : 0;
+    let flashIndex = Number.isInteger(state.flashIndex) ? state.flashIndex : 0;
     let flashFlipped = false;
-
-    // [v0.3] Web Speech API: apoyo experimental de pronunciación, no obligatorio para usar el recurso.
     const speechAvailable = "speechSynthesis" in window;
 
     function renderFlashcard() {
-      const item    = flashcards[flashIndex];
-      const main    = document.getElementById("flashMain");
-      const counter = document.getElementById("flashCounter");
+      const item = flashcards[flashIndex];
+      const main = document.getElementById("flashMain");
 
       document.getElementById("flashLabel").textContent = flashFlipped ? "Español" : "Francés";
-
-      // MEJORA: contador de tarjeta para orientar al alumno
-      counter.textContent = `${flashIndex + 1} / ${flashcards.length}`;
+      document.getElementById("flashCounter").textContent = `${flashIndex + 1} / ${flashcards.length}`;
 
       main.textContent = flashFlipped ? item.es : item.fr;
-      main.lang        = flashFlipped ? "es"    : "fr";
+      main.lang = flashFlipped ? "es" : "fr";
 
-      document.getElementById("flashSub").textContent = flashFlipped
-        ? item.hint
-        : "Pulsa para ver la traducción";
+      document.getElementById("flashSub").textContent = flashFlipped ? item.hint : "Pulsa para ver la traducción";
 
-      // [v0.3] El botón de escucha solo aparece en la cara francesa y si el navegador soporta la API.
       const speakBtn = document.getElementById("flashSpeakBtn");
       const unavailable = document.getElementById("flashSpeakUnavailable");
       if (speakBtn) speakBtn.hidden = flashFlipped || !speechAvailable;
       if (unavailable) unavailable.hidden = speechAvailable;
 
-      if (flashFlipped) {
-        document.getElementById("flashSpeakStatus").textContent = "";
-      }
+      if (flashFlipped) document.getElementById("flashSpeakStatus").textContent = "";
 
       renderPhraseBank();
     }
@@ -1309,11 +1214,10 @@
       const bank = document.getElementById("phraseBank");
       bank.innerHTML = "";
       flashcards.forEach((item, i) => {
-        // [v0.4] El banco deja de ser una lista pasiva y permite saltar directamente a cada tarjeta.
         const btn = document.createElement("button");
-        btn.className   = "phrase phrase-btn";
-        btn.type        = "button";
-        btn.lang        = "fr";
+        btn.className = "phrase phrase-btn";
+        btn.type = "button";
+        btn.lang = "fr";
         btn.textContent = item.fr;
         btn.setAttribute("aria-label", `Ver tarjeta: ${item.fr}`);
         btn.setAttribute("aria-current", i === flashIndex ? "true" : "false");
@@ -1342,21 +1246,21 @@
     });
 
     document.getElementById("nextFlashBtn").addEventListener("click", () => {
-      flashIndex   = (flashIndex + 1) % flashcards.length;
+      flashIndex = (flashIndex + 1) % flashcards.length;
       flashFlipped = false;
       persistFlashcardUse();
       renderFlashcard();
     });
 
     document.getElementById("prevFlashBtn").addEventListener("click", () => {
-      flashIndex   = (flashIndex - 1 + flashcards.length) % flashcards.length;
+      flashIndex = (flashIndex - 1 + flashcards.length) % flashcards.length;
       flashFlipped = false;
       persistFlashcardUse();
       renderFlashcard();
     });
 
     document.getElementById("shuffleFlashBtn").addEventListener("click", () => {
-      flashIndex   = Math.floor(Math.random() * flashcards.length);
+      flashIndex = Math.floor(Math.random() * flashcards.length);
       flashFlipped = false;
       persistFlashcardUse();
       renderFlashcard();
@@ -1364,15 +1268,14 @@
 
     function speakFrench(text) {
       if (!speechAvailable) return;
-
       window.speechSynthesis.cancel();
 
       const status = document.getElementById("flashSpeakStatus");
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang  = "fr-FR";
-      utterance.rate  = 0.85;
+      utterance.lang = "fr-FR";
+      utterance.rate = 0.85;
 
-      const voices  = window.speechSynthesis.getVoices();
+      const voices = window.speechSynthesis.getVoices();
       const frVoice = voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
       if (frVoice) {
         utterance.voice = frVoice;
@@ -1406,44 +1309,34 @@
       }
     }
 
-    const flashSpeakBtn = document.getElementById("flashSpeakBtn");
-    if (flashSpeakBtn) {
-      flashSpeakBtn.addEventListener("click", (ev) => {
-        ev.stopPropagation();
-        markStarted("flashcards");
-        getVoicesAndSpeak(flashcards[flashIndex].fr);
-      });
-    }
+    document.getElementById("flashSpeakBtn").addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      markStarted("flashcards");
+      getVoicesAndSpeak(flashcards[flashIndex].fr);
+    });
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // BLOQUE 3 · EMPAREJAR
-    // ─────────────────────────────────────────────────────────────────────────
     const matchPairs = [
-      { id: "name",   fr: "Je m'appelle…",          es: "Decir mi nombre" },
-      { id: "live",   fr: "J'habite à…",            es: "Decir dónde vivo" },
-      { id: "price",  fr: "Combien ça coûte ?",     es: "Preguntar precio" },
-      { id: "repeat", fr: "Pouvez-vous répéter, s'il vous plaît ?",  es: "Pedir que repitan" },
-      { id: "help",   fr: "Excusez-moi",            es: "Llamar la atención con educación" },
-      { id: "want",   fr: "Je voudrais…",           es: "Pedir algo de forma cortés" }
+      { id: "name", fr: "Je m'appelle…", es: "Decir mi nombre" },
+      { id: "live", fr: "J'habite à…", es: "Decir dónde vivo" },
+      { id: "price", fr: "Combien ça coûte ?", es: "Preguntar precio" },
+      { id: "repeat", fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "Pedir que repitan" },
+      { id: "help", fr: "Excusez-moi", es: "Llamar la atención con educación" },
+      { id: "want", fr: "Je voudrais…", es: "Pedir algo de forma cortés" }
     ];
 
-    let selectedLeft  = null;
+    let selectedLeft = null;
     let selectedRight = null;
-    let matchedIds    = new Set(state.matchDone || []);
+    let matchedIds = new Set(state.matchDone || []);
 
     function shuffle(array) {
       return [...array].sort(() => Math.random() - 0.5);
     }
 
-    // [v0.3] Reconstruye o crea el orden de la columna derecha y lo persiste.
     function initializeMatchOrder() {
       if (Array.isArray(state.matchOrder) && state.matchOrder.length > 0) {
         const byId = new Map(matchPairs.map((pair) => [pair.id, pair]));
         const ordered = state.matchOrder.map((id) => byId.get(id)).filter(Boolean);
-
-        if (ordered.length === matchPairs.length) {
-          return ordered;
-        }
+        if (ordered.length === matchPairs.length) return ordered;
       }
 
       const shuffled = shuffle(matchPairs);
@@ -1455,19 +1348,22 @@
     let rightOrder = initializeMatchOrder();
 
     function renderMatch() {
-      const left  = document.getElementById("leftMatch");
+      const left = document.getElementById("leftMatch");
       const right = document.getElementById("rightMatch");
-      left.innerHTML  = "";
+      const count = document.getElementById("matchCount");
+
+      left.innerHTML = "";
       right.innerHTML = "";
+      count.textContent = `${matchedIds.size} / ${matchPairs.length} parejas`;
 
       matchPairs.forEach((pair) => {
         const btn = document.createElement("button");
-        btn.className   = "match-btn";
+        btn.className = "match-btn";
         btn.textContent = pair.fr;
-        btn.lang        = "fr";
-        btn.type        = "button";
-        btn.dataset.id  = pair.id;
-        if (matchedIds.has(pair.id))  btn.classList.add("done");
+        btn.lang = "fr";
+        btn.type = "button";
+        btn.dataset.id = pair.id;
+        if (matchedIds.has(pair.id)) btn.classList.add("done");
         if (selectedLeft === pair.id) btn.classList.add("selected");
         btn.disabled = matchedIds.has(pair.id);
         btn.addEventListener("click", () => {
@@ -1480,11 +1376,11 @@
 
       rightOrder.forEach((pair) => {
         const btn = document.createElement("button");
-        btn.className   = "match-btn";
+        btn.className = "match-btn";
         btn.textContent = pair.es;
-        btn.type        = "button";
-        btn.dataset.id  = pair.id;
-        if (matchedIds.has(pair.id))   btn.classList.add("done");
+        btn.type = "button";
+        btn.dataset.id = pair.id;
+        if (matchedIds.has(pair.id)) btn.classList.add("done");
         if (selectedRight === pair.id) btn.classList.add("selected");
         btn.disabled = matchedIds.has(pair.id);
         btn.addEventListener("click", () => {
@@ -1507,24 +1403,27 @@
         feedback.textContent = "Ahora selecciona la pareja correspondiente.";
         return;
       }
+
       markStarted("emparejar");
+
       if (selectedLeft === selectedRight) {
         matchedIds.add(selectedLeft);
         feedback.textContent = "Correcto. Esa frase encaja con esa intención.";
       } else {
         feedback.textContent = "No encaja. Prueba otra combinación y piensa en la situación de uso.";
       }
-      selectedLeft  = null;
+
+      selectedLeft = null;
       selectedRight = null;
       state.matchDone = [...matchedIds];
       saveState();
     }
 
     document.getElementById("resetMatchBtn").addEventListener("click", () => {
-      matchedIds    = new Set();
-      selectedLeft  = null;
+      matchedIds = new Set();
+      selectedLeft = null;
       selectedRight = null;
-      rightOrder    = shuffle(matchPairs);
+      rightOrder = shuffle(matchPairs);
       state.matchDone = [];
       state.matchOrder = rightOrder.map((pair) => pair.id);
       saveState();
@@ -1532,80 +1431,52 @@
       renderMatch();
     });
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // BLOQUE 4 · SITUACIONES COMUNICATIVAS
-    // ─────────────────────────────────────────────────────────────────────────
     const scenarios = [
-      {
-        s:       "Llegas a clase y saludas al grupo por la mañana.",
-        options: ["Au revoir", "Combien ça coûte ?", "Bonjour", "Je ne comprends pas"],
-        answer:  2,
-        exp:     "«Bonjour» es el saludo básico durante el día."
-      },
-      {
-        s:       "No has entendido la explicación y quieres pedir que repitan.",
-        options: ["J'habite à Gáldar", "Pouvez-vous répéter, s'il vous plaît ?", "Je voudrais un café", "Ça coûte deux euros"],
-        answer:  1,
-        exp:     "Pedir repetición con cortesía ayuda mucho en A1."
-      },
-      {
-        s:       "Estás comprando y quieres saber el precio.",
-        options: ["Comment ça va ?", "Où est la gare ?", "Je m'appelle Ana", "Combien ça coûte ?"],
-        answer:  3,
-        exp:     "«Combien ça coûte ?» es la pregunta básica para precio."
-      },
-      {
-        s:       "Te preguntan tu nombre.",
-        options: ["Je m'appelle Carlos", "J'habite à Paris", "Je ne comprends pas", "Bonsoir"],
-        answer:  0,
-        exp:     "«Je m'appelle…» sirve para decir el nombre."
-      },
-      {
-        s:       "Quieres preguntar dónde está la estación.",
-        options: ["Je voudrais la gare", "La gare coûte combien ?", "Où est la gare ?", "Je suis gare"],
-        answer:  2,
-        exp:     "«Où est… ?» pregunta por ubicación. «La gare» es la estación."
-      }
+      { s: "Llegas a clase y saludas al grupo por la mañana.", options: ["Au revoir", "Combien ça coûte ?", "Bonjour", "Je ne comprends pas"], answer: 2, exp: "«Bonjour» es el saludo básico durante el día." },
+      { s: "No has entendido la explicación y quieres pedir que repitan.", options: ["J'habite à Gáldar", "Pouvez-vous répéter, s'il vous plaît ?", "Je voudrais un café", "Ça coûte deux euros"], answer: 1, exp: "Pedir repetición con cortesía ayuda mucho en A1." },
+      { s: "Estás comprando y quieres saber el precio.", options: ["Comment ça va ?", "Où est la gare ?", "Je m'appelle Ana", "Combien ça coûte ?"], answer: 3, exp: "«Combien ça coûte ?» es la pregunta básica para precio." },
+      { s: "Te preguntan tu nombre.", options: ["Je m'appelle Carlos", "J'habite à Paris", "Je ne comprends pas", "Bonsoir"], answer: 0, exp: "«Je m'appelle…» sirve para decir el nombre." },
+      { s: "Quieres preguntar dónde está la estación.", options: ["Je voudrais la gare", "La gare coûte combien ?", "Où est la gare ?", "Je suis gare"], answer: 2, exp: "«Où est… ?» pregunta por ubicación. «La gare» es la estación." }
     ];
 
-    // [v0.3] Las situaciones leen y escriben directamente en state.scenario.
     function renderScenario() {
-      const counter  = document.getElementById("scenarioCounter");
-      const text     = document.getElementById("scenarioText");
-      const options  = document.getElementById("scenarioOptions");
+      const counter = document.getElementById("scenarioCounter");
+      const text = document.getElementById("scenarioText");
+      const options = document.getElementById("scenarioOptions");
       const feedback = document.getElementById("scenarioFeedback");
-      const nextBtn  = document.getElementById("nextScenarioBtn");
+      const nextBtn = document.getElementById("nextScenarioBtn");
+
       options.innerHTML = "";
-      nextBtn.disabled  = state.scenario.index >= scenarios.length;
+      nextBtn.disabled = state.scenario.index >= scenarios.length;
 
       if (state.scenario.index >= scenarios.length) {
         counter.textContent = "Situaciones completadas";
-        text.textContent    = `Resultado orientativo: ${state.scenario.score} de ${scenarios.length}`;
-        feedback.textContent = state.scenario.score >= 4
-          ? "Buen desempeño orientativo. Puedes pasar al reto final."
-          : "Conviene repasar flashcards y volver a estas situaciones.";
+        text.textContent = `Resultado orientativo: ${state.scenario.score} de ${scenarios.length}`;
+        feedback.textContent = state.scenario.score >= 4 ? "Buen desempeño orientativo. Puedes pasar al reto final." : "Conviene repasar flashcards y volver a estas situaciones.";
         nextBtn.textContent = "Finalizado";
         return;
       }
 
       const item = scenarios[state.scenario.index];
-      counter.textContent  = `Situación ${state.scenario.index + 1} de ${scenarios.length}`;
-      text.textContent     = item.s;
+      counter.textContent = `Situación ${state.scenario.index + 1} de ${scenarios.length}`;
+      text.textContent = item.s;
       feedback.textContent = state.scenario.answered ? item.exp : "Elige una respuesta.";
-      nextBtn.textContent  = "Siguiente situación";
-      nextBtn.disabled     = false;
+      nextBtn.textContent = "Siguiente situación";
+      nextBtn.disabled = false;
 
       item.options.forEach((opt, i) => {
         const btn = document.createElement("button");
-        btn.className   = "option";
-        btn.type        = "button";
-        btn.lang        = "fr";
+        btn.className = "option";
+        btn.type = "button";
+        btn.lang = "fr";
         btn.textContent = opt;
+
         if (state.scenario.answered) {
           btn.disabled = true;
-          if (i === item.answer)   btn.classList.add("correct");
+          if (i === item.answer) btn.classList.add("correct");
           if (i === state.scenario.selected && state.scenario.selected !== item.answer) btn.classList.add("wrong");
         }
+
         btn.addEventListener("click", () => answerScenario(i));
         options.appendChild(btn);
       });
@@ -1628,22 +1499,19 @@
         document.getElementById("scenarioFeedback").textContent = "Primero elige una respuesta.";
         return;
       }
-      state.scenario.index    += 1;
-      state.scenario.answered  = false;
-      state.scenario.selected  = null;
+      state.scenario.index += 1;
+      state.scenario.answered = false;
+      state.scenario.selected = null;
       saveState();
       renderScenario();
     });
 
     document.getElementById("resetScenarioBtn").addEventListener("click", () => {
-      state.scenario = structuredClone(defaultState.scenario);
+      state.scenario = clone(defaultState.scenario);
       saveState();
       renderScenario();
     });
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // BLOQUE 5 · RETO FINAL
-    // ─────────────────────────────────────────────────────────────────────────
     const finalPrompts = [
       "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
       "Estás en clase. Preséntate, di dónde vives y pide que repitan una frase.",
@@ -1656,6 +1524,8 @@
       markStarted("reto");
       const prompt = finalPrompts[Math.floor(Math.random() * finalPrompts.length)];
       document.getElementById("randomPrompt").textContent = prompt;
+      state.reto.prompt = prompt;
+      saveState();
     });
 
     const draft = document.getElementById("studentDraft");
@@ -1675,7 +1545,6 @@
       });
     });
 
-    // [v0.4] Revisión local orientativa: no usa IA, no usa API y no envía texto fuera del navegador.
     function normalizeDraftText(text) {
       return text
         .toLowerCase()
@@ -1691,6 +1560,8 @@
 
       if (!text.trim()) {
         feedback.textContent = "Escribe primero una respuesta breve. Puedes apoyarte en el ejemplo y en las frases de apoyo.";
+        state.reto.feedback = feedback.textContent;
+        saveState();
         return;
       }
 
@@ -1703,15 +1574,17 @@
       ];
 
       const included = checks.filter((item) => item.ok).map((item) => item.label);
-      const missing  = checks.filter((item) => !item.ok).map((item) => item.label);
+      const missing = checks.filter((item) => !item.ok).map((item) => item.label);
 
       if (missing.length === 0) {
         feedback.textContent = "Orientación local: tu respuesta incluye los elementos básicos esperados. Practícala ahora en voz alta y pide revisión docente si hace falta.";
-        return;
+      } else {
+        const includedText = included.length ? `Has incluido ${included.join(", ")}. ` : "Todavía no detecto los elementos básicos. ";
+        feedback.textContent = `${includedText}Podrías añadir: ${missing.join(", ")}. Esta revisión es orientativa y no sustituye la corrección docente.`;
       }
 
-      const includedText = included.length ? `Has incluido ${included.join(", ")}. ` : "Todavía no detecto los elementos básicos. ";
-      feedback.textContent = `${includedText}Podrías añadir: ${missing.join(", ")}. Esta revisión es orientativa y no sustituye la corrección docente.`;
+      state.reto.feedback = feedback.textContent;
+      saveState();
     }
 
     document.getElementById("reviewDraftBtn").addEventListener("click", reviewDraftLocally);
@@ -1721,15 +1594,16 @@
         await navigator.clipboard.writeText(draft.value || "");
         document.getElementById("draftStatus").textContent = "Texto copiado al portapapeles.";
       } catch {
-        document.getElementById("draftStatus").textContent =
-          "No se pudo copiar automáticamente. Puedes seleccionar el texto manualmente.";
+        document.getElementById("draftStatus").textContent = "No se pudo copiar automáticamente. Puedes seleccionar el texto manualmente.";
       }
     });
 
     document.getElementById("clearDraftBtn").addEventListener("click", () => {
-      // [v0.4] Limpiar borra texto, checklist y feedback local para evitar estados mezclados.
       draft.value = "";
       state.reto.draft = "";
+      state.reto.feedback = "";
+      state.reto.prompt = "";
+      document.getElementById("randomPrompt").textContent = 'Pulsa "Generar reto aleatorio" para recibir una situación concreta.';
       document.querySelectorAll(".retoCheck").forEach((box, index) => {
         box.checked = false;
         state.reto[`check${index}`] = false;
@@ -1739,24 +1613,280 @@
       document.getElementById("draftStatus").textContent = "Texto y checklist borrados de este navegador.";
     });
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // REINICIO GLOBAL
-    // ─────────────────────────────────────────────────────────────────────────
+    function escapeHtml(value) {
+      return String(value || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function getReportData() {
+      const startedCount = Object.values(state.started).filter(Boolean).length;
+      const startedTotal = Object.keys(state.started).length;
+      const quizFinished = state.quiz.index >= quizQuestions.length;
+      const scenarioFinished = state.scenario.index >= scenarios.length;
+      const checks = [0, 1, 2, 3].map((i) => Boolean(state.reto[`check${i}`]));
+      const checkedCount = checks.filter(Boolean).length;
+
+      return {
+        date: new Date().toLocaleString("es-ES"),
+        version: "0.5",
+        progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
+        quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
+        quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
+        flashcard: `${flashIndex + 1} / ${flashcards.length}: ${flashcards[flashIndex]?.fr || "No iniciado"}`,
+        match: `${matchedIds.size} de ${matchPairs.length} parejas completadas`,
+        scenarios: scenarioFinished ? `${state.scenario.score} de ${scenarios.length}` : `En curso: situación ${Math.min(state.scenario.index + 1, scenarios.length)} de ${scenarios.length}. Puntuación parcial: ${state.scenario.score}.`,
+        prompt: state.reto.prompt || document.getElementById("randomPrompt").textContent || "Sin reto aleatorio generado.",
+        draft: state.reto.draft || draft.value || "",
+        checks,
+        checkedCount,
+        feedback: state.reto.feedback || document.getElementById("draftFeedback").textContent || "Sin revisión local realizada."
+      };
+    }
+
+    function buildStudentReportHtml() {
+      const r = getReportData();
+      const checkLabels = [
+        "Incluí un saludo.",
+        "Dije mi nombre con “Je m'appelle…”.",
+        "Añadí una frase sencilla sobre mí.",
+        "Usé una petición útil y educada."
+      ];
+
+      const checkRows = checkLabels.map((label, index) => {
+        const mark = r.checks[index] ? "Sí" : "Pendiente";
+        return `<tr><td>${escapeHtml(label)}</td><td>${mark}</td></tr>`;
+      }).join("");
+
+      return `<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Informe de práctica · Repaso Final Francés A1</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #5f6b76;
+      --line: #d9d1c5;
+      --brand: #164f4b;
+      --soft: #e8f3f1;
+      --gold: #c9a227;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #f6f3ee;
+      line-height: 1.5;
+    }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.96);
+    }
+    .toolbar p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.7rem 0.9rem;
+      min-height: 42px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--brand);
+      color: white;
+    }
+    .secondary {
+      background: white;
+      color: var(--brand);
+      border: 1px solid var(--line);
+    }
+    main {
+      width: min(820px, calc(100% - 2rem));
+      margin: 1rem auto;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.4rem;
+    }
+    h1, h2, h3 { line-height: 1.15; color: #173b38; }
+    h1 { margin-top: 0; font-size: 1.8rem; }
+    h2 { margin-top: 1.4rem; font-size: 1.25rem; border-bottom: 1px solid var(--line); padding-bottom: 0.35rem; }
+    .notice {
+      border-left: 4px solid var(--gold);
+      background: rgba(201, 162, 39, 0.1);
+      border-radius: 12px;
+      padding: 0.75rem 0.9rem;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.8rem;
+      background: #fffdf9;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+    td, th { border: 1px solid var(--line); padding: 0.5rem; text-align: left; vertical-align: top; }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.8rem;
+      background: var(--soft);
+      font-family: inherit;
+    }
+    .muted { color: var(--muted); }
+    @page { size: A4; margin: 16mm; }
+    @media print {
+      body { background: white; }
+      .toolbar { display: none !important; }
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+      }
+      h2 { break-after: avoid; }
+      .box, table, pre, .notice { break-inside: avoid; }
+    }
+    @media (max-width: 700px) {
+      .meta { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <p><strong>Informe preparado.</strong> Para PDF: elige “Guardar como PDF” o “Microsoft Print to PDF”.</p>
+    <div>
+      <button onclick="window.print()">Guardar / imprimir PDF</button>
+      <button class="secondary" onclick="window.close()">Cerrar</button>
+    </div>
+  </div>
+
+  <main>
+    <h1>Informe de práctica · Repaso Final Francés A1</h1>
+    <p class="muted">Recurso pedagógico digital complementario · Portfolio docente FPE</p>
+
+    <div class="notice">
+      <strong>Nota institucional:</strong> este informe es orientativo, local y no oficial. No sustituye la evaluación de la docente titular ni del centro. No se ha enviado información a ningún servidor.
+    </div>
+
+    <h2>1. Datos del recurso</h2>
+    <div class="meta">
+      <div class="box"><strong>Autor:</strong><br>Joel Concepción Villanueva</div>
+      <div class="box"><strong>Fecha de generación:</strong><br>${escapeHtml(r.date)}</div>
+      <div class="box"><strong>Versión:</strong><br>${escapeHtml(r.version)}</div>
+      <div class="box"><strong>Progreso local:</strong><br>${escapeHtml(r.progress)}</div>
+    </div>
+
+    <h2>2. Resultados orientativos</h2>
+    <table>
+      <tr><th>Bloque</th><th>Estado / resultado</th></tr>
+      <tr><td>Autodiagnóstico A1</td><td>${escapeHtml(r.quiz)}<br><span class="muted">${escapeHtml(r.quizAdvice)}</span></td></tr>
+      <tr><td>Flashcards</td><td>${escapeHtml(r.flashcard)}</td></tr>
+      <tr><td>Emparejar frase e intención</td><td>${escapeHtml(r.match)}</td></tr>
+      <tr><td>Mini-situaciones</td><td>${escapeHtml(r.scenarios)}</td></tr>
+      <tr><td>Reto final</td><td>${escapeHtml(r.checkedCount)} de 4 elementos marcados en checklist.</td></tr>
+    </table>
+
+    <h2>3. Reto final</h2>
+    <p><strong>Situación o consigna:</strong></p>
+    <p>${escapeHtml(r.prompt)}</p>
+
+    <p><strong>Texto de práctica escrito por el alumno/a:</strong></p>
+    <pre lang="fr">${escapeHtml(r.draft || "Sin texto escrito.")}</pre>
+
+    <h2>4. Checklist del reto</h2>
+    <table>
+      <tr><th>Elemento</th><th>Estado</th></tr>
+      ${checkRows}
+    </table>
+
+    <h2>5. Orientación local</h2>
+    <p>${escapeHtml(r.feedback)}</p>
+
+    <h2>6. Privacidad y límites</h2>
+    <p>Este informe se ha generado en el navegador. El recurso no solicita nombres, correos, teléfonos, DNI ni otros datos personales; no tiene login, no usa backend y no incorpora analítica.</p>
+    <p class="muted">Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
+  </main>
+</body>
+</html>`;
+    }
+
+    function openStudentReport() {
+      const reportHtml = buildStudentReportHtml();
+      const reportWindow = window.open("", "_blank", "noopener,noreferrer,width=900,height=900");
+
+      if (!reportWindow) {
+        document.getElementById("reportStatus").textContent = "El navegador bloqueó la ventana emergente. Se descargará el informe en formato HTML como alternativa.";
+        downloadStudentReportHtml();
+        return;
+      }
+
+      reportWindow.document.open();
+      reportWindow.document.write(reportHtml);
+      reportWindow.document.close();
+      document.getElementById("reportStatus").textContent = "Informe abierto. En la ventana del informe, pulsa “Guardar / imprimir PDF”.";
+    }
+
+    function downloadStudentReportHtml() {
+      const reportHtml = buildStudentReportHtml();
+      const date = new Date().toISOString().slice(0, 10);
+      const blob = new Blob([reportHtml], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `informe-practica-frances-a1-${date}.html`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      document.getElementById("reportStatus").textContent = "Informe HTML descargado. Puedes abrirlo y guardarlo como PDF desde el navegador.";
+    }
+
+    document.getElementById("reportBtn").addEventListener("click", openStudentReport);
+    document.getElementById("reportBtn2").addEventListener("click", openStudentReport);
+    document.getElementById("downloadHtmlReportBtn").addEventListener("click", downloadStudentReportHtml);
+
     document.getElementById("resetAllBtn").addEventListener("click", () => {
+      const ok = confirm("¿Borrar todo el progreso local de este navegador?");
+      if (!ok) return;
       localStorage.removeItem(STORAGE_KEY);
       location.reload();
     });
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // INICIALIZACIÓN
-    // Renderiza todos los bloques sin marcar progreso de uso.
-    // ─────────────────────────────────────────────────────────────────────────
     updateGlobalProgress();
     renderQuiz();
     renderFlashcard();
     renderMatch();
     renderScenario();
     updateNavScrollHint();
+
+    if (state.reto.prompt) {
+      document.getElementById("randomPrompt").textContent = state.reto.prompt;
+    }
+    if (state.reto.feedback) {
+      document.getElementById("draftFeedback").textContent = state.reto.feedback;
+    }
   </script>
 </body>
 </html>
