@@ -7,6 +7,8 @@
 **Tipo de documento:** preparación de plantilla multidioma  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
+**Nota de estado:** esta guía documenta la fase v1.3. El estado actual del recurso es v1.4, que conserva esta estructura y añade una experiencia instalable ligera.
+
 ## 1. Finalidad
 
 La versión **1.3** prepara el proyecto para funcionar como molde reutilizable para otros idiomas iniciales, sin cambiar la lógica principal de la aplicación ni añadir dependencias externas.

@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.3  
+**Versión de referencia:** 1.4  
 **Tipo de documento:** preparación de audios locales propios  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -61,7 +61,9 @@ Recomendaciones:
 
 El soporte está preparado en `index.html`, pero queda desactivado mientras no existan audios reales.
 
-La versión 1.3 mantiene la UX móvil refinada y no cambia este criterio: los audios locales serían archivos estáticos del autor, no grabaciones del alumnado. La estructura `assets/lang/` permite documentar nombres de audio previstos para futuras variantes de idioma.
+La versión 1.4 mantiene la UX móvil refinada y no cambia este criterio: los audios locales serían archivos estáticos del autor, no grabaciones del alumnado. La estructura `assets/lang/` permite documentar nombres de audio previstos para futuras variantes de idioma.
+
+Si el recurso se instala como PWA, los audios solo deberían reproducirse como archivos locales estáticos incluidos en el repositorio. No se añade grabación ni subida de archivos.
 
 Cuando se incorporen todos los audios, se puede activar cambiando:
 

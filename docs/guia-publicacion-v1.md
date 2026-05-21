@@ -4,7 +4,7 @@
 
 **Autor:** Joel Concepción Villanueva  
 **Versión histórica de referencia:** 1.0  
-**Estado actual del recurso:** 1.3  
+**Estado actual del recurso:** 1.4  
 **Tipo de documento:** checklist de publicación estable  
 **Carácter:** recurso complementario, gratuito, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -12,7 +12,7 @@
 
 Esta guía se conserva como documento histórico de cierre de la versión 1.0 y como checklist de publicación estable en GitHub Pages, portfolio docente o contexto de demostración.
 
-La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v1.3**, con UX móvil refinada y estructura de plantilla multidioma.
+La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v1.4**, con UX móvil refinada, estructura de plantilla multidioma y experiencia instalable ligera.
 
 ## 2. Comprobaciones antes de publicar
 
@@ -30,6 +30,9 @@ Antes de publicar o actualizar la versión visible, revisar:
 - el reto final recomienda usar nombre de pila o ficticio;
 - el informe local se genera sin enviar datos;
 - la estructura `assets/lang/` contiene inventario y plantilla de contenidos;
+- `manifest.webmanifest` es válido;
+- `sw.js` no registra servicios externos ni analítica;
+- los iconos de `assets/icons/` existen;
 - la documentación principal está en `/docs/`;
 - la licencia está definida en `LICENSE.md`.
 
@@ -68,5 +71,5 @@ Estado de ciclos tras v1.0:
 - v1.1: UX móvil guiada inicial;
 - v1.2.4: UX móvil refinada cerrada;
 - v1.3: plantilla multidioma preparada;
-- v1.4: PWA o experiencia instalable;
+- v1.4: PWA o experiencia instalable preparada;
 - v2.0: producto demostrativo completo adaptable a distintos idiomas.

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Repaso Francés A1</title>
+  <desc id="desc">Icono local del recurso Repaso Final Francés A1.</desc>
+  <rect width="512" height="512" rx="112" fill="#164f4b"/>
+  <path d="M96 120c0-17.7 14.3-32 32-32h256c17.7 0 32 14.3 32 32v272c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V120Z" fill="#fffdf9"/>
+  <path d="M128 120h256v56H128v-56Z" fill="#e8f3f1"/>
+  <path d="M155 233h202" stroke="#164f4b" stroke-width="22" stroke-linecap="round"/>
+  <path d="M155 292h153" stroke="#0f766e" stroke-width="22" stroke-linecap="round"/>
+  <path d="M155 351h103" stroke="#c9a227" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="352" cy="334" r="44" fill="#164f4b"/>
+  <text x="352" y="350" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700" fill="#fffdf9">A1</text>
+  <text x="256" y="162" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#164f4b">FR</text>
+</svg>

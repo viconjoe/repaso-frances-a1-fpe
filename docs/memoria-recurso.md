@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 1.3  
+**Versión:** 1.4  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -259,6 +259,21 @@ Plantilla multidioma:
 
 En esta fase no se carga JSON dinámico desde la app para no romper la apertura directa del archivo en navegador. La separación queda preparada de forma documental y estructural.
 
+### v1.4
+
+Experiencia instalable ligera:
+
+- creación de `manifest.webmanifest`;
+- creación de `sw.js`;
+- creación de `assets/icons/icon.svg`;
+- creación de `assets/icons/icon-192.png`;
+- creación de `assets/icons/icon-512.png`;
+- incorporación de metadatos PWA en `index.html`;
+- registro prudente del service worker solo en entornos `http` o `https`;
+- caché básica offline de archivos esenciales.
+
+La PWA no añade seguimiento, cuentas, backend, analítica, formularios externos ni IA/API. Su finalidad es facilitar el acceso desde pantalla de inicio y mejorar la disponibilidad tras la primera carga.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -295,7 +310,6 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 
 Las siguientes mejoras quedan para versiones posteriores:
 
-- v1.4: PWA o experiencia instalable;
 - v2.0: producto demostrativo completo;
 - vídeo demo;
 - memoria de pilotaje tras uso real, si procede y si se autoriza.
@@ -331,6 +345,6 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 ## 16. Conclusión
 
-**Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma y respeto por la privacidad.
+**Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera y respeto por la privacidad.
 
-La versión **1.3** se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **1.4** se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

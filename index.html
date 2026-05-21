@@ -5,12 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Recurso pedagógico digital complementario de repaso para alumnado adulto de Francés A1. Versión estática para portfolio docente FPE." />
   <meta name="author" content="Joel Concepción Villanueva" />
+  <meta name="theme-color" content="#164f4b" />
+  <meta name="application-name" content="Repaso Francés A1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Francés A1" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
   <title>Repaso Final Francés A1 · Kit interactivo</title>
 
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 1.3
+    Versión: 1.4
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -83,6 +91,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v1.3] Preparación de plantilla multidioma: estructura documental y datos lingüísticos reutilizables en assets/lang/.
     [v1.3] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v1.4:
+    ──────────────────────────────────────────────────────────────────────
+    [v1.4] Experiencia instalable PWA ligera: manifest, iconos locales, service worker y caché básica offline.
+    [v1.4] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
   -->
 
   <style>
@@ -1786,7 +1799,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.3 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.4 · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2673,7 +2686,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "1.3",
+        version: "1.4",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
@@ -2941,6 +2954,14 @@
     }
     if (state.reto.feedback) {
       document.getElementById("draftFeedback").textContent = state.reto.feedback;
+    }
+
+    if ("serviceWorker" in navigator && ["http:", "https:"].includes(window.location.protocol)) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {
+          // La app sigue funcionando aunque el navegador no permita instalar el service worker.
+        });
+      });
     }
   </script>
 </body>

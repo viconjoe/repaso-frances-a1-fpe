@@ -2,6 +2,8 @@
 
 Esta carpeta prepara la fase **v1.3 · Plantilla multidioma**.
 
+Estado actual del recurso: **v1.4**. La experiencia instalable ligera conserva esta estructura sin cargar datos externos ni añadir servicios.
+
 Los archivos de esta carpeta documentan cómo separar progresivamente los datos lingüísticos de la interfaz sin añadir backend, dependencias, login, analítica, formularios externos ni IA/API.
 
 ## Archivos
@@ -25,4 +27,3 @@ Al crear una variante para otro idioma:
 - conservar avisos de privacidad;
 - no presentar el recurso como oficial de ninguna entidad;
 - revisar que las actividades sigan siendo de nivel A1 o equivalente inicial.
-

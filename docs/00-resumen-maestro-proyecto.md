@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.3  
+**Versión de referencia:** 1.4  
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -42,7 +42,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **1.3** se mantiene como recurso web estático:
+La versión **1.4** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -54,13 +54,18 @@ La versión **1.3** se mantiene como recurso web estático:
 - sin APIs externas de corrección;
 - sin IA/API;
 - sin dependencias externas;
-- publicación compatible con GitHub Pages.
+- publicación compatible con GitHub Pages;
+- manifest web;
+- service worker con caché básica offline;
+- iconos locales para instalación.
 
 El recurso utiliza `localStorage` para conservar progreso únicamente en el navegador del usuario.
 
 El ciclo v1.2 consolidó una **UX móvil refinada**: portada compacta, descripción y nota institucional en desplegables, recorrido guiado, mapa de bloques, selector **Ir a...**, barra inferior persistente y cabecera móvil alineada en v1.2.4.
 
 La versión **1.3** prepara la fase de plantilla multidioma mediante `assets/lang/`, con un inventario del contenido actual de Francés A1 y una plantilla base para adaptar el molde a otros idiomas iniciales.
+
+La versión **1.4** añade una experiencia instalable ligera tipo PWA, manteniendo la ausencia de backend, login, analítica, formularios, IA/API y recogida de datos personales.
 
 ## 5. Privacidad y prudencia
 
@@ -92,6 +97,7 @@ La documentación principal del proyecto queda organizada en:
 - `docs/ficha-pedagogica.md`: descripción didáctica y orientaciones de uso;
 - `docs/guia-audios-locales.md`: preparación de audios estáticos del autor sin grabar alumnado;
 - `docs/guia-modo-presentacion.md`: uso del modo presentación para aula;
+- `docs/guia-pwa-instalacion-v1-4.md`: guía de instalación PWA ligera;
 - `docs/guia-plantilla-multidioma-v1-3.md`: guía para adaptar el molde a otros idiomas;
 - `docs/guia-publicacion-v1.md`: checklist histórico de publicación estable v1.0, con nota de estado actual v1.2.4;
 - `docs/guia-ux-movil-v1-2-4.md`: criterio y funcionamiento de la experiencia móvil refinada;
@@ -101,17 +107,16 @@ La documentación principal del proyecto queda organizada en:
 - `docs/memoria-recurso.md`: memoria breve de diseño, decisiones técnicas y evolución;
 - `docs/roadmap-producto-multidioma.md`: visión de evolución hacia app gratuita, empaquetable y reutilizable para otros idiomas.
 
-También se incluyen capturas de referencia en `assets/capturas/`, pictogramas SVG propios en `assets/pictogramas/`, estructura preparada para audios locales en `assets/audio/` y estructura de contenidos multidioma en `assets/lang/`.
+También se incluyen capturas de referencia en `assets/capturas/`, pictogramas SVG propios en `assets/pictogramas/`, iconos PWA en `assets/icons/`, estructura preparada para audios locales en `assets/audio/` y estructura de contenidos multidioma en `assets/lang/`.
 
 ## 7. Criterio de continuidad
 
-La versión 1.3 consolida el proyecto como recurso didáctico digital prudente, documentado y coherente para portfolio docente, con una primera estructura reutilizable para otros idiomas.
+La versión 1.4 consolida el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, con una primera estructura reutilizable para otros idiomas.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 
 Las siguientes fases deberían centrarse en:
 
-- v1.4: PWA o experiencia instalable;
 - v2.0: producto demostrativo completo.
 
 Debe mantenerse el principio de privacidad y evitar añadir backend, analítica, formularios, IA, APIs externas o recogida de datos personales.

@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 1.3  
+**Versión actual:** 1.4  
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
@@ -41,9 +41,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v1.3
+## Estado actual: v1.4
 
-La versión **1.3** conserva la UX móvil refinada de v1.2.4 y prepara el proyecto como plantilla multidioma.
+La versión **1.4** conserva la UX móvil refinada de v1.2.4, la estructura multidioma de v1.3 y añade una experiencia instalable ligera tipo PWA.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -56,7 +56,8 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - barra inferior de navegación para avanzar, retroceder o volver al recorrido guiado;
 - modo presentación independiente para uso en aula;
 - informe local de práctica, opcional y no oficial;
-- estructura `assets/lang/` para documentar contenidos lingüísticos reutilizables.
+- estructura `assets/lang/` para documentar contenidos lingüísticos reutilizables;
+- manifiesto web, iconos locales y service worker con caché básica offline.
 
 ## Estructura del recurso
 
@@ -125,6 +126,9 @@ El progreso se guarda únicamente en el navegador del usuario mediante `localSto
 - Pronunciación experimental con Web Speech API, si el navegador la soporta.
 - Generación de informe local mediante ventana HTML imprimible y descarga alternativa con `Blob`.
 - Carpeta `assets/lang/` con inventario de contenidos y plantilla de paquete lingüístico.
+- `manifest.webmanifest` para instalación como PWA ligera.
+- `sw.js` para caché offline básica en navegadores compatibles.
+- Iconos locales en `assets/icons/`.
 
 ## Estructura del repositorio
 
@@ -133,10 +137,16 @@ repaso-frances-a1-fpe/
 ├── index.html
 ├── LICENSE.md
 ├── README.md
+├── manifest.webmanifest
+├── sw.js
 ├── assets/
 │   ├── audio/
 │   │   ├── README.md
 │   │   └── audio-manifest.json
+│   ├── icons/
+│   │   ├── icon.svg
+│   │   ├── icon-192.png
+│   │   └── icon-512.png
 │   ├── lang/
 │   │   ├── README.md
 │   │   ├── fr-a1-content.json
@@ -158,6 +168,7 @@ repaso-frances-a1-fpe/
     ├── ficha-pedagogica.md
     ├── guia-audios-locales.md
     ├── guia-modo-presentacion.md
+    ├── guia-pwa-instalacion-v1-4.md
     ├── guia-plantilla-multidioma-v1-3.md
     ├── guia-publicacion-v1.md
     ├── guia-ux-movil-v1-2-4.md
@@ -176,6 +187,7 @@ La carpeta `assets/audio/` queda preparada para audios propios, pero no incluye 
 - [Ficha pedagógica](docs/ficha-pedagogica.md)
 - [Guía de audios locales propios](docs/guia-audios-locales.md)
 - [Guía de modo presentación](docs/guia-modo-presentacion.md)
+- [Guía PWA e instalación v1.4](docs/guia-pwa-instalacion-v1-4.md)
 - [Guía de plantilla multidioma v1.3](docs/guia-plantilla-multidioma-v1-3.md)
 - [Guía de publicación v1.0](docs/guia-publicacion-v1.md)
 - [Guía de UX móvil refinada v1.2.4](docs/guia-ux-movil-v1-2-4.md)
@@ -198,6 +210,15 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Algunas capturas pueden corresponder a versiones anteriores del recurso. Tras estabilizar v1.2.4, conviene renovar especialmente las capturas móviles para reflejar la cabecera simplificada, el selector **Ir a...** y la vista **Ver todos los bloques**.
 
 ## Evolución de versiones
+
+### v1.4
+
+- Experiencia instalable ligera tipo PWA.
+- Creación de `manifest.webmanifest`.
+- Creación de `sw.js` con caché offline básica.
+- Creación de iconos locales en `assets/icons/`.
+- Registro prudente de service worker solo en `http` o `https`.
+- Mantenimiento del enfoque sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin recogida de datos personales.
 
 ### v1.3
 
@@ -255,7 +276,6 @@ Algunas capturas pueden corresponder a versiones anteriores del recurso. Tras es
 
 Las siguientes mejoras se consideran posibles para versiones posteriores:
 
-- v1.4: PWA o experiencia instalable;
 - v2.0: producto demostrativo completo adaptable a distintos idiomas;
 - vídeo demo de 60-90 segundos;
 - memoria de pilotaje tras uso real en aula, si procede y si se autoriza.

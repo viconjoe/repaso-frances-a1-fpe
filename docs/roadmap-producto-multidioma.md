@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.3  
+**Versión de referencia:** 1.4  
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -55,6 +55,16 @@ La versión **1.3** abre la fase de plantilla multidioma:
 - mantiene `index.html` funcionando de forma local y estática.
 
 Esta etapa no añade nuevas actividades ni cambia la lógica principal. Prepara el recurso para futuras variantes de idioma sin introducir dependencias.
+
+La versión **1.4** añade una experiencia instalable ligera:
+
+- manifest web;
+- iconos locales;
+- service worker;
+- caché básica offline;
+- guía de instalación PWA.
+
+Esta instalación no cambia el carácter complementario del recurso ni añade seguimiento del alumnado.
 
 ## 4. Visión de app empaquetada
 
@@ -113,7 +123,7 @@ La evolución del producto debería mantener:
 - crear plantilla base para otros idiomas;
 - mantener la UX móvil v1.2.4 como referencia inicial.
 
-### v1.4 · Experiencia instalable
+### v1.4 · Experiencia instalable completada
 
 - estudiar PWA ligera;
 - iconos de instalación;
@@ -148,4 +158,4 @@ Una formulación prudente para portfolio o presentación sería:
 
 ## 10. Conclusión
 
-La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión **1.3**, con una experiencia móvil refinada y una primera estructura multidioma. El siguiente salto razonable es preparar una experiencia instalable ligera, capaz de explicar con claridad su valor pedagógico, sus límites institucionales y su potencial como producto educativo gratuito y replicable.
+La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión **1.4**, con experiencia móvil refinada, primera estructura multidioma y opción de instalación ligera. El siguiente salto razonable es preparar una demostración de producto más completa sin perder su sencillez, privacidad y carácter no oficial.
