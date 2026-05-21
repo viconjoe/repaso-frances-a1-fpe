@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Comprender</title>
+  <desc id="desc">Bocadillos de diálogo con una marca de comprensión.</desc>
+  <rect width="96" height="96" rx="18" fill="#e8f3f1"/>
+  <path d="M22 25h35a11 11 0 0 1 11 11v7a11 11 0 0 1-11 11H38L25 65v-11h-3a11 11 0 0 1-11-11v-7a11 11 0 0 1 11-11Z" fill="#fffdf9" stroke="#164f4b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M43 57h30a9 9 0 0 1 9 9v3a9 9 0 0 1-9 9H61l-10 8v-8h-8a9 9 0 0 1-9-9v-3a9 9 0 0 1 9-9Z" fill="#ffffff" stroke="#0f766e" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m29 40 8 8 19-21" fill="none" stroke="#c9a227" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
