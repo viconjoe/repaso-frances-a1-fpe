@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 0.9  
+**Versión de referencia:** 1.0  
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -82,7 +82,7 @@ La evolución del producto debería mantener:
 
 ## 6. Próximas etapas sugeridas
 
-### v1.0 · Consolidación publicable
+### v1.0 · Consolidación publicable completada
 
 - revisión final de textos;
 - limpieza de documentación;
@@ -133,4 +133,4 @@ Una formulación prudente para portfolio o presentación sería:
 
 ## 9. Conclusión
 
-La etapa actual deja el proyecto suficientemente consolidado como recurso de portfolio docente. El siguiente salto no debería ser añadir muchas actividades, sino preparar una **versión 1.0 limpia, estable y presentable**, capaz de explicar con claridad su valor pedagógico, sus límites institucionales y su potencial como producto educativo gratuito y replicable.
+La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión 1.0. El siguiente salto no debería ser añadir muchas actividades, sino preparar una plantilla multidioma y una experiencia instalable ligera, capaces de explicar con claridad su valor pedagógico, sus límites institucionales y su potencial como producto educativo gratuito y replicable.

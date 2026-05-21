@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 0.9  
+**Versión de referencia:** 1.0  
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -42,7 +42,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Alcance técnico
 
-La versión 0.9 se mantiene como recurso web estático:
+La versión 1.0 se mantiene como recurso web estático:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -82,10 +82,12 @@ Si se usa en equipos compartidos, se recomienda borrar el progreso local al fina
 La documentación principal del proyecto queda organizada en:
 
 - `README.md`: presentación general, acceso, estructura, privacidad y evolución de versiones;
+- `LICENSE.md`: licencia del código y de los contenidos didácticos;
 - `docs/00-resumen-maestro-proyecto.md`: síntesis maestra y posicionamiento del proyecto;
 - `docs/ficha-pedagogica.md`: descripción didáctica y orientaciones de uso;
 - `docs/guia-audios-locales.md`: preparación de audios estáticos del autor sin grabar alumnado;
 - `docs/guia-modo-presentacion.md`: uso del modo presentación para aula;
+- `docs/guia-publicacion-v1.md`: checklist de publicación estable;
 - `docs/guia-visual-pictogramas.md`: descripción del apoyo visual SVG local;
 - `docs/guia-uso-aula.md`: secuencia breve para uso guiado, autónomo o por parejas;
 - `docs/memoria-pilotaje-preparatoria.md`: marco prudente para un futuro pilotaje sin datos reales de alumnado;
@@ -96,7 +98,7 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 0.9 consolida el proyecto como recurso didáctico digital prudente, documentado y coherente para portfolio docente.
+La versión 1.0 consolida el proyecto como recurso didáctico digital prudente, documentado y coherente para portfolio docente.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 

@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 0.9  
+**Versión:** 1.0  
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma o guiada  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -203,6 +203,8 @@ La versión 0.7 añade capturas de referencia y una memoria preparatoria de pilo
 La versión 0.8 añade pictogramas SVG propios como apoyo visual local, especialmente en el bloque inicial, el itinerario de uso y el aviso de privacidad.
 
 La versión 0.9 añade modo presentación para aula y deja preparada la estructura de audios locales propios del autor. No se graba al alumnado.
+
+La versión 1.0 consolida el recurso como versión estable/presentable, con licencia definida y guía de publicación.
 
 ## 11. Evaluación
 

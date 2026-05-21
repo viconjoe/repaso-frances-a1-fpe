@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 0.9  
+**Versión actual:** 1.0  
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
@@ -81,6 +81,8 @@ Desde la versión **0.9**, se incorpora modo presentación para aula y queda pre
 
 La documentación incorpora además una visión de evolución hacia app educativa empaquetable, gratuita y reutilizable como molde para otros idiomas, siempre sin carácter oficial ni vínculo institucional directo con ICSE o con el SCE.
 
+La versión **1.0** se considera versión estable/presentable para publicación, portfolio docente y demostración del enfoque de producto educativo gratuito.
+
 ## Informe de práctica del alumno
 
 Desde la versión **0.5**, el recurso incorpora un bloque específico para generar un **informe local de práctica**.
@@ -145,6 +147,7 @@ El informe de práctica se genera localmente. En ordenadores compartidos, se rec
 ```text
 repaso-frances-a1-fpe/
 ├── index.html
+├── LICENSE.md
 ├── README.md
 ├── assets/
 │   ├── audio/
@@ -166,6 +169,7 @@ repaso-frances-a1-fpe/
     ├── ficha-pedagogica.md
     ├── guia-audios-locales.md
     ├── guia-modo-presentacion.md
+    ├── guia-publicacion-v1.md
     ├── guia-visual-pictogramas.md
     ├── guia-uso-aula.md
     ├── memoria-pilotaje-preparatoria.md
@@ -199,6 +203,7 @@ La página publicada usa `index.html` como archivo principal.
 - [Ficha pedagógica](docs/ficha-pedagogica.md)
 - [Guía de audios locales propios](docs/guia-audios-locales.md)
 - [Guía de modo presentación](docs/guia-modo-presentacion.md)
+- [Guía de publicación v1.0](docs/guia-publicacion-v1.md)
 - [Guía visual de pictogramas](docs/guia-visual-pictogramas.md)
 - [Guía breve de uso en aula](docs/guia-uso-aula.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -215,6 +220,16 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 - [Modo presentación](assets/capturas/04-modo-presentacion.png)
 
 ## Evolución de versiones
+
+### v1.0
+
+Versión estable/presentable:
+
+- definición de licencia en `LICENSE.md`;
+- incorporación de `docs/guia-publicacion-v1.md`;
+- revisión de versión visible en recurso, informe local y documentación;
+- consolidación del proyecto como recurso publicable de portfolio docente;
+- mantenimiento del enfoque gratuito, estático y prudente: sin backend, sin login, sin analítica, sin formularios externos, sin grabación de alumnado, sin IA/API y sin dependencias externas.
 
 ### v0.9
 
@@ -323,7 +338,11 @@ No se recomienda incorporar por ahora un corrector IA/API, porque implicaría en
 
 ## Licencia
 
-Por el momento, este recurso se publica como evidencia de portfolio docente. La licencia de reutilización puede definirse más adelante según el uso previsto.
+El código del recurso se publica bajo licencia MIT.
+
+Los contenidos didácticos, documentación, capturas y recursos visuales se publican bajo licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0).
+
+Ver [LICENSE.md](LICENSE.md).
 
 ## Autor
 

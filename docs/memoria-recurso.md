@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 0.9  
+**Versión:** 1.0  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -290,6 +290,16 @@ Mejoras de aula y preparación de audio:
 - creación de `docs/guia-modo-presentacion.md`;
 - mantenimiento del enfoque sin grabar alumnado, sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
 
+### v1.0
+
+Consolidación estable/presentable:
+
+- definición de licencia en `LICENSE.md`;
+- creación de `docs/guia-publicacion-v1.md`;
+- actualización de versión visible a 1.0;
+- cierre documental del recurso como publicación estable de portfolio docente;
+- mantenimiento del enfoque gratuito, estático, sin backend, sin login, sin analítica, sin formularios externos, sin grabación de alumnado, sin IA/API y sin dependencias externas.
+
 ## 13. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -327,7 +337,7 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 
 ## 15. Mejoras futuras
 
-### v1.0
+### v1.1 / v2.0
 
 Mejoras razonables:
 
@@ -368,4 +378,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto y respeto por la privacidad.
 
-La versión 0.9 se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión 1.0 se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
