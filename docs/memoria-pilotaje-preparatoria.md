@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.0  
+**Versión de referencia:** 1.1  
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -124,4 +124,4 @@ Esta plantilla no debe incluir nombres ni datos personales del alumnado.
 
 El recurso está preparado para un pilotaje prudente como herramienta complementaria de repaso de Francés A1 para alumnado adulto.
 
-La versión 1.0 aporta documentación, capturas de referencia y un marco de observación suficiente para una futura prueba real, siempre que exista autorización y se mantenga la protección de datos personales.
+La versión 1.1 aporta, además, una experiencia móvil guiada que conviene observar específicamente en una futura prueba real: claridad del recorrido, comodidad de la barra inferior y reducción del desplazamiento en teléfonos.

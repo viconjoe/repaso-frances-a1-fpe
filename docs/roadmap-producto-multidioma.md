@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.0  
+**Versión de referencia:** 1.1  
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -92,14 +92,23 @@ La evolución del producto debería mantener:
 - comprobación en móvil y escritorio;
 - publicación estable en GitHub Pages.
 
-### v1.1 · Plantilla multidioma
+### v1.1 · UX móvil guiada completada
+
+- modo guiado paso a paso;
+- activación automática en móvil;
+- barra inferior anterior/siguiente;
+- vista completa opcional;
+- reducción de desplazamiento vertical;
+- convivencia con modo presentación de aula.
+
+### v1.2 · Plantilla multidioma
 
 - separar datos lingüísticos de la interfaz;
 - preparar estructura de carpetas por idioma;
 - documentar cómo crear una nueva variante;
 - crear ejemplo mínimo para otro idioma.
 
-### v1.2 · Experiencia instalable
+### v1.3 · Experiencia instalable
 
 - estudiar PWA ligera;
 - iconos de instalación;
@@ -133,4 +142,4 @@ Una formulación prudente para portfolio o presentación sería:
 
 ## 9. Conclusión
 
-La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión 1.0. El siguiente salto no debería ser añadir muchas actividades, sino preparar una plantilla multidioma y una experiencia instalable ligera, capaces de explicar con claridad su valor pedagógico, sus límites institucionales y su potencial como producto educativo gratuito y replicable.
+La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión 1.1, con una experiencia móvil más guiada. El siguiente salto no debería ser añadir muchas actividades, sino preparar una plantilla multidioma y una experiencia instalable ligera, capaces de explicar con claridad su valor pedagógico, sus límites institucionales y su potencial como producto educativo gratuito y replicable.

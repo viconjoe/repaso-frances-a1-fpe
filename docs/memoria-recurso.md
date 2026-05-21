@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -20,6 +20,8 @@ El recurso nace en el contexto del itinerario de habilitación docente FPE de Jo
 El proyecto ha sido diseñado con una premisa clara: crear algo funcional, sobrio y usable, sin convertirlo en una aplicación compleja ni en una plataforma de evaluación.
 
 El recurso no es oficial, no tiene vínculo institucional directo con ICSE ni con el SCE y se presenta como herramienta personal de portfolio docente.
+
+En la versión 1.1 se refuerza especialmente la experiencia móvil mediante un recorrido guiado por bloques, inspirado en principios de microaprendizaje: una tarea principal por pantalla, navegación clara y posibilidad de volver a la vista completa.
 
 ## 2. Justificación
 
@@ -300,6 +302,18 @@ Consolidación estable/presentable:
 - cierre documental del recurso como publicación estable de portfolio docente;
 - mantenimiento del enfoque gratuito, estático, sin backend, sin login, sin analítica, sin formularios externos, sin grabación de alumnado, sin IA/API y sin dependencias externas.
 
+### v1.1
+
+Mejora de experiencia móvil:
+
+- incorporación de modo guiado paso a paso;
+- activación automática en pantallas pequeñas;
+- navegación inferior con anterior/siguiente;
+- posibilidad de volver a vista completa;
+- creación de `docs/guia-ux-movil-v1-1.md`;
+- incorporación de captura móvil de referencia;
+- mantenimiento de la lógica principal de actividades y del enfoque sin dependencias externas.
+
 ## 13. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -314,7 +328,8 @@ Entre las mejoras aceptadas se incluyeron:
 - mejorar la salida del informe para que no imprima toda la página.
 - incorporar pictogramas SVG propios;
 - preparar modo presentación para aula;
-- preparar estructura de audios locales propios del autor.
+- preparar estructura de audios locales propios del autor;
+- reducir la longitud percibida en móvil mediante una experiencia guiada.
 
 Otras sugerencias se dejaron para versiones futuras:
 
@@ -337,7 +352,7 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 
 ## 15. Mejoras futuras
 
-### v1.1 / v2.0
+### v1.2 / v2.0
 
 Mejoras razonables:
 
@@ -378,4 +393,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto y respeto por la privacidad.
 
-La versión 1.0 se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión 1.1 se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

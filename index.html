@@ -10,7 +10,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 1.0
+    Versión: 1.1
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -53,6 +53,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v1.0] Versión estable/presentable: licencia, documentación de publicación y cierre de portfolio.
     [v1.0] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v1.1:
+    ──────────────────────────────────────────────────────────────────────
+    [v1.1] UX móvil guiada: recorrido paso a paso, barra inferior y vista completa opcional.
+    [v1.1] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
   -->
 
   <style>
@@ -219,6 +224,12 @@
 
     button:active, .button:active { transform: translateY(1px); }
 
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.58;
+      box-shadow: none;
+    }
+
     .primary {
       background: var(--brand);
       color: white;
@@ -247,6 +258,13 @@
 
     button.presentation-toggle.presentation-toggle--active:focus-visible {
       outline-color: rgba(22, 79, 75, 0.45);
+    }
+
+    button.guided-toggle.guided-toggle--active {
+      background-color: var(--brand-2) !important;
+      color: white !important;
+      border-color: var(--brand-2) !important;
+      box-shadow: 0 8px 16px rgba(15, 118, 110, 0.18);
     }
 
     nav {
@@ -737,6 +755,111 @@
       text-align: center;
     }
 
+    .guided-panel {
+      display: none;
+      margin: 1rem auto 0;
+      width: min(1120px, calc(100% - 2rem));
+      border: 1px solid rgba(22, 79, 75, 0.16);
+      border-radius: 18px;
+      background: rgba(232, 243, 241, 0.78);
+      padding: 0.8rem 1rem;
+    }
+
+    .guided-panel strong { color: var(--brand); }
+
+    .guided-toolbar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      display: none;
+      border-top: 1px solid rgba(217, 209, 197, 0.9);
+      background: rgba(255, 253, 249, 0.96);
+      backdrop-filter: blur(14px);
+      padding: 0.65rem max(1rem, env(safe-area-inset-left)) calc(0.65rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-right));
+      box-shadow: 0 -10px 26px rgba(31, 41, 51, 0.09);
+    }
+
+    .guided-toolbar__inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(6.2rem, auto) 1fr minmax(6.2rem, auto);
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .guided-status {
+      display: grid;
+      gap: 0.25rem;
+      justify-items: center;
+      min-width: 0;
+    }
+
+    .guided-status strong {
+      color: var(--brand);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .guided-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.25rem;
+      width: 100%;
+    }
+
+    .guided-dot {
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 999px;
+      background: rgba(22, 79, 75, 0.22);
+    }
+
+    .guided-dot--active { background: var(--brand-2); }
+
+    body.guided-mode:not(.presentation-mode) {
+      background: #f8f6f1;
+    }
+
+    body.guided-mode:not(.presentation-mode) main {
+      padding-bottom: 6.5rem;
+    }
+
+    body.guided-mode:not(.presentation-mode) nav {
+      display: none;
+    }
+
+    body.guided-mode:not(.presentation-mode) .guided-panel,
+    body.guided-mode:not(.presentation-mode) .guided-toolbar {
+      display: block;
+    }
+
+    body.guided-mode:not(.presentation-mode) main > section {
+      display: none;
+    }
+
+    body.guided-mode:not(.presentation-mode) main > section.guided-active {
+      display: block;
+      min-height: calc(100svh - 12.5rem);
+      margin-top: 0.8rem;
+    }
+
+    body.guided-mode:not(.presentation-mode) #creditos,
+    body.guided-mode:not(.presentation-mode) #docente {
+      display: none;
+    }
+
+    body.guided-mode:not(.presentation-mode) .hero {
+      grid-template-columns: 1fr 0.7fr;
+      align-items: start;
+    }
+
+    body.guided-mode:not(.presentation-mode) .hero-card {
+      align-self: stretch;
+    }
+
     body.presentation-mode {
       background: #fffdf9;
     }
@@ -803,6 +926,69 @@
 
       .section-head { display: grid; }
       section { border-radius: 22px; }
+
+      body.guided-mode:not(.presentation-mode) header {
+        padding: 0.75rem 0 0;
+      }
+
+      body.guided-mode:not(.presentation-mode) .hero {
+        border-radius: 0 0 22px 22px;
+        border-left: 0;
+        border-right: 0;
+        box-shadow: none;
+      }
+
+      body.guided-mode:not(.presentation-mode) .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 0.45rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) .lead,
+      body.guided-mode:not(.presentation-mode) .notice {
+        font-size: 0.95rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) .hero-card {
+        display: none;
+      }
+
+      body.guided-mode:not(.presentation-mode) .guided-panel {
+        margin-top: 0.65rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) main {
+        width: min(100% - 1rem, 1120px);
+        padding-top: 0.65rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) main > section.guided-active {
+        min-height: auto;
+        margin: 0;
+        border-radius: 22px;
+        padding: 1rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) .card {
+        padding: 0.9rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) .flashcard {
+        min-height: 215px;
+      }
+
+      .guided-toolbar__inner {
+        grid-template-columns: auto 1fr auto;
+        gap: 0.5rem;
+      }
+
+      .guided-toolbar button {
+        min-width: 0;
+        padding-inline: 0.85rem;
+      }
+
+      .guided-status strong {
+        font-size: 0.84rem;
+      }
     }
 
     @media print {
@@ -835,6 +1021,7 @@
         <div class="cta-row no-print" aria-label="Accesos principales">
           <a class="button primary" href="#diagnostico">Empezar autodiagnóstico</a>
           <a class="button secondary" href="#flashcards">Repasar frases</a>
+          <button class="ghost guided-toggle" type="button" id="guidedToggle" aria-pressed="false">Modo guiado</button>
           <button class="ghost presentation-toggle" type="button" id="presentationToggle" aria-pressed="false">Modo presentación</button>
           <button class="ghost" type="button" id="reportBtn">Preparar informe PDF</button>
         </div>
@@ -851,6 +1038,11 @@
         </div>
         <p class="small muted"><span id="progressText">0%</span> de bloques prácticos iniciados en este navegador.</p>
       </aside>
+    </div>
+
+    <div class="guided-panel no-print" id="guidedPanel" aria-live="polite">
+      <strong id="guidedPanelTitle">Recorrido guiado</strong>
+      <span class="small muted" id="guidedPanelText">Avanza bloque a bloque. Puedes volver a la vista completa cuando quieras.</span>
     </div>
   </header>
 
@@ -1206,12 +1398,23 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.0 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.1 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
     <p class="footer-note">Repaso Final Francés A1 · Recurso pedagógico digital complementario · Joel Concepción Villanueva</p>
   </main>
+
+  <div class="guided-toolbar no-print" id="guidedToolbar" aria-label="Navegación del modo guiado">
+    <div class="guided-toolbar__inner">
+      <button class="secondary" type="button" id="guidedPrevBtn">Anterior</button>
+      <div class="guided-status">
+        <strong id="guidedStatusText">Paso 1 de 7</strong>
+        <div class="guided-dots" id="guidedDots" aria-hidden="true"></div>
+      </div>
+      <button class="primary" type="button" id="guidedNextBtn">Siguiente</button>
+    </div>
+  </div>
 
   <script>
     const STORAGE_KEY = "repaso_frances_a1_v05";
@@ -1307,7 +1510,91 @@
       update();
     }
 
+    const guidedSteps = [
+      { id: "objetivo", title: "Objetivo", help: "Lee la finalidad del recurso y el itinerario breve." },
+      { id: "diagnostico", title: "Autodiagnóstico", help: "Responde las preguntas para detectar qué conviene repasar." },
+      { id: "flashcards", title: "Flashcards", help: "Practica una frase cada vez y repítela en voz alta." },
+      { id: "emparejar", title: "Emparejar", help: "Relaciona cada frase con su intención comunicativa." },
+      { id: "situaciones", title: "Situaciones", help: "Elige la frase más adecuada para cada caso." },
+      { id: "reto", title: "Reto final", help: "Prepara una presentación breve sin datos personales." },
+      { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." }
+    ];
+
+    let guidedIndex = 0;
+    let guidedUserPreferenceSet = false;
+
+    function getGuidedIndexById(id) {
+      return guidedSteps.findIndex((step) => step.id === id);
+    }
+
+    function renderGuidedDots() {
+      const dots = document.getElementById("guidedDots");
+      if (!dots) return;
+      dots.innerHTML = "";
+      guidedSteps.forEach((step, index) => {
+        const dot = document.createElement("span");
+        dot.className = `guided-dot${index === guidedIndex ? " guided-dot--active" : ""}`;
+        dot.title = step.title;
+        dots.appendChild(dot);
+      });
+    }
+
+    function updateGuidedView({ scroll = false } = {}) {
+      const active = document.body.classList.contains("guided-mode");
+      const toggle = document.getElementById("guidedToggle");
+      const prevBtn = document.getElementById("guidedPrevBtn");
+      const nextBtn = document.getElementById("guidedNextBtn");
+      const status = document.getElementById("guidedStatusText");
+      const panelTitle = document.getElementById("guidedPanelTitle");
+      const panelText = document.getElementById("guidedPanelText");
+      const step = guidedSteps[guidedIndex] || guidedSteps[0];
+
+      guidedSteps.forEach((item, index) => {
+        const section = document.getElementById(item.id);
+        if (section) section.classList.toggle("guided-active", active && index === guidedIndex);
+      });
+
+      if (toggle) {
+        toggle.setAttribute("aria-pressed", String(active));
+        toggle.classList.toggle("guided-toggle--active", active);
+        toggle.textContent = active ? "Ver todo" : "Modo guiado";
+      }
+
+      if (prevBtn) prevBtn.disabled = guidedIndex === 0;
+      if (nextBtn) nextBtn.textContent = guidedIndex === guidedSteps.length - 1 ? "Ver todo" : "Siguiente";
+      if (status) status.textContent = `Paso ${guidedIndex + 1} de ${guidedSteps.length}: ${step.title}`;
+      if (panelTitle) panelTitle.textContent = active ? `Recorrido guiado · ${step.title}` : "Recorrido guiado";
+      if (panelText) panelText.textContent = active ? step.help : "Avanza bloque a bloque. Puedes volver a la vista completa cuando quieras.";
+
+      renderGuidedDots();
+
+      if (active && scroll) {
+        const target = document.getElementById(step.id);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function setGuidedMode(active, { scroll = true, remember = true } = {}) {
+      if (active && document.body.classList.contains("presentation-mode")) {
+        setPresentationMode(false);
+      }
+
+      document.body.classList.toggle("guided-mode", active);
+      if (remember) guidedUserPreferenceSet = true;
+      updateGuidedView({ scroll });
+    }
+
+    function goToGuidedStep(index, { scroll = true } = {}) {
+      guidedIndex = Math.max(0, Math.min(guidedSteps.length - 1, index));
+      updateGuidedView({ scroll });
+    }
+
     function setPresentationMode(active) {
+      if (active) {
+        document.body.classList.remove("guided-mode");
+        updateGuidedView({ scroll: false });
+      }
+
       document.body.classList.toggle("presentation-mode", active);
       const btn = document.getElementById("presentationToggle");
       if (btn) {
@@ -1321,9 +1608,49 @@
       setPresentationMode(!document.body.classList.contains("presentation-mode"));
     });
 
+    document.getElementById("guidedToggle").addEventListener("click", () => {
+      setGuidedMode(!document.body.classList.contains("guided-mode"));
+    });
+
+    document.getElementById("guidedPrevBtn").addEventListener("click", () => {
+      goToGuidedStep(guidedIndex - 1);
+    });
+
+    document.getElementById("guidedNextBtn").addEventListener("click", () => {
+      if (guidedIndex >= guidedSteps.length - 1) {
+        setGuidedMode(false);
+        document.getElementById("informe")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      goToGuidedStep(guidedIndex + 1);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        const id = link.getAttribute("href")?.slice(1);
+        const index = getGuidedIndexById(id);
+        if (index >= 0 && document.body.classList.contains("guided-mode")) {
+          guidedIndex = index;
+          updateGuidedView({ scroll: true });
+        }
+      });
+    });
+
     document.addEventListener("keydown", (ev) => {
       if (ev.key === "Escape" && document.body.classList.contains("presentation-mode")) {
         setPresentationMode(false);
+      }
+
+      const editing = ["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName);
+      if (!editing && document.body.classList.contains("guided-mode")) {
+        if (ev.key === "ArrowLeft") {
+          ev.preventDefault();
+          goToGuidedStep(guidedIndex - 1);
+        }
+        if (ev.key === "ArrowRight") {
+          ev.preventDefault();
+          if (guidedIndex < guidedSteps.length - 1) goToGuidedStep(guidedIndex + 1);
+        }
       }
     });
 
@@ -1914,7 +2241,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "1.0",
+        version: "1.1",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
@@ -2162,6 +2489,20 @@
     renderMatch();
     renderScenario();
     updateNavScrollHint();
+
+    const initialHashIndex = getGuidedIndexById(location.hash.slice(1));
+    if (initialHashIndex >= 0) guidedIndex = initialHashIndex;
+
+    const mobileGuided = window.matchMedia("(max-width: 700px)").matches;
+    setGuidedMode(mobileGuided, { scroll: false, remember: false });
+
+    window.addEventListener("resize", () => {
+      if (guidedUserPreferenceSet) return;
+      const shouldGuide = window.matchMedia("(max-width: 700px)").matches;
+      if (shouldGuide !== document.body.classList.contains("guided-mode")) {
+        setGuidedMode(shouldGuide, { scroll: false, remember: false });
+      }
+    });
 
     if (state.reto.prompt) {
       document.getElementById("randomPrompt").textContent = state.reto.prompt;

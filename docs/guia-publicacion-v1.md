@@ -59,6 +59,7 @@ Formulación recomendada:
 
 Tras v1.0, las mejoras deberían abordarse como nuevas ramas o hitos:
 
-- v1.1: plantilla multidioma;
-- v1.2: PWA o experiencia instalable;
+- v1.1: UX móvil guiada;
+- v1.2: plantilla multidioma;
+- v1.3: PWA o experiencia instalable;
 - v2.0: producto demostrativo completo adaptable a distintos idiomas.

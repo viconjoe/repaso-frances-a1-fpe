@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.0  
+**Versión de referencia:** 1.1  
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -42,7 +42,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Alcance técnico
 
-La versión 1.0 se mantiene como recurso web estático:
+La versión 1.1 se mantiene como recurso web estático:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -56,6 +56,8 @@ La versión 1.0 se mantiene como recurso web estático:
 - publicación compatible con GitHub Pages.
 
 El recurso utiliza `localStorage` para conservar progreso únicamente en el navegador del usuario.
+
+La mejora principal de la versión 1.1 es una experiencia móvil guiada: el alumnado puede avanzar por bloques con navegación anterior/siguiente, reduciendo el desplazamiento vertical y manteniendo una vista completa opcional.
 
 ## 5. Privacidad y prudencia
 
@@ -88,6 +90,7 @@ La documentación principal del proyecto queda organizada en:
 - `docs/guia-audios-locales.md`: preparación de audios estáticos del autor sin grabar alumnado;
 - `docs/guia-modo-presentacion.md`: uso del modo presentación para aula;
 - `docs/guia-publicacion-v1.md`: checklist de publicación estable;
+- `docs/guia-ux-movil-v1-1.md`: criterio y funcionamiento de la experiencia móvil guiada;
 - `docs/guia-visual-pictogramas.md`: descripción del apoyo visual SVG local;
 - `docs/guia-uso-aula.md`: secuencia breve para uso guiado, autónomo o por parejas;
 - `docs/memoria-pilotaje-preparatoria.md`: marco prudente para un futuro pilotaje sin datos reales de alumnado;
@@ -98,7 +101,7 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 1.0 consolida el proyecto como recurso didáctico digital prudente, documentado y coherente para portfolio docente.
+La versión 1.1 consolida el proyecto como recurso didáctico digital prudente, documentado y coherente para portfolio docente, con una mejora específica de comodidad móvil.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 

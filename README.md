@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 1.0  
+**Versión actual:** 1.1  
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
@@ -83,6 +83,8 @@ La documentación incorpora además una visión de evolución hacia app educativ
 
 La versión **1.0** se considera versión estable/presentable para publicación, portfolio docente y demostración del enfoque de producto educativo gratuito.
 
+Desde la versión **1.1**, se incorpora una UX móvil guiada para reducir el desplazamiento en pantallas pequeñas y facilitar un recorrido paso a paso.
+
 ## Informe de práctica del alumno
 
 Desde la versión **0.5**, el recurso incorpora un bloque específico para generar un **informe local de práctica**.
@@ -137,6 +139,7 @@ El informe de práctica se genera localmente. En ordenadores compartidos, se rec
 - Sin dependencias externas.
 - Compatible con GitHub Pages.
 - Diseño responsive.
+- Modo guiado móvil con navegación anterior/siguiente y vista completa opcional.
 - Uso básico de accesibilidad: skip link, foco visible, `aria-live`, `lang="fr"`, botones táctiles y barras de progreso con atributos ARIA.
 - Persistencia local mediante `localStorage`.
 - Pronunciación experimental con Web Speech API, si el navegador la soporta.
@@ -153,11 +156,12 @@ repaso-frances-a1-fpe/
 │   ├── audio/
 │   │   ├── README.md
 │   │   └── audio-manifest.json
-│   ├── capturas/
-│   │   ├── 01-portada-objetivo.png
-│   │   ├── 02-reto-final-privacidad.png
-│   │   ├── 03-informe-ficha-docente.png
-│   │   └── 04-modo-presentacion.png
+    │   ├── capturas/
+    │   │   ├── 01-portada-objetivo.png
+    │   │   ├── 02-reto-final-privacidad.png
+    │   │   ├── 03-informe-ficha-docente.png
+    │   │   ├── 04-modo-presentacion.png
+    │   │   └── 05-modo-guiado-movil.png
 │   └── pictogramas/
 │       ├── comprender.svg
 │       ├── responder.svg
@@ -170,6 +174,7 @@ repaso-frances-a1-fpe/
     ├── guia-audios-locales.md
     ├── guia-modo-presentacion.md
     ├── guia-publicacion-v1.md
+    ├── guia-ux-movil-v1-1.md
     ├── guia-visual-pictogramas.md
     ├── guia-uso-aula.md
     ├── memoria-pilotaje-preparatoria.md
@@ -204,6 +209,7 @@ La página publicada usa `index.html` como archivo principal.
 - [Guía de audios locales propios](docs/guia-audios-locales.md)
 - [Guía de modo presentación](docs/guia-modo-presentacion.md)
 - [Guía de publicación v1.0](docs/guia-publicacion-v1.md)
+- [Guía de UX móvil guiada v1.1](docs/guia-ux-movil-v1-1.md)
 - [Guía visual de pictogramas](docs/guia-visual-pictogramas.md)
 - [Guía breve de uso en aula](docs/guia-uso-aula.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -218,8 +224,21 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 - [Reto final y privacidad](assets/capturas/02-reto-final-privacidad.png)
 - [Informe y ficha docente](assets/capturas/03-informe-ficha-docente.png)
 - [Modo presentación](assets/capturas/04-modo-presentacion.png)
+- [Modo guiado móvil](assets/capturas/05-modo-guiado-movil.png)
 
 ## Evolución de versiones
+
+### v1.1
+
+Mejora de experiencia móvil:
+
+- incorporación de modo guiado paso a paso;
+- activación automática del modo guiado en móviles;
+- botón para alternar entre `Modo guiado` y `Ver todo`;
+- barra inferior con navegación `Anterior` / `Siguiente`;
+- reducción de desplazamiento vertical al mostrar un bloque principal por pantalla;
+- mantenimiento del modo presentación para aula como experiencia independiente;
+- mantenimiento del enfoque gratuito, estático y prudente: sin backend, sin login, sin analítica, sin formularios externos, sin grabación de alumnado, sin IA/API y sin dependencias externas.
 
 ### v1.0
 

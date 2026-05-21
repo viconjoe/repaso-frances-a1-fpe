@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.0  
+**Versión de referencia:** 1.1  
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -56,6 +56,8 @@ Se recomienda:
 La pronunciación automática, si está disponible, debe tratarse como apoyo aproximado, no como modelo único.
 
 Desde la versión 0.9, si en el futuro se incorporan audios locales propios del autor, pueden usarse como modelo adicional de pronunciación sin grabar al alumnado.
+
+Desde la versión 1.1, en móviles puede utilizarse el modo guiado para reducir el desplazamiento: cada bloque aparece como un paso y la barra inferior permite avanzar o retroceder.
 
 ### 4. Emparejar y mini-situaciones · 8-10 minutos
 
