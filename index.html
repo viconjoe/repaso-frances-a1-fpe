@@ -10,7 +10,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 1.1
+    Versión: 1.2
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -58,6 +58,14 @@
     ──────────────────────────────────────────────────────────────────────
     [v1.1] UX móvil guiada: recorrido paso a paso, barra inferior y vista completa opcional.
     [v1.1] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v1.2:
+    ──────────────────────────────────────────────────────────────────────
+    [v1.2] Portada móvil simplificada con desplegables de información y nota de uso.
+    [v1.2] Vista “Ver todos los bloques” reorganizada como mapa de bloques, no como lista interminable.
+    [v1.2] Botón persistente para volver al recorrido guiado desde la vista completa en móvil.
+    [v1.2] Menú móvil sustituido por selector claro de bloques.
+    [v1.2] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
   -->
 
   <style>
@@ -198,6 +206,44 @@
       color: var(--ink);
     }
 
+    .mobile-lead,
+    .mobile-info-drawers,
+    .mobile-jump,
+    .unguided-toolbar {
+      display: none;
+    }
+
+    .mobile-info-drawers {
+      gap: 0.65rem;
+      margin-top: 0.9rem;
+    }
+
+    .info-drawer {
+      border: 1px solid rgba(22, 79, 75, 0.18);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 18px;
+      padding: 0.15rem;
+    }
+
+    .info-drawer summary {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.75rem 0.85rem;
+      cursor: pointer;
+      color: var(--brand);
+      font-weight: 850;
+      list-style-position: inside;
+    }
+
+    .info-drawer p {
+      margin: 0;
+      padding: 0 0.85rem 0.85rem;
+      color: var(--muted);
+    }
+
     .cta-row {
       display: flex;
       flex-wrap: wrap;
@@ -319,6 +365,36 @@
       font-weight: 700;
     }
 
+    .mobile-jump {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0.75rem auto 0;
+      align-items: center;
+      gap: 0.65rem;
+      border: 1px solid rgba(22, 79, 75, 0.16);
+      border-radius: 18px;
+      background: rgba(255, 253, 249, 0.94);
+      padding: 0.7rem 0.8rem;
+      box-shadow: 0 8px 18px rgba(31, 41, 51, 0.06);
+    }
+
+    .mobile-jump label {
+      color: var(--brand);
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .mobile-jump select {
+      width: 100%;
+      min-height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(22, 79, 75, 0.22);
+      background: white;
+      color: var(--ink);
+      padding: 0.55rem 0.85rem;
+      font: inherit;
+      font-weight: 700;
+    }
+
     main { padding: 1.5rem 0 3rem; }
 
     section {
@@ -367,6 +443,44 @@
     }
 
     .card p:last-child { margin-bottom: 0; }
+
+    .block-map-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .block-map-card {
+      display: grid;
+      gap: 0.6rem;
+      align-content: start;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 1rem;
+      min-height: 12rem;
+    }
+
+    .block-map-card .step-number {
+      width: 2.15rem;
+      height: 2.15rem;
+    }
+
+    .block-map-card h3 {
+      margin-bottom: 0;
+      color: var(--brand);
+    }
+
+    .block-map-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .block-map-card button {
+      width: 100%;
+      margin-top: auto;
+    }
 
     .objective-card {
       display: grid;
@@ -790,6 +904,35 @@
       align-items: center;
     }
 
+    .unguided-toolbar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      border-top: 1px solid rgba(217, 209, 197, 0.9);
+      background: rgba(255, 253, 249, 0.96);
+      backdrop-filter: blur(14px);
+      padding: 0.65rem max(1rem, env(safe-area-inset-left)) calc(0.65rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-right));
+      box-shadow: 0 -10px 26px rgba(31, 41, 51, 0.09);
+    }
+
+    .unguided-toolbar__inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .unguided-toolbar .button,
+    .unguided-toolbar button {
+      width: 100%;
+      min-width: 0;
+      padding-inline: 0.85rem;
+    }
+
     .guided-status {
       display: grid;
       gap: 0.25rem;
@@ -991,6 +1134,99 @@
       }
     }
 
+    @media (max-width: 700px) {
+      header {
+        padding: 0.75rem 0 0;
+      }
+
+      .shell {
+        width: min(100% - 1rem, 1120px);
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+        border-radius: 0 0 22px 22px;
+        border-left: 0;
+        border-right: 0;
+        padding: 1rem;
+        box-shadow: none;
+      }
+
+      .eyebrow {
+        max-width: 100%;
+        font-size: 0.78rem;
+        line-height: 1.25;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .desktop-lead,
+      .desktop-notice {
+        display: none;
+      }
+
+      .mobile-lead {
+        display: block;
+        font-size: 0.98rem;
+        margin-bottom: 0;
+      }
+
+      .mobile-info-drawers {
+        display: grid;
+      }
+
+      .cta-row[aria-label="Accesos principales"] {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+      }
+
+      .cta-row[aria-label="Accesos principales"] .button,
+      .cta-row[aria-label="Accesos principales"] button {
+        width: 100%;
+      }
+
+      .cta-row[aria-label="Accesos principales"] .hero-extra {
+        display: none;
+      }
+
+      .hero-card {
+        display: none;
+      }
+
+      body:not(.guided-mode):not(.presentation-mode) nav {
+        display: none;
+      }
+
+      body:not(.guided-mode):not(.presentation-mode) .mobile-jump {
+        display: flex;
+      }
+
+      body:not(.guided-mode):not(.presentation-mode) .unguided-toolbar {
+        display: block;
+      }
+
+      body:not(.guided-mode):not(.presentation-mode) main {
+        padding-bottom: 6.8rem;
+      }
+
+      .block-map-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .block-map-card {
+        min-height: auto;
+      }
+
+      .unguided-toolbar__inner {
+        grid-template-columns: 1fr 0.75fr;
+      }
+    }
+
     @media print {
       body { background: white; }
       nav, .cta-row, button, .button, .no-print { display: none !important; }
@@ -1016,14 +1252,28 @@
       <div>
         <span class="eyebrow">🇫🇷 Francés A1 · Repaso final · Alumnado adulto</span>
         <h1>Repaso Final Francés A1</h1>
-        <p class="lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
-        <p class="notice small"><strong>Nota de uso:</strong> propuesta pedagógica complementaria creada para portfolio docente FPE. No es un recurso oficial de ICSE, no tiene vínculo institucional directo con ICSE ni con el SCE, y no sustituye la programación, los materiales ni la evaluación establecidos por la docente titular o el centro.</p>
+        <p class="lead mobile-lead">Recurso interactivo de repaso para alumnado adulto de Francés A1.</p>
+        <p class="lead desktop-lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
+
+        <div class="mobile-info-drawers no-print" aria-label="Información breve del recurso">
+          <details class="info-drawer">
+            <summary>¿Qué voy a practicar?</summary>
+            <p>Expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1: saludos, presentación personal, petición de ayuda, precios, ubicación y un reto final breve.</p>
+          </details>
+          <details class="info-drawer">
+            <summary>Nota de uso y privacidad</summary>
+            <p>Propuesta pedagógica complementaria para portfolio docente FPE. No es un recurso oficial de ICSE ni del SCE, no sustituye la programación ni la evaluación del centro y no recoge datos personales.</p>
+          </details>
+        </div>
+
+        <p class="notice small desktop-notice"><strong>Nota de uso:</strong> propuesta pedagógica complementaria creada para portfolio docente FPE. No es un recurso oficial de ICSE, no tiene vínculo institucional directo con ICSE ni con el SCE, y no sustituye la programación, los materiales ni la evaluación establecidos por la docente titular o el centro.</p>
         <div class="cta-row no-print" aria-label="Accesos principales">
-          <a class="button primary" href="#diagnostico">Empezar autodiagnóstico</a>
-          <a class="button secondary" href="#flashcards">Repasar frases</a>
-          <button class="ghost guided-toggle" type="button" id="guidedToggle" aria-pressed="false">Modo guiado</button>
-          <button class="ghost presentation-toggle" type="button" id="presentationToggle" aria-pressed="false">Modo presentación</button>
-          <button class="ghost" type="button" id="reportBtn">Preparar informe PDF</button>
+          <a class="button primary hero-main" id="startGuidedBtn" href="#diagnostico">Empezar autodiagnóstico</a>
+          <button class="secondary hero-main" type="button" id="viewBlocksBtn">Ver todos los bloques</button>
+          <a class="button secondary hero-extra" href="#flashcards">Repasar frases</a>
+          <button class="ghost guided-toggle hero-extra" type="button" id="guidedToggle" aria-pressed="false">Recorrido guiado</button>
+          <button class="ghost presentation-toggle hero-extra" type="button" id="presentationToggle" aria-pressed="false">Modo presentación</button>
+          <button class="ghost hero-extra" type="button" id="reportBtn">Preparar informe PDF</button>
         </div>
       </div>
 
@@ -1059,7 +1309,76 @@
     </div>
   </nav>
 
+  <div class="mobile-jump no-print" aria-label="Selector de bloques">
+    <label for="mobileJumpSelect">Ir a</label>
+    <select id="mobileJumpSelect">
+      <option value="">Elige un bloque…</option>
+      <option value="objetivo">Objetivo</option>
+      <option value="diagnostico">Autodiagnóstico</option>
+      <option value="flashcards">Flashcards</option>
+      <option value="emparejar">Emparejar</option>
+      <option value="situaciones">Situaciones</option>
+      <option value="reto">Reto final</option>
+      <option value="informe">Informe</option>
+    </select>
+  </div>
+
   <main id="contenido" class="shell">
+    <section id="mapa" class="block-map-section no-print">
+      <div class="section-head">
+        <div>
+          <span class="tag">Mapa de bloques</span>
+          <h2>Elige cómo continuar</h2>
+          <p class="muted">Vista rápida de la herramienta. Abre un bloque concreto o vuelve al recorrido guiado paso a paso.</p>
+        </div>
+      </div>
+
+      <div class="block-map-grid" aria-label="Mapa de bloques del recurso">
+        <article class="block-map-card">
+          <span class="step-number">0</span>
+          <h3>Objetivo</h3>
+          <p>Finalidad del recurso e itinerario breve de uso.</p>
+          <button class="secondary" type="button" data-guided-step="0">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">1</span>
+          <h3>Autodiagnóstico</h3>
+          <p>10 preguntas rápidas con feedback orientativo.</p>
+          <button class="primary" type="button" data-guided-step="1">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">2</span>
+          <h3>Flashcards</h3>
+          <p>Frases de supervivencia para practicar en voz alta.</p>
+          <button class="secondary" type="button" data-guided-step="2">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">3</span>
+          <h3>Emparejar</h3>
+          <p>Relaciona cada frase con su intención comunicativa.</p>
+          <button class="secondary" type="button" data-guided-step="3">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">4</span>
+          <h3>Situaciones</h3>
+          <p>Elige la frase más adecuada para cada caso.</p>
+          <button class="secondary" type="button" data-guided-step="4">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">5</span>
+          <h3>Reto final</h3>
+          <p>Prepara una presentación breve con apoyo.</p>
+          <button class="secondary" type="button" data-guided-step="5">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">6</span>
+          <h3>Informe</h3>
+          <p>Genera una evidencia local si te resulta útil.</p>
+          <button class="secondary" type="button" data-guided-step="6">Abrir bloque</button>
+        </article>
+      </div>
+    </section>
+
     <section id="objetivo">
       <div class="section-head">
         <div>
@@ -1398,7 +1717,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.1 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.2 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -1413,6 +1732,13 @@
         <div class="guided-dots" id="guidedDots" aria-hidden="true"></div>
       </div>
       <button class="primary" type="button" id="guidedNextBtn">Siguiente</button>
+    </div>
+  </div>
+
+  <div class="unguided-toolbar no-print" id="unguidedToolbar" aria-label="Accesos de vista completa">
+    <div class="unguided-toolbar__inner">
+      <button class="primary" type="button" id="backToGuidedBtn">Volver al recorrido</button>
+      <a class="button secondary" href="#mapa">Mapa</a>
     </div>
   </div>
 
@@ -1557,11 +1883,11 @@
       if (toggle) {
         toggle.setAttribute("aria-pressed", String(active));
         toggle.classList.toggle("guided-toggle--active", active);
-        toggle.textContent = active ? "Ver todo" : "Modo guiado";
+        toggle.textContent = active ? "Ver todos los bloques" : "Recorrido guiado";
       }
 
       if (prevBtn) prevBtn.disabled = guidedIndex === 0;
-      if (nextBtn) nextBtn.textContent = guidedIndex === guidedSteps.length - 1 ? "Ver todo" : "Siguiente";
+      if (nextBtn) nextBtn.textContent = guidedIndex === guidedSteps.length - 1 ? "Ver todos los bloques" : "Siguiente";
       if (status) status.textContent = `Paso ${guidedIndex + 1} de ${guidedSteps.length}: ${step.title}`;
       if (panelTitle) panelTitle.textContent = active ? `Recorrido guiado · ${step.title}` : "Recorrido guiado";
       if (panelText) panelText.textContent = active ? step.help : "Avanza bloque a bloque. Puedes volver a la vista completa cuando quieras.";
@@ -1619,10 +1945,46 @@
     document.getElementById("guidedNextBtn").addEventListener("click", () => {
       if (guidedIndex >= guidedSteps.length - 1) {
         setGuidedMode(false);
-        document.getElementById("informe")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("mapa")?.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
       goToGuidedStep(guidedIndex + 1);
+    });
+
+    document.getElementById("startGuidedBtn").addEventListener("click", (ev) => {
+      ev.preventDefault();
+      setGuidedMode(true);
+      goToGuidedStep(1);
+    });
+
+    document.getElementById("viewBlocksBtn").addEventListener("click", () => {
+      setGuidedMode(false);
+      document.getElementById("mapa")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    document.getElementById("backToGuidedBtn").addEventListener("click", () => {
+      setGuidedMode(true);
+      goToGuidedStep(Math.max(0, guidedIndex));
+    });
+
+    document.querySelectorAll("[data-guided-step]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const nextIndex = Number(btn.dataset.guidedStep);
+        if (Number.isInteger(nextIndex)) {
+          setGuidedMode(true);
+          goToGuidedStep(nextIndex);
+        }
+      });
+    });
+
+    document.getElementById("mobileJumpSelect").addEventListener("change", (ev) => {
+      const id = ev.target.value;
+      const index = getGuidedIndexById(id);
+      if (index >= 0) {
+        setGuidedMode(true);
+        goToGuidedStep(index);
+        ev.target.value = "";
+      }
     });
 
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -2241,7 +2603,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "1.1",
+        version: "1.2",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
