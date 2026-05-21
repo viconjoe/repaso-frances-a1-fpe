@@ -4,9 +4,9 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 1.1  
+**Versión:** 1.3  
 **Formato:** recurso web estático HTML/CSS/JavaScript  
-**Modalidad de uso:** autónoma o guiada  
+**Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
 **Nivel de referencia:** Francés A1 según MCER  
 **Público destinatario:** alumnado adulto en fase de repaso final de curso  
@@ -20,7 +20,7 @@ No es un curso completo.
 No sustituye la programación oficial.  
 No sustituye la labor de la docente titular.  
 No constituye una evaluación oficial del alumnado.  
-No es un recurso oficial de ICSE.
+No es un recurso oficial de ICSE.  
 No tiene vínculo institucional directo con ICSE ni con el SCE.
 
 Su finalidad principal es reforzar contenidos comunicativos básicos mediante actividades breves, accesibles y de baja complejidad técnica.
@@ -44,7 +44,7 @@ Al finalizar el uso del recurso, el alumnado debería ser capaz de:
 
 1. Reconocer saludos y despedidas frecuentes en francés.
 2. Identificar frases básicas de presentación personal.
-3. Comprender expresiones como `Je m'appelle…`, `J'habite à…` y `Je ne comprends pas`.
+3. Comprender expresiones como `Je m'appelle...`, `J'habite à...` y `Je ne comprends pas`.
 4. Asociar frases con intenciones comunicativas simples.
 5. Elegir respuestas adecuadas en mini-situaciones de nivel A1.
 6. Producir una presentación breve con apoyo.
@@ -52,52 +52,7 @@ Al finalizar el uso del recurso, el alumnado debería ser capaz de:
 8. Usar frases funcionales en contexto de aula o situación cotidiana básica.
 9. Guardar, si lo desea, un informe local de práctica sin enviar datos a terceros.
 
-## 5. Contenidos trabajados
-
-### Contenidos lingüísticos
-
-- Saludos: `Bonjour`, `Bonsoir`, `Salut`.
-- Despedida: `Au revoir`.
-- Presentación: `Je m'appelle…`.
-- Residencia: `J'habite à…`.
-- Petición cortés: `Je voudrais…`.
-- Precio: `Combien ça coûte ?`.
-- Ubicación: `Où est la gare ?`.
-- Comprensión: `Je ne comprends pas`.
-- Petición de repetición: `Pouvez-vous répéter, s’il vous plaît ?`.
-- Situación personal básica: `Je suis étudiant(e)`, `Je travaille`, `Je cherche du travail`, `Je suis à la retraite`.
-
-### Contenidos funcionales
-
-- Saludar.
-- Presentarse.
-- Decir dónde se vive.
-- Pedir algo de forma sencilla.
-- Preguntar precio.
-- Preguntar una ubicación o dirección.
-- Pedir ayuda.
-- Pedir repetición.
-- Expresar falta de comprensión.
-- Completar una breve producción escrita u oral con apoyo.
-
-### Contenidos actitudinales
-
-- Perder miedo al error.
-- Practicar de forma autónoma.
-- Usar frases de supervivencia comunicativa.
-- Ganar confianza en una lengua extranjera.
-- Valorar la repetición funcional como apoyo al aprendizaje.
-- Comprender que el informe generado es una evidencia orientativa, no una calificación oficial.
-
-## 6. Adecuación al nivel A1
-
-El recurso está diseñado para **A1 final**, no para inicio absoluto.
-
-Las frases `Je voudrais…` y `Pouvez-vous répéter, s’il vous plaît ?` se incorporan como expresiones funcionales completas, no como contenidos gramaticales para analizar en profundidad.
-
-La prioridad no es explicar el condicional ni la inversión interrogativa, sino ofrecer al alumnado frases útiles y memorizables para desenvolverse en situaciones básicas.
-
-## 7. Metodología
+## 5. Metodología
 
 El recurso se apoya en una metodología práctica y formativa:
 
@@ -121,9 +76,24 @@ La secuencia didáctica sigue una progresión sencilla:
 6. Producción breve final.
 7. Generación opcional de informe local de práctica.
 
-En la versión 0.6 se incorpora además un itinerario visual de uso en el bloque inicial: detectar, repasar, aplicar y guardar evidencia local opcional.
+## 6. UX móvil como accesibilidad práctica
 
-## 8. Descripción de actividades
+La versión **1.2.4** incorpora una UX móvil refinada que funciona como medida de accesibilidad práctica.
+
+El modo guiado ayuda a alumnado adulto con diversidad de habilidades digitales porque:
+
+- reduce la sensación de página larga;
+- presenta un bloque principal por paso;
+- evita depender de un menú horizontal desplazable;
+- ofrece una barra inferior de navegación clara;
+- permite volver al recorrido guiado desde la vista completa;
+- organiza **Ver todos los bloques** como mapa de navegación;
+- ofrece un selector móvil **Ir a...** para saltar a un bloque concreto;
+- mantiene una cabecera móvil breve, alineada y sin repeticiones innecesarias.
+
+La intención no es infantilizar la experiencia ni convertirla en juego, sino hacerla más cómoda, sobria y clara para alumnado adulto.
+
+## 7. Descripción de actividades
 
 ### Bloque 0 · Objetivo del recurso
 
@@ -139,7 +109,7 @@ Tarjetas de frases útiles con traducción y apoyo de pronunciación experimenta
 
 ### Bloque 3 · Emparejar frase e intención
 
-Actividad de asociación entre frases francesas e intenciones comunicativas en español. Refuerza la comprensión funcional. Desde la versión 0.5 incorpora contador de parejas completadas.
+Actividad de asociación entre frases francesas e intenciones comunicativas en español. Refuerza la comprensión funcional.
 
 ### Bloque 4 · Mini-situaciones comunicativas
 
@@ -151,34 +121,19 @@ Producción breve escrita u oral. El alumnado puede construir una presentación 
 
 ### Bloque 6 · Informe de práctica
 
-Desde la versión 0.5, el recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto del reto final.
+El recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto del reto final.
 
-El informe no se envía a ningún servidor. Se abre en una vista limpia preparada para A4 y se guarda como PDF mediante el sistema de impresión del navegador, por ejemplo con **Guardar como PDF** o **Microsoft Print to PDF**. También se ofrece descarga alternativa en formato HTML.
+El informe no se envía a ningún servidor. Se abre en una vista limpia preparada para A4 y se guarda como PDF mediante el sistema de impresión del navegador. También se ofrece descarga alternativa en formato HTML.
 
 ### Bloque 7 · Ficha docente
 
 Bloque informativo que contextualiza el recurso para tutoría, coordinación o portfolio docente.
 
-## 9. Temporalización orientativa
-
-Uso parcial:
-
-- Autodiagnóstico: 5–8 minutos.
-- Flashcards: 5–10 minutos.
-- Emparejar: 5 minutos.
-- Situaciones: 5–8 minutos.
-- Reto final: 10–15 minutos.
-- Informe local: 2–5 minutos, si se desea guardar evidencia.
-
-Uso completo:
-
-- Entre 25 y 45 minutos, según el ritmo del grupo y el grado de acompañamiento docente.
-
-## 10. Modalidades de uso
+## 8. Modalidades de uso
 
 ### Uso autónomo
 
-El alumnado accede mediante enlace o QR y trabaja a su ritmo.
+El alumnado accede mediante enlace o QR y trabaja a su ritmo. En móvil se recomienda utilizar el recorrido guiado.
 
 ### Uso guiado en aula
 
@@ -198,17 +153,7 @@ El alumnado puede preparar un informe local con su progreso orientativo y su pro
 
 Permite demostrar diseño de recurso digital, adaptación a alumnado adulto, accesibilidad básica, privacidad, documentación pedagógica y competencia tecnológica aplicada a docencia.
 
-La versión 0.7 añade capturas de referencia y una memoria preparatoria de pilotaje para documentar mejor el recurso como evidencia de portfolio sin incluir datos reales de alumnado.
-
-La versión 0.8 añade pictogramas SVG propios como apoyo visual local, especialmente en el bloque inicial, el itinerario de uso y el aviso de privacidad.
-
-La versión 0.9 añade modo presentación para aula y deja preparada la estructura de audios locales propios del autor. No se graba al alumnado.
-
-La versión 1.0 consolida el recurso como versión estable/presentable, con licencia definida y guía de publicación.
-
-La versión 1.1 mejora la experiencia móvil mediante un modo guiado que presenta un bloque por pantalla, con navegación anterior/siguiente y posibilidad de volver a la vista completa.
-
-## 11. Evaluación
+## 9. Evaluación
 
 El recurso no realiza evaluación oficial.
 
@@ -223,11 +168,12 @@ Sí permite:
 
 Los resultados mostrados son orientativos y no deben utilizarse como calificación oficial salvo decisión expresa del equipo docente.
 
-## 12. Atención a la diversidad y accesibilidad
+## 10. Atención a la diversidad y accesibilidad
 
 El recurso incorpora medidas básicas:
 
 - diseño responsive;
+- UX móvil refinada en v1.2.4;
 - botones grandes;
 - feedback visible;
 - foco de teclado;
@@ -240,7 +186,7 @@ El recurso incorpora medidas básicas:
 
 No pretende ser una auditoría WCAG completa, pero sí aplica criterios básicos de accesibilidad y usabilidad.
 
-## 13. Privacidad y protección de datos
+## 11. Privacidad y protección de datos
 
 El recurso no recoge datos personales.
 
@@ -253,7 +199,7 @@ No solicita:
 - cuenta de usuario;
 - información sensible.
 
-En el reto final se recomienda utilizar solo un nombre de pila o un nombre ficticio para practicar la estructura `Je m'appelle…`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
+En el reto final se recomienda utilizar solo un nombre de pila o un nombre ficticio para practicar la estructura `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
 
 El progreso y el texto escrito se guardan únicamente en el navegador mediante `localStorage`.
 
@@ -261,7 +207,7 @@ El informe de práctica se genera localmente en el navegador. No se envía infor
 
 En dispositivos compartidos, se recomienda utilizar el botón **Borrar progreso local** al finalizar.
 
-## 14. Recursos técnicos utilizados
+## 12. Recursos técnicos utilizados
 
 - HTML5.
 - CSS3.
@@ -272,23 +218,17 @@ En dispositivos compartidos, se recomienda utilizar el botón **Borrar progreso 
 - Generación local de archivo HTML mediante `Blob` para descarga alternativa.
 - GitHub Pages para publicación.
 
-No se utilizan dependencias externas, backend, formularios, analítica ni bases de datos.
+No se utilizan dependencias externas, backend, formularios, analítica, IA/API ni bases de datos.
 
-## 15. Papel de la persona docente
+## 13. Evolución relevante
 
-La persona docente puede:
+- **v1.0:** consolidación estable/presentable, licencia y guía de publicación.
+- **v1.1:** modo guiado móvil inicial.
+- **v1.2:** UX móvil refinada con portada simplificada, mapa de bloques, selector **Ir a...** y barra inferior.
+- **v1.2.1-v1.2.4:** ajustes de cabecera móvil, reducción de redundancia y alineación visual final.
+- **v1.3:** preparación de plantilla multidioma mediante `assets/lang/`, inventario de contenidos de Francés A1 y plantilla para otros idiomas iniciales.
 
-- seleccionar bloques concretos;
-- guiar la actividad;
-- resolver dudas;
-- adaptar el uso al grupo;
-- complementar con práctica oral;
-- orientar al alumnado sobre el uso prudente del informe local;
-- decidir si el recurso se usa individualmente, por parejas o en grupo.
-
-El recurso no sustituye su criterio pedagógico ni la programación oficial.
-
-## 16. Limitaciones
+## 14. Limitaciones
 
 - No corrige todos los errores lingüísticos del alumnado.
 - La pronunciación automática depende del navegador y puede sonar artificial.
@@ -297,13 +237,6 @@ El recurso no sustituye su criterio pedagógico ni la programación oficial.
 - La estructura de audios locales está preparada, pero no incluye todavía archivos de audio reales.
 - No está diseñado como LMS ni como sistema de seguimiento del alumnado.
 
-## 17. Posibles mejoras futuras
-
-- Vídeo demo de 60–90 segundos.
-- Memoria de pilotaje tras uso real en aula, si procede y si se autoriza.
-
-No se recomienda incorporar por ahora un corrector IA/API, porque implicaría envío de texto a terceros, mayor complejidad técnica, posible backend y gestión de privacidad.
-
-## 18. Conclusión pedagógica
+## 15. Conclusión pedagógica
 
 El recurso es adecuado como apoyo complementario de repaso para Francés A1 final. Su valor principal está en ofrecer práctica breve, feedback inmediato, progresión sencilla desde reconocimiento hasta producción guiada y una evidencia local opcional de práctica, respetando la privacidad y manteniendo un enfoque realista para alumnado adulto.

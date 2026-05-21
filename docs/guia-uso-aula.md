@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.1  
+**Versión de referencia:** 1.3  
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -23,9 +23,25 @@ Conviene recordar al grupo:
 - que no deben introducir datos personales;
 - que en el reto final se recomienda usar solo un nombre de pila o un nombre ficticio.
 
-No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
+No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales o sensibles.
 
-## 3. Secuencia recomendada de 30-40 minutos
+## 3. Uso recomendado en móvil
+
+En teléfonos se recomienda usar el **recorrido guiado**.
+
+Esta vista ayuda a:
+
+- avanzar bloque a bloque;
+- evitar la sensación de página larga;
+- mantener una navegación clara mediante la barra inferior;
+- volver al recorrido guiado desde la vista completa;
+- reducir la necesidad de desplazarse por toda la página.
+
+La opción **Ver todos los bloques** funciona como un **mapa de navegación**, no como una simple página larga. Permite ver la estructura general del recurso y elegir por dónde continuar.
+
+El selector móvil **Ir a...** ayuda a saltar directamente a un bloque concreto sin perderse ni depender de un menú horizontal desplazable.
+
+## 4. Secuencia recomendada de 30-40 minutos
 
 ### 1. Presentación del objetivo · 3 minutos
 
@@ -55,9 +71,7 @@ Se recomienda:
 
 La pronunciación automática, si está disponible, debe tratarse como apoyo aproximado, no como modelo único.
 
-Desde la versión 0.9, si en el futuro se incorporan audios locales propios del autor, pueden usarse como modelo adicional de pronunciación sin grabar al alumnado.
-
-Desde la versión 1.1, en móviles puede utilizarse el modo guiado para reducir el desplazamiento: cada bloque aparece como un paso y la barra inferior permite avanzar o retroceder.
+Si en el futuro se incorporan audios locales propios del autor, pueden usarse como modelo adicional de pronunciación sin grabar al alumnado.
 
 ### 4. Emparejar y mini-situaciones · 8-10 minutos
 
@@ -86,11 +100,11 @@ La producción puede hacerse oralmente, por escrito o primero por escrito y desp
 
 El informe puede utilizarse como evidencia orientativa de práctica.
 
-Solo debe generarse si aporta valor al contexto de aula o al portfolio del estudiante/docente. No se envía a servidores externos.
+Solo debe generarse si aporta valor al contexto de aula o al portfolio. No se envía a servidores externos y no tiene valor evaluativo oficial.
 
 En equipos compartidos, se recomienda borrar el progreso local al finalizar.
 
-## 4. Variante corta de 15 minutos
+## 5. Variante corta de 15 minutos
 
 Para una sesión breve:
 
@@ -99,7 +113,7 @@ Para una sesión breve:
 3. Una o dos mini-situaciones.
 4. Reto final oral sin informe.
 
-## 5. Variante autónoma
+## 6. Variante autónoma
 
 Si el alumnado usa el recurso fuera del aula, puede seguir este orden:
 
@@ -110,7 +124,9 @@ Si el alumnado usa el recurso fuera del aula, puede seguir este orden:
 5. Escribir una práctica breve.
 6. Borrar el progreso local si usa un equipo compartido.
 
-## 6. Observaciones para portfolio docente
+En móvil, el recorrido guiado y el selector **Ir a...** son la forma más cómoda de moverse.
+
+## 7. Observaciones para portfolio docente
 
 El uso del recurso permite evidenciar:
 
@@ -118,13 +134,13 @@ El uso del recurso permite evidenciar:
 - adaptación a alumnado adulto;
 - uso de evaluación formativa;
 - atención básica a privacidad;
-- accesibilidad y usabilidad inicial;
+- accesibilidad y usabilidad móvil;
 - documentación pedagógica del recurso;
 - publicación sencilla en GitHub Pages.
 
 Si se documenta una experiencia real de aula, debe hacerse con autorización y sin incluir datos personales del alumnado.
 
-## 7. Límites
+## 8. Límites
 
 El recurso no corrige de forma completa la producción escrita u oral.
 
@@ -132,4 +148,8 @@ El feedback es local, básico y orientativo.
 
 No debe usarse como calificación oficial salvo decisión expresa del equipo docente responsable.
 
-No incorpora backend, login, formularios externos, analítica, APIs externas ni recogida de datos personales.
+No incorpora backend, login, formularios externos, analítica, APIs externas, IA ni recogida de datos personales.
+
+## 9. Nota multidioma
+
+Desde v1.3, el repositorio incorpora `assets/lang/` como preparación de plantilla multidioma. Esta estructura no cambia el uso en aula de Francés A1, pero permite documentar cómo adaptar el recurso a otros idiomas iniciales manteniendo la misma prudencia pedagógica y de privacidad.

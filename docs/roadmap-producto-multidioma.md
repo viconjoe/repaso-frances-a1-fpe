@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.1  
+**Versión de referencia:** 1.3  
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -33,7 +33,30 @@ Este planteamiento debe hacerse con prudencia:
 
 La formulación adecuada sería: **recurso adaptable a contextos de formación para el empleo en Canarias**, no recurso oficial del SCE.
 
-## 3. Visión de app empaquetada
+## 3. Estado actual
+
+La versión **1.2.4** cerró la fase de UX móvil refinada:
+
+- recorrido guiado por bloques;
+- portada móvil simplificada;
+- cabecera móvil breve y alineada;
+- descripción y nota institucional en desplegables;
+- vista **Ver todos los bloques** como mapa;
+- selector móvil **Ir a...**;
+- barra inferior persistente;
+- modo presentación independiente para aula.
+
+La versión **1.3** abre la fase de plantilla multidioma:
+
+- crea `assets/lang/`;
+- documenta el contenido actual en `fr-a1-content.json`;
+- incorpora `language-pack-template.json`;
+- añade una guía para adaptar el molde a otros idiomas;
+- mantiene `index.html` funcionando de forma local y estática.
+
+Esta etapa no añade nuevas actividades ni cambia la lógica principal. Prepara el recurso para futuras variantes de idioma sin introducir dependencias.
+
+## 4. Visión de app empaquetada
 
 Una evolución natural sería convertir el recurso en una app empaquetada o instalable, manteniendo la simplicidad técnica.
 
@@ -47,7 +70,7 @@ Opciones posibles:
 
 La prioridad debería ser que funcione bien sin servidor, sin cuentas y sin recogida de datos personales.
 
-## 4. Molde para otros idiomas
+## 5. Molde para otros idiomas
 
 El proyecto puede convertirse en una plantilla para:
 
@@ -67,7 +90,7 @@ Para facilitarlo, convendría separar progresivamente:
 - documentación pedagógica;
 - fichas específicas por idioma.
 
-## 5. Principios no negociables
+## 6. Principios no negociables
 
 La evolución del producto debería mantener:
 
@@ -80,41 +103,24 @@ La evolución del producto debería mantener:
 - transparencia sobre límites pedagógicos;
 - separación clara entre recurso complementario y evaluación oficial.
 
-## 6. Próximas etapas sugeridas
+## 7. Próximas etapas sugeridas
 
-### v1.0 · Consolidación publicable completada
-
-- revisión final de textos;
-- limpieza de documentación;
-- licencia definida;
-- capturas finales;
-- guía de instalación/uso;
-- comprobación en móvil y escritorio;
-- publicación estable en GitHub Pages.
-
-### v1.1 · UX móvil guiada completada
-
-- modo guiado paso a paso;
-- activación automática en móvil;
-- barra inferior anterior/siguiente;
-- vista completa opcional;
-- reducción de desplazamiento vertical;
-- convivencia con modo presentación de aula.
-
-### v1.2 · Plantilla multidioma
+### v1.3 · Plantilla multidioma completada
 
 - separar datos lingüísticos de la interfaz;
 - preparar estructura de carpetas por idioma;
 - documentar cómo crear una nueva variante;
-- crear ejemplo mínimo para otro idioma.
+- crear plantilla base para otros idiomas;
+- mantener la UX móvil v1.2.4 como referencia inicial.
 
-### v1.3 · Experiencia instalable
+### v1.4 · Experiencia instalable
 
 - estudiar PWA ligera;
 - iconos de instalación;
 - manifest web;
 - funcionamiento offline básico;
-- revisión de accesibilidad.
+- revisión de accesibilidad;
+- mantener ausencia de backend, login y analítica.
 
 ### v2.0 · Producto demostrativo completo
 
@@ -124,7 +130,7 @@ La evolución del producto debería mantener:
 - paquete de presentación para entidades formativas;
 - guía de adaptación a contextos FPE.
 
-## 7. Riesgos a evitar
+## 8. Riesgos a evitar
 
 - convertir el recurso en una plataforma compleja demasiado pronto;
 - recoger datos personales sin necesidad;
@@ -134,12 +140,12 @@ La evolución del producto debería mantener:
 - añadir IA/API sin resolver privacidad, coste y gobernanza;
 - perder la sencillez que hace útil el recurso.
 
-## 8. Formulación recomendada del proyecto
+## 9. Formulación recomendada del proyecto
 
 Una formulación prudente para portfolio o presentación sería:
 
 > Recurso didáctico digital gratuito, creado por Joel Concepción Villanueva, orientado al repaso de Francés A1 para alumnado adulto en contexto FPE. Actualmente funciona como herramienta complementaria y evidencia de competencia digital docente. A largo plazo, se proyecta como molde reutilizable para otros idiomas y como app educativa empaquetable, manteniendo privacidad, gratuidad y ausencia de recogida de datos personales.
 
-## 9. Conclusión
+## 10. Conclusión
 
-La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión 1.1, con una experiencia móvil más guiada. El siguiente salto no debería ser añadir muchas actividades, sino preparar una plantilla multidioma y una experiencia instalable ligera, capaces de explicar con claridad su valor pedagógico, sus límites institucionales y su potencial como producto educativo gratuito y replicable.
+La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión **1.3**, con una experiencia móvil refinada y una primera estructura multidioma. El siguiente salto razonable es preparar una experiencia instalable ligera, capaz de explicar con claridad su valor pedagógico, sus límites institucionales y su potencial como producto educativo gratuito y replicable.

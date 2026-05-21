@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.1  
+**Versión de referencia:** 1.3  
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -40,9 +40,9 @@ No sustituye materiales oficiales, programación docente ni evaluación oficial.
 
 Debe presentarse siempre como herramienta complementaria de repaso y como evidencia de competencia digital docente dentro de un portfolio personal.
 
-## 4. Alcance técnico
+## 4. Estado actual del recurso
 
-La versión 1.1 se mantiene como recurso web estático:
+La versión **1.3** se mantiene como recurso web estático:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -52,18 +52,21 @@ La versión 1.1 se mantiene como recurso web estático:
 - sin analítica;
 - sin formularios externos;
 - sin APIs externas de corrección;
+- sin IA/API;
 - sin dependencias externas;
 - publicación compatible con GitHub Pages.
 
 El recurso utiliza `localStorage` para conservar progreso únicamente en el navegador del usuario.
 
-La mejora principal de la versión 1.1 es una experiencia móvil guiada: el alumnado puede avanzar por bloques con navegación anterior/siguiente, reduciendo el desplazamiento vertical y manteniendo una vista completa opcional.
+El ciclo v1.2 consolidó una **UX móvil refinada**: portada compacta, descripción y nota institucional en desplegables, recorrido guiado, mapa de bloques, selector **Ir a...**, barra inferior persistente y cabecera móvil alineada en v1.2.4.
+
+La versión **1.3** prepara la fase de plantilla multidioma mediante `assets/lang/`, con un inventario del contenido actual de Francés A1 y una plantilla base para adaptar el molde a otros idiomas iniciales.
 
 ## 5. Privacidad y prudencia
 
 El proyecto se ha diseñado con criterio de minimización de datos. No recoge datos personales ni los envía a servidores externos.
 
-En el reto final se recomienda que el alumnado use solo un **nombre de pila** o un **nombre ficticio** para practicar la frase `Je m'appelle…`.
+En el reto final se recomienda que el alumnado use solo un **nombre de pila** o un **nombre ficticio** para practicar la frase `Je m'appelle...`.
 
 No deben escribirse:
 
@@ -89,20 +92,26 @@ La documentación principal del proyecto queda organizada en:
 - `docs/ficha-pedagogica.md`: descripción didáctica y orientaciones de uso;
 - `docs/guia-audios-locales.md`: preparación de audios estáticos del autor sin grabar alumnado;
 - `docs/guia-modo-presentacion.md`: uso del modo presentación para aula;
-- `docs/guia-publicacion-v1.md`: checklist de publicación estable;
-- `docs/guia-ux-movil-v1-1.md`: criterio y funcionamiento de la experiencia móvil guiada;
+- `docs/guia-plantilla-multidioma-v1-3.md`: guía para adaptar el molde a otros idiomas;
+- `docs/guia-publicacion-v1.md`: checklist histórico de publicación estable v1.0, con nota de estado actual v1.2.4;
+- `docs/guia-ux-movil-v1-2-4.md`: criterio y funcionamiento de la experiencia móvil refinada;
 - `docs/guia-visual-pictogramas.md`: descripción del apoyo visual SVG local;
 - `docs/guia-uso-aula.md`: secuencia breve para uso guiado, autónomo o por parejas;
 - `docs/memoria-pilotaje-preparatoria.md`: marco prudente para un futuro pilotaje sin datos reales de alumnado;
-- `docs/memoria-recurso.md`: memoria breve de diseño, decisiones técnicas y evolución.
+- `docs/memoria-recurso.md`: memoria breve de diseño, decisiones técnicas y evolución;
 - `docs/roadmap-producto-multidioma.md`: visión de evolución hacia app gratuita, empaquetable y reutilizable para otros idiomas.
 
-También se incluyen capturas de referencia en `assets/capturas/`, pictogramas SVG propios en `assets/pictogramas/` y estructura preparada para audios locales en `assets/audio/`.
+También se incluyen capturas de referencia en `assets/capturas/`, pictogramas SVG propios en `assets/pictogramas/`, estructura preparada para audios locales en `assets/audio/` y estructura de contenidos multidioma en `assets/lang/`.
 
 ## 7. Criterio de continuidad
 
-La versión 1.1 consolida el proyecto como recurso didáctico digital prudente, documentado y coherente para portfolio docente, con una mejora específica de comodidad móvil.
+La versión 1.3 consolida el proyecto como recurso didáctico digital prudente, documentado y coherente para portfolio docente, con una primera estructura reutilizable para otros idiomas.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 
-Las siguientes fases deberían centrarse en mejoras pedagógicas o visuales de bajo riesgo, manteniendo el principio de privacidad y evitando añadir backend, analítica, formularios, IA, APIs externas o recogida de datos personales.
+Las siguientes fases deberían centrarse en:
+
+- v1.4: PWA o experiencia instalable;
+- v2.0: producto demostrativo completo.
+
+Debe mantenerse el principio de privacidad y evitar añadir backend, analítica, formularios, IA, APIs externas o recogida de datos personales.

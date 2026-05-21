@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.1  
+**Versión de referencia:** 1.3  
 **Tipo de documento:** apoyo visual local del recurso  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -12,6 +12,8 @@
 La versión 0.8 incorpora pictogramas SVG propios para reforzar la orientación visual del recurso sin añadir dependencias externas.
 
 Los pictogramas no sustituyen las instrucciones escritas. Funcionan como apoyo visual para alumnado adulto, especialmente en tareas de repaso rápido, uso autónomo o proyección en aula.
+
+En la versión 1.3 conviven con la UX móvil refinada y la preparación multidioma. Siguen siendo apoyo visual local, no una nueva funcionalidad ni una dependencia externa.
 
 ## 2. Pictogramas incluidos
 

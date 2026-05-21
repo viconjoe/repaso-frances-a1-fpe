@@ -4,6 +4,8 @@ Esta carpeta queda preparada para incorporar audios de pronunciación creados pr
 
 No está pensada para grabar al alumnado ni para recoger voces, nombres o datos personales.
 
+Estado del recurso: v1.3. La preparación multidioma no cambia el criterio de audio: solo se contemplan audios locales propios del autor, incluidos como archivos estáticos.
+
 ## Archivos previstos
 
 Los nombres esperados por el recurso son:

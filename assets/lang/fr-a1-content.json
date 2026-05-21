@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1.0",
+  "resourceVersion": "1.3",
+  "language": {
+    "code": "fr",
+    "name": "Francés",
+    "level": "A1",
+    "audience": "Alumnado adulto"
+  },
+  "metadata": {
+    "title": "Repaso Final Francés A1",
+    "author": "Joel Concepción Villanueva",
+    "institutionalStatus": "Recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE",
+    "privacy": "Sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin recogida de datos personales"
+  },
+  "quizQuestions": [
+    {
+      "q": "¿Qué significa Bonjour?",
+      "options": ["Buenos días / Hola", "Adiós", "Gracias", "Buenas noches"],
+      "answer": 0,
+      "exp": "Bonjour es el saludo básico durante el día."
+    },
+    {
+      "q": "Elige la frase para decir tu nombre.",
+      "options": ["Je voudrais...", "Je m'appelle...", "Où est... ?", "Combien ça coûte ?"],
+      "answer": 1,
+      "exp": "Je m'appelle... significa Me llamo..."
+    },
+    {
+      "q": "¿Cómo preguntas el precio?",
+      "options": ["Où est la gare ?", "Combien ça coûte ?", "J'habite à Gáldar", "Au revoir"],
+      "answer": 1,
+      "exp": "Combien ça coûte ? significa ¿Cuánto cuesta?"
+    },
+    {
+      "q": "¿Qué frase sirve para pedir que repitan?",
+      "options": ["Je ne comprends pas", "Pouvez-vous répéter, s'il vous plaît ?", "Bonsoir", "Je travaille"],
+      "answer": 1,
+      "exp": "Es una fórmula útil y educada para pedir repetición."
+    },
+    {
+      "q": "¿Qué significa J'habite à...?",
+      "options": ["Me llamo...", "Vivo en...", "Quisiera...", "No entiendo"],
+      "answer": 1,
+      "exp": "J'habite à... significa Vivo en..."
+    },
+    {
+      "q": "¿Qué frase usarías para pedir algo con cortesía?",
+      "options": ["Je voudrais...", "Au revoir", "Comment ça va ?", "Où est... ?"],
+      "answer": 0,
+      "exp": "Je voudrais... equivale a Quisiera..."
+    },
+    {
+      "q": "Elige una despedida.",
+      "options": ["Au revoir", "Bonjour", "Merci", "Je suis étudiant(e)"],
+      "answer": 0,
+      "exp": "Au revoir significa adiós o hasta luego."
+    },
+    {
+      "q": "¿Qué significa Je ne comprends pas?",
+      "options": ["No entiendo", "No trabajo", "No cuesta", "No vivo"],
+      "answer": 0,
+      "exp": "Frase básica para expresar que no entiendes."
+    },
+    {
+      "q": "¿Qué frase pregunta por ubicación?",
+      "options": ["Où est... ?", "Je voudrais...", "Bonsoir", "Ça coûte deux euros"],
+      "answer": 0,
+      "exp": "Où est... ? significa ¿Dónde está...?"
+    },
+    {
+      "q": "¿Qué frase significa Estoy jubilado/a?",
+      "options": ["Je suis à la retraite.", "Je cherche du travail.", "Je travaille.", "J'étudie le français."],
+      "answer": 0,
+      "exp": "Je suis à la retraite significa Estoy jubilado/a."
+    }
+  ],
+  "flashcards": [
+    {
+      "fr": "Bonjour",
+      "es": "Buenos días / Hola",
+      "hint": "Saludo básico durante el día",
+      "audio": "bonjour.mp3"
+    },
+    {
+      "fr": "Bonsoir",
+      "es": "Buenas noches / Buenas tardes (tarde-noche)",
+      "hint": "Saludo al final del día, desde el atardecer",
+      "audio": "bonsoir.mp3"
+    },
+    {
+      "fr": "Au revoir",
+      "es": "Adiós / Hasta luego",
+      "hint": "Despedida",
+      "audio": "au-revoir.mp3"
+    },
+    {
+      "fr": "Je m'appelle...",
+      "es": "Me llamo...",
+      "hint": "Presentación",
+      "audio": "je-mappelle.mp3"
+    },
+    {
+      "fr": "J'habite à...",
+      "es": "Vivo en...",
+      "hint": "Lugar de residencia",
+      "audio": "jhabite-a.mp3"
+    },
+    {
+      "fr": "Je voudrais...",
+      "es": "Quisiera...",
+      "hint": "Petición educada",
+      "audio": "je-voudrais.mp3"
+    },
+    {
+      "fr": "Combien ça coûte ?",
+      "es": "¿Cuánto cuesta?",
+      "hint": "Compra básica",
+      "audio": "combien-ca-coute.mp3"
+    },
+    {
+      "fr": "Où est... ?",
+      "es": "¿Dónde está...?",
+      "hint": "Direcciones",
+      "audio": "ou-est.mp3"
+    },
+    {
+      "fr": "Je ne comprends pas",
+      "es": "No entiendo",
+      "hint": "Pedir apoyo",
+      "audio": "je-ne-comprends-pas.mp3"
+    },
+    {
+      "fr": "Pouvez-vous répéter, s'il vous plaît ?",
+      "es": "¿Puede repetir, por favor?",
+      "hint": "Pedir repetición",
+      "audio": "pouvez-vous-repeter.mp3"
+    }
+  ],
+  "matchPairs": [
+    {
+      "id": "name",
+      "phrase": "Je m'appelle...",
+      "intent": "Decir mi nombre"
+    },
+    {
+      "id": "live",
+      "phrase": "J'habite à...",
+      "intent": "Decir dónde vivo"
+    },
+    {
+      "id": "price",
+      "phrase": "Combien ça coûte ?",
+      "intent": "Preguntar precio"
+    },
+    {
+      "id": "repeat",
+      "phrase": "Pouvez-vous répéter, s'il vous plaît ?",
+      "intent": "Pedir que repitan"
+    },
+    {
+      "id": "help",
+      "phrase": "Excusez-moi",
+      "intent": "Llamar la atención con educación"
+    },
+    {
+      "id": "want",
+      "phrase": "Je voudrais...",
+      "intent": "Pedir algo de forma cortés"
+    }
+  ],
+  "scenarios": [
+    {
+      "s": "Llegas a clase y saludas al grupo por la mañana.",
+      "options": ["Au revoir", "Combien ça coûte ?", "Bonjour", "Je ne comprends pas"],
+      "answer": 2,
+      "exp": "Bonjour es el saludo básico durante el día."
+    },
+    {
+      "s": "No has entendido la explicación y quieres pedir que repitan.",
+      "options": ["J'habite à Gáldar", "Pouvez-vous répéter, s'il vous plaît ?", "Je voudrais un café", "Ça coûte deux euros"],
+      "answer": 1,
+      "exp": "Pedir repetición con cortesía ayuda mucho en A1."
+    },
+    {
+      "s": "Estás comprando y quieres saber el precio.",
+      "options": ["Comment ça va ?", "Où est la gare ?", "Je m'appelle Ana", "Combien ça coûte ?"],
+      "answer": 3,
+      "exp": "Combien ça coûte ? es la pregunta básica para precio."
+    },
+    {
+      "s": "Te preguntan tu nombre.",
+      "options": ["Je m'appelle Carlos", "J'habite à Paris", "Je ne comprends pas", "Bonsoir"],
+      "answer": 0,
+      "exp": "Je m'appelle... sirve para decir el nombre."
+    },
+    {
+      "s": "Quieres preguntar dónde está la estación.",
+      "options": ["Je voudrais la gare", "La gare coûte combien ?", "Où est la gare ?", "Je suis gare"],
+      "answer": 2,
+      "exp": "Où est... ? pregunta por ubicación. La gare es la estación."
+    }
+  ],
+  "finalPrompts": [
+    "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
+    "Estás en clase. Preséntate, di dónde vives y pide que repitan una frase.",
+    "Estás en una tienda. Saluda, pregunta el precio y da las gracias.",
+    "Estás en la calle. Pregunta dónde está la estación y pide ayuda con cortesía.",
+    "Conoces a una persona nueva. Saluda, di tu nombre, dónde vives y cómo estás."
+  ]
+}

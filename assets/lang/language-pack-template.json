@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "resourceVersion": "1.3",
+  "language": {
+    "code": "xx",
+    "name": "Idioma",
+    "level": "A1",
+    "audience": "Alumnado adulto"
+  },
+  "metadata": {
+    "title": "Repaso Final Idioma A1",
+    "author": "Joel Concepción Villanueva",
+    "institutionalStatus": "Recurso complementario, no oficial y sin vínculo institucional directo con entidades externas salvo autorización expresa",
+    "privacy": "Sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin recogida de datos personales"
+  },
+  "quizQuestions": [
+    {
+      "q": "Pregunta de autodiagnóstico en español o lengua de apoyo",
+      "options": ["Opción correcta", "Distractor 1", "Distractor 2", "Distractor 3"],
+      "answer": 0,
+      "exp": "Explicación breve y formativa."
+    }
+  ],
+  "flashcards": [
+    {
+      "target": "Frase en el idioma meta",
+      "es": "Traducción o apoyo en español",
+      "hint": "Función comunicativa",
+      "audio": "archivo-opcional.mp3"
+    }
+  ],
+  "matchPairs": [
+    {
+      "id": "example",
+      "phrase": "Frase en el idioma meta",
+      "intent": "Intención comunicativa"
+    }
+  ],
+  "scenarios": [
+    {
+      "s": "Situación comunicativa breve.",
+      "options": ["Respuesta adecuada", "Distractor 1", "Distractor 2", "Distractor 3"],
+      "answer": 0,
+      "exp": "Explicación breve de uso."
+    }
+  ],
+  "finalPrompts": [
+    "Situación comunicativa breve adaptada al idioma y al nivel."
+  ],
+  "adaptationChecklist": [
+    "Mantener nivel inicial A1 o equivalente.",
+    "Usar frases funcionales y memorizables.",
+    "Evitar datos personales reales.",
+    "Mantener enfoque adulto y no infantilizado.",
+    "Revisar privacidad y límites institucionales."
+  ]
+}

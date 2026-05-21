@@ -3,31 +3,37 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.0  
+**Versión histórica de referencia:** 1.0  
+**Estado actual del recurso:** 1.3  
 **Tipo de documento:** checklist de publicación estable  
 **Carácter:** recurso complementario, gratuito, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
 ## 1. Finalidad
 
-Esta guía sirve como cierre de la versión 1.0 y como checklist para presentar el recurso de forma estable en GitHub Pages, portfolio docente o contexto de demostración.
+Esta guía se conserva como documento histórico de cierre de la versión 1.0 y como checklist de publicación estable en GitHub Pages, portfolio docente o contexto de demostración.
 
-La versión 1.0 no añade nuevas actividades. Consolida el recurso, la documentación, la licencia y la presentación pública.
+La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v1.3**, con UX móvil refinada y estructura de plantilla multidioma.
 
 ## 2. Comprobaciones antes de publicar
 
-Antes de considerar estable la versión, revisar:
+Antes de publicar o actualizar la versión visible, revisar:
 
 - `index.html` abre correctamente en navegador;
-- la versión visible indica `1.0`;
+- la versión visible coincide con la versión actual del recurso;
 - el modo presentación se activa y se desactiva;
+- el recorrido guiado móvil funciona;
+- la vista **Ver todos los bloques** actúa como mapa de navegación;
+- el selector móvil **Ir a...** permite saltar a bloques;
 - las flashcards funcionan;
 - la pronunciación experimental se muestra como apoyo aproximado;
 - el botón de audio local no aparece mientras no existan audios reales;
 - el reto final recomienda usar nombre de pila o ficticio;
 - el informe local se genera sin enviar datos;
-- las capturas de referencia están actualizadas;
+- la estructura `assets/lang/` contiene inventario y plantilla de contenidos;
 - la documentación principal está en `/docs/`;
 - la licencia está definida en `LICENSE.md`.
+
+Las capturas de referencia pueden corresponder a versiones anteriores. Tras estabilizar v1.2.4 conviene renovar especialmente las capturas móviles.
 
 ## 3. Publicación en GitHub Pages
 
@@ -57,9 +63,10 @@ Formulación recomendada:
 
 ## 6. Próximo ciclo
 
-Tras v1.0, las mejoras deberían abordarse como nuevas ramas o hitos:
+Estado de ciclos tras v1.0:
 
-- v1.1: UX móvil guiada;
-- v1.2: plantilla multidioma;
-- v1.3: PWA o experiencia instalable;
+- v1.1: UX móvil guiada inicial;
+- v1.2.4: UX móvil refinada cerrada;
+- v1.3: plantilla multidioma preparada;
+- v1.4: PWA o experiencia instalable;
 - v2.0: producto demostrativo completo adaptable a distintos idiomas.

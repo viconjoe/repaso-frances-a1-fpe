@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.1  
+**Versión de referencia:** 1.3  
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -22,7 +22,9 @@ El pilotaje tendría como objetivo comprobar si el recurso:
 - facilita la autoevaluación formativa sin sensación de examen;
 - ayuda a preparar una producción breve oral o escrita;
 - se usa correctamente sin introducir datos personales;
-- funciona bien en móvil, portátil o proyección de aula.
+- funciona bien en móvil, portátil o proyección de aula;
+- mejora su comodidad móvil con la UX refinada de v1.2.4;
+- mantiene coherencia si se usa como molde para futuras variantes de idioma.
 
 ## 3. Condiciones previas
 
@@ -33,6 +35,7 @@ Antes de cualquier uso real en aula se recomienda:
 - recordar que no sustituye la programación ni la evaluación del curso;
 - evitar recoger evidencias identificables del alumnado;
 - indicar que en el reto final se use solo nombre de pila o nombre ficticio;
+- recordar que no deben introducirse apellidos, DNI, teléfono, correo ni datos sensibles;
 - borrar el progreso local en equipos compartidos al finalizar.
 
 ## 4. Propuesta de sesión
@@ -49,11 +52,20 @@ Secuencia recomendada:
 6. Reto final oral o escrito.
 7. Informe local opcional, solo si aporta valor y se respetan las pautas de privacidad.
 
+En móvil se recomienda usar el recorrido guiado. La vista **Ver todos los bloques** puede utilizarse como mapa de orientación si el alumnado necesita saltar a una actividad concreta.
+
 ## 5. Indicadores de observación
 
 Durante un uso real podrían observarse, sin identificar a nadie, aspectos como:
 
 - si las instrucciones se entienden sin explicación adicional;
+- si el alumnado entiende la cabecera inicial;
+- si la cabecera móvil simplificada mejora la primera impresión;
+- si el recorrido guiado reduce la sensación de página larga;
+- si el mapa de bloques ayuda a orientarse;
+- si el selector **Ir a...** es comprensible;
+- si la barra inferior evita pérdidas durante el recorrido;
+- si los textos son claros para alumnado adulto con baja o media competencia digital;
 - si los botones y actividades resultan fáciles de usar;
 - si el alumnado comprende que el resultado no es una nota oficial;
 - si las frases de apoyo son suficientes para el reto final;
@@ -113,6 +125,7 @@ Bloques utilizados:
 Incidencias técnicas:
 Dudas frecuentes:
 Frases o actividades más útiles:
+Observaciones de UX móvil:
 Aspectos de privacidad observados:
 Mejoras propuestas:
 Conclusión docente:
@@ -124,4 +137,6 @@ Esta plantilla no debe incluir nombres ni datos personales del alumnado.
 
 El recurso está preparado para un pilotaje prudente como herramienta complementaria de repaso de Francés A1 para alumnado adulto.
 
-La versión 1.1 aporta, además, una experiencia móvil guiada que conviene observar específicamente en una futura prueba real: claridad del recorrido, comodidad de la barra inferior y reducción del desplazamiento en teléfonos.
+La versión 1.2.4 aporta una experiencia móvil refinada que conviene observar específicamente en una futura prueba real: claridad de cabecera, reducción de desplazamiento, utilidad del mapa de bloques, comprensión del selector **Ir a...** y eficacia de la barra inferior como navegación principal.
+
+La versión 1.3 añade una estructura de plantilla multidioma. En un pilotaje futuro puede observarse si el contenido de Francés A1 está suficientemente separado y documentado para servir como modelo sin confundir al alumnado ni presentar el recurso como oficial.

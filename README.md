@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 1.1  
+**Versión actual:** 1.3  
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
@@ -41,22 +41,22 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Nivel y enfoque lingüístico
+## Estado actual: v1.3
 
-El recurso se orienta a **Francés A1 según el MCER**, especialmente a contenidos funcionales de supervivencia comunicativa:
+La versión **1.3** conserva la UX móvil refinada de v1.2.4 y prepara el proyecto como plantilla multidioma.
 
-- saludos y despedidas;
-- presentación personal;
-- nombre y lugar de residencia;
-- frases de cortesía;
-- pedir ayuda;
-- pedir que repitan;
-- expresar que no se entiende;
-- preguntar precio;
-- preguntar una dirección o ubicación;
-- resolver situaciones comunicativas simples.
+El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
-Algunas expresiones, como `Je voudrais…` o `Pouvez-vous répéter, s’il vous plaît ?`, se tratan como **bloques funcionales útiles para A1**, no como explicación gramatical completa del condicional o de la inversión interrogativa.
+- portada móvil simplificada;
+- descripción inicial y nota institucional en desplegables;
+- cabecera móvil breve, alineada y sin redundancias;
+- recorrido guiado por bloques;
+- vista **Ver todos los bloques** reorganizada como mapa de bloques;
+- selector móvil **Ir a...** para saltar a un bloque sin depender del menú horizontal;
+- barra inferior de navegación para avanzar, retroceder o volver al recorrido guiado;
+- modo presentación independiente para uso en aula;
+- informe local de práctica, opcional y no oficial;
+- estructura `assets/lang/` para documentar contenidos lingüísticos reutilizables.
 
 ## Estructura del recurso
 
@@ -71,25 +71,9 @@ El recurso incluye estos bloques principales:
 7. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
 8. **Ficha docente integrada**: contextualiza el recurso como propuesta pedagógica complementaria.
 
-Desde la versión **0.6**, se refuerza el uso en aula con un itinerario sugerido dentro del recurso y una guía breve específica en `/docs/`.
-
-Desde la versión **0.7**, el repositorio incorpora capturas de referencia y una memoria preparatoria de pilotaje sin datos reales de alumnado.
-
-Desde la versión **0.8**, el recurso añade pictogramas SVG propios como apoyo visual local, sin librerías ni iconos externos.
-
-Desde la versión **0.9**, se incorpora modo presentación para aula y queda preparada la estructura para audios locales propios del autor.
-
-La documentación incorpora además una visión de evolución hacia app educativa empaquetable, gratuita y reutilizable como molde para otros idiomas, siempre sin carácter oficial ni vínculo institucional directo con ICSE o con el SCE.
-
-La versión **1.0** se considera versión estable/presentable para publicación, portfolio docente y demostración del enfoque de producto educativo gratuito.
-
-Desde la versión **1.1**, se incorpora una UX móvil guiada para reducir el desplazamiento en pantallas pequeñas y facilitar un recorrido paso a paso.
-
 ## Informe de práctica del alumno
 
-Desde la versión **0.5**, el recurso incorpora un bloque específico para generar un **informe local de práctica**.
-
-El informe resume:
+El informe local resume:
 
 - progreso local por bloques iniciados;
 - resultado orientativo del autodiagnóstico;
@@ -106,12 +90,6 @@ El informe:
 - se puede guardar como PDF usando el sistema de impresión del navegador;
 - también puede descargarse como archivo HTML.
 
-Para guardarlo como PDF:
-
-```text
-Preparar informe PDF → Guardar / imprimir PDF → Guardar como PDF / Microsoft Print to PDF → Guardar
-```
-
 ## Privacidad
 
 El recurso:
@@ -124,13 +102,12 @@ El recurso:
 - no envía respuestas a ningún servidor;
 - no usa formularios externos;
 - no incorpora analítica;
+- no incorpora IA/API;
 - no recoge datos personales.
 
-En el reto final se recomienda usar solo un nombre de pila o un nombre ficticio para practicar la frase `Je m'appelle…`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
+En el reto final se recomienda usar solo un nombre de pila o un nombre ficticio para practicar la frase `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
 
 El progreso se guarda únicamente en el navegador del usuario mediante `localStorage`.
-
-El informe de práctica se genera localmente. En ordenadores compartidos, se recomienda pulsar **“Borrar progreso local”** al terminar.
 
 ## Características técnicas
 
@@ -138,12 +115,16 @@ El informe de práctica se genera localmente. En ordenadores compartidos, se rec
 - HTML, CSS y JavaScript vanilla.
 - Sin dependencias externas.
 - Compatible con GitHub Pages.
-- Diseño responsive.
-- Modo guiado móvil con navegación anterior/siguiente y vista completa opcional.
+- Diseño responsive con enfoque mobile-first en v1.2.4.
+- Recorrido guiado móvil con navegación anterior/siguiente.
+- Vista completa reorganizada como mapa de bloques.
+- Selector móvil **Ir a...**.
+- Modo presentación independiente para aula.
 - Uso básico de accesibilidad: skip link, foco visible, `aria-live`, `lang="fr"`, botones táctiles y barras de progreso con atributos ARIA.
 - Persistencia local mediante `localStorage`.
 - Pronunciación experimental con Web Speech API, si el navegador la soporta.
 - Generación de informe local mediante ventana HTML imprimible y descarga alternativa con `Blob`.
+- Carpeta `assets/lang/` con inventario de contenidos y plantilla de paquete lingüístico.
 
 ## Estructura del repositorio
 
@@ -156,12 +137,16 @@ repaso-frances-a1-fpe/
 │   ├── audio/
 │   │   ├── README.md
 │   │   └── audio-manifest.json
-    │   ├── capturas/
-    │   │   ├── 01-portada-objetivo.png
-    │   │   ├── 02-reto-final-privacidad.png
-    │   │   ├── 03-informe-ficha-docente.png
-    │   │   ├── 04-modo-presentacion.png
-    │   │   └── 05-modo-guiado-movil.png
+│   ├── lang/
+│   │   ├── README.md
+│   │   ├── fr-a1-content.json
+│   │   └── language-pack-template.json
+│   ├── capturas/
+│   │   ├── 01-portada-objetivo.png
+│   │   ├── 02-reto-final-privacidad.png
+│   │   ├── 03-informe-ficha-docente.png
+│   │   ├── 04-modo-presentacion.png
+│   │   └── 05-modo-guiado-movil.png
 │   └── pictogramas/
 │       ├── comprender.svg
 │       ├── responder.svg
@@ -173,8 +158,9 @@ repaso-frances-a1-fpe/
     ├── ficha-pedagogica.md
     ├── guia-audios-locales.md
     ├── guia-modo-presentacion.md
+    ├── guia-plantilla-multidioma-v1-3.md
     ├── guia-publicacion-v1.md
-    ├── guia-ux-movil-v1-1.md
+    ├── guia-ux-movil-v1-2-4.md
     ├── guia-visual-pictogramas.md
     ├── guia-uso-aula.md
     ├── memoria-pilotaje-preparatoria.md
@@ -184,32 +170,15 @@ repaso-frances-a1-fpe/
 
 La carpeta `assets/audio/` queda preparada para audios propios, pero no incluye grabaciones del alumnado.
 
-## Uso local
-
-Para abrir el recurso en local:
-
-1. Descargar o clonar el repositorio.
-2. Abrir `index.html` en el navegador.
-3. No requiere servidor local para funcionar.
-
-## Publicación en GitHub Pages
-
-El recurso puede publicarse desde:
-
-```text
-Settings → Pages → Deploy from a branch → main → /root
-```
-
-La página publicada usa `index.html` como archivo principal.
-
 ## Documentación complementaria
 
 - [Resumen maestro del proyecto](docs/00-resumen-maestro-proyecto.md)
 - [Ficha pedagógica](docs/ficha-pedagogica.md)
 - [Guía de audios locales propios](docs/guia-audios-locales.md)
 - [Guía de modo presentación](docs/guia-modo-presentacion.md)
+- [Guía de plantilla multidioma v1.3](docs/guia-plantilla-multidioma-v1-3.md)
 - [Guía de publicación v1.0](docs/guia-publicacion-v1.md)
-- [Guía de UX móvil guiada v1.1](docs/guia-ux-movil-v1-1.md)
+- [Guía de UX móvil refinada v1.2.4](docs/guia-ux-movil-v1-2-4.md)
 - [Guía visual de pictogramas](docs/guia-visual-pictogramas.md)
 - [Guía breve de uso en aula](docs/guia-uso-aula.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -226,132 +195,70 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 - [Modo presentación](assets/capturas/04-modo-presentacion.png)
 - [Modo guiado móvil](assets/capturas/05-modo-guiado-movil.png)
 
+Algunas capturas pueden corresponder a versiones anteriores del recurso. Tras estabilizar v1.2.4, conviene renovar especialmente las capturas móviles para reflejar la cabecera simplificada, el selector **Ir a...** y la vista **Ver todos los bloques**.
+
 ## Evolución de versiones
+
+### v1.3
+
+- Preparación de plantilla multidioma.
+- Creación de `assets/lang/`.
+- Inventario estructurado del contenido actual en `assets/lang/fr-a1-content.json`.
+- Plantilla base para nuevos idiomas en `assets/lang/language-pack-template.json`.
+- Guía documental `docs/guia-plantilla-multidioma-v1-3.md`.
+- Mantenimiento del funcionamiento estático: sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin dependencias.
+
+### v1.2.4
+
+- Alineación final de la cabecera móvil.
+- Corrección de simetría visual en la tarjeta superior.
+- Identificación breve y sobria: `Repaso final · Francés A1` y `Alumnado adulto`.
+- Mantenimiento del recorrido guiado, mapa de bloques y funcionamiento local.
+
+### v1.2.3
+
+- Simplificación de cabecera móvil.
+- Reducción de repeticiones de `Repaso final`, `Francés A1` y `alumnado adulto`.
+- Identificación inicial más clara y menos saturada.
+
+### v1.2.1
+
+- Cabecera guiada compacta.
+- En móvil, durante el recorrido guiado, se ocultan elementos superiores innecesarios.
+- A partir del paso 2, la cabecera deja paso a la barra inferior como navegación principal.
+
+### v1.2
+
+- UX móvil refinada con enfoque mobile-first.
+- Portada móvil simplificada.
+- Descripción inicial y nota institucional convertidas en desplegables.
+- Vista **Ver todos los bloques** reorganizada como mapa de bloques.
+- Selector móvil **Ir a...**.
+- Barra inferior persistente para volver al recorrido guiado desde la vista completa.
+- Mantenimiento del modo presentación para aula.
 
 ### v1.1
 
-Mejora de experiencia móvil:
-
-- incorporación de modo guiado paso a paso;
-- activación automática del modo guiado en móviles;
-- botón para alternar entre `Modo guiado` y `Ver todo`;
-- barra inferior con navegación `Anterior` / `Siguiente`;
-- reducción de desplazamiento vertical al mostrar un bloque principal por pantalla;
-- mantenimiento del modo presentación para aula como experiencia independiente;
-- mantenimiento del enfoque gratuito, estático y prudente: sin backend, sin login, sin analítica, sin formularios externos, sin grabación de alumnado, sin IA/API y sin dependencias externas.
+- Modo guiado móvil inicial.
+- Activación automática en pantallas pequeñas.
+- Navegación inferior anterior/siguiente.
+- Vista completa opcional.
 
 ### v1.0
 
-Versión estable/presentable:
-
-- definición de licencia en `LICENSE.md`;
-- incorporación de `docs/guia-publicacion-v1.md`;
-- revisión de versión visible en recurso, informe local y documentación;
-- consolidación del proyecto como recurso publicable de portfolio docente;
-- mantenimiento del enfoque gratuito, estático y prudente: sin backend, sin login, sin analítica, sin formularios externos, sin grabación de alumnado, sin IA/API y sin dependencias externas.
-
-### v0.9
-
-Mejoras de uso en aula y preparación de audio:
-
-- incorporación de modo presentación para proyección en aula;
-- botón para activar y desactivar el modo presentación;
-- salida rápida del modo presentación con tecla `Escape`;
-- creación de carpeta `assets/audio/`;
-- creación de `assets/audio/audio-manifest.json`;
-- preparación de soporte para audios locales propios del autor, desactivado hasta incorporar archivos reales;
-- creación de `docs/guia-audios-locales.md`;
-- creación de `docs/guia-modo-presentacion.md`;
-- incorporación de `docs/roadmap-producto-multidioma.md` como visión de evolución;
-- mantenimiento del enfoque local: sin grabar alumnado, sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
-
-### v0.8
-
-Mejoras visuales y pedagógicas:
-
-- creación de carpeta `assets/pictogramas/`;
-- incorporación de cinco pictogramas SVG propios;
-- integración de pictogramas en tarjetas de objetivo, itinerario de uso y aviso de privacidad;
-- creación de `docs/guia-visual-pictogramas.md`;
-- mantenimiento del enfoque local: sin backend, sin login, sin analítica, sin formularios externos, sin IA/API, sin librerías de iconos y sin dependencias externas.
-
-### v0.7
-
-Mejoras de publicación y portfolio:
-
-- creación de carpeta `assets/capturas/`;
-- incorporación de tres capturas de referencia del recurso;
-- creación de `docs/memoria-pilotaje-preparatoria.md`;
-- actualización de estructura documental y enlaces del README;
-- mantenimiento del enfoque prudente: sin datos reales de alumnado, sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
-
-### v0.6
-
-Mejoras pedagógicas y visuales ligeras:
-
-- itinerario sugerido de uso en aula dentro del bloque de objetivo;
-- refuerzo visible de privacidad antes del reto final;
-- secuencia breve recomendada en la ficha docente integrada;
-- nueva guía documental `docs/guia-uso-aula.md`;
-- actualización de documentación complementaria;
-- mantenimiento del enfoque estático: sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
-
-### v0.5
-
-Mejoras de informe local y documentación:
-
-- informe del alumno separado de la impresión general de la página;
-- botón **Preparar informe PDF** con vista limpia A4;
-- instrucciones claras para guardar con **Guardar como PDF** o **Microsoft Print to PDF**;
-- descarga alternativa de informe HTML;
-- feedback visible para evitar confusión entre imprimir y guardar;
-- contador de parejas en el bloque de emparejar;
-- mantenimiento del enfoque sin backend, sin login, sin analítica y sin APIs externas.
-
-### v0.4.1
-
-Correcciones menores antes de mostrar el recurso:
-
-- corrección de versión visible en créditos;
-- redistribución de respuestas correctas en mini-situaciones;
-- unificación de la frase `Pouvez-vous répéter, s’il vous plaît ?`.
-
-### v0.4
-
-Mejoras de experiencia de usuario:
-
-- banco de frases clicable en flashcards;
-- botones de navegación colocados junto a la tarjeta;
-- mejora del bloque de reto final;
-- feedback local sin IA;
-- corrección del botón limpiar para borrar texto y checklist.
-
-### v0.3
-
-Mejoras técnicas y de accesibilidad:
-
-- indicador visual de desplazamiento en navegación móvil;
-- persistencia del orden en la actividad de emparejar;
-- refactor del estado de quiz y situaciones;
-- banco de frases de apoyo;
-- pronunciación experimental con Web Speech API.
-
-### v0.2
-
-Primera versión depurada:
-
-- tono institucional prudente;
-- autodiagnóstico orientativo;
-- progreso real por interacción;
-- nota de privacidad;
-- accesibilidad básica.
+- Versión estable/presentable.
+- Licencia definida en `LICENSE.md`.
+- Guía de publicación v1.0.
+- Consolidación del proyecto como recurso publicable de portfolio docente.
 
 ## Futuras mejoras previstas
 
 Las siguientes mejoras se consideran posibles para versiones posteriores:
 
-- vídeo demo de 60–90 segundos;
-- memoria de pilotaje tras uso real en aula, si procede y si se autoriza, tomando como base la memoria preparatoria.
+- v1.4: PWA o experiencia instalable;
+- v2.0: producto demostrativo completo adaptable a distintos idiomas;
+- vídeo demo de 60-90 segundos;
+- memoria de pilotaje tras uso real en aula, si procede y si se autoriza.
 
 No se recomienda incorporar por ahora un corrector IA/API, porque implicaría envío de texto a terceros, mayor complejidad técnica, posible backend y gestión de privacidad.
 
