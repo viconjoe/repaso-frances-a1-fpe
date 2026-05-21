@@ -10,7 +10,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 1.2.1
+    Versión: 1.2.2
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -66,6 +66,14 @@
     [v1.2] Botón persistente para volver al recorrido guiado desde la vista completa en móvil.
     [v1.2] Menú móvil sustituido por selector claro de bloques.
     [v1.2] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v1.2.1:
+    ──────────────────────────────────────────────────────────────────────
+    [v1.2.1] Cabecera móvil compacta durante el recorrido guiado.
+
+    Cambios v1.2.2:
+    ──────────────────────────────────────────────────────────────────────
+    [v1.2.2] Se elimina el título duplicado en móvil guiado y se compacta el bloque superior inicial.
   -->
 
   <style>
@@ -1204,19 +1212,29 @@
       }
 
       body.guided-mode:not(.presentation-mode) .hero {
-        padding: 0.85rem 1rem;
-        gap: 0.4rem;
+        padding: 0.72rem 1rem;
+        gap: 0.25rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) .eyebrow {
+        margin-bottom: 0.25rem;
+        padding: 0.38rem 0.62rem;
+        border-radius: 16px;
+        font-size: 0.84rem;
+        line-height: 1.2;
       }
 
       body.guided-mode:not(.presentation-mode) .hero h1 {
-        font-size: 1.7rem;
-        line-height: 1.05;
-        margin-bottom: 0.25rem;
+        display: none;
       }
 
       body.guided-mode:not(.presentation-mode) .mobile-lead {
-        font-size: 0.92rem;
-        line-height: 1.35;
+        margin: 0;
+        max-width: none;
+        font-size: 0.98rem;
+        line-height: 1.32;
+        font-weight: 650;
+        color: var(--brand);
       }
 
       body.guided-mode.guided-past-cover:not(.presentation-mode) header {
@@ -1279,9 +1297,9 @@
   <header>
     <div class="shell hero">
       <div>
-        <span class="eyebrow">🇫🇷 Francés A1 · Repaso final · Alumnado adulto</span>
+        <span class="eyebrow">🇫🇷 Francés A1 · Repaso final · Adultos</span>
         <h1>Repaso Final Francés A1</h1>
-        <p class="lead mobile-lead">Recurso interactivo de repaso para alumnado adulto de Francés A1.</p>
+        <p class="lead mobile-lead">Recurso interactivo de repaso para alumnado adulto.</p>
         <p class="lead desktop-lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
 
         <div class="mobile-info-drawers no-print" aria-label="Información breve del recurso">
@@ -1746,7 +1764,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.2.1 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.2.2 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2633,7 +2651,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "1.2.1",
+        version: "1.2.2",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
