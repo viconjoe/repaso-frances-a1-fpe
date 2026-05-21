@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Evidencia local</title>
+  <desc id="desc">Informe local con escudo de privacidad.</desc>
+  <rect width="96" height="96" rx="18" fill="#e8f3f1"/>
+  <path d="M25 16h33l13 13v47a8 8 0 0 1-8 8H25a8 8 0 0 1-8-8V24a8 8 0 0 1 8-8Z" fill="#fffdf9" stroke="#164f4b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M58 17v13h13" fill="none" stroke="#164f4b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M29 39h27M29 51h18" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M62 48 78 55v9c0 10-6 16-16 19-10-3-16-9-16-19v-9l16-7Z" fill="#ffffff" stroke="#164f4b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m55 65 5 5 10-13" fill="none" stroke="#c9a227" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

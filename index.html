@@ -10,10 +10,10 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 0.5
+    Versión: 0.9
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
-    Datos: no recoge nombres, emails, teléfonos ni información personal.
+    Datos: no recoge nombres completos, emails, teléfonos ni información personal.
     Todo el progreso se guarda localmente en el navegador.
 
     Cambios v0.5:
@@ -26,6 +26,28 @@
     [v0.5] Feedback de informe y ayuda visible para evitar confusión entre imprimir y guardar.
     [v0.5] Emparejar con contador de parejas y tarjetas más claras.
     [v0.5] Se mantiene: sin backend, sin login, sin analítica, sin APIs externas.
+
+    Cambios v0.6:
+    ──────────────────────────────────────────────────────────────────────
+    [v0.6] Mejora pedagógica ligera: itinerario sugerido de uso en aula.
+    [v0.6] Refuerzo visual de pasos, privacidad y uso como evidencia local.
+    [v0.6] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v0.7:
+    ──────────────────────────────────────────────────────────────────────
+    [v0.7] Consolidación de portfolio: capturas y memoria preparatoria de pilotaje.
+    [v0.7] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v0.8:
+    ──────────────────────────────────────────────────────────────────────
+    [v0.8] Pictogramas SVG propios como apoyo visual local.
+    [v0.8] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v0.9:
+    ──────────────────────────────────────────────────────────────────────
+    [v0.9] Modo presentación para aula.
+    [v0.9] Preparación para audios locales propios del autor.
+    [v0.9] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
   -->
 
   <style>
@@ -208,6 +230,18 @@
       border: 1px solid var(--line);
     }
 
+    button.presentation-toggle.presentation-toggle--active {
+      background-color: var(--brand) !important;
+      background-image: linear-gradient(var(--brand), var(--brand)) !important;
+      color: white !important;
+      border-color: var(--brand) !important;
+      box-shadow: 0 8px 16px rgba(22, 79, 75, 0.18);
+    }
+
+    button.presentation-toggle.presentation-toggle--active:focus-visible {
+      outline-color: rgba(22, 79, 75, 0.45);
+    }
+
     nav {
       margin: 1rem auto 0;
       position: sticky;
@@ -309,9 +343,88 @@
 
     .card p:last-child { margin-bottom: 0; }
 
+    .objective-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.85rem;
+      align-items: start;
+    }
+
+    .pictogram {
+      width: 58px;
+      height: 58px;
+      flex: 0 0 auto;
+    }
+
     .muted { color: var(--muted); }
 
     .small { font-size: 0.92rem; }
+
+    .lesson-flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.85rem;
+      margin: 1rem 0 0;
+    }
+
+    .step-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.7rem;
+      align-items: start;
+      background: #fffdf9;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 0.9rem;
+    }
+
+    .step-number {
+      display: inline-grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      background: var(--brand);
+      color: white;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .step-icon {
+      width: 2.35rem;
+      height: 2.35rem;
+      border-radius: 999px;
+    }
+
+    .step-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .step-card strong {
+      display: block;
+      color: var(--brand);
+      margin-bottom: 0.2rem;
+    }
+
+    .privacy-callout {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.7rem;
+      align-items: start;
+      margin: 0.85rem 0;
+      border: 1px solid rgba(15, 118, 110, 0.22);
+      border-left: 4px solid var(--brand-2);
+      border-radius: 16px;
+      padding: 0.85rem 1rem;
+      background: rgba(15, 118, 110, 0.07);
+    }
+
+    .privacy-callout img {
+      width: 46px;
+      height: 46px;
+    }
 
     .progress-wrap {
       background: rgba(22, 79, 75, 0.12);
@@ -576,6 +689,13 @@
       min-height: 44px;
     }
 
+    .audio-prep-note {
+      border: 1px dashed rgba(22, 79, 75, 0.28);
+      border-radius: 14px;
+      padding: 0.7rem 0.8rem;
+      background: rgba(232, 243, 241, 0.55);
+    }
+
     .flash-speak-status,
     .flash-speak-note {
       margin: 0.15rem 0 0;
@@ -610,10 +730,67 @@
       text-align: center;
     }
 
+    body.presentation-mode {
+      background: #fffdf9;
+    }
+
+    body.presentation-mode header {
+      padding-bottom: 0;
+    }
+
+    body.presentation-mode .hero {
+      grid-template-columns: 1fr;
+    }
+
+    body.presentation-mode .hero-card,
+    body.presentation-mode #creditos,
+    body.presentation-mode .footer-note {
+      display: none;
+    }
+
+    body.presentation-mode nav {
+      position: static;
+      background: #fffdf9;
+    }
+
+    body.presentation-mode section {
+      min-height: calc(100vh - 7rem);
+      display: grid;
+      align-content: center;
+      box-shadow: none;
+      border-radius: 18px;
+    }
+
+    body.presentation-mode .card,
+    body.presentation-mode .step-card {
+      box-shadow: none;
+    }
+
+    body.presentation-mode h1 {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+    }
+
+    body.presentation-mode h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    body.presentation-mode h3,
+    body.presentation-mode .lead {
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+    }
+
+    body.presentation-mode .option,
+    body.presentation-mode .match-btn,
+    body.presentation-mode .check-item,
+    body.presentation-mode p,
+    body.presentation-mode li {
+      font-size: 1.08rem;
+    }
+
     .print-only { display: none; }
 
     @media (max-width: 860px) {
-      .hero, .grid, .grid.two, .flashcard-wrap, .match-area {
+      .hero, .grid, .grid.two, .flashcard-wrap, .match-area, .lesson-flow {
         grid-template-columns: 1fr;
       }
 
@@ -647,10 +824,11 @@
         <span class="eyebrow">🇫🇷 Francés A1 · Repaso final · Alumnado adulto</span>
         <h1>Repaso Final Francés A1</h1>
         <p class="lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
-        <p class="notice small"><strong>Nota de uso:</strong> propuesta pedagógica complementaria creada para portfolio docente FPE. No es un recurso oficial de ICSE ni sustituye la programación, los materiales ni la evaluación establecidos por la docente titular o el centro.</p>
+        <p class="notice small"><strong>Nota de uso:</strong> propuesta pedagógica complementaria creada para portfolio docente FPE. No es un recurso oficial de ICSE, no tiene vínculo institucional directo con ICSE ni con el SCE, y no sustituye la programación, los materiales ni la evaluación establecidos por la docente titular o el centro.</p>
         <div class="cta-row no-print" aria-label="Accesos principales">
           <a class="button primary" href="#diagnostico">Empezar autodiagnóstico</a>
           <a class="button secondary" href="#flashcards">Repasar frases</a>
+          <button class="ghost presentation-toggle" type="button" id="presentationToggle" aria-pressed="false">Modo presentación</button>
           <button class="ghost" type="button" id="reportBtn">Preparar informe PDF</button>
         </div>
       </div>
@@ -693,17 +871,26 @@
       </div>
 
       <div class="grid">
-        <article class="card">
-          <h3>Comprender</h3>
-          <p>Reconocer saludos, datos personales, números básicos y frases cotidianas muy frecuentes.</p>
+        <article class="card objective-card">
+          <img class="pictogram" src="assets/pictogramas/comprender.svg" alt="" aria-hidden="true" />
+          <div>
+            <h3>Comprender</h3>
+            <p>Reconocer saludos, datos personales, números básicos y frases cotidianas muy frecuentes.</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Responder</h3>
-          <p>Elegir respuestas simples para presentarse, pedir ayuda, comprar algo básico o preguntar información.</p>
+        <article class="card objective-card">
+          <img class="pictogram" src="assets/pictogramas/responder.svg" alt="" aria-hidden="true" />
+          <div>
+            <h3>Responder</h3>
+            <p>Elegir respuestas simples para presentarse, pedir ayuda, comprar algo básico o preguntar información.</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Practicar</h3>
-          <p>Usar frases breves en voz alta, con apoyo visual y sin miedo al error, priorizando la comunicación básica.</p>
+        <article class="card objective-card">
+          <img class="pictogram" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
+          <div>
+            <h3>Practicar</h3>
+            <p>Usar frases breves en voz alta, con apoyo visual y sin miedo al error, priorizando la comunicación básica.</p>
+          </div>
         </article>
       </div>
 
@@ -714,6 +901,37 @@
         <span class="pill">Demander une adresse (Pedir una dirección)</span>
         <span class="pill">Acheter (Comprar)</span>
         <span class="pill">Demander de l'aide (Pedir ayuda)</span>
+      </div>
+
+      <div class="lesson-flow" aria-label="Itinerario sugerido de uso">
+        <article class="step-card">
+          <img class="step-icon" src="assets/pictogramas/responder.svg" alt="" aria-hidden="true" />
+          <div>
+            <strong><span class="step-label"><span>1.</span> Detectar</span></strong>
+            <span class="small muted">Autodiagnóstico breve para saber qué conviene repasar.</span>
+          </div>
+        </article>
+        <article class="step-card">
+          <img class="step-icon" src="assets/pictogramas/comprender.svg" alt="" aria-hidden="true" />
+          <div>
+            <strong><span class="step-label"><span>2.</span> Repasar</span></strong>
+            <span class="small muted">Flashcards y frases funcionales para practicar en voz alta.</span>
+          </div>
+        </article>
+        <article class="step-card">
+          <img class="step-icon" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
+          <div>
+            <strong><span class="step-label"><span>3.</span> Aplicar</span></strong>
+            <span class="small muted">Emparejar, resolver situaciones y preparar el reto final.</span>
+          </div>
+        </article>
+        <article class="step-card">
+          <img class="step-icon" src="assets/pictogramas/evidencia.svg" alt="" aria-hidden="true" />
+          <div>
+            <strong><span class="step-label"><span>4.</span> Guardar evidencia</span></strong>
+            <span class="small muted">Informe local opcional, orientativo y sin envío de datos.</span>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -760,9 +978,11 @@
               <div class="flash-sub" id="flashSub">Pulsa para ver la traducción</div>
               <div class="flash-actions no-print">
                 <button class="ghost flash-speak-btn" type="button" id="flashSpeakBtn" aria-label="Escuchar pronunciación en francés (experimental)" hidden>🔊 Escuchar (experimental)</button>
+                <button class="secondary flash-speak-btn" type="button" id="localAudioBtn" aria-label="Escuchar audio local del autor" hidden>Escuchar audio local</button>
                 <p id="flashSpeakStatus" class="small muted flash-speak-status" aria-live="polite"></p>
                 <p id="flashSpeakNote" class="small muted flash-speak-note" hidden>La pronunciación es generada por el navegador y puede sonar robótica según el sistema. Úsala como referencia aproximada. Practica siempre en voz alta.</p>
                 <p id="flashSpeakUnavailable" class="small muted flash-speak-status" hidden>La pronunciación automática no está disponible en este navegador.</p>
+                <p id="localAudioNote" class="small muted audio-prep-note" hidden>Los audios locales están preparados para archivos del autor en <code>assets/audio/</code>. No graban ni solicitan voz del alumnado.</p>
               </div>
             </div>
           </div>
@@ -846,10 +1066,10 @@
       <div class="grid two">
         <article class="card">
           <h3>Consigna</h3>
-          <p>Escribe o di en voz alta una presentación básica en francés. Debe incluir:</p>
+          <p>Escribe o di en voz alta una presentación básica en francés. Usa solo un nombre de pila o un nombre ficticio. Debe incluir:</p>
           <ul>
             <li>Saludo.</li>
-            <li>Nombre.</li>
+            <li>Nombre de pila o nombre ficticio.</li>
             <li>Lugar donde vives.</li>
             <li>Una frase sobre lo que haces o estudias.</li>
             <li>Una petición sencilla: repetir, ayudar, indicar un lugar o decir el precio.</li>
@@ -878,8 +1098,16 @@
             <span lang="fr">Bonjour. Je m'appelle Ana. J'habite à Las Palmas. J'étudie le français. Pouvez-vous répéter, s'il vous plaît ?</span>
           </div>
 
-          <label class="small muted" for="studentDraft">Tu práctica escrita. No escribas apellidos, DNI, teléfono ni otros datos personales.</label>
+          <label class="small muted" for="studentDraft">Tu práctica escrita. Usa un nombre de pila o ficticio. No escribas apellidos, DNI, teléfono, correo ni otros datos personales.</label>
           <textarea id="studentDraft" aria-label="Mi respuesta de práctica" placeholder="Escribe aquí tu práctica. Ejemplo: Bonjour. Je m'appelle…"></textarea>
+
+          <div class="privacy-callout small">
+            <img src="assets/pictogramas/privacidad.svg" alt="" aria-hidden="true" />
+            <div>
+              <strong>Privacidad antes de escribir</strong>
+              <span>Practica con un nombre de pila o inventado. Evita apellidos, DNI, teléfono, correo, dirección completa y cualquier dato personal innecesario.</span>
+            </div>
+          </div>
 
           <div class="checklist">
             <label class="check-item"><input class="retoCheck" type="checkbox" /> Incluí un saludo.</label>
@@ -954,11 +1182,13 @@
         </article>
         <article class="card">
           <h3>Privacidad y límites</h3>
-          <p>No solicita datos personales. No es un recurso oficial de ICSE. No sustituye la programación docente ni la evaluación oficial. Es un recurso complementario de repaso.</p>
+          <p>No solicita datos personales. No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. No sustituye la programación docente ni la evaluación oficial. Es un recurso complementario de repaso.</p>
         </article>
       </div>
 
       <div class="card">
+        <h3>Secuencia breve recomendada</h3>
+        <p>Inicio con autodiagnóstico, repaso de frases clave, práctica por parejas en mini-situaciones y cierre con reto final oral o escrito. El informe local solo se usa si aporta una evidencia útil y se respetan las indicaciones de privacidad.</p>
         <h3>Evidencias generadas</h3>
         <p>Recurso HTML estático, ficha pedagógica, posible QR de acceso, capturas de uso, informe local de práctica y breve memoria de pilotaje si la tutora lo autoriza.</p>
         <h3>Competencias docentes demostradas</h3>
@@ -969,7 +1199,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni implica autorización institucional. Versión 0.5 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 0.9 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -1070,6 +1300,26 @@
       update();
     }
 
+    function setPresentationMode(active) {
+      document.body.classList.toggle("presentation-mode", active);
+      const btn = document.getElementById("presentationToggle");
+      if (btn) {
+        btn.setAttribute("aria-pressed", String(active));
+        btn.classList.toggle("presentation-toggle--active", active);
+        btn.textContent = active ? "Salir de presentación" : "Modo presentación";
+      }
+    }
+
+    document.getElementById("presentationToggle").addEventListener("click", () => {
+      setPresentationMode(!document.body.classList.contains("presentation-mode"));
+    });
+
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape" && document.body.classList.contains("presentation-mode")) {
+        setPresentationMode(false);
+      }
+    });
+
     const quizQuestions = [
       { q: "¿Qué significa Bonjour?", options: ["Buenos días / Hola", "Adiós", "Gracias", "Buenas noches"], answer: 0, exp: "«Bonjour» es el saludo básico durante el día." },
       { q: "Elige la frase para decir tu nombre.", options: ["Je voudrais…", "Je m'appelle…", "Où est… ?", "Combien ça coûte ?"], answer: 1, exp: "«Je m'appelle…» significa «Me llamo…»." },
@@ -1165,17 +1415,20 @@
       renderQuiz();
     });
 
+    const LOCAL_AUDIO_ENABLED = false;
+    const AUDIO_BASE_PATH = "assets/audio/";
+
     const flashcards = [
-      { fr: "Bonjour", es: "Buenos días / Hola", hint: "Saludo básico durante el día" },
-      { fr: "Bonsoir", es: "Buenas noches / Buenas tardes (tarde-noche)", hint: "Saludo al final del día, desde el atardecer" },
-      { fr: "Au revoir", es: "Adiós / Hasta luego", hint: "Despedida" },
-      { fr: "Je m'appelle…", es: "Me llamo…", hint: "Presentación" },
-      { fr: "J'habite à…", es: "Vivo en…", hint: "Lugar de residencia" },
-      { fr: "Je voudrais…", es: "Quisiera…", hint: "Petición educada" },
-      { fr: "Combien ça coûte ?", es: "¿Cuánto cuesta?", hint: "Compra básica" },
-      { fr: "Où est… ?", es: "¿Dónde está…?", hint: "Direcciones" },
-      { fr: "Je ne comprends pas", es: "No entiendo", hint: "Pedir apoyo" },
-      { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?", hint: "Pedir repetición" }
+      { fr: "Bonjour", es: "Buenos días / Hola", hint: "Saludo básico durante el día", audio: "bonjour.mp3" },
+      { fr: "Bonsoir", es: "Buenas noches / Buenas tardes (tarde-noche)", hint: "Saludo al final del día, desde el atardecer", audio: "bonsoir.mp3" },
+      { fr: "Au revoir", es: "Adiós / Hasta luego", hint: "Despedida", audio: "au-revoir.mp3" },
+      { fr: "Je m'appelle…", es: "Me llamo…", hint: "Presentación", audio: "je-mappelle.mp3" },
+      { fr: "J'habite à…", es: "Vivo en…", hint: "Lugar de residencia", audio: "jhabite-a.mp3" },
+      { fr: "Je voudrais…", es: "Quisiera…", hint: "Petición educada", audio: "je-voudrais.mp3" },
+      { fr: "Combien ça coûte ?", es: "¿Cuánto cuesta?", hint: "Compra básica", audio: "combien-ca-coute.mp3" },
+      { fr: "Où est… ?", es: "¿Dónde está…?", hint: "Direcciones", audio: "ou-est.mp3" },
+      { fr: "Je ne comprends pas", es: "No entiendo", hint: "Pedir apoyo", audio: "je-ne-comprends-pas.mp3" },
+      { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?", hint: "Pedir repetición", audio: "pouvez-vous-repeter.mp3" }
     ];
 
     let flashIndex = Number.isInteger(state.flashIndex) ? state.flashIndex : 0;
@@ -1195,8 +1448,12 @@
       document.getElementById("flashSub").textContent = flashFlipped ? item.hint : "Pulsa para ver la traducción";
 
       const speakBtn = document.getElementById("flashSpeakBtn");
+      const localAudioBtn = document.getElementById("localAudioBtn");
+      const localAudioNote = document.getElementById("localAudioNote");
       const unavailable = document.getElementById("flashSpeakUnavailable");
       if (speakBtn) speakBtn.hidden = flashFlipped || !speechAvailable;
+      if (localAudioBtn) localAudioBtn.hidden = flashFlipped || !LOCAL_AUDIO_ENABLED || !item.audio;
+      if (localAudioNote) localAudioNote.hidden = LOCAL_AUDIO_ENABLED;
       if (unavailable) unavailable.hidden = speechAvailable;
 
       if (flashFlipped) document.getElementById("flashSpeakStatus").textContent = "";
@@ -1313,6 +1570,24 @@
       ev.stopPropagation();
       markStarted("flashcards");
       getVoicesAndSpeak(flashcards[flashIndex].fr);
+    });
+
+    document.getElementById("localAudioBtn").addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      const item = flashcards[flashIndex];
+      if (!LOCAL_AUDIO_ENABLED || !item.audio) return;
+
+      const status = document.getElementById("flashSpeakStatus");
+      const audio = new Audio(`${AUDIO_BASE_PATH}${item.audio}`);
+      audio.addEventListener("play", () => {
+        status.textContent = "Reproduciendo audio local del autor.";
+      });
+      audio.addEventListener("error", () => {
+        status.textContent = "No se encontró el archivo de audio local. Revisa assets/audio/.";
+      });
+      audio.play().catch(() => {
+        status.textContent = "El navegador no pudo reproducir el audio local.";
+      });
     });
 
     const matchPairs = [
@@ -1632,7 +1907,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "0.5",
+        version: "0.9",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
@@ -1825,7 +2100,7 @@
     <p>${escapeHtml(r.feedback)}</p>
 
     <h2>6. Privacidad y límites</h2>
-    <p>Este informe se ha generado en el navegador. El recurso no solicita nombres, correos, teléfonos, DNI ni otros datos personales; no tiene login, no usa backend y no incorpora analítica.</p>
+    <p>Este informe se ha generado en el navegador. Para el reto final se recomienda usar solo un nombre de pila o ficticio. El recurso no solicita apellidos, correos, teléfonos, DNI ni otros datos personales; no tiene login, no usa backend y no incorpora analítica.</p>
     <p class="muted">Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
   </main>
 </body>

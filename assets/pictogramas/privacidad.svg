@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Privacidad</title>
+  <desc id="desc">Candado de privacidad con aviso de datos mínimos.</desc>
+  <rect width="96" height="96" rx="18" fill="#e8f3f1"/>
+  <rect x="24" y="42" width="48" height="36" rx="10" fill="#fffdf9" stroke="#164f4b" stroke-width="4"/>
+  <path d="M34 42v-9a14 14 0 0 1 28 0v9" fill="none" stroke="#164f4b" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="48" cy="59" r="5" fill="#0f766e"/>
+  <path d="M48 64v6" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20 22h18M20 31h12M58 22h18M64 31h12" stroke="#c9a227" stroke-width="5" stroke-linecap="round"/>
+</svg>

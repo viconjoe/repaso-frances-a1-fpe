@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 0.4.1  
+**Versión:** 0.9  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -19,6 +19,8 @@ El recurso nace en el contexto del itinerario de habilitación docente FPE de Jo
 
 El proyecto ha sido diseñado con una premisa clara: crear algo funcional, sobrio y usable, sin convertirlo en una aplicación compleja ni en una plataforma de evaluación.
 
+El recurso no es oficial, no tiene vínculo institucional directo con ICSE ni con el SCE y se presenta como herramienta personal de portfolio docente.
+
 ## 2. Justificación
 
 El alumnado adulto que finaliza un nivel A1 puede beneficiarse de recursos breves que le permitan repasar frases esenciales, comprobar qué recuerda y practicar pequeñas situaciones comunicativas.
@@ -30,6 +32,7 @@ En este contexto, el recurso responde a varias necesidades:
 - practicar con feedback inmediato;
 - ofrecer una herramienta accesible desde móvil;
 - permitir uso autónomo mediante enlace o QR;
+- generar una evidencia local de práctica cuando sea útil;
 - demostrar competencia digital docente sin depender de plataformas complejas.
 
 La herramienta se ha desarrollado como recurso estático para que pueda alojarse en GitHub Pages, compartirse fácilmente y conservarse como evidencia de portfolio profesional.
@@ -63,7 +66,8 @@ El recurso busca que el alumnado pueda:
 4. practicar una presentación breve;
 5. pedir ayuda o repetición en francés;
 6. ganar seguridad en el uso de frases básicas;
-7. repasar de forma autónoma o guiada.
+7. repasar de forma autónoma o guiada;
+8. preparar un informe local de práctica sin enviar datos a terceros.
 
 ## 6. Principios de diseño
 
@@ -83,6 +87,10 @@ El recurso avanza desde reconocimiento y comprensión hacia producción breve.
 
 No se recogen datos personales. El progreso se guarda solo en el navegador.
 
+### Evidencia local
+
+Desde la versión 0.5, el recurso permite generar un informe local de práctica. Esta evidencia es orientativa, no oficial, y se guarda mediante el navegador del usuario.
+
 ### Accesibilidad básica
 
 Se incorporan medidas simples de accesibilidad y usabilidad, suficientes para una evidencia de portfolio docente inicial.
@@ -93,7 +101,7 @@ El tono, el diseño y las actividades se han planteado para adultos, evitando in
 
 ## 7. Estructura del recurso
 
-El recurso se organiza en seis bloques:
+El recurso se organiza en estos bloques:
 
 ### Bloque 0 · Objetivo del recurso
 
@@ -109,7 +117,7 @@ Contiene 10 tarjetas con frases útiles en francés y traducción al español. I
 
 ### Bloque 3 · Empareja frase e intención
 
-Relaciona expresiones francesas con su función comunicativa. Refuerza la comprensión funcional.
+Relaciona expresiones francesas con su función comunicativa. Refuerza la comprensión funcional. Desde la versión 0.5 añade contador de parejas completadas.
 
 ### Bloque 4 · Mini-situaciones comunicativas
 
@@ -118,6 +126,10 @@ Plantea situaciones breves y pide elegir la frase más adecuada.
 ### Bloque 5 · Reto final
 
 Propone una producción breve escrita u oral. Incluye banco de frases de apoyo y revisión orientativa local.
+
+### Bloque 6 · Informe de práctica
+
+Permite preparar una vista limpia de informe del alumno/a, con resultados orientativos, checklist y texto del reto final. Puede guardarse como PDF desde el diálogo de impresión del navegador o descargarse como HTML.
 
 ### Bloque docente
 
@@ -159,6 +171,8 @@ Tecnologías utilizadas:
 - JavaScript vanilla;
 - `localStorage`;
 - Web Speech API;
+- `window.print()` para la salida PDF mediante navegador;
+- `Blob` para descarga alternativa de informe HTML;
 - GitHub Pages.
 
 No se utilizan frameworks, backend, formularios, analítica, bases de datos, APIs externas de corrección ni autenticación.
@@ -167,9 +181,13 @@ No se utilizan frameworks, backend, formularios, analítica, bases de datos, API
 
 El recurso no solicita datos personales.
 
-No pide nombre, email, teléfono, DNI, cuenta de usuario, contraseñas ni información sensible.
+No pide nombre completo, email, teléfono, DNI, cuenta de usuario, contraseñas ni información sensible.
+
+En el reto final se recomienda practicar con un nombre de pila o con un nombre ficticio. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
 
 El texto que el alumnado escribe en el reto final se guarda únicamente en el navegador, para evitar pérdida accidental durante la sesión.
+
+El informe de práctica se genera en local. No se envía a ningún servidor.
 
 En ordenadores compartidos se recomienda borrar el progreso local al terminar.
 
@@ -182,13 +200,15 @@ Se han incorporado varias decisiones de experiencia de usuario:
 - botones grandes;
 - mensajes de feedback visibles;
 - progreso general;
+- contador de parejas en emparejar;
 - foco visible;
 - enlace para saltar al contenido;
 - etiquetas ARIA;
 - `aria-live` en feedbacks;
 - `lang="fr"` en frases francesas;
 - navegación directa en flashcards;
-- reducción de desplazamientos en móvil.
+- reducción de desplazamientos en móvil;
+- vista limpia A4 para el informe local.
 
 Estas medidas no sustituyen una auditoría WCAG completa, pero ofrecen una base razonable para un recurso docente inicial.
 
@@ -214,9 +234,65 @@ Se incorporaron sugerencias de compañeros de aula: banco de frases clicable, bo
 
 Corrección previa a uso externo: versión visible corregida, respuestas correctas de mini-situaciones redistribuidas y frase de repetición unificada con `s’il vous plaît`.
 
+### v0.5
+
+Mejora del informe local:
+
+- informe del alumno separado de la impresión general de la página;
+- vista A4 limpia con resultados y práctica;
+- instrucciones para guardar como PDF desde navegador;
+- descarga alternativa en HTML;
+- contador de parejas en emparejar;
+- documentación reorganizada en `/docs`.
+
+### v0.6
+
+Consolidación pedagógica y visual ligera:
+
+- itinerario sugerido de uso en aula dentro del recurso;
+- refuerzo visible de privacidad antes del reto final;
+- secuencia breve recomendada en la ficha docente integrada;
+- creación de `docs/guia-uso-aula.md`;
+- actualización de documentación complementaria;
+- mantenimiento del enfoque sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
+
+### v0.7
+
+Consolidación para publicación y portfolio:
+
+- creación de `assets/capturas/`;
+- incorporación de capturas de portada, reto final con privacidad e informe/ficha docente;
+- creación de `docs/memoria-pilotaje-preparatoria.md`;
+- actualización de README, resumen maestro, ficha pedagógica y guía de aula;
+- preparación de un marco de pilotaje sin datos reales de alumnado;
+- mantenimiento del enfoque sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
+
+### v0.8
+
+Mejora visual y pedagógica ligera:
+
+- creación de `assets/pictogramas/`;
+- incorporación de cinco pictogramas SVG propios;
+- integración de pictogramas en tarjetas de objetivo, itinerario sugerido y aviso de privacidad;
+- creación de `docs/guia-visual-pictogramas.md`;
+- mantenimiento del enfoque local sin librerías de iconos, sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
+
+### v0.9
+
+Mejoras de aula y preparación de audio:
+
+- incorporación de modo presentación para aula;
+- botón de activación/desactivación y salida con tecla `Escape`;
+- creación de `assets/audio/`;
+- creación de `assets/audio/audio-manifest.json`;
+- preparación de soporte para audios locales propios del autor, desactivado hasta incorporar archivos reales;
+- creación de `docs/guia-audios-locales.md`;
+- creación de `docs/guia-modo-presentacion.md`;
+- mantenimiento del enfoque sin grabar alumnado, sin backend, sin login, sin analítica, sin formularios externos, sin IA/API y sin dependencias externas.
+
 ## 13. Feedback recibido
 
-Durante el proceso se recogieron sugerencias de compañeros de aula.
+Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
 
 Entre las mejoras aceptadas se incluyeron:
 
@@ -224,13 +300,15 @@ Entre las mejoras aceptadas se incluyeron:
 - reducir desplazamientos innecesarios;
 - mejorar el campo del reto final;
 - corregir el botón de limpiar;
-- valorar ajustes lingüísticos en frases de dirección o ubicación.
+- valorar ajustes lingüísticos en frases de dirección o ubicación;
+- mejorar la salida del informe para que no imprima toda la página.
+- incorporar pictogramas SVG propios;
+- preparar modo presentación para aula;
+- preparar estructura de audios locales propios del autor.
 
 Otras sugerencias se dejaron para versiones futuras:
 
-- rediseño completo del bloque de emparejar;
-- incorporación de pictogramas;
-- corrector IA/API.
+- corrector IA/API, descartado por ahora.
 
 ## 14. Limitaciones actuales
 
@@ -238,8 +316,8 @@ El recurso tiene limitaciones deliberadas:
 
 - no corrige todos los errores de producción escrita;
 - no ofrece seguimiento docente;
-- no recoge resultados;
-- no genera informes;
+- no recoge resultados en servidor;
+- no genera un PDF técnico con librería externa, sino una vista imprimible que el navegador guarda como PDF;
 - no incorpora audios humanos;
 - no sustituye práctica oral real;
 - no sustituye la evaluación docente;
@@ -249,25 +327,11 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 
 ## 15. Mejoras futuras
 
-### v0.5
+### v1.0
 
-Posibles mejoras razonables:
+Mejoras razonables:
 
-- rediseñar el bloque de emparejar para móvil;
-- añadir capturas al repositorio;
-- crear ficha imprimible;
-- mejorar feedback local del reto final;
-- añadir pequeña guía de uso para docentes.
-
-### v0.6 / v1.0
-
-Mejoras posteriores:
-
-- pictogramas o SVG propios;
-- audios propios locales;
-- modo presentación para aula;
 - vídeo demo;
-- versión PDF de la ficha pedagógica;
 - memoria de pilotaje tras uso real.
 
 ### No recomendable por ahora
@@ -295,12 +359,13 @@ El recurso demuestra:
 - criterios básicos de accesibilidad;
 - despliegue en GitHub Pages;
 - mejora iterativa a partir de feedback;
-- documentación pedagógica asociada.
+- documentación pedagógica asociada;
+- generación prudente de evidencia local sin servidor ni recogida de datos.
 
-Como portfolio docente, el recurso permite mostrar no solo el producto final, sino también un proceso de diseño, revisión y mejora.
+Como portfolio docente, el recurso permite mostrar no solo el producto final, sino también un proceso de diseño, revisión, documentación y mejora.
 
 ## 17. Conclusión
 
-**Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica y utilidad práctica para alumnado adulto.
+**Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto y respeto por la privacidad.
 
-La versión 0.4.1 se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión 0.9 se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

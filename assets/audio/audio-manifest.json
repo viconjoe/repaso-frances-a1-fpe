@@ -1,0 +1,47 @@
+{
+  "version": "0.9",
+  "purpose": "Audios locales propios del autor para frases de Francés A1. No se graba al alumnado.",
+  "enabledInIndex": false,
+  "files": [
+    {
+      "phrase": "Bonjour",
+      "file": "bonjour.mp3"
+    },
+    {
+      "phrase": "Bonsoir",
+      "file": "bonsoir.mp3"
+    },
+    {
+      "phrase": "Au revoir",
+      "file": "au-revoir.mp3"
+    },
+    {
+      "phrase": "Je m'appelle…",
+      "file": "je-mappelle.mp3"
+    },
+    {
+      "phrase": "J'habite à…",
+      "file": "jhabite-a.mp3"
+    },
+    {
+      "phrase": "Je voudrais…",
+      "file": "je-voudrais.mp3"
+    },
+    {
+      "phrase": "Combien ça coûte ?",
+      "file": "combien-ca-coute.mp3"
+    },
+    {
+      "phrase": "Où est… ?",
+      "file": "ou-est.mp3"
+    },
+    {
+      "phrase": "Je ne comprends pas",
+      "file": "je-ne-comprends-pas.mp3"
+    },
+    {
+      "phrase": "Pouvez-vous répéter, s'il vous plaît ?",
+      "file": "pouvez-vous-repeter.mp3"
+    }
+  ]
+}
