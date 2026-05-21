@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 1.5  
+**Versión actual:** 2.0
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
@@ -41,9 +41,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v1.5
+## Estado actual: v2.0
 
-La versión **1.5** conserva la UX móvil refinada, la estructura multidioma y la experiencia instalable ligera. Añade capturas renovadas, validación técnica ligera y guía de demostración.
+La versión **2.0** consolida el recurso como **producto demostrativo completo** para portfolio docente: mantiene la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera, las capturas y la validación de v1.5, y añade un dossier de presentación profesional y una guía de adaptación a contextos FPE.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -59,7 +59,9 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - estructura `assets/lang/` para documentar contenidos lingüísticos reutilizables;
 - manifiesto web, iconos locales y service worker con caché básica offline;
 - capturas actuales para portfolio y presentación;
-- checklist de validación y guion breve de demo.
+- checklist de validación y guion breve de demo;
+- dossier de producto demostrativo;
+- guía de adaptación prudente a contextos FPE y otros idiomas iniciales.
 
 ## Estructura del recurso
 
@@ -179,6 +181,8 @@ repaso-frances-a1-fpe/
     ├── guia-publicacion-v1.md
     ├── guia-ux-movil-v1-2-4.md
     ├── guia-validacion-demo-v1-5.md
+    ├── dossier-producto-demostrativo-v2.md
+    ├── guia-adaptacion-contextos-fpe-v2.md
     ├── guia-visual-pictogramas.md
     ├── guia-uso-aula.md
     ├── memoria-pilotaje-preparatoria.md
@@ -201,6 +205,8 @@ La carpeta `assets/audio/` queda preparada para audios propios, pero no incluye 
 - [Guía visual de pictogramas](docs/guia-visual-pictogramas.md)
 - [Guía breve de uso en aula](docs/guia-uso-aula.md)
 - [Guía de validación y demo v1.5](docs/guia-validacion-demo-v1-5.md)
+- [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
+- [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
 - [Memoria breve del recurso](docs/memoria-recurso.md)
 - [Roadmap de producto multidioma](docs/roadmap-producto-multidioma.md)
@@ -222,6 +228,14 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.0
+
+- Consolidación como producto demostrativo completo para portfolio docente.
+- Dossier de presentación profesional del recurso.
+- Guía de adaptación prudente a contextos FPE y otros idiomas iniciales.
+- Cierre del molde gratuito, estático, instalable y reutilizable.
+- Mantenimiento del enfoque no oficial, sin vínculo institucional directo, sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin recogida de datos personales.
 
 ### v1.5
 
@@ -296,7 +310,8 @@ Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conse
 
 Las siguientes mejoras se consideran posibles para versiones posteriores:
 
-- v2.0: producto demostrativo completo adaptable a distintos idiomas;
+- pilotaje real documentado, si procede y si existe autorización;
+- variantes de idioma creadas a partir de la plantilla multidioma;
 - memoria de pilotaje tras uso real en aula, si procede y si se autoriza.
 
 No se recomienda incorporar por ahora un corrector IA/API, porque implicaría envío de texto a terceros, mayor complejidad técnica, posible backend y gestión de privacidad.

@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 1.5  
+**Versión:** 2.0
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -286,6 +286,16 @@ Capturas, validación y demo:
 - validación técnica ligera de manifest, service worker, versión visible e informe local;
 - preparación de guion breve de vídeo demo.
 
+### v2.0
+
+Producto demostrativo completo:
+
+- actualización de la versión visible y de los metadatos internos a 2.0;
+- creación de `docs/dossier-producto-demostrativo-v2.md`;
+- creación de `docs/guia-adaptacion-contextos-fpe-v2.md`;
+- consolidación del proyecto como molde gratuito, estático, instalable y reutilizable para otros idiomas iniciales;
+- refuerzo del posicionamiento prudente: recurso personal de portfolio, no oficial, sin vínculo institucional directo con ICSE ni con el SCE.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -322,7 +332,8 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 
 Las siguientes mejoras quedan para versiones posteriores:
 
-- v2.0: producto demostrativo completo;
+- pilotaje real documentado, si procede y si se autoriza;
+- creación de variantes de idioma a partir de la plantilla multidioma;
 - memoria de pilotaje tras uso real, si procede y si se autoriza.
 
 No se recomienda añadir corrector IA/API en esta fase.
@@ -358,4 +369,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **1.5** se considera adecuada para publicación en GitHub Pages y para ser mostrada como evidencia de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.0** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

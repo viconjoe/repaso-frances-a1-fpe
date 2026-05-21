@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.5  
+**Versión de referencia:** 2.0
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -146,3 +146,5 @@ La versión 1.3 añade una estructura de plantilla multidioma. En un pilotaje fu
 La versión 1.4 permite observar si la instalación en pantalla de inicio facilita el acceso sin crear confusión sobre el carácter complementario, local y no oficial del recurso.
 
 La versión 1.5 añade capturas y una guía de demo que pueden ayudar a preparar una explicación inicial clara antes de cualquier pilotaje.
+
+La versión 2.0 añade un dossier de producto demostrativo y una guía de adaptación a contextos FPE. En un pilotaje futuro, estos documentos pueden ayudar a explicar mejor el alcance del recurso sin presentarlo como oficial ni como herramienta de evaluación.

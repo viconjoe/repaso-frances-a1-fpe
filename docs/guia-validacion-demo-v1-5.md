@@ -7,6 +7,8 @@
 **Tipo de documento:** validación ligera, capturas y guion de demostración  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
+**Nota de estado:** esta guía documenta la fase v1.5. El estado actual del recurso es v2.0, que conserva estas capturas y añade un dossier de producto demostrativo y una guía de adaptación a contextos FPE.
+
 ## 1. Finalidad
 
 La versión **1.5** no añade nuevas actividades. Cierra una fase de presentación profesional del recurso mediante:
@@ -98,5 +100,4 @@ Cierre:
 
 ## 6. Próxima fase sugerida
 
-La siguiente fase natural sería **v2.0 · Producto demostrativo completo**, centrada en empaquetar la presentación del proyecto, no en añadir muchas actividades.
-
+La fase posterior se completó como **v2.0 · Producto demostrativo completo**, centrada en empaquetar la presentación del proyecto, no en añadir muchas actividades.

@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.5  
+**Versión de referencia:** 2.0
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -42,7 +42,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **1.5** se mantiene como recurso web estático e instalable:
+La versión **2.0** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -70,6 +70,8 @@ La versión **1.3** prepara la fase de plantilla multidioma mediante `assets/lan
 La versión **1.4** añade una experiencia instalable ligera tipo PWA, manteniendo la ausencia de backend, login, analítica, formularios, IA/API y recogida de datos personales.
 
 La versión **1.5** añade una fase de presentación profesional: capturas actuales, validación técnica ligera, checklist y guion breve de demo.
+
+La versión **2.0** consolida el proyecto como producto demostrativo completo: mantiene la app estática e instalable, documenta su valor como molde reutilizable y añade un dossier de presentación junto a una guía de adaptación prudente a contextos FPE y otros idiomas iniciales.
 
 ## 5. Privacidad y prudencia
 
@@ -103,9 +105,11 @@ La documentación principal del proyecto queda organizada en:
 - `docs/guia-modo-presentacion.md`: uso del modo presentación para aula;
 - `docs/guia-pwa-instalacion-v1-4.md`: guía de instalación PWA ligera;
 - `docs/guia-plantilla-multidioma-v1-3.md`: guía para adaptar el molde a otros idiomas;
-- `docs/guia-publicacion-v1.md`: checklist histórico de publicación estable v1.0, con nota de estado actual v1.2.4;
+- `docs/guia-publicacion-v1.md`: checklist histórico de publicación estable v1.0, con nota de estado actual v2.0;
 - `docs/guia-ux-movil-v1-2-4.md`: criterio y funcionamiento de la experiencia móvil refinada;
 - `docs/guia-validacion-demo-v1-5.md`: checklist de validación y guion breve de demostración;
+- `docs/dossier-producto-demostrativo-v2.md`: dossier de presentación del producto demostrativo;
+- `docs/guia-adaptacion-contextos-fpe-v2.md`: guía para adaptar el molde a otros idiomas o contextos FPE;
 - `docs/guia-visual-pictogramas.md`: descripción del apoyo visual SVG local;
 - `docs/guia-uso-aula.md`: secuencia breve para uso guiado, autónomo o por parejas;
 - `docs/memoria-pilotaje-preparatoria.md`: marco prudente para un futuro pilotaje sin datos reales de alumnado;
@@ -116,12 +120,13 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 1.5 consolida el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, con capturas y guion de presentación.
+La versión 2.0 consolida el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, con capturas, guion de presentación, dossier de producto y guía de adaptación.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 
 Las siguientes fases deberían centrarse en:
 
-- v2.0: producto demostrativo completo.
+- pilotaje real documentado, si procede y si existe autorización;
+- creación de variantes de idioma a partir de la plantilla multidioma.
 
 Debe mantenerse el principio de privacidad y evitar añadir backend, analítica, formularios, IA, APIs externas o recogida de datos personales.

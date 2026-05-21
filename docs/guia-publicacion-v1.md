@@ -4,7 +4,7 @@
 
 **Autor:** Joel Concepción Villanueva  
 **Versión histórica de referencia:** 1.0  
-**Estado actual del recurso:** 1.5  
+**Estado actual del recurso:** 2.0
 **Tipo de documento:** checklist de publicación estable  
 **Carácter:** recurso complementario, gratuito, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -12,7 +12,7 @@
 
 Esta guía se conserva como documento histórico de cierre de la versión 1.0 y como checklist de publicación estable en GitHub Pages, portfolio docente o contexto de demostración.
 
-La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v1.5**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera y capturas de validación.
+La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v2.0**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación y dossier de producto demostrativo.
 
 ## 2. Comprobaciones antes de publicar
 
@@ -38,7 +38,7 @@ Antes de publicar o actualizar la versión visible, revisar:
 - la documentación principal está en `/docs/`;
 - la licencia está definida en `LICENSE.md`.
 
-Las capturas de referencia pueden corresponder a versiones anteriores. Tras estabilizar v1.2.4 conviene renovar especialmente las capturas móviles.
+Las capturas de referencia pueden corresponder a versiones anteriores. Las capturas v1.5 son las capturas actuales de validación para la fase demostrativa.
 
 ## 3. Publicación en GitHub Pages
 
@@ -75,4 +75,4 @@ Estado de ciclos tras v1.0:
 - v1.3: plantilla multidioma preparada;
 - v1.4: PWA o experiencia instalable preparada;
 - v1.5: capturas, validación y demo preparadas;
-- v2.0: producto demostrativo completo adaptable a distintos idiomas.
+- v2.0: producto demostrativo completo adaptable a distintos idiomas, con dossier y guía de adaptación.

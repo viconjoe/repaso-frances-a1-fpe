@@ -7,7 +7,7 @@
 **Tipo de documento:** experiencia instalable ligera  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-**Nota de estado:** esta guía documenta la fase v1.4. El estado actual del recurso es v1.5, que conserva la PWA ligera y añade capturas, validación y guía de demo.
+**Nota de estado:** esta guía documenta la fase v1.4. El estado actual del recurso es v2.0, que conserva la PWA ligera, añade capturas, validación, guía de demo y dossier de producto demostrativo.
 
 ## 1. Finalidad
 

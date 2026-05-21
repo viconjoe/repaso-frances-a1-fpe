@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.5  
+**Versión de referencia:** 2.0
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -73,6 +73,13 @@ La versión **1.5** cierra una fase de validación y presentación:
 - validación técnica ligera;
 - guion breve de demo;
 - preparación para portfolio docente.
+
+La versión **2.0** cierra la fase de producto demostrativo completo:
+
+- dossier profesional de presentación;
+- guía de adaptación a contextos FPE y otros idiomas iniciales;
+- posicionamiento prudente para portfolio y demostraciones;
+- mantenimiento del enfoque gratuito, estático, instalable y sin recogida de datos personales.
 
 ## 4. Visión de app empaquetada
 
@@ -150,11 +157,20 @@ La evolución del producto debería mantener:
 
 ### v2.0 · Producto demostrativo completo
 
-- app empaquetada o instalable;
-- sistema de temas por idioma;
-- documentación profesional;
-- paquete de presentación para entidades formativas;
-- guía de adaptación a contextos FPE.
+Estado: completada como cierre demostrativo del proyecto.
+
+- app web estática e instalable como PWA ligera;
+- documentación profesional consolidada;
+- dossier de producto demostrativo;
+- guía de adaptación a contextos FPE;
+- base multidioma preparada mediante `assets/lang/`;
+- presentación prudente para entidades formativas, sin afirmaciones institucionales oficiales.
+
+### Etapas posteriores posibles
+
+- variantes reales de otros idiomas iniciales;
+- pilotaje real documentado, si procede y si existe autorización;
+- mejora visual o empaquetado adicional solo si no compromete privacidad ni sencillez.
 
 ## 8. Riesgos a evitar
 
@@ -174,4 +190,4 @@ Una formulación prudente para portfolio o presentación sería:
 
 ## 10. Conclusión
 
-La etapa actual deja el proyecto consolidado como recurso de portfolio docente en versión **1.5**, con experiencia móvil refinada, estructura multidioma, opción de instalación ligera, capturas y guion de demostración. El siguiente salto razonable es preparar una demostración de producto más completa sin perder su sencillez, privacidad y carácter no oficial.
+La etapa actual deja el proyecto consolidado como producto demostrativo de portfolio docente en versión **2.0**, con experiencia móvil refinada, estructura multidioma, opción de instalación ligera, capturas, guion de demostración, dossier profesional y guía de adaptación. Los siguientes pasos razonables ya no requieren añadir muchas funciones, sino validar el recurso en uso real o crear variantes controladas para otros idiomas.
