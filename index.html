@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 1.4
+    Versión: 1.5
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -96,6 +96,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v1.4] Experiencia instalable PWA ligera: manifest, iconos locales, service worker y caché básica offline.
     [v1.4] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v1.5:
+    ──────────────────────────────────────────────────────────────────────
+    [v1.5] Capturas renovadas, validación técnica ligera y preparación de guion de demo.
+    [v1.5] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
   -->
 
   <style>
@@ -1799,7 +1804,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.4 · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.5 · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2686,7 +2691,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "1.4",
+        version: "1.5",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",

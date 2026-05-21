@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 1.4  
+**Versión actual:** 1.5  
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
@@ -41,9 +41,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v1.4
+## Estado actual: v1.5
 
-La versión **1.4** conserva la UX móvil refinada de v1.2.4, la estructura multidioma de v1.3 y añade una experiencia instalable ligera tipo PWA.
+La versión **1.5** conserva la UX móvil refinada, la estructura multidioma y la experiencia instalable ligera. Añade capturas renovadas, validación técnica ligera y guía de demostración.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -57,7 +57,9 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - modo presentación independiente para uso en aula;
 - informe local de práctica, opcional y no oficial;
 - estructura `assets/lang/` para documentar contenidos lingüísticos reutilizables;
-- manifiesto web, iconos locales y service worker con caché básica offline.
+- manifiesto web, iconos locales y service worker con caché básica offline;
+- capturas actuales para portfolio y presentación;
+- checklist de validación y guion breve de demo.
 
 ## Estructura del recurso
 
@@ -156,7 +158,11 @@ repaso-frances-a1-fpe/
 │   │   ├── 02-reto-final-privacidad.png
 │   │   ├── 03-informe-ficha-docente.png
 │   │   ├── 04-modo-presentacion.png
-│   │   └── 05-modo-guiado-movil.png
+│   │   ├── 05-modo-guiado-movil.png
+│   │   ├── 06-v1-5-movil-portada-guiada.png
+│   │   ├── 07-v1-5-movil-mapa-bloques.png
+│   │   ├── 08-v1-5-escritorio-portada.png
+│   │   └── 09-v1-5-modo-presentacion.png
 │   └── pictogramas/
 │       ├── comprender.svg
 │       ├── responder.svg
@@ -172,6 +178,7 @@ repaso-frances-a1-fpe/
     ├── guia-plantilla-multidioma-v1-3.md
     ├── guia-publicacion-v1.md
     ├── guia-ux-movil-v1-2-4.md
+    ├── guia-validacion-demo-v1-5.md
     ├── guia-visual-pictogramas.md
     ├── guia-uso-aula.md
     ├── memoria-pilotaje-preparatoria.md
@@ -193,6 +200,7 @@ La carpeta `assets/audio/` queda preparada para audios propios, pero no incluye 
 - [Guía de UX móvil refinada v1.2.4](docs/guia-ux-movil-v1-2-4.md)
 - [Guía visual de pictogramas](docs/guia-visual-pictogramas.md)
 - [Guía breve de uso en aula](docs/guia-uso-aula.md)
+- [Guía de validación y demo v1.5](docs/guia-validacion-demo-v1-5.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
 - [Memoria breve del recurso](docs/memoria-recurso.md)
 - [Roadmap de producto multidioma](docs/roadmap-producto-multidioma.md)
@@ -206,10 +214,22 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 - [Informe y ficha docente](assets/capturas/03-informe-ficha-docente.png)
 - [Modo presentación](assets/capturas/04-modo-presentacion.png)
 - [Modo guiado móvil](assets/capturas/05-modo-guiado-movil.png)
+- [v1.5 · Móvil portada guiada](assets/capturas/06-v1-5-movil-portada-guiada.png)
+- [v1.5 · Móvil mapa de bloques](assets/capturas/07-v1-5-movil-mapa-bloques.png)
+- [v1.5 · Escritorio portada](assets/capturas/08-v1-5-escritorio-portada.png)
+- [v1.5 · Modo presentación](assets/capturas/09-v1-5-modo-presentacion.png)
 
-Algunas capturas pueden corresponder a versiones anteriores del recurso. Tras estabilizar v1.2.4, conviene renovar especialmente las capturas móviles para reflejar la cabecera simplificada, el selector **Ir a...** y la vista **Ver todos los bloques**.
+Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v1.5
+
+- Capturas renovadas de móvil, mapa de bloques, escritorio y modo presentación.
+- Guía de validación y demo.
+- Checklist antes de presentar el recurso.
+- Guion breve de vídeo demo de 60-90 segundos.
+- Validación técnica ligera de manifest, service worker y versión visible.
 
 ### v1.4
 
@@ -277,7 +297,6 @@ Algunas capturas pueden corresponder a versiones anteriores del recurso. Tras es
 Las siguientes mejoras se consideran posibles para versiones posteriores:
 
 - v2.0: producto demostrativo completo adaptable a distintos idiomas;
-- vídeo demo de 60-90 segundos;
 - memoria de pilotaje tras uso real en aula, si procede y si se autoriza.
 
 No se recomienda incorporar por ahora un corrector IA/API, porque implicaría envío de texto a terceros, mayor complejidad técnica, posible backend y gestión de privacidad.

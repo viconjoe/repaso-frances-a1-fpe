@@ -2,7 +2,7 @@
 
 Esta carpeta prepara la fase **v1.3 · Plantilla multidioma**.
 
-Estado actual del recurso: **v1.4**. La experiencia instalable ligera conserva esta estructura sin cargar datos externos ni añadir servicios.
+Estado actual del recurso: **v1.5**. La fase de capturas y demo conserva esta estructura sin cargar datos externos ni añadir servicios.
 
 Los archivos de esta carpeta documentan cómo separar progresivamente los datos lingüísticos de la interfaz sin añadir backend, dependencias, login, analítica, formularios externos ni IA/API.
 

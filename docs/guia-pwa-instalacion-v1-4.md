@@ -7,6 +7,8 @@
 **Tipo de documento:** experiencia instalable ligera  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
+**Nota de estado:** esta guía documenta la fase v1.4. El estado actual del recurso es v1.5, que conserva la PWA ligera y añade capturas, validación y guía de demo.
+
 ## 1. Finalidad
 
 La versión **1.4** prepara el recurso como una PWA ligera o experiencia instalable desde navegador.
@@ -91,4 +93,3 @@ Tras publicar en GitHub Pages:
 5. Instalarlo.
 6. Abrirlo desde el icono instalado.
 7. Probar navegación básica, modo guiado e informe local.
-

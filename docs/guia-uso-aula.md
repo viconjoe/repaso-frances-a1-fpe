@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.4  
+**Versión de referencia:** 1.5  
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -159,3 +159,7 @@ Desde v1.3, el repositorio incorpora `assets/lang/` como preparación de plantil
 Desde v1.4, el recurso puede funcionar como PWA ligera en navegadores compatibles. Si se instala en un dispositivo de aula, conviene recordar que el progreso sigue siendo local del navegador o instalación utilizada.
 
 En equipos compartidos, debe mantenerse la recomendación de borrar el progreso local al finalizar.
+
+## 11. Nota sobre demo
+
+Desde v1.5 existe una guía de validación y demo. Puede usarse para presentar el recurso en portfolio o para explicar su uso antes de una sesión, dejando claro que es una herramienta complementaria, local y no oficial.

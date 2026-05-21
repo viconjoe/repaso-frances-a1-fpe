@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 1.4  
+**Versión de referencia:** 1.5  
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -25,7 +25,8 @@ El pilotaje tendría como objetivo comprobar si el recurso:
 - funciona bien en móvil, portátil o proyección de aula;
 - mejora su comodidad móvil con la UX refinada de v1.2.4;
 - mantiene coherencia si se usa como molde para futuras variantes de idioma;
-- puede instalarse como PWA ligera sin alterar la privacidad.
+- puede instalarse como PWA ligera sin alterar la privacidad;
+- dispone de capturas y guion de demo para preparar la presentación al grupo.
 
 ## 3. Condiciones previas
 
@@ -143,3 +144,5 @@ La versión 1.2.4 aporta una experiencia móvil refinada que conviene observar e
 La versión 1.3 añade una estructura de plantilla multidioma. En un pilotaje futuro puede observarse si el contenido de Francés A1 está suficientemente separado y documentado para servir como modelo sin confundir al alumnado ni presentar el recurso como oficial.
 
 La versión 1.4 permite observar si la instalación en pantalla de inicio facilita el acceso sin crear confusión sobre el carácter complementario, local y no oficial del recurso.
+
+La versión 1.5 añade capturas y una guía de demo que pueden ayudar a preparar una explicación inicial clara antes de cualquier pilotaje.

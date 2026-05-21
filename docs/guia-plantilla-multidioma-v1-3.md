@@ -7,7 +7,7 @@
 **Tipo de documento:** preparación de plantilla multidioma  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-**Nota de estado:** esta guía documenta la fase v1.3. El estado actual del recurso es v1.4, que conserva esta estructura y añade una experiencia instalable ligera.
+**Nota de estado:** esta guía documenta la fase v1.3. El estado actual del recurso es v1.5, que conserva esta estructura, añade una experiencia instalable ligera e incorpora capturas de validación.
 
 ## 1. Finalidad
 
@@ -89,6 +89,6 @@ Toda variante debe mantener:
 
 ## 7. Siguiente paso técnico
 
-La fase posterior natural es **v1.4 · PWA o experiencia instalable**.
+La fase posterior ya se completó como **v1.4 · PWA o experiencia instalable**.
 
 Antes de llegar a v1.4, conviene validar que la estructura `assets/lang/` es suficiente para crear al menos una variante piloto de otro idioma sin duplicar documentación innecesaria.
