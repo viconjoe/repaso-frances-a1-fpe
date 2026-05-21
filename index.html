@@ -10,7 +10,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 1.2.2
+    Versión: 1.2.4
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -74,6 +74,10 @@
     Cambios v1.2.2:
     ──────────────────────────────────────────────────────────────────────
     [v1.2.2] Se elimina el título duplicado en móvil guiado y se compacta el bloque superior inicial.
+
+    Cambios v1.2.4:
+    ──────────────────────────────────────────────────────────────────────
+    [v1.2.4] Cabecera móvil alineada: tarjeta de ancho completo, sin duplicaciones y coherente con los bloques.
   -->
 
   <style>
@@ -214,11 +218,27 @@
       color: var(--ink);
     }
 
+    .mobile-hero-compact,
     .mobile-lead,
     .mobile-info-drawers,
     .mobile-jump,
     .unguided-toolbar {
       display: none;
+    }
+
+    .mobile-hero-title {
+      font-size: clamp(1.08rem, 4.8vw, 1.3rem);
+      font-weight: 850;
+      line-height: 1.16;
+      color: var(--brand);
+      margin-bottom: 0.18rem;
+    }
+
+    .mobile-hero-subtitle {
+      font-size: 0.98rem;
+      font-weight: 750;
+      color: var(--muted);
+      line-height: 1.2;
     }
 
     .mobile-info-drawers {
@@ -1161,26 +1181,29 @@
         box-shadow: none;
       }
 
-      .eyebrow {
-        max-width: 100%;
-        font-size: 0.78rem;
-        line-height: 1.25;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-        margin-bottom: 0.45rem;
-      }
-
+      .desktop-eyebrow,
+      .desktop-main-title,
       .desktop-lead,
-      .desktop-notice {
-        display: none;
+      .desktop-notice,
+      .mobile-lead {
+        display: none !important;
       }
 
-      .mobile-lead {
+      .mobile-hero-compact {
         display: block;
-        font-size: 0.98rem;
-        margin-bottom: 0;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        padding: 0.9rem 1rem;
+        border: 1px solid rgba(217, 209, 197, 0.9);
+        border-left: 4px solid rgba(0, 85, 164, 0.48);
+        border-right: 4px solid rgba(239, 65, 53, 0.30);
+        border-radius: 20px;
+        background:
+          linear-gradient(90deg,
+            rgba(0, 85, 164, 0.07) 0%,
+            rgba(255, 255, 255, 0.94) 22%,
+            rgba(255, 255, 255, 0.94) 78%,
+            rgba(239, 65, 53, 0.07) 100%);
       }
 
       .mobile-info-drawers {
@@ -1212,29 +1235,19 @@
       }
 
       body.guided-mode:not(.presentation-mode) .hero {
+        grid-template-columns: 1fr;
         padding: 0.72rem 1rem;
-        gap: 0.25rem;
+        gap: 0.2rem;
       }
 
-      body.guided-mode:not(.presentation-mode) .eyebrow {
-        margin-bottom: 0.25rem;
-        padding: 0.38rem 0.62rem;
-        border-radius: 16px;
-        font-size: 0.84rem;
-        line-height: 1.2;
+      body.guided-mode:not(.presentation-mode) .hero > div {
+        min-width: 0;
       }
 
-      body.guided-mode:not(.presentation-mode) .hero h1 {
-        display: none;
-      }
-
-      body.guided-mode:not(.presentation-mode) .mobile-lead {
-        margin: 0;
-        max-width: none;
-        font-size: 0.98rem;
-        line-height: 1.32;
-        font-weight: 650;
-        color: var(--brand);
+      body.guided-mode:not(.presentation-mode) .mobile-hero-compact {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0.82rem 1rem;
       }
 
       body.guided-mode.guided-past-cover:not(.presentation-mode) header {
@@ -1297,9 +1310,13 @@
   <header>
     <div class="shell hero">
       <div>
-        <span class="eyebrow">🇫🇷 Francés A1 · Repaso final · Adultos</span>
-        <h1>Repaso Final Francés A1</h1>
-        <p class="lead mobile-lead">Recurso interactivo de repaso para alumnado adulto.</p>
+        <div class="mobile-hero-compact" aria-label="Cabecera breve del recurso">
+          <div class="mobile-hero-title">🇫🇷 Repaso final · Francés A1</div>
+          <div class="mobile-hero-subtitle">Alumnado adulto</div>
+        </div>
+
+        <span class="eyebrow desktop-eyebrow">🇫🇷 Francés A1 · Repaso final · Alumnado adulto</span>
+        <h1 class="desktop-main-title">Repaso Final Francés A1</h1>
         <p class="lead desktop-lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
 
         <div class="mobile-info-drawers no-print" aria-label="Información breve del recurso">
@@ -1764,7 +1781,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.2.2 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.2.4 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2651,7 +2668,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "1.2.2",
+        version: "1.2.4",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
