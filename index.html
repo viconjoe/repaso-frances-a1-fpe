@@ -10,7 +10,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 1.2
+    Versión: 1.2.1
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -1198,6 +1198,35 @@
         display: none;
       }
 
+      body.guided-mode:not(.presentation-mode) .mobile-info-drawers,
+      body.guided-mode:not(.presentation-mode) .cta-row[aria-label="Accesos principales"] {
+        display: none;
+      }
+
+      body.guided-mode:not(.presentation-mode) .hero {
+        padding: 0.85rem 1rem;
+        gap: 0.4rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) .hero h1 {
+        font-size: 1.7rem;
+        line-height: 1.05;
+        margin-bottom: 0.25rem;
+      }
+
+      body.guided-mode:not(.presentation-mode) .mobile-lead {
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+
+      body.guided-mode.guided-past-cover:not(.presentation-mode) header {
+        display: none;
+      }
+
+      body.guided-mode.guided-past-cover:not(.presentation-mode) main {
+        padding-top: 0.55rem;
+      }
+
       body:not(.guided-mode):not(.presentation-mode) nav {
         display: none;
       }
@@ -1717,7 +1746,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.2 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 1.2.1 · Preparada para GitHub Pages · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -1867,6 +1896,7 @@
 
     function updateGuidedView({ scroll = false } = {}) {
       const active = document.body.classList.contains("guided-mode");
+      document.body.classList.toggle("guided-past-cover", active && guidedIndex > 0);
       const toggle = document.getElementById("guidedToggle");
       const prevBtn = document.getElementById("guidedPrevBtn");
       const nextBtn = document.getElementById("guidedNextBtn");
@@ -2603,7 +2633,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "1.2",
+        version: "1.2.1",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
