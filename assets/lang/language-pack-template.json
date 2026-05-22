@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "resourceVersion": "2.1",
+  "resourceVersion": "2.2",
   "language": {
     "code": "xx",
     "name": "Idioma",
@@ -42,6 +42,19 @@
       "options": ["Respuesta adecuada", "Distractor 1", "Distractor 2", "Distractor 3"],
       "answer": 0,
       "exp": "Explicación breve de uso."
+    }
+  ],
+  "readingTexts": [
+    {
+      "title": "Tipo de texto breve: aviso, mensaje, horario, nota o correo",
+      "text": [
+        "Línea breve en el idioma meta.",
+        "Información concreta: hora, día, precio, lugar o acción."
+      ],
+      "q": "Pregunta de comprensión en español o lengua de apoyo.",
+      "options": ["Respuesta correcta", "Distractor 1", "Distractor 2", "Distractor 3"],
+      "answer": 0,
+      "exp": "Explicación breve indicando la palabra clave del texto."
     }
   ],
   "finalPrompts": [

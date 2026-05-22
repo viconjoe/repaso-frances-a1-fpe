@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.1
+**Versión de referencia:** 2.2
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -73,7 +73,19 @@ La pronunciación automática, si está disponible, debe tratarse como apoyo apr
 
 Si en el futuro se incorporan audios locales propios del autor, pueden usarse como modelo adicional de pronunciación sin grabar al alumnado.
 
-### 4. Emparejar y mini-situaciones · 8-10 minutos
+### 4. Comprensión lectora breve · 5-7 minutos
+
+El alumnado lee uno o dos textos breves y responde una pregunta de localización de información.
+
+Conviene pedir que busquen primero una palabra clave:
+
+- hora;
+- día;
+- precio;
+- lugar;
+- acción principal.
+
+### 5. Emparejar y mini-situaciones · 8-10 minutos
 
 Estas actividades sirven para pasar de reconocer frases a entender cuándo usarlas.
 
@@ -83,7 +95,7 @@ Puede hacerse:
 - por parejas;
 - en grupo con proyección.
 
-### 5. Reto final · 8-12 minutos
+### 6. Reto final · 8-12 minutos
 
 El alumnado prepara una presentación breve:
 
@@ -96,7 +108,7 @@ Se recomienda usar un nombre de pila o ficticio y evitar cualquier dato personal
 
 La producción puede hacerse oralmente, por escrito o primero por escrito y después en voz alta.
 
-### 6. Informe local · 2-4 minutos, opcional
+### 7. Informe local · 2-4 minutos, opcional
 
 El informe puede utilizarse como evidencia orientativa de práctica.
 
@@ -110,8 +122,9 @@ Para una sesión breve:
 
 1. Autodiagnóstico.
 2. Flashcards seleccionadas.
-3. Una o dos mini-situaciones.
-4. Reto final oral sin informe.
+3. Un texto breve de lectura.
+4. Una o dos mini-situaciones.
+5. Reto final oral sin informe.
 
 ## 6. Variante autónoma
 
@@ -120,9 +133,10 @@ Si el alumnado usa el recurso fuera del aula, puede seguir este orden:
 1. Leer el objetivo.
 2. Hacer el autodiagnóstico.
 3. Repasar las flashcards donde tenga dudas.
-4. Completar emparejar y situaciones.
-5. Escribir una práctica breve.
-6. Borrar el progreso local si usa un equipo compartido.
+4. Hacer el bloque de lectura A1.
+5. Completar emparejar y situaciones.
+6. Escribir una práctica breve.
+7. Borrar el progreso local si usa un equipo compartido.
 
 En móvil, el recorrido guiado y el selector **Ir a...** son la forma más cómoda de moverse.
 
@@ -173,3 +187,7 @@ Desde v2.0.1, al iniciar el recorrido guiado se muestra una indicación más exp
 ## 13. Nota sobre v2.1
 
 Desde v2.1 el recurso incluye más contenido A1 y un bloque de gramática útil. En aula conviene seleccionar una parte del contenido, no recorrerlo todo de una vez: autodiagnóstico, 6-8 flashcards, una o dos píldoras gramaticales, varias situaciones y un reto final breve.
+
+## 14. Nota sobre v2.2
+
+Desde v2.2 el recurso incorpora comprensión lectora A1 con textos breves y preguntas de información concreta. En aula conviene usarlo como transición entre reconocimiento de frases y situaciones comunicativas: leer, buscar una palabra clave, responder y justificar oralmente dónde aparece la pista en el texto.

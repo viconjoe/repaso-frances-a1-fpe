@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.1
+**Versión:** 2.2
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -85,6 +85,8 @@ El recurso se organiza en estos bloques:
 - **Objetivo del recurso**.
 - **Autodiagnóstico orientativo A1**.
 - **Flashcards de supervivencia**.
+- **Gramática útil A1**.
+- **Comprensión lectora A1**.
 - **Empareja frase e intención**.
 - **Mini-situaciones comunicativas**.
 - **Reto final**.
@@ -108,6 +110,8 @@ Se han incluido frases como:
 Aunque algunas estructuras podrían analizarse gramaticalmente en niveles superiores, se presentan como **expresiones funcionales memorizables**, adecuadas para un alumno A1 que necesita desenvolverse en situaciones reales.
 
 La prioridad es la comunicación básica, no el análisis gramatical exhaustivo.
+
+En v2.2 se incorpora comprensión lectora A1 mediante textos muy breves y cotidianos. La actividad se centra en localizar información concreta: hora, día, precio, lugar o acción principal.
 
 ## 8. Decisiones técnicas
 
@@ -166,6 +170,7 @@ Se han incorporado varias decisiones de experiencia de usuario:
 - `lang="fr"` en frases francesas;
 - navegación directa en flashcards;
 - vista limpia A4 para el informe local.
+- bloque de comprensión lectora con textos cortos y opciones claras.
 
 En v1.2.4, la UX móvil se refina a partir de revisión en móvil real:
 
@@ -316,7 +321,20 @@ Ampliación pedagógica de Francés A1:
 - ampliación de retos finales;
 - actualización de `assets/lang/fr-a1-content.json` como inventario reutilizable.
 
-Esta fase responde al objetivo de aproximar el recurso a un repertorio A1 más aceptable y escalable, sin añadir comprensión lectora ni audición todavía.
+Esta fase responde al objetivo de aproximar el recurso a un repertorio A1 más aceptable y escalable, antes de añadir destrezas específicas.
+
+### v2.2
+
+Comprensión lectora A1:
+
+- incorporación de un bloque específico de lectura;
+- cinco textos breves: mensaje de clase, aviso de tienda, correo sencillo, nota de restaurante y transporte;
+- preguntas centradas en localizar información concreta;
+- feedback formativo basado en una pista visible del texto;
+- inclusión del resultado en el informe local;
+- actualización de `assets/lang/fr-a1-content.json` y de la plantilla multidioma.
+
+Esta fase refuerza la progresión desde reconocimiento de frases hacia comprensión de textos breves, sin añadir backend, login, analítica, formularios externos, IA/API ni dependencias.
 
 ## 12. Feedback recibido
 
@@ -344,6 +362,7 @@ El recurso tiene limitaciones deliberadas:
 - no recoge resultados en servidor;
 - no genera un PDF técnico con librería externa, sino una vista imprimible que el navegador guarda como PDF;
 - no incorpora audios humanos;
+- no desarrolla todavía una destreza de audición completa;
 - no sustituye práctica oral real;
 - no sustituye la evaluación docente;
 - no funciona como plataforma LMS.
@@ -355,6 +374,7 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 Las siguientes mejoras quedan para versiones posteriores:
 
 - pilotaje real documentado, si procede y si se autoriza;
+- ampliación de comprensión auditiva A1 con audios locales propios del autor;
 - creación de variantes de idioma a partir de la plantilla multidioma;
 - memoria de pilotaje tras uso real, si procede y si se autoriza.
 
@@ -391,4 +411,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **2.1** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.2** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial y comprensión lectora A1, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

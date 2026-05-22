@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.1
+**Versión:** 2.2
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -32,6 +32,7 @@ La finalidad del recurso es ayudar al alumnado adulto a repasar expresiones esen
 El recurso busca que el alumnado pueda:
 
 - reconocer frases útiles de Francés A1;
+- comprender textos breves con información concreta;
 - asociar frases con funciones comunicativas;
 - responder a situaciones comunicativas simples;
 - practicar una presentación breve;
@@ -46,11 +47,12 @@ Al finalizar el uso del recurso, el alumnado debería ser capaz de:
 2. Identificar frases básicas de presentación personal.
 3. Comprender expresiones como `Je m'appelle...`, `J'habite à...` y `Je ne comprends pas`.
 4. Asociar frases con intenciones comunicativas simples.
-5. Elegir respuestas adecuadas en mini-situaciones de nivel A1.
-6. Producir una presentación breve con apoyo.
-7. Pedir repetición o ayuda de forma cortés.
-8. Usar frases funcionales en contexto de aula o situación cotidiana básica.
-9. Guardar, si lo desea, un informe local de práctica sin enviar datos a terceros.
+5. Localizar información básica en mensajes, avisos, notas y horarios sencillos.
+6. Elegir respuestas adecuadas en mini-situaciones de nivel A1.
+7. Producir una presentación breve con apoyo.
+8. Pedir repetición o ayuda de forma cortés.
+9. Usar frases funcionales en contexto de aula o situación cotidiana básica.
+10. Guardar, si lo desea, un informe local de práctica sin enviar datos a terceros.
 
 ## 5. Metodología
 
@@ -71,10 +73,11 @@ La secuencia didáctica sigue una progresión sencilla:
 1. Presentación del objetivo.
 2. Autodiagnóstico orientativo.
 3. Repaso de frases.
-4. Asociación frase-intención.
-5. Resolución de mini-situaciones.
-6. Producción breve final.
-7. Generación opcional de informe local de práctica.
+4. Comprensión lectora breve.
+5. Asociación frase-intención.
+6. Resolución de mini-situaciones.
+7. Producción breve final.
+8. Generación opcional de informe local de práctica.
 
 ## 6. UX móvil como accesibilidad práctica
 
@@ -101,31 +104,39 @@ Presenta la finalidad general y los contenidos trabajados.
 
 ### Bloque 1 · Autodiagnóstico orientativo
 
-Actividad de 10 preguntas con feedback inmediato. Permite detectar qué conviene repasar. No tiene valor evaluativo oficial.
+Actividad de 15 preguntas con feedback inmediato. Permite detectar qué conviene repasar. No tiene valor evaluativo oficial.
 
 ### Bloque 2 · Flashcards
 
 Tarjetas de frases útiles con traducción y apoyo de pronunciación experimental. Permiten repasar de forma autónoma. El banco de frases permite saltar directamente a una tarjeta concreta.
 
-### Bloque 3 · Emparejar frase e intención
+### Bloque 3 · Gramática útil A1
+
+Píldoras breves para construir frases sencillas: presentarse, vivir, trabajar, preguntar, negar y pedir con cortesía.
+
+### Bloque 4 · Comprensión lectora A1
+
+Textos breves de uso cotidiano: mensaje, aviso, correo, nota y transporte. El alumnado localiza información concreta como hora, día, precio o acción principal.
+
+### Bloque 5 · Emparejar frase e intención
 
 Actividad de asociación entre frases francesas e intenciones comunicativas en español. Refuerza la comprensión funcional.
 
-### Bloque 4 · Mini-situaciones comunicativas
+### Bloque 6 · Mini-situaciones comunicativas
 
 Situaciones breves en español donde el alumnado debe elegir una respuesta adecuada en francés.
 
-### Bloque 5 · Reto final
+### Bloque 7 · Reto final
 
 Producción breve escrita u oral. El alumnado puede construir una presentación sencilla y resolver una situación básica usando frases de apoyo. El feedback local es orientativo y no sustituye la corrección docente.
 
-### Bloque 6 · Informe de práctica
+### Bloque 8 · Informe de práctica
 
 El recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto del reto final.
 
 El informe no se envía a ningún servidor. Se abre en una vista limpia preparada para A4 y se guarda como PDF mediante el sistema de impresión del navegador. También se ofrece descarga alternativa en formato HTML.
 
-### Bloque 7 · Ficha docente
+### Ficha docente
 
 Bloque informativo que contextualiza el recurso para tutoría, coordinación o portfolio docente.
 
@@ -139,7 +150,7 @@ El alumnado accede mediante enlace o QR y trabaja a su ritmo. En móvil se recom
 
 La persona docente puede proyectar el recurso, resolver actividades con el grupo o usarlo por parejas.
 
-Para una sesión breve se recomienda iniciar con el autodiagnóstico, seleccionar algunas flashcards, practicar una o dos mini-situaciones y cerrar con el reto final oral o escrito.
+Para una sesión breve se recomienda iniciar con el autodiagnóstico, seleccionar algunas flashcards, hacer uno o dos textos breves de lectura, practicar una o dos mini-situaciones y cerrar con el reto final oral o escrito.
 
 ### Uso como repaso final
 
@@ -161,6 +172,7 @@ Sí permite:
 
 - autoevaluación formativa;
 - feedback inmediato;
+- comprensión lectora breve con feedback formativo;
 - identificación de contenidos a repasar;
 - práctica guiada;
 - producción breve con orientación;
@@ -232,6 +244,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.0:** consolidación como producto demostrativo completo, con dossier de presentación y guía de adaptación a contextos FPE y otros idiomas iniciales.
 - **v2.0.1:** ajuste de UX tras revisión externa: orientación inicial más explícita y flashcards sin solapamientos en traducciones largas.
 - **v2.1:** ampliación pedagógica de Francés A1 con más vocabulario funcional, gramática útil, situaciones y retos finales.
+- **v2.2:** incorporación de comprensión lectora A1 con textos breves, preguntas de localización de información y feedback formativo.
 
 ## 14. Limitaciones
 

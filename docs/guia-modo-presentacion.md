@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.1
+**Versión de referencia:** 2.2
 **Tipo de documento:** uso del modo presentación para aula  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -32,6 +32,7 @@ El modo presentación puede usarse para:
 - explicar el objetivo de la sesión;
 - resolver el autodiagnóstico con el grupo;
 - proyectar flashcards y practicar pronunciación;
+- leer un texto breve de comprensión lectora y localizar la pista con el grupo;
 - hacer mini-situaciones oralmente;
 - explicar el reto final;
 - recordar las pautas de privacidad antes de escribir.

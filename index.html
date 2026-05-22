@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.1
+    Versión: 2.2
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -116,8 +116,13 @@
     Cambios v2.1:
     ──────────────────────────────────────────────────────────────────────
     [v2.1] Ampliación pedagógica de Francés A1: vocabulario, gramática útil, situaciones y retos.
-    [v2.1] Se prepara una base más escalable para comprensión lectora, audición y variantes de otros idiomas.
+    [v2.1] Se prepara una base más escalable para audición y variantes de otros idiomas.
     [v2.1] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v2.2:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.2] Comprensión lectora A1: textos breves, preguntas de lectura y feedback formativo.
+    [v2.2] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
   -->
 
   <style>
@@ -670,7 +675,27 @@
       transition: width 0.25s ease;
     }
 
-    .quiz-card, .scenario-card { display: grid; gap: 0.8rem; }
+    .quiz-card, .scenario-card, .reading-card { display: grid; gap: 0.8rem; }
+
+    .reading-text {
+      border: 1px solid rgba(22, 79, 75, 0.14);
+      border-radius: 18px;
+      background: #fff;
+      padding: 1rem;
+      display: grid;
+      gap: 0.45rem;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+
+    .reading-text p {
+      margin: 0;
+    }
+
+    .reading-text [lang="fr"] {
+      color: var(--brand);
+      font-weight: 750;
+    }
 
     .option-list { display: grid; gap: 0.6rem; }
 
@@ -1473,6 +1498,7 @@
       <a href="#diagnostico">Autodiagnóstico</a>
       <a href="#flashcards">Flashcards</a>
       <a href="#gramatica">Gramática útil</a>
+      <a href="#lectura">Lectura A1</a>
       <a href="#emparejar">Emparejar</a>
       <a href="#situaciones">Situaciones</a>
       <a href="#reto">Reto final</a>
@@ -1489,6 +1515,7 @@
       <option value="diagnostico">Autodiagnóstico</option>
       <option value="flashcards">Flashcards</option>
       <option value="gramatica">Gramática útil</option>
+      <option value="lectura">Lectura A1</option>
       <option value="emparejar">Emparejar</option>
       <option value="situaciones">Situaciones</option>
       <option value="reto">Reto final</option>
@@ -1533,27 +1560,33 @@
         </article>
         <article class="block-map-card">
           <span class="step-number">4</span>
-          <h3>Emparejar</h3>
-          <p>Relaciona cada frase con su intención comunicativa.</p>
+          <h3>Lectura A1</h3>
+          <p>Comprende textos breves: aviso, mensaje, horario o correo.</p>
           <button class="secondary" type="button" data-guided-step="4">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">5</span>
-          <h3>Situaciones</h3>
-          <p>Elige la frase más adecuada para cada caso.</p>
+          <h3>Emparejar</h3>
+          <p>Relaciona cada frase con su intención comunicativa.</p>
           <button class="secondary" type="button" data-guided-step="5">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">6</span>
-          <h3>Reto final</h3>
-          <p>Prepara una presentación breve con apoyo.</p>
+          <h3>Situaciones</h3>
+          <p>Elige la frase más adecuada para cada caso.</p>
           <button class="secondary" type="button" data-guided-step="6">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">7</span>
+          <h3>Reto final</h3>
+          <p>Prepara una presentación breve con apoyo.</p>
+          <button class="secondary" type="button" data-guided-step="7">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">8</span>
           <h3>Informe</h3>
           <p>Genera una evidencia local si te resulta útil.</p>
-          <button class="secondary" type="button" data-guided-step="7">Abrir bloque</button>
+          <button class="secondary" type="button" data-guided-step="8">Abrir bloque</button>
         </article>
       </div>
     </section>
@@ -1619,7 +1652,7 @@
           <img class="step-icon" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>3.</span> Aplicar</span></strong>
-            <span class="small muted">Emparejar, resolver situaciones y preparar el reto final.</span>
+            <span class="small muted">Leer textos breves, emparejar, resolver situaciones y preparar el reto final.</span>
           </div>
         </article>
         <article class="step-card">
@@ -1702,7 +1735,7 @@
     <section id="gramatica">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 4</span>
+          <span class="tag">Bloque 3</span>
           <h2>Gramática útil A1</h2>
           <p class="muted">Píldoras muy breves para construir frases sencillas. No sustituyen una explicación completa: sirven como apoyo rápido antes de practicar.</p>
         </div>
@@ -1742,10 +1775,33 @@
       </div>
     </section>
 
+    <section id="lectura">
+      <div class="section-head">
+        <div>
+          <span class="tag">Bloque 4</span>
+          <h2>Comprensión lectora A1</h2>
+          <p class="muted">Lee textos breves y localiza información concreta: avisos, mensajes, horarios, notas y correos sencillos.</p>
+        </div>
+        <button class="secondary no-print" type="button" id="resetReadingBtn">Reiniciar lectura</button>
+      </div>
+
+      <div class="card reading-card">
+        <p class="small muted" id="readingCounter">Texto 1 de 5</p>
+        <h3 id="readingTitle">Cargando texto...</h3>
+        <div class="reading-text" id="readingText" aria-label="Texto breve en francés"></div>
+        <h3 id="readingQuestion">Pregunta de comprensión</h3>
+        <div class="option-list" id="readingOptions"></div>
+        <div class="feedback" id="readingFeedback" aria-live="polite">Elige una respuesta.</div>
+        <div class="cta-row no-print">
+          <button class="primary" type="button" id="nextReadingBtn">Siguiente texto</button>
+        </div>
+      </div>
+    </section>
+
     <section id="emparejar">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 3</span>
+          <span class="tag">Bloque 5</span>
           <h2>Empareja frase e intención</h2>
           <p class="muted">Selecciona primero una frase en francés y después su intención en español. Si te equivocas, el feedback te orienta sin penalización.</p>
         </div>
@@ -1776,7 +1832,7 @@
     <section id="situaciones">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 5</span>
+          <span class="tag">Bloque 6</span>
           <h2>Mini-situaciones comunicativas</h2>
           <p class="muted">Lee la situación y elige la frase más adecuada para responder.</p>
         </div>
@@ -1797,7 +1853,7 @@
     <section id="reto">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 6</span>
+          <span class="tag">Bloque 7</span>
           <h2>Reto final: presentarse y resolver una situación</h2>
           <p class="muted">Actividad final para hacer en parejas, en voz alta o por escrito. No se guarda en ningún servidor.</p>
         </div>
@@ -1871,7 +1927,7 @@
     <section id="informe">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 7</span>
+          <span class="tag">Bloque 8</span>
           <h2>Informe de práctica del alumno</h2>
           <p class="muted">Genera una ficha breve con el progreso local, resultados orientativos y texto del reto final. No se envía nada a ningún servidor.</p>
         </div>
@@ -1939,7 +1995,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.1 · Ampliación pedagógica Francés A1 · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.2 · Comprensión lectora A1 · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -1974,6 +2030,7 @@
         diagnostico: false,
         flashcards: false,
         gramatica: false,
+        lectura: false,
         emparejar: false,
         situaciones: false,
         reto: false
@@ -1982,6 +2039,7 @@
       flashIndex: 0,
       matchDone: [],
       matchOrder: null,
+      reading: { index: 0, score: 0, answered: false, selected: null },
       scenario: { index: 0, score: 0, answered: false, selected: null },
       reto: {
         draft: "",
@@ -2004,6 +2062,7 @@
           ...parsed,
           started: { ...defaultState.started, ...(parsed.started || {}) },
           quiz: { ...defaultState.quiz, ...(parsed.quiz || {}) },
+          reading: { ...defaultState.reading, ...(parsed.reading || {}) },
           scenario: { ...defaultState.scenario, ...(parsed.scenario || {}) },
           reto: { ...defaultState.reto, ...(parsed.reto || {}) }
         };
@@ -2030,6 +2089,12 @@
     if (grammarSection) {
       grammarSection.addEventListener("click", () => markStarted("gramatica"));
       grammarSection.addEventListener("focusin", () => markStarted("gramatica"));
+    }
+
+    const readingSection = document.getElementById("lectura");
+    if (readingSection) {
+      readingSection.addEventListener("click", () => markStarted("lectura"));
+      readingSection.addEventListener("focusin", () => markStarted("lectura"));
     }
 
     function setProgress(wrapId, barId, value) {
@@ -2070,6 +2135,7 @@
       { id: "diagnostico", title: "Autodiagnóstico", help: "Responde las preguntas para detectar qué conviene repasar." },
       { id: "flashcards", title: "Flashcards", help: "Practica una frase cada vez y repítela en voz alta." },
       { id: "gramatica", title: "Gramática útil", help: "Revisa estructuras A1 para presentarte, preguntar, negar y pedir con cortesía." },
+      { id: "lectura", title: "Lectura A1", help: "Lee textos breves y busca información concreta antes de responder." },
       { id: "emparejar", title: "Emparejar", help: "Relaciona cada frase con su intención comunicativa." },
       { id: "situaciones", title: "Situaciones", help: "Elige la frase más adecuada para cada caso." },
       { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
@@ -2345,6 +2411,152 @@
       state.quiz = clone(defaultState.quiz);
       saveState();
       renderQuiz();
+    });
+
+    const readingTexts = [
+      {
+        title: "Mensaje de clase",
+        text: [
+          "Bonjour Marta,",
+          "Le cours de français commence à 9 h. Apporte ton cahier et un stylo.",
+          "À demain !"
+        ],
+        q: "¿A qué hora empieza el curso?",
+        options: ["A las 8 h", "A las 9 h", "A las 10 h", "Por la tarde"],
+        answer: 1,
+        exp: "El texto dice «commence à 9 h»."
+      },
+      {
+        title: "Aviso en una tienda",
+        text: [
+          "La boulangerie est ouverte du lundi au samedi.",
+          "Horaires : 8 h - 14 h.",
+          "Fermé le dimanche."
+        ],
+        q: "¿Qué día está cerrada la panadería?",
+        options: ["Lunes", "Sábado", "Domingo", "Viernes"],
+        answer: 2,
+        exp: "El aviso dice «Fermé le dimanche»."
+      },
+      {
+        title: "Correo breve",
+        text: [
+          "Bonjour,",
+          "J'ai rendez-vous mardi à 10 h avec Madame Dupont.",
+          "Merci beaucoup."
+        ],
+        q: "¿Cuándo es la cita?",
+        options: ["Lunes a las 10 h", "Martes a las 10 h", "Martes a las 9 h", "Domingo"],
+        answer: 1,
+        exp: "El correo dice «mardi à 10 h»."
+      },
+      {
+        title: "Nota de restaurante",
+        text: [
+          "Menu du jour : soupe, poulet avec riz, dessert.",
+          "Prix : 12 euros.",
+          "Eau incluse."
+        ],
+        q: "¿Cuánto cuesta el menú?",
+        options: ["10 euros", "12 euros", "15 euros", "20 euros"],
+        answer: 1,
+        exp: "La nota indica «Prix : 12 euros»."
+      },
+      {
+        title: "Mensaje de transporte",
+        text: [
+          "Le bus pour la gare part à 16 h 30.",
+          "Arrêt : Place Centrale.",
+          "Billet : 1,50 euro."
+        ],
+        q: "¿A qué hora sale el bus?",
+        options: ["14 h 30", "16 h 30", "17 h", "A las 15 h"],
+        answer: 1,
+        exp: "El mensaje dice «part à 16 h 30»."
+      }
+    ];
+
+    function renderReading() {
+      const counter = document.getElementById("readingCounter");
+      const title = document.getElementById("readingTitle");
+      const textBox = document.getElementById("readingText");
+      const question = document.getElementById("readingQuestion");
+      const options = document.getElementById("readingOptions");
+      const feedback = document.getElementById("readingFeedback");
+      const nextBtn = document.getElementById("nextReadingBtn");
+
+      options.innerHTML = "";
+      textBox.innerHTML = "";
+      nextBtn.disabled = state.reading.index >= readingTexts.length;
+
+      if (state.reading.index >= readingTexts.length) {
+        counter.textContent = "Lectura completada";
+        title.textContent = `Resultado orientativo: ${state.reading.score} de ${readingTexts.length}`;
+        question.textContent = "Comprensión lectora A1 finalizada";
+        feedback.textContent = state.reading.score >= 3 ? "Buen trabajo. Has localizado información concreta en textos breves." : "Conviene repetir los textos buscando palabras clave: hora, día, precio, lugar y acción.";
+        nextBtn.textContent = "Finalizado";
+        return;
+      }
+
+      const item = readingTexts[state.reading.index];
+      counter.textContent = `Texto ${state.reading.index + 1} de ${readingTexts.length}`;
+      title.textContent = item.title;
+      item.text.forEach((line) => {
+        const paragraph = document.createElement("p");
+        paragraph.lang = "fr";
+        paragraph.textContent = line;
+        textBox.appendChild(paragraph);
+      });
+      question.textContent = item.q;
+      feedback.textContent = state.reading.answered ? item.exp : "Elige una respuesta.";
+      nextBtn.textContent = "Siguiente texto";
+      nextBtn.disabled = false;
+
+      item.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.className = "option";
+        btn.type = "button";
+        btn.textContent = opt;
+
+        if (state.reading.answered) {
+          btn.disabled = true;
+          if (i === item.answer) btn.classList.add("correct");
+          if (i === state.reading.selected && state.reading.selected !== item.answer) btn.classList.add("wrong");
+        }
+
+        btn.addEventListener("click", () => answerReading(i));
+        options.appendChild(btn);
+      });
+    }
+
+    function answerReading(selected) {
+      if (state.reading.answered || state.reading.index >= readingTexts.length) return;
+      markStarted("lectura");
+      const item = readingTexts[state.reading.index];
+      if (selected === item.answer) state.reading.score += 1;
+      state.reading.answered = true;
+      state.reading.selected = selected;
+      saveState();
+      renderReading();
+    }
+
+    document.getElementById("nextReadingBtn").addEventListener("click", () => {
+      if (state.reading.index >= readingTexts.length) return;
+      if (!state.reading.answered) {
+        document.getElementById("readingFeedback").textContent = "Primero elige una respuesta. Busca una palabra clave en el texto.";
+        return;
+      }
+      state.reading.index += 1;
+      state.reading.answered = false;
+      state.reading.selected = null;
+      saveState();
+      renderReading();
+    });
+
+    document.getElementById("resetReadingBtn").addEventListener("click", () => {
+      state.reading = clone(defaultState.reading);
+      saveState();
+      renderReading();
     });
 
     const LOCAL_AUDIO_ENABLED = false;
@@ -2869,17 +3081,19 @@
       const startedCount = Object.values(state.started).filter(Boolean).length;
       const startedTotal = Object.keys(state.started).length;
       const quizFinished = state.quiz.index >= quizQuestions.length;
+      const readingFinished = state.reading.index >= readingTexts.length;
       const scenarioFinished = state.scenario.index >= scenarios.length;
       const checks = [0, 1, 2, 3].map((i) => Boolean(state.reto[`check${i}`]));
       const checkedCount = checks.filter(Boolean).length;
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.1",
+        version: "2.2",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
         flashcard: `${flashIndex + 1} / ${flashcards.length}: ${flashcards[flashIndex]?.fr || "No iniciado"}`,
+        reading: readingFinished ? `${state.reading.score} de ${readingTexts.length}` : `En curso: texto ${Math.min(state.reading.index + 1, readingTexts.length)} de ${readingTexts.length}. Puntuación parcial: ${state.reading.score}.`,
         match: `${matchedIds.size} de ${matchPairs.length} parejas completadas`,
         scenarios: scenarioFinished ? `${state.scenario.score} de ${scenarios.length}` : `En curso: situación ${Math.min(state.scenario.index + 1, scenarios.length)} de ${scenarios.length}. Puntuación parcial: ${state.scenario.score}.`,
         prompt: state.reto.prompt || document.getElementById("randomPrompt").textContent || "Sin reto aleatorio generado.",
@@ -3046,6 +3260,7 @@
       <tr><th>Bloque</th><th>Estado / resultado</th></tr>
       <tr><td>Autodiagnóstico A1</td><td>${escapeHtml(r.quiz)}<br><span class="muted">${escapeHtml(r.quizAdvice)}</span></td></tr>
       <tr><td>Flashcards</td><td>${escapeHtml(r.flashcard)}</td></tr>
+      <tr><td>Comprensión lectora</td><td>${escapeHtml(r.reading)}</td></tr>
       <tr><td>Emparejar frase e intención</td><td>${escapeHtml(r.match)}</td></tr>
       <tr><td>Mini-situaciones</td><td>${escapeHtml(r.scenarios)}</td></tr>
       <tr><td>Reto final</td><td>${escapeHtml(r.checkedCount)} de 4 elementos marcados en checklist.</td></tr>
@@ -3119,6 +3334,7 @@
 
     updateGlobalProgress();
     renderQuiz();
+    renderReading();
     renderFlashcard();
     renderMatch();
     renderScenario();

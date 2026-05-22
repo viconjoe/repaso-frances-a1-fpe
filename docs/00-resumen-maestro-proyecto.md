@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.1
+**Versión de referencia:** 2.2
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -22,6 +22,7 @@ El recurso busca ofrecer una práctica breve, clara y accesible para:
 
 - repasar expresiones básicas de supervivencia comunicativa;
 - reconocer saludos, presentaciones y frases de cortesía;
+- comprender textos breves de nivel A1 con información concreta;
 - asociar frases francesas con intenciones comunicativas;
 - resolver mini-situaciones de nivel A1;
 - preparar una producción breve escrita u oral;
@@ -42,7 +43,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **2.0** se mantiene como recurso web estático e instalable:
+La versión **2.2** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -76,6 +77,8 @@ La versión **2.0** consolida el proyecto como producto demostrativo completo: m
 La versión **2.0.1** incorpora una corrección de UX tras revisión externa: añade una indicación inicial más explícita sobre el uso de **Atrás/Siguiente** y ajusta las flashcards para evitar solapamientos en traducciones largas.
 
 La versión **2.1** amplía el contenido pedagógico de Francés A1: aumenta vocabulario, autodiagnóstico, emparejamientos, situaciones y retos, e incorpora un bloque de gramática útil A1.
+
+La versión **2.2** añade comprensión lectora A1 mediante textos breves, preguntas de localización de información y feedback formativo. El recurso sigue siendo local, estático y sin recogida de datos personales.
 
 ## 5. Privacidad y prudencia
 
@@ -113,6 +116,7 @@ La documentación principal del proyecto queda organizada en:
 - `docs/guia-ux-movil-v1-2-4.md`: criterio y funcionamiento de la experiencia móvil refinada;
 - `docs/guia-validacion-demo-v1-5.md`: checklist de validación y guion breve de demostración;
 - `docs/guia-ampliacion-pedagogica-v2-1.md`: criterio de ampliación de vocabulario y gramática A1;
+- `docs/guia-comprension-lectora-v2-2.md`: criterio de lectura A1 con textos breves y feedback formativo;
 - `docs/dossier-producto-demostrativo-v2.md`: dossier de presentación del producto demostrativo;
 - `docs/guia-adaptacion-contextos-fpe-v2.md`: guía para adaptar el molde a otros idiomas o contextos FPE;
 - `docs/guia-visual-pictogramas.md`: descripción del apoyo visual SVG local;
@@ -125,13 +129,14 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 2.0 consolida el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, con capturas, guion de presentación, dossier de producto y guía de adaptación.
+La versión 2.2 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo comprensión lectora A1 sin cambiar el modelo técnico local.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 
 Las siguientes fases deberían centrarse en:
 
 - pilotaje real documentado, si procede y si existe autorización;
+- comprensión auditiva A1 con audios locales propios del autor;
 - creación de variantes de idioma a partir de la plantilla multidioma.
 
 Debe mantenerse el principio de privacidad y evitar añadir backend, analítica, formularios, IA, APIs externas o recogida de datos personales.

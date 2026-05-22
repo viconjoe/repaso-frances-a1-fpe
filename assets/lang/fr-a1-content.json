@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "resourceVersion": "2.1",
+  "resourceVersion": "2.2",
   "language": {
     "code": "fr",
     "name": "Francés",
@@ -22,7 +22,8 @@
     "compras, restaurante y cantidades",
     "trabajo y cita",
     "petición de ayuda, repetición y aclaración",
-    "gramática funcional A1"
+    "gramática funcional A1",
+    "comprensión lectora A1 con textos breves"
   ],
   "grammarNotes": [
     {
@@ -132,6 +133,68 @@
     { "s": "Quieres decir que vas a coger el autobús.", "options": ["Je vais prendre le bus", "Je prends la pomme", "Je cherche la gare", "Je suis bus"], "answer": 0, "exp": "Je vais + infinitivo expresa un plan próximo." },
     { "s": "La persona habla muy rápido y necesitas que vaya más despacio.", "options": ["Pouvez-vous parler plus lentement ?", "Combien ça coûte ?", "Je suis espagnol", "C'est mon cahier"], "answer": 0, "exp": "Es una frase clave para interacción oral A1." },
     { "s": "En una tienda quieres pedir un kilo de manzanas.", "options": ["Un kilo de pommes, s'il vous plaît", "Il est neuf heures", "Je m'appelle pommes", "Où est le bus ?"], "answer": 0, "exp": "La estructura cantidad + producto es útil en compras básicas." }
+  ],
+  "readingTexts": [
+    {
+      "title": "Mensaje de clase",
+      "text": [
+        "Bonjour Marta,",
+        "Le cours de français commence à 9 h. Apporte ton cahier et un stylo.",
+        "À demain !"
+      ],
+      "q": "¿A qué hora empieza el curso?",
+      "options": ["A las 8 h", "A las 9 h", "A las 10 h", "Por la tarde"],
+      "answer": 1,
+      "exp": "El texto dice «commence à 9 h»."
+    },
+    {
+      "title": "Aviso en una tienda",
+      "text": [
+        "La boulangerie est ouverte du lundi au samedi.",
+        "Horaires : 8 h - 14 h.",
+        "Fermé le dimanche."
+      ],
+      "q": "¿Qué día está cerrada la panadería?",
+      "options": ["Lunes", "Sábado", "Domingo", "Viernes"],
+      "answer": 2,
+      "exp": "El aviso dice «Fermé le dimanche»."
+    },
+    {
+      "title": "Correo breve",
+      "text": [
+        "Bonjour,",
+        "J'ai rendez-vous mardi à 10 h avec Madame Dupont.",
+        "Merci beaucoup."
+      ],
+      "q": "¿Cuándo es la cita?",
+      "options": ["Lunes a las 10 h", "Martes a las 10 h", "Martes a las 9 h", "Domingo"],
+      "answer": 1,
+      "exp": "El correo dice «mardi à 10 h»."
+    },
+    {
+      "title": "Nota de restaurante",
+      "text": [
+        "Menu du jour : soupe, poulet avec riz, dessert.",
+        "Prix : 12 euros.",
+        "Eau incluse."
+      ],
+      "q": "¿Cuánto cuesta el menú?",
+      "options": ["10 euros", "12 euros", "15 euros", "20 euros"],
+      "answer": 1,
+      "exp": "La nota indica «Prix : 12 euros»."
+    },
+    {
+      "title": "Mensaje de transporte",
+      "text": [
+        "Le bus pour la gare part à 16 h 30.",
+        "Arrêt : Place Centrale.",
+        "Billet : 1,50 euro."
+      ],
+      "q": "¿A qué hora sale el bus?",
+      "options": ["14 h 30", "16 h 30", "17 h", "A las 15 h"],
+      "answer": 1,
+      "exp": "El mensaje dice «part à 16 h 30»."
+    }
   ],
   "finalPrompts": [
     "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",

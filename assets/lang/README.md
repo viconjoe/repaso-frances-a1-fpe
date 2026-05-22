@@ -2,7 +2,7 @@
 
 Esta carpeta prepara la fase **v1.3 · Plantilla multidioma**.
 
-Estado actual del recurso: **v2.1**. La ampliación pedagógica incorpora más vocabulario, situaciones y notas de gramática funcional sin cargar datos externos ni añadir servicios.
+Estado actual del recurso: **v2.2**. La ampliación pedagógica incorpora más vocabulario, situaciones, notas de gramática funcional y comprensión lectora A1 sin cargar datos externos ni añadir servicios.
 
 Los archivos de esta carpeta documentan cómo separar progresivamente los datos lingüísticos de la interfaz sin añadir backend, dependencias, login, analítica, formularios externos ni IA/API.
 

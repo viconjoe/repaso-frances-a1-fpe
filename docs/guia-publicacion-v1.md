@@ -4,7 +4,7 @@
 
 **Autor:** Joel Concepción Villanueva  
 **Versión histórica de referencia:** 1.0  
-**Estado actual del recurso:** 2.1
+**Estado actual del recurso:** 2.2
 **Tipo de documento:** checklist de publicación estable  
 **Carácter:** recurso complementario, gratuito, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -12,7 +12,7 @@
 
 Esta guía se conserva como documento histórico de cierre de la versión 1.0 y como checklist de publicación estable en GitHub Pages, portfolio docente o contexto de demostración.
 
-La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v2.1**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo y ampliación pedagógica de Francés A1.
+La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v2.2**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo, ampliación pedagógica de Francés A1 y comprensión lectora A1.
 
 ## 2. Comprobaciones antes de publicar
 
