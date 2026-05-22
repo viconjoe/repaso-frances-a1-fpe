@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.0.1
+**Versión de referencia:** 2.1
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -75,6 +75,8 @@ La versión **2.0** consolida el proyecto como producto demostrativo completo: m
 
 La versión **2.0.1** incorpora una corrección de UX tras revisión externa: añade una indicación inicial más explícita sobre el uso de **Atrás/Siguiente** y ajusta las flashcards para evitar solapamientos en traducciones largas.
 
+La versión **2.1** amplía el contenido pedagógico de Francés A1: aumenta vocabulario, autodiagnóstico, emparejamientos, situaciones y retos, e incorpora un bloque de gramática útil A1.
+
 ## 5. Privacidad y prudencia
 
 El proyecto se ha diseñado con criterio de minimización de datos. No recoge datos personales ni los envía a servidores externos.
@@ -110,6 +112,7 @@ La documentación principal del proyecto queda organizada en:
 - `docs/guia-publicacion-v1.md`: checklist histórico de publicación estable v1.0, con nota de estado actual v2.0;
 - `docs/guia-ux-movil-v1-2-4.md`: criterio y funcionamiento de la experiencia móvil refinada;
 - `docs/guia-validacion-demo-v1-5.md`: checklist de validación y guion breve de demostración;
+- `docs/guia-ampliacion-pedagogica-v2-1.md`: criterio de ampliación de vocabulario y gramática A1;
 - `docs/dossier-producto-demostrativo-v2.md`: dossier de presentación del producto demostrativo;
 - `docs/guia-adaptacion-contextos-fpe-v2.md`: guía para adaptar el molde a otros idiomas o contextos FPE;
 - `docs/guia-visual-pictogramas.md`: descripción del apoyo visual SVG local;

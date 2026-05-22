@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.0.1
+**Versión actual:** 2.1
 
 **Publicación:** GitHub Pages
 
@@ -42,9 +42,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.0.1
+## Estado actual: v2.1
 
-La versión **2.0.1** consolida el recurso como **producto demostrativo completo** para portfolio docente y corrige dos detalles de UX detectados en revisión externa: orientación inicial del recorrido guiado y solapamiento visual en traducciones largas de flashcards.
+La versión **2.1** amplía pedagógicamente el recurso para acercarlo mejor al repertorio A1: incorpora más vocabulario funcional, un bloque de gramática útil, más situaciones comunicativas y retos finales variados. Mantiene la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -52,13 +52,14 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - descripción inicial y nota institucional en desplegables;
 - cabecera móvil breve, alineada y sin redundancias;
 - recorrido guiado por bloques;
+- bloque **Gramática útil A1** con estructuras funcionales breves;
 - vista **Ver todos los bloques** reorganizada como mapa de bloques;
 - selector móvil **Ir a...** para saltar a un bloque sin depender del menú horizontal;
 - barra inferior de navegación para avanzar, retroceder o volver al recorrido guiado;
 - indicación inicial explícita para usar los botones **Atrás/Siguiente** en la parte baja de la pantalla;
 - modo presentación independiente para uso en aula;
 - informe local de práctica, opcional y no oficial;
-- estructura `assets/lang/` para documentar contenidos lingüísticos reutilizables;
+- estructura `assets/lang/` actualizada con inventario ampliado de contenidos lingüísticos reutilizables;
 - manifiesto web, iconos locales y service worker con caché básica offline;
 - capturas actuales para portfolio y presentación;
 - checklist de validación y guion breve de demo;
@@ -70,20 +71,21 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 El recurso incluye estos bloques principales:
 
 1. **Objetivo del recurso**: presenta la finalidad y los contenidos trabajados.
-2. **Autodiagnóstico orientativo A1**: test breve de 10 preguntas con feedback inmediato. No tiene valor evaluativo oficial.
-3. **Flashcards de supervivencia**: tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
-4. **Empareja frase e intención**: actividad de asociación entre frases francesas y funciones comunicativas, con contador de parejas completadas.
-5. **Mini-situaciones comunicativas**: selección de respuestas adecuadas ante situaciones sencillas.
-6. **Reto final**: producción breve escrita u oral para presentarse y resolver una situación básica, con banco de frases de apoyo y orientación local.
-7. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
-8. **Ficha docente integrada**: contextualiza el recurso como propuesta pedagógica complementaria.
+2. **Autodiagnóstico orientativo A1**: test breve de 15 preguntas con feedback inmediato. No tiene valor evaluativo oficial.
+3. **Flashcards de supervivencia**: 32 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
+4. **Gramática útil A1**: píldoras breves sobre presentación, preguntas, negación, cortesía y futuro próximo.
+5. **Empareja frase e intención**: actividad de asociación entre frases francesas y funciones comunicativas, con contador de parejas completadas.
+6. **Mini-situaciones comunicativas**: selección de respuestas adecuadas ante situaciones sencillas.
+7. **Reto final**: producción breve escrita u oral para presentarse y resolver una situación básica, con banco de frases de apoyo y orientación local.
+8. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
+9. **Ficha docente integrada**: contextualiza el recurso como propuesta pedagógica complementaria.
 
 ## Informe de práctica del alumno
 
 El informe local resume:
 
 - progreso local por bloques iniciados;
-- resultado orientativo del autodiagnóstico;
+- resultado orientativo del autodiagnóstico ampliado;
 - avance en flashcards, emparejar y situaciones;
 - checklist del reto final;
 - texto escrito en el reto final;
@@ -126,6 +128,7 @@ El progreso se guarda únicamente en el navegador del usuario mediante `localSto
 - Recorrido guiado móvil con navegación anterior/siguiente.
 - Vista completa reorganizada como mapa de bloques.
 - Selector móvil **Ir a...**.
+- Bloque de gramática funcional A1 sin teoría extensa.
 - Modo presentación independiente para aula.
 - Uso básico de accesibilidad: skip link, foco visible, `aria-live`, `lang="fr"`, botones táctiles y barras de progreso con atributos ARIA.
 - Persistencia local mediante `localStorage`.
@@ -183,6 +186,7 @@ repaso-frances-a1-fpe/
     ├── guia-publicacion-v1.md
     ├── guia-ux-movil-v1-2-4.md
     ├── guia-validacion-demo-v1-5.md
+    ├── guia-ampliacion-pedagogica-v2-1.md
     ├── dossier-producto-demostrativo-v2.md
     ├── guia-adaptacion-contextos-fpe-v2.md
     ├── guia-visual-pictogramas.md
@@ -207,6 +211,7 @@ La carpeta `assets/audio/` queda preparada para audios propios, pero no incluye 
 - [Guía visual de pictogramas](docs/guia-visual-pictogramas.md)
 - [Guía breve de uso en aula](docs/guia-uso-aula.md)
 - [Guía de validación y demo v1.5](docs/guia-validacion-demo-v1-5.md)
+- [Guía de ampliación pedagógica v2.1](docs/guia-ampliacion-pedagogica-v2-1.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -230,6 +235,16 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.1
+
+- Ampliación pedagógica de Francés A1.
+- Autodiagnóstico ampliado de 10 a 15 preguntas.
+- Flashcards ampliadas de 10 a 32 frases y expresiones.
+- Nuevo bloque **Gramática útil A1**.
+- Más emparejamientos, mini-situaciones y retos finales.
+- Inventario `assets/lang/fr-a1-content.json` actualizado para facilitar futuras variantes.
+- Preparación conceptual para próximas fases de comprensión lectora y audición.
 
 ### v2.0.1
 

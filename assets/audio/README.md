@@ -4,7 +4,7 @@ Esta carpeta queda preparada para incorporar audios de pronunciación creados pr
 
 No está pensada para grabar al alumnado ni para recoger voces, nombres o datos personales.
 
-Estado del recurso: v2.0.1. La fase de producto demostrativo no cambia el criterio de audio: solo se contemplan audios locales propios del autor, incluidos como archivos estáticos.
+Estado del recurso: v2.1. La ampliación pedagógica aumenta el inventario de frases posibles para audios locales. El criterio no cambia: solo se contemplan audios locales propios del autor, incluidos como archivos estáticos.
 
 ## Archivos previstos
 

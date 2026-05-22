@@ -1,47 +1,39 @@
 {
-  "version": "2.0.1",
+  "version": "2.1",
   "purpose": "Audios locales propios del autor para frases de Francés A1. No se graba al alumnado.",
   "enabledInIndex": false,
   "files": [
-    {
-      "phrase": "Bonjour",
-      "file": "bonjour.mp3"
-    },
-    {
-      "phrase": "Bonsoir",
-      "file": "bonsoir.mp3"
-    },
-    {
-      "phrase": "Au revoir",
-      "file": "au-revoir.mp3"
-    },
-    {
-      "phrase": "Je m'appelle…",
-      "file": "je-mappelle.mp3"
-    },
-    {
-      "phrase": "J'habite à…",
-      "file": "jhabite-a.mp3"
-    },
-    {
-      "phrase": "Je voudrais…",
-      "file": "je-voudrais.mp3"
-    },
-    {
-      "phrase": "Combien ça coûte ?",
-      "file": "combien-ca-coute.mp3"
-    },
-    {
-      "phrase": "Où est… ?",
-      "file": "ou-est.mp3"
-    },
-    {
-      "phrase": "Je ne comprends pas",
-      "file": "je-ne-comprends-pas.mp3"
-    },
-    {
-      "phrase": "Pouvez-vous répéter, s'il vous plaît ?",
-      "file": "pouvez-vous-repeter.mp3"
-    }
+    { "phrase": "Bonjour", "file": "bonjour.mp3" },
+    { "phrase": "Bonsoir", "file": "bonsoir.mp3" },
+    { "phrase": "Au revoir", "file": "au-revoir.mp3" },
+    { "phrase": "Merci beaucoup", "file": "merci-beaucoup.mp3" },
+    { "phrase": "Excusez-moi", "file": "excusez-moi.mp3" },
+    { "phrase": "Je m'appelle...", "file": "je-mappelle.mp3" },
+    { "phrase": "J'habite à...", "file": "jhabite-a.mp3" },
+    { "phrase": "Je suis espagnol(e)", "file": "je-suis-espagnol.mp3" },
+    { "phrase": "Je suis étudiant(e)", "file": "je-suis-etudiant.mp3" },
+    { "phrase": "Je travaille", "file": "je-travaille.mp3" },
+    { "phrase": "Je cherche du travail", "file": "je-cherche-du-travail.mp3" },
+    { "phrase": "Je voudrais...", "file": "je-voudrais.mp3" },
+    { "phrase": "Combien ça coûte ?", "file": "combien-ca-coute.mp3" },
+    { "phrase": "L'addition, s'il vous plaît", "file": "addition-sil-vous-plait.mp3" },
+    { "phrase": "Où est la gare ?", "file": "ou-est-la-gare.mp3" },
+    { "phrase": "À gauche", "file": "a-gauche.mp3" },
+    { "phrase": "À droite", "file": "a-droite.mp3" },
+    { "phrase": "Je vais prendre le bus", "file": "je-vais-prendre-le-bus.mp3" },
+    { "phrase": "J'ai rendez-vous", "file": "jai-rendez-vous.mp3" },
+    { "phrase": "Il est neuf heures", "file": "il-est-neuf-heures.mp3" },
+    { "phrase": "Aujourd'hui", "file": "aujourdhui.mp3" },
+    { "phrase": "Demain", "file": "demain.mp3" },
+    { "phrase": "Lundi", "file": "lundi.mp3" },
+    { "phrase": "Il pleut", "file": "il-pleut.mp3" },
+    { "phrase": "Il fait chaud", "file": "il-fait-chaud.mp3" },
+    { "phrase": "Mon cahier", "file": "mon-cahier.mp3" },
+    { "phrase": "Votre adresse", "file": "votre-adresse.mp3" },
+    { "phrase": "Un kilo de pommes", "file": "un-kilo-de-pommes.mp3" },
+    { "phrase": "Je ne comprends pas", "file": "je-ne-comprends-pas.mp3" },
+    { "phrase": "Pouvez-vous répéter, s'il vous plaît ?", "file": "pouvez-vous-repeter.mp3" },
+    { "phrase": "Pouvez-vous parler plus lentement ?", "file": "parler-plus-lentement.mp3" },
+    { "phrase": "Pouvez-vous m'aider ?", "file": "pouvez-vous-maider.mp3" }
   ]
 }

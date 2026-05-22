@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.0.1
+**Versión:** 2.1
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -304,6 +304,20 @@ Corrección de UX tras revisión externa:
 - se reorganiza la estructura visual de las flashcards para que la etiqueta de idioma y el contador no se solapen con traducciones largas;
 - se ajusta el tamaño y el ajuste de línea del texto principal de las flashcards en móvil.
 
+### v2.1
+
+Ampliación pedagógica de Francés A1:
+
+- autodiagnóstico ampliado de 10 a 15 preguntas;
+- flashcards ampliadas de 10 a 32 expresiones;
+- incorporación de un bloque de gramática útil A1;
+- ampliación de emparejamientos frase-intención;
+- ampliación de mini-situaciones comunicativas;
+- ampliación de retos finales;
+- actualización de `assets/lang/fr-a1-content.json` como inventario reutilizable.
+
+Esta fase responde al objetivo de aproximar el recurso a un repertorio A1 más aceptable y escalable, sin añadir comprensión lectora ni audición todavía.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -377,4 +391,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **2.0.1** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.1** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

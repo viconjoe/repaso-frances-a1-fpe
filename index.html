@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.0.1
+    Versión: 2.1
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -112,6 +112,12 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.0.1] Ajuste de UX móvil tras revisión externa: indicación explícita de uso de Atrás/Siguiente.
     [v2.0.1] Corrección visual de flashcards para evitar solapamientos entre etiqueta, contador y traducciones largas.
+
+    Cambios v2.1:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.1] Ampliación pedagógica de Francés A1: vocabulario, gramática útil, situaciones y retos.
+    [v2.1] Se prepara una base más escalable para comprensión lectora, audición y variantes de otros idiomas.
+    [v2.1] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
   -->
 
   <style>
@@ -505,6 +511,28 @@
     }
 
     .card p:last-child { margin-bottom: 0; }
+
+    .grammar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .grammar-card {
+      display: grid;
+      gap: 0.45rem;
+      align-content: start;
+    }
+
+    .grammar-card h3 {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+    }
+
+    .grammar-card code {
+      color: var(--brand);
+      font-weight: 800;
+    }
 
     .block-map-grid {
       display: grid;
@@ -1150,7 +1178,7 @@
     .print-only { display: none; }
 
     @media (max-width: 860px) {
-      .hero, .grid, .grid.two, .flashcard-wrap, .match-area, .lesson-flow {
+      .hero, .grid, .grid.two, .flashcard-wrap, .match-area, .lesson-flow, .grammar-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1395,12 +1423,12 @@
 
         <span class="eyebrow desktop-eyebrow">🇫🇷 Francés A1 · Repaso final · Alumnado adulto</span>
         <h1 class="desktop-main-title">Repaso Final Francés A1</h1>
-        <p class="lead desktop-lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
+        <p class="lead desktop-lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional, gramática útil y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
 
         <div class="mobile-info-drawers no-print" aria-label="Información breve del recurso">
           <details class="info-drawer">
             <summary>¿Qué voy a practicar?</summary>
-            <p>Expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1: saludos, presentación personal, petición de ayuda, precios, ubicación y un reto final breve.</p>
+            <p>Expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1: saludos, presentación personal, aula, números, tiempo, ciudad, compras, transporte, trabajo y un reto final breve.</p>
           </details>
           <details class="info-drawer">
             <summary>Nota de uso y privacidad</summary>
@@ -1444,6 +1472,7 @@
       <a href="#objetivo">Objetivo</a>
       <a href="#diagnostico">Autodiagnóstico</a>
       <a href="#flashcards">Flashcards</a>
+      <a href="#gramatica">Gramática útil</a>
       <a href="#emparejar">Emparejar</a>
       <a href="#situaciones">Situaciones</a>
       <a href="#reto">Reto final</a>
@@ -1459,6 +1488,7 @@
       <option value="objetivo">Objetivo</option>
       <option value="diagnostico">Autodiagnóstico</option>
       <option value="flashcards">Flashcards</option>
+      <option value="gramatica">Gramática útil</option>
       <option value="emparejar">Emparejar</option>
       <option value="situaciones">Situaciones</option>
       <option value="reto">Reto final</option>
@@ -1486,7 +1516,7 @@
         <article class="block-map-card">
           <span class="step-number">1</span>
           <h3>Autodiagnóstico</h3>
-          <p>10 preguntas rápidas con feedback orientativo.</p>
+          <p>15 preguntas rápidas con feedback orientativo.</p>
           <button class="primary" type="button" data-guided-step="1">Abrir bloque</button>
         </article>
         <article class="block-map-card">
@@ -1497,27 +1527,33 @@
         </article>
         <article class="block-map-card">
           <span class="step-number">3</span>
-          <h3>Emparejar</h3>
-          <p>Relaciona cada frase con su intención comunicativa.</p>
+          <h3>Gramática útil</h3>
+          <p>Píldoras breves de estructura A1 para construir frases.</p>
           <button class="secondary" type="button" data-guided-step="3">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">4</span>
-          <h3>Situaciones</h3>
-          <p>Elige la frase más adecuada para cada caso.</p>
+          <h3>Emparejar</h3>
+          <p>Relaciona cada frase con su intención comunicativa.</p>
           <button class="secondary" type="button" data-guided-step="4">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">5</span>
-          <h3>Reto final</h3>
-          <p>Prepara una presentación breve con apoyo.</p>
+          <h3>Situaciones</h3>
+          <p>Elige la frase más adecuada para cada caso.</p>
           <button class="secondary" type="button" data-guided-step="5">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">6</span>
+          <h3>Reto final</h3>
+          <p>Prepara una presentación breve con apoyo.</p>
+          <button class="secondary" type="button" data-guided-step="6">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">7</span>
           <h3>Informe</h3>
           <p>Genera una evidencia local si te resulta útil.</p>
-          <button class="secondary" type="button" data-guided-step="6">Abrir bloque</button>
+          <button class="secondary" type="button" data-guided-step="7">Abrir bloque</button>
         </article>
       </div>
     </section>
@@ -1601,7 +1637,7 @@
         <div>
           <span class="tag">Bloque 1</span>
           <h2>Autodiagnóstico orientativo A1</h2>
-          <p class="muted">Responde 10 preguntas. El objetivo no es obtener una nota oficial, sino detectar qué conviene repasar.</p>
+          <p class="muted">Responde 15 preguntas. El objetivo no es obtener una nota oficial, sino detectar qué conviene repasar.</p>
         </div>
         <button class="secondary no-print" type="button" id="resetQuizBtn">Reiniciar autodiagnóstico</button>
       </div>
@@ -1610,7 +1646,7 @@
         <div class="progress-wrap" id="quizProgressWrap" role="progressbar" aria-label="Progreso del autodiagnóstico" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
           <div class="progress-bar" id="quizProgress"></div>
         </div>
-        <p class="small muted" id="quizCounter">Pregunta 1 de 10</p>
+        <p class="small muted" id="quizCounter">Pregunta 1 de 15</p>
         <h3 id="quizQuestion">Cargando pregunta…</h3>
         <div class="option-list" id="quizOptions"></div>
         <div class="feedback" id="quizFeedback" aria-live="polite">Elige una respuesta para ver una explicación breve.</div>
@@ -1633,7 +1669,7 @@
         <div class="flashcard-panel">
           <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Tarjeta de vocabulario. Pulsa para girar.">
             <span class="label" id="flashLabel">Francés</span>
-            <span class="counter" id="flashCounter" aria-live="polite">1 / 10</span>
+          <span class="counter" id="flashCounter" aria-live="polite">1 / 32</span>
             <div class="flash-content">
               <div class="flash-main" id="flashMain">Bonjour</div>
               <div class="flash-sub" id="flashSub">Pulsa para ver la traducción</div>
@@ -1660,6 +1696,49 @@
           <p class="small muted bank-help">También puedes tocar una frase para ir directamente a esa tarjeta.</p>
           <div class="phrase-bank" id="phraseBank"></div>
         </aside>
+      </div>
+    </section>
+
+    <section id="gramatica">
+      <div class="section-head">
+        <div>
+          <span class="tag">Bloque 4</span>
+          <h2>Gramática útil A1</h2>
+          <p class="muted">Píldoras muy breves para construir frases sencillas. No sustituyen una explicación completa: sirven como apoyo rápido antes de practicar.</p>
+        </div>
+      </div>
+
+      <div class="grammar-grid">
+        <article class="card grammar-card">
+          <h3>Presentarse</h3>
+          <p><code>Je suis...</code> + profesión o estado: <span lang="fr">Je suis étudiant(e).</span></p>
+          <p><code>Je m'appelle...</code> para decir el nombre. Usa solo nombre de pila o ficticio.</p>
+        </article>
+        <article class="card grammar-card">
+          <h3>Vivir y trabajar</h3>
+          <p><code>J'habite à...</code> + ciudad: <span lang="fr">J'habite à Las Palmas.</span></p>
+          <p><code>Je travaille dans...</code> + sector: <span lang="fr">Je travaille dans le commerce.</span></p>
+        </article>
+        <article class="card grammar-card">
+          <h3>Preguntar</h3>
+          <p><code>Où ?</code> lugar · <code>Quand ?</code> tiempo · <code>Combien ?</code> precio o cantidad.</p>
+          <p><span lang="fr">Où est la gare ?</span> · <span lang="fr">Combien ça coûte ?</span></p>
+        </article>
+        <article class="card grammar-card">
+          <h3>Negar</h3>
+          <p><code>ne... pas</code> rodea al verbo en frases simples.</p>
+          <p><span lang="fr">Je ne comprends pas.</span> · <span lang="fr">Je ne travaille pas.</span></p>
+        </article>
+        <article class="card grammar-card">
+          <h3>Cortesía</h3>
+          <p><code>Je voudrais...</code> y <code>Pouvez-vous... ?</code> ayudan a pedir algo con educación.</p>
+          <p><span lang="fr">Je voudrais un café.</span> · <span lang="fr">Pouvez-vous répéter ?</span></p>
+        </article>
+        <article class="card grammar-card">
+          <h3>Tiempo inmediato</h3>
+          <p><code>Je vais + infinitif</code> expresa un plan próximo.</p>
+          <p><span lang="fr">Je vais étudier ce soir.</span> · <span lang="fr">Je vais prendre le bus.</span></p>
+        </article>
       </div>
     </section>
 
@@ -1697,7 +1776,7 @@
     <section id="situaciones">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 4</span>
+          <span class="tag">Bloque 5</span>
           <h2>Mini-situaciones comunicativas</h2>
           <p class="muted">Lee la situación y elige la frase más adecuada para responder.</p>
         </div>
@@ -1718,7 +1797,7 @@
     <section id="reto">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 5</span>
+          <span class="tag">Bloque 6</span>
           <h2>Reto final: presentarse y resolver una situación</h2>
           <p class="muted">Actividad final para hacer en parejas, en voz alta o por escrito. No se guarda en ningún servidor.</p>
         </div>
@@ -1792,7 +1871,7 @@
     <section id="informe">
       <div class="section-head">
         <div>
-          <span class="tag">Informe</span>
+          <span class="tag">Bloque 7</span>
           <h2>Informe de práctica del alumno</h2>
           <p class="muted">Genera una ficha breve con el progreso local, resultados orientativos y texto del reto final. No se envía nada a ningún servidor.</p>
         </div>
@@ -1860,7 +1939,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.0.1 · Producto demostrativo completo · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.1 · Ampliación pedagógica Francés A1 · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -1894,6 +1973,7 @@
       started: {
         diagnostico: false,
         flashcards: false,
+        gramatica: false,
         emparejar: false,
         situaciones: false,
         reto: false
@@ -1946,6 +2026,12 @@
       }
     }
 
+    const grammarSection = document.getElementById("gramatica");
+    if (grammarSection) {
+      grammarSection.addEventListener("click", () => markStarted("gramatica"));
+      grammarSection.addEventListener("focusin", () => markStarted("gramatica"));
+    }
+
     function setProgress(wrapId, barId, value) {
       const percent = Math.max(0, Math.min(100, Math.round(value)));
       const wrap = document.getElementById(wrapId);
@@ -1983,9 +2069,10 @@
       { id: "objetivo", title: "Objetivo", help: "Lee la finalidad del recurso. Para avanzar, usa los botones Atrás/Siguiente de la parte baja de la pantalla." },
       { id: "diagnostico", title: "Autodiagnóstico", help: "Responde las preguntas para detectar qué conviene repasar." },
       { id: "flashcards", title: "Flashcards", help: "Practica una frase cada vez y repítela en voz alta." },
+      { id: "gramatica", title: "Gramática útil", help: "Revisa estructuras A1 para presentarte, preguntar, negar y pedir con cortesía." },
       { id: "emparejar", title: "Emparejar", help: "Relaciona cada frase con su intención comunicativa." },
       { id: "situaciones", title: "Situaciones", help: "Elige la frase más adecuada para cada caso." },
-      { id: "reto", title: "Reto final", help: "Prepara una presentación breve sin datos personales." },
+      { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
       { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." }
     ];
 
@@ -2170,7 +2257,12 @@
       { q: "Elige una despedida.", options: ["Au revoir", "Bonjour", "Merci", "Je suis étudiant(e)"], answer: 0, exp: "«Au revoir» significa «adiós» o «hasta luego»." },
       { q: "¿Qué significa Je ne comprends pas?", options: ["No entiendo", "No trabajo", "No cuesta", "No vivo"], answer: 0, exp: "Frase básica para expresar que no entiendes." },
       { q: "¿Qué frase pregunta por ubicación?", options: ["Où est… ?", "Je voudrais…", "Bonsoir", "Ça coûte deux euros"], answer: 0, exp: "«Où est… ?» significa «¿Dónde está…?»." },
-      { q: "¿Qué frase significa Estoy jubilado/a?", options: ["Je suis à la retraite.", "Je cherche du travail.", "Je travaille.", "J'étudie le français."], answer: 0, exp: "«Je suis à la retraite» significa «Estoy jubilado/a»." }
+      { q: "¿Qué frase significa Estoy jubilado/a?", options: ["Je suis à la retraite.", "Je cherche du travail.", "Je travaille.", "J'étudie le français."], answer: 0, exp: "«Je suis à la retraite» significa «Estoy jubilado/a»." },
+      { q: "¿Cómo dices 'Tengo una cita'?", options: ["J'ai rendez-vous.", "Je suis perdu.", "Il pleut.", "C'est fermé."], answer: 0, exp: "«J'ai rendez-vous» sirve para decir que tienes una cita." },
+      { q: "¿Qué palabra corresponde a 'lunes'?", options: ["Dimanche", "Lundi", "Mercredi", "Samedi"], answer: 1, exp: "«Lundi» significa lunes." },
+      { q: "Elige una frase para pedir ayuda en la ciudad.", options: ["Je vais bien.", "Pouvez-vous m'aider ?", "Je suis espagnol.", "C'est mon cahier."], answer: 1, exp: "«Pouvez-vous m'aider ?» es una petición educada de ayuda." },
+      { q: "¿Qué significa Je vais prendre le bus?", options: ["Voy a coger el bus", "Trabajo en el bus", "Busco el bus", "El bus cuesta caro"], answer: 0, exp: "«Je vais + infinitivo» expresa un plan próximo." },
+      { q: "¿Qué frase sirve en un restaurante?", options: ["L'addition, s'il vous plaît.", "Je suis à la retraite.", "C'est mon ordinateur.", "Il est mardi."], answer: 0, exp: "«L'addition, s'il vous plaît» significa «La cuenta, por favor»." }
     ];
 
     function renderQuiz() {
@@ -2262,13 +2354,35 @@
       { fr: "Bonjour", es: "Buenos días / Hola", hint: "Saludo básico durante el día", audio: "bonjour.mp3" },
       { fr: "Bonsoir", es: "Buenas noches / Buenas tardes (tarde-noche)", hint: "Saludo al final del día, desde el atardecer", audio: "bonsoir.mp3" },
       { fr: "Au revoir", es: "Adiós / Hasta luego", hint: "Despedida", audio: "au-revoir.mp3" },
+      { fr: "Merci beaucoup", es: "Muchas gracias", hint: "Agradecimiento", audio: "merci-beaucoup.mp3" },
+      { fr: "Excusez-moi", es: "Disculpe / Perdón", hint: "Cortesía para llamar la atención", audio: "excusez-moi.mp3" },
       { fr: "Je m'appelle…", es: "Me llamo…", hint: "Presentación", audio: "je-mappelle.mp3" },
       { fr: "J'habite à…", es: "Vivo en…", hint: "Lugar de residencia", audio: "jhabite-a.mp3" },
+      { fr: "Je suis espagnol(e)", es: "Soy español/a", hint: "Nacionalidad", audio: "je-suis-espagnol.mp3" },
+      { fr: "Je suis étudiant(e)", es: "Soy estudiante", hint: "Situación personal", audio: "je-suis-etudiant.mp3" },
+      { fr: "Je travaille", es: "Trabajo", hint: "Actividad laboral", audio: "je-travaille.mp3" },
+      { fr: "Je cherche du travail", es: "Busco trabajo", hint: "Empleo", audio: "je-cherche-du-travail.mp3" },
       { fr: "Je voudrais…", es: "Quisiera…", hint: "Petición educada", audio: "je-voudrais.mp3" },
       { fr: "Combien ça coûte ?", es: "¿Cuánto cuesta?", hint: "Compra básica", audio: "combien-ca-coute.mp3" },
-      { fr: "Où est… ?", es: "¿Dónde está…?", hint: "Direcciones", audio: "ou-est.mp3" },
+      { fr: "L'addition, s'il vous plaît", es: "La cuenta, por favor", hint: "Restaurante", audio: "addition-sil-vous-plait.mp3" },
+      { fr: "Où est la gare ?", es: "¿Dónde está la estación?", hint: "Ciudad y transporte", audio: "ou-est-la-gare.mp3" },
+      { fr: "À gauche", es: "A la izquierda", hint: "Direcciones", audio: "a-gauche.mp3" },
+      { fr: "À droite", es: "A la derecha", hint: "Direcciones", audio: "a-droite.mp3" },
+      { fr: "Je vais prendre le bus", es: "Voy a coger el bus", hint: "Transporte y futuro próximo", audio: "je-vais-prendre-le-bus.mp3" },
+      { fr: "J'ai rendez-vous", es: "Tengo una cita", hint: "Cita o gestión", audio: "jai-rendez-vous.mp3" },
+      { fr: "Il est neuf heures", es: "Son las nueve", hint: "Hora", audio: "il-est-neuf-heures.mp3" },
+      { fr: "Aujourd'hui", es: "Hoy", hint: "Tiempo", audio: "aujourdhui.mp3" },
+      { fr: "Demain", es: "Mañana", hint: "Tiempo", audio: "demain.mp3" },
+      { fr: "Lundi", es: "Lunes", hint: "Día de la semana", audio: "lundi.mp3" },
+      { fr: "Il pleut", es: "Llueve", hint: "Meteorología", audio: "il-pleut.mp3" },
+      { fr: "Il fait chaud", es: "Hace calor", hint: "Meteorología / sensación", audio: "il-fait-chaud.mp3" },
+      { fr: "Mon cahier", es: "Mi cuaderno", hint: "Objeto de aula y posesivo", audio: "mon-cahier.mp3" },
+      { fr: "Votre adresse", es: "Su dirección", hint: "Dato personal básico", audio: "votre-adresse.mp3" },
+      { fr: "Un kilo de pommes", es: "Un kilo de manzanas", hint: "Cantidad y compra", audio: "un-kilo-de-pommes.mp3" },
       { fr: "Je ne comprends pas", es: "No entiendo", hint: "Pedir apoyo", audio: "je-ne-comprends-pas.mp3" },
-      { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?", hint: "Pedir repetición", audio: "pouvez-vous-repeter.mp3" }
+      { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?", hint: "Pedir repetición", audio: "pouvez-vous-repeter.mp3" },
+      { fr: "Pouvez-vous parler plus lentement ?", es: "¿Puede hablar más despacio?", hint: "Aclaración", audio: "parler-plus-lentement.mp3" },
+      { fr: "Pouvez-vous m'aider ?", es: "¿Puede ayudarme?", hint: "Solicitar ayuda", audio: "pouvez-vous-maider.mp3" }
     ];
 
     let flashIndex = Number.isInteger(state.flashIndex) ? state.flashIndex : 0;
@@ -2433,8 +2547,14 @@
     const matchPairs = [
       { id: "name", fr: "Je m'appelle…", es: "Decir mi nombre" },
       { id: "live", fr: "J'habite à…", es: "Decir dónde vivo" },
+      { id: "nationality", fr: "Je suis espagnol(e)", es: "Decir mi nacionalidad" },
+      { id: "job", fr: "Je cherche du travail", es: "Hablar de empleo" },
       { id: "price", fr: "Combien ça coûte ?", es: "Preguntar precio" },
+      { id: "restaurant", fr: "L'addition, s'il vous plaît", es: "Pedir la cuenta" },
+      { id: "place", fr: "Où est la gare ?", es: "Preguntar por un lugar" },
+      { id: "appointment", fr: "J'ai rendez-vous", es: "Decir que tengo una cita" },
       { id: "repeat", fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "Pedir que repitan" },
+      { id: "slow", fr: "Pouvez-vous parler plus lentement ?", es: "Pedir que hablen más despacio" },
       { id: "help", fr: "Excusez-moi", es: "Llamar la atención con educación" },
       { id: "want", fr: "Je voudrais…", es: "Pedir algo de forma cortés" }
     ];
@@ -2551,7 +2671,12 @@
       { s: "No has entendido la explicación y quieres pedir que repitan.", options: ["J'habite à Gáldar", "Pouvez-vous répéter, s'il vous plaît ?", "Je voudrais un café", "Ça coûte deux euros"], answer: 1, exp: "Pedir repetición con cortesía ayuda mucho en A1." },
       { s: "Estás comprando y quieres saber el precio.", options: ["Comment ça va ?", "Où est la gare ?", "Je m'appelle Ana", "Combien ça coûte ?"], answer: 3, exp: "«Combien ça coûte ?» es la pregunta básica para precio." },
       { s: "Te preguntan tu nombre.", options: ["Je m'appelle Carlos", "J'habite à Paris", "Je ne comprends pas", "Bonsoir"], answer: 0, exp: "«Je m'appelle…» sirve para decir el nombre." },
-      { s: "Quieres preguntar dónde está la estación.", options: ["Je voudrais la gare", "La gare coûte combien ?", "Où est la gare ?", "Je suis gare"], answer: 2, exp: "«Où est… ?» pregunta por ubicación. «La gare» es la estación." }
+      { s: "Quieres preguntar dónde está la estación.", options: ["Je voudrais la gare", "La gare coûte combien ?", "Où est la gare ?", "Je suis gare"], answer: 2, exp: "«Où est… ?» pregunta por ubicación. «La gare» es la estación." },
+      { s: "Estás en un restaurante y quieres pedir la cuenta.", options: ["L'addition, s'il vous plaît", "Je suis à la retraite", "Où est mon cahier ?", "Il pleut"], answer: 0, exp: "«L'addition, s'il vous plaît» es una fórmula útil en restaurante." },
+      { s: "Tienes una cita en recepción y quieres decirlo.", options: ["J'ai rendez-vous", "Je vais prendre le bus", "Il fait chaud", "Je ne travaille pas"], answer: 0, exp: "«J'ai rendez-vous» significa que tienes una cita." },
+      { s: "Quieres decir que vas a coger el autobús.", options: ["Je vais prendre le bus", "Je prends la pomme", "Je cherche la gare", "Je suis bus"], answer: 0, exp: "«Je vais + infinitivo» expresa un plan próximo." },
+      { s: "La persona habla muy rápido y necesitas que vaya más despacio.", options: ["Pouvez-vous parler plus lentement ?", "Combien ça coûte ?", "Je suis espagnol", "C'est mon cahier"], answer: 0, exp: "Es una frase clave para interacción oral A1." },
+      { s: "En una tienda quieres pedir un kilo de manzanas.", options: ["Un kilo de pommes, s'il vous plaît", "Il est neuf heures", "Je m'appelle pommes", "Où est le bus ?"], answer: 0, exp: "La estructura cantidad + producto es útil en compras básicas." }
     ];
 
     function renderScenario() {
@@ -2630,9 +2755,12 @@
     const finalPrompts = [
       "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
       "Estás en clase. Preséntate, di dónde vives y pide que repitan una frase.",
-      "Estás en una tienda. Saluda, pregunta el precio y da las gracias.",
+      "Estás en una tienda. Saluda, pregunta el precio y pide un kilo de fruta.",
       "Estás en la calle. Pregunta dónde está la estación y pide ayuda con cortesía.",
-      "Conoces a una persona nueva. Saluda, di tu nombre, dónde vives y cómo estás."
+      "Conoces a una persona nueva. Saluda, di tu nombre, dónde vives y cómo estás.",
+      "Tienes una cita. Saluda, di tu nombre y explica que tienes una cita.",
+      "Vas a usar transporte. Di a dónde vas y que vas a coger el autobús.",
+      "Buscas empleo. Preséntate y di en una frase sencilla que buscas trabajo."
     ];
 
     document.getElementById("generatePromptBtn").addEventListener("click", () => {
@@ -2747,7 +2875,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.0.1",
+        version: "2.1",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",

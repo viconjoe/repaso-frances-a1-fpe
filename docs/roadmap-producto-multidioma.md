@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.0.1
+**Versión de referencia:** 2.1
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -82,6 +82,8 @@ La versión **2.0** cierra la fase de producto demostrativo completo:
 - mantenimiento del enfoque gratuito, estático, instalable y sin recogida de datos personales.
 
 La versión **2.0.1** corrige dos detalles detectados en revisión externa antes de avanzar a nuevas variantes: orientación inicial del recorrido guiado y solapamiento visual en flashcards.
+
+La versión **2.1** amplía la base pedagógica de Francés A1 antes de crear variantes: vocabulario, gramática útil, situaciones y retos. Esta decisión refuerza el molde para que otros idiomas no partan de una versión demasiado mínima.
 
 ## 4. Visión de app empaquetada
 
