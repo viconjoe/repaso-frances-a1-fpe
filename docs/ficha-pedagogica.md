@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.2
+**Versión:** 2.3
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -33,6 +33,7 @@ El recurso busca que el alumnado pueda:
 
 - reconocer frases útiles de Francés A1;
 - comprender textos breves con información concreta;
+- identificar información básica en audios locales breves del autor;
 - asociar frases con funciones comunicativas;
 - responder a situaciones comunicativas simples;
 - practicar una presentación breve;
@@ -48,11 +49,12 @@ Al finalizar el uso del recurso, el alumnado debería ser capaz de:
 3. Comprender expresiones como `Je m'appelle...`, `J'habite à...` y `Je ne comprends pas`.
 4. Asociar frases con intenciones comunicativas simples.
 5. Localizar información básica en mensajes, avisos, notas y horarios sencillos.
-6. Elegir respuestas adecuadas en mini-situaciones de nivel A1.
-7. Producir una presentación breve con apoyo.
-8. Pedir repetición o ayuda de forma cortés.
-9. Usar frases funcionales en contexto de aula o situación cotidiana básica.
-10. Guardar, si lo desea, un informe local de práctica sin enviar datos a terceros.
+6. Identificar palabras clave en audios breves preparados por el autor.
+7. Elegir respuestas adecuadas en mini-situaciones de nivel A1.
+8. Producir una presentación breve con apoyo.
+9. Pedir repetición o ayuda de forma cortés.
+10. Usar frases funcionales en contexto de aula o situación cotidiana básica.
+11. Guardar, si lo desea, un informe local de práctica sin enviar datos a terceros.
 
 ## 5. Metodología
 
@@ -74,10 +76,11 @@ La secuencia didáctica sigue una progresión sencilla:
 2. Autodiagnóstico orientativo.
 3. Repaso de frases.
 4. Comprensión lectora breve.
-5. Asociación frase-intención.
-6. Resolución de mini-situaciones.
-7. Producción breve final.
-8. Generación opcional de informe local de práctica.
+5. Comprensión auditiva breve con audios locales del autor, cuando estén disponibles.
+6. Asociación frase-intención.
+7. Resolución de mini-situaciones.
+8. Producción breve final.
+9. Generación opcional de informe local de práctica.
 
 ## 6. UX móvil como accesibilidad práctica
 
@@ -118,19 +121,23 @@ Píldoras breves para construir frases sencillas: presentarse, vivir, trabajar, 
 
 Textos breves de uso cotidiano: mensaje, aviso, correo, nota y transporte. El alumnado localiza información concreta como hora, día, precio o acción principal.
 
-### Bloque 5 · Emparejar frase e intención
+### Bloque 5 · Comprensión auditiva A1
+
+Tareas breves preparadas para audios locales propios del autor. No se usa micrófono, no se graba al alumnado y no se envía audio a servidores externos.
+
+### Bloque 6 · Emparejar frase e intención
 
 Actividad de asociación entre frases francesas e intenciones comunicativas en español. Refuerza la comprensión funcional.
 
-### Bloque 6 · Mini-situaciones comunicativas
+### Bloque 7 · Mini-situaciones comunicativas
 
 Situaciones breves en español donde el alumnado debe elegir una respuesta adecuada en francés.
 
-### Bloque 7 · Reto final
+### Bloque 8 · Reto final
 
 Producción breve escrita u oral. El alumnado puede construir una presentación sencilla y resolver una situación básica usando frases de apoyo. El feedback local es orientativo y no sustituye la corrección docente.
 
-### Bloque 8 · Informe de práctica
+### Bloque 9 · Informe de práctica
 
 El recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto del reto final.
 
@@ -150,7 +157,7 @@ El alumnado accede mediante enlace o QR y trabaja a su ritmo. En móvil se recom
 
 La persona docente puede proyectar el recurso, resolver actividades con el grupo o usarlo por parejas.
 
-Para una sesión breve se recomienda iniciar con el autodiagnóstico, seleccionar algunas flashcards, hacer uno o dos textos breves de lectura, practicar una o dos mini-situaciones y cerrar con el reto final oral o escrito.
+Para una sesión breve se recomienda iniciar con el autodiagnóstico, seleccionar algunas flashcards, hacer uno o dos textos breves de lectura, practicar un audio local cuando esté disponible, hacer una o dos mini-situaciones y cerrar con el reto final oral o escrito.
 
 ### Uso como repaso final
 
@@ -173,6 +180,7 @@ Sí permite:
 - autoevaluación formativa;
 - feedback inmediato;
 - comprensión lectora breve con feedback formativo;
+- comprensión auditiva breve preparada con audios locales propios del autor;
 - identificación de contenidos a repasar;
 - práctica guiada;
 - producción breve con orientación;
@@ -245,6 +253,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.0.1:** ajuste de UX tras revisión externa: orientación inicial más explícita y flashcards sin solapamientos en traducciones largas.
 - **v2.1:** ampliación pedagógica de Francés A1 con más vocabulario funcional, gramática útil, situaciones y retos finales.
 - **v2.2:** incorporación de comprensión lectora A1 con textos breves, preguntas de localización de información y feedback formativo.
+- **v2.3:** preparación de comprensión auditiva A1 con audios locales propios del autor, sin micrófono ni grabación del alumnado.
 
 ## 14. Limitaciones
 
@@ -252,7 +261,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - La pronunciación automática depende del navegador y puede sonar artificial.
 - El feedback del reto final es local y básico, no equivale a una corrección docente.
 - El informe PDF se guarda mediante el sistema de impresión del navegador, no mediante una librería PDF externa.
-- La estructura de audios locales está preparada, pero no incluye todavía archivos de audio reales.
+- La estructura de audios locales está preparada; los audios deben ser archivos propios del autor y no grabaciones del alumnado.
 - No está diseñado como LMS ni como sistema de seguimiento del alumnado.
 
 ## 15. Conclusión pedagógica

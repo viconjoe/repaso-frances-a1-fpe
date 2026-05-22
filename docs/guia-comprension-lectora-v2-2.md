@@ -1,5 +1,7 @@
 # Guía de comprensión lectora v2.2
 
+> Nota de estado: esta guía documenta la fase v2.2. El estado actual del recurso es **v2.3**, que añade preparación de comprensión auditiva A1 con audios locales propios del autor.
+
 ## 1. Finalidad
 
 La versión **2.2** incorpora un bloque de comprensión lectora A1 para reforzar una destreza que todavía no estaba trabajada de forma explícita en la herramienta.

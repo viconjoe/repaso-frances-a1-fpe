@@ -1,8 +1,8 @@
 {
-  "version": "2.1",
-  "purpose": "Audios locales propios del autor para frases de Francés A1. No se graba al alumnado.",
+  "version": "2.3",
+  "purpose": "Audios locales propios del autor para frases y tareas de comprensión auditiva de Francés A1. No se graba al alumnado.",
   "enabledInIndex": false,
-  "files": [
+  "flashcardFiles": [
     { "phrase": "Bonjour", "file": "bonjour.mp3" },
     { "phrase": "Bonsoir", "file": "bonsoir.mp3" },
     { "phrase": "Au revoir", "file": "au-revoir.mp3" },
@@ -35,5 +35,32 @@
     { "phrase": "Pouvez-vous répéter, s'il vous plaît ?", "file": "pouvez-vous-repeter.mp3" },
     { "phrase": "Pouvez-vous parler plus lentement ?", "file": "parler-plus-lentement.mp3" },
     { "phrase": "Pouvez-vous m'aider ?", "file": "pouvez-vous-maider.mp3" }
+  ],
+  "listeningFiles": [
+    {
+      "title": "Saludo en clase",
+      "file": "listen-01-saludo-clase.mp3",
+      "transcript": "Bonjour. Je m'appelle Claire. J'habite à Las Palmas."
+    },
+    {
+      "title": "Hora del curso",
+      "file": "listen-02-heure-cours.mp3",
+      "transcript": "Le cours commence à neuf heures. Apportez votre cahier."
+    },
+    {
+      "title": "Compra básica",
+      "file": "listen-03-achat-pommes.mp3",
+      "transcript": "Bonjour. Je voudrais un kilo de pommes, s'il vous plaît."
+    },
+    {
+      "title": "Transporte",
+      "file": "listen-04-bus-gare.mp3",
+      "transcript": "Excusez-moi, où est le bus pour la gare ?"
+    },
+    {
+      "title": "Pedir repetición",
+      "file": "listen-05-repeter.mp3",
+      "transcript": "Je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?"
+    }
   ]
 }

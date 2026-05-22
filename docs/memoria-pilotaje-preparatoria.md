@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.2
+**Versión de referencia:** 2.3
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -50,10 +50,11 @@ Secuencia recomendada:
 2. Autodiagnóstico orientativo.
 3. Repaso con flashcards.
 4. Comprensión lectora breve.
-5. Actividad de emparejar.
-6. Mini-situaciones comunicativas.
-7. Reto final oral o escrito.
-8. Informe local opcional, solo si aporta valor y se respetan las pautas de privacidad.
+5. Comprensión auditiva breve, si los audios locales están disponibles.
+6. Actividad de emparejar.
+7. Mini-situaciones comunicativas.
+8. Reto final oral o escrito.
+9. Informe local opcional, solo si aporta valor y se respetan las pautas de privacidad.
 
 En móvil se recomienda usar el recorrido guiado. La vista **Ver todos los bloques** puede utilizarse como mapa de orientación si el alumnado necesita saltar a una actividad concreta.
 
@@ -71,6 +72,8 @@ Durante un uso real podrían observarse, sin identificar a nadie, aspectos como:
 - si los textos son claros para alumnado adulto con baja o media competencia digital;
 - si los textos de lectura A1 permiten localizar información concreta sin saturación;
 - si el feedback de comprensión lectora ayuda a justificar la respuesta;
+- si los audios locales del autor se escuchan con claridad suficiente;
+- si el bloque de audición se entiende como escucha, no como grabación del alumnado;
 - si los botones y actividades resultan fáciles de usar;
 - si el alumnado comprende que el resultado no es una nota oficial;
 - si las frases de apoyo son suficientes para el reto final;

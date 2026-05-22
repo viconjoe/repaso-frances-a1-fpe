@@ -4,7 +4,7 @@
 
 **Autor:** Joel Concepción Villanueva  
 **Versión histórica de referencia:** 1.0  
-**Estado actual del recurso:** 2.2
+**Estado actual del recurso:** 2.3
 **Tipo de documento:** checklist de publicación estable  
 **Carácter:** recurso complementario, gratuito, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -12,7 +12,7 @@
 
 Esta guía se conserva como documento histórico de cierre de la versión 1.0 y como checklist de publicación estable en GitHub Pages, portfolio docente o contexto de demostración.
 
-La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v2.2**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo, ampliación pedagógica de Francés A1 y comprensión lectora A1.
+La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v2.3**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo, ampliación pedagógica de Francés A1, comprensión lectora A1 y preparación de comprensión auditiva A1 con audios locales propios.
 
 ## 2. Comprobaciones antes de publicar
 
@@ -26,7 +26,7 @@ Antes de publicar o actualizar la versión visible, revisar:
 - el selector móvil **Ir a...** permite saltar a bloques;
 - las flashcards funcionan;
 - la pronunciación experimental se muestra como apoyo aproximado;
-- el botón de audio local no aparece mientras no existan audios reales;
+- el bloque de audición informa que los audios deben ser archivos locales propios del autor y no grabaciones del alumnado;
 - el reto final recomienda usar nombre de pila o ficticio;
 - el informe local se genera sin enviar datos;
 - la estructura `assets/lang/` contiene inventario y plantilla de contenidos;

@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.2
+**Versión:** 2.3
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -87,6 +87,7 @@ El recurso se organiza en estos bloques:
 - **Flashcards de supervivencia**.
 - **Gramática útil A1**.
 - **Comprensión lectora A1**.
+- **Comprensión auditiva A1 preparada con audios locales propios del autor**.
 - **Empareja frase e intención**.
 - **Mini-situaciones comunicativas**.
 - **Reto final**.
@@ -112,6 +113,8 @@ Aunque algunas estructuras podrían analizarse gramaticalmente en niveles superi
 La prioridad es la comunicación básica, no el análisis gramatical exhaustivo.
 
 En v2.2 se incorpora comprensión lectora A1 mediante textos muy breves y cotidianos. La actividad se centra en localizar información concreta: hora, día, precio, lugar o acción principal.
+
+En v2.3 se prepara comprensión auditiva A1 mediante tareas breves asociadas a archivos locales del autor. La herramienta no solicita micrófono, no graba voz del alumnado y no envía audio a ningún servidor.
 
 ## 8. Decisiones técnicas
 
@@ -171,6 +174,7 @@ Se han incorporado varias decisiones de experiencia de usuario:
 - navegación directa en flashcards;
 - vista limpia A4 para el informe local.
 - bloque de comprensión lectora con textos cortos y opciones claras.
+- bloque de comprensión auditiva preparado para audios locales estáticos del autor.
 
 En v1.2.4, la UX móvil se refina a partir de revisión en móvil real:
 
@@ -336,6 +340,20 @@ Comprensión lectora A1:
 
 Esta fase refuerza la progresión desde reconocimiento de frases hacia comprensión de textos breves, sin añadir backend, login, analítica, formularios externos, IA/API ni dependencias.
 
+### v2.3
+
+Comprensión auditiva A1 con audios locales propios:
+
+- incorporación de un bloque específico de audición;
+- cinco tareas auditivas breves con archivo local previsto;
+- transcripción de apoyo docente para preparar o revisar los audios;
+- actualización de `assets/audio/audio-manifest.json`;
+- inclusión del resultado en el informe local;
+- actualización de `assets/lang/fr-a1-content.json` y de la plantilla multidioma;
+- mantenimiento explícito de privacidad: sin micrófono, sin grabación del alumnado y sin subida de archivos.
+
+La reproducción queda preparada para cuando existan archivos reales en `assets/audio/`. Mientras no existan, el recurso informa con claridad y no muestra la actividad como recogida de voz.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -361,8 +379,8 @@ El recurso tiene limitaciones deliberadas:
 - no ofrece seguimiento docente;
 - no recoge resultados en servidor;
 - no genera un PDF técnico con librería externa, sino una vista imprimible que el navegador guarda como PDF;
-- no incorpora audios humanos;
-- no desarrolla todavía una destreza de audición completa;
+- no incorpora todavía los archivos `.mp3` reales;
+- no desarrolla seguimiento docente de audición;
 - no sustituye práctica oral real;
 - no sustituye la evaluación docente;
 - no funciona como plataforma LMS.
@@ -374,7 +392,7 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 Las siguientes mejoras quedan para versiones posteriores:
 
 - pilotaje real documentado, si procede y si se autoriza;
-- ampliación de comprensión auditiva A1 con audios locales propios del autor;
+- incorporación real de los archivos `.mp3` propios del autor;
 - creación de variantes de idioma a partir de la plantilla multidioma;
 - memoria de pilotaje tras uso real, si procede y si se autoriza.
 
@@ -411,4 +429,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **2.2** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial y comprensión lectora A1, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.3** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1 y preparación de comprensión auditiva con audios locales propios del autor, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

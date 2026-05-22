@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.2
+    Versión: 2.3
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -123,6 +123,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.2] Comprensión lectora A1: textos breves, preguntas de lectura y feedback formativo.
     [v2.2] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v2.3:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.3] Preparación de comprensión auditiva A1 con audios locales propios del autor.
+    [v2.3] No se usa micrófono, no se graba alumnado y no se envía audio a servidores.
   -->
 
   <style>
@@ -675,7 +680,7 @@
       transition: width 0.25s ease;
     }
 
-    .quiz-card, .scenario-card, .reading-card { display: grid; gap: 0.8rem; }
+    .quiz-card, .scenario-card, .reading-card, .listening-card { display: grid; gap: 0.8rem; }
 
     .reading-text {
       border: 1px solid rgba(22, 79, 75, 0.14);
@@ -695,6 +700,30 @@
     .reading-text [lang="fr"] {
       color: var(--brand);
       font-weight: 750;
+    }
+
+    .audio-task-box {
+      border: 1px dashed rgba(22, 79, 75, 0.28);
+      border-radius: 18px;
+      background: rgba(232, 243, 241, 0.55);
+      padding: 1rem;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .audio-task-box p {
+      margin: 0;
+    }
+
+    .audio-task-box audio {
+      width: 100%;
+    }
+
+    .transcript-details {
+      border: 1px solid rgba(22, 79, 75, 0.14);
+      border-radius: 14px;
+      background: #fff;
+      padding: 0.75rem 0.85rem;
     }
 
     .option-list { display: grid; gap: 0.6rem; }
@@ -1499,6 +1528,7 @@
       <a href="#flashcards">Flashcards</a>
       <a href="#gramatica">Gramática útil</a>
       <a href="#lectura">Lectura A1</a>
+      <a href="#audicion">Audición A1</a>
       <a href="#emparejar">Emparejar</a>
       <a href="#situaciones">Situaciones</a>
       <a href="#reto">Reto final</a>
@@ -1516,6 +1546,7 @@
       <option value="flashcards">Flashcards</option>
       <option value="gramatica">Gramática útil</option>
       <option value="lectura">Lectura A1</option>
+      <option value="audicion">Audición A1</option>
       <option value="emparejar">Emparejar</option>
       <option value="situaciones">Situaciones</option>
       <option value="reto">Reto final</option>
@@ -1566,27 +1597,33 @@
         </article>
         <article class="block-map-card">
           <span class="step-number">5</span>
-          <h3>Emparejar</h3>
-          <p>Relaciona cada frase con su intención comunicativa.</p>
+          <h3>Audición A1</h3>
+          <p>Preparada para audios locales propios del autor, sin grabar alumnado.</p>
           <button class="secondary" type="button" data-guided-step="5">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">6</span>
-          <h3>Situaciones</h3>
-          <p>Elige la frase más adecuada para cada caso.</p>
+          <h3>Emparejar</h3>
+          <p>Relaciona cada frase con su intención comunicativa.</p>
           <button class="secondary" type="button" data-guided-step="6">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">7</span>
-          <h3>Reto final</h3>
-          <p>Prepara una presentación breve con apoyo.</p>
+          <h3>Situaciones</h3>
+          <p>Elige la frase más adecuada para cada caso.</p>
           <button class="secondary" type="button" data-guided-step="7">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">8</span>
+          <h3>Reto final</h3>
+          <p>Prepara una presentación breve con apoyo.</p>
+          <button class="secondary" type="button" data-guided-step="8">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">9</span>
           <h3>Informe</h3>
           <p>Genera una evidencia local si te resulta útil.</p>
-          <button class="secondary" type="button" data-guided-step="8">Abrir bloque</button>
+          <button class="secondary" type="button" data-guided-step="9">Abrir bloque</button>
         </article>
       </div>
     </section>
@@ -1652,7 +1689,7 @@
           <img class="step-icon" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>3.</span> Aplicar</span></strong>
-            <span class="small muted">Leer textos breves, emparejar, resolver situaciones y preparar el reto final.</span>
+            <span class="small muted">Leer, escuchar audios locales, emparejar, resolver situaciones y preparar el reto final.</span>
           </div>
         </article>
         <article class="step-card">
@@ -1798,10 +1835,42 @@
       </div>
     </section>
 
-    <section id="emparejar">
+    <section id="audicion">
       <div class="section-head">
         <div>
           <span class="tag">Bloque 5</span>
+          <h2>Comprensión auditiva A1</h2>
+          <p class="muted">Actividad preparada para audios locales propios del autor. No usa micrófono, no graba voz del alumnado y no envía audio a ningún servidor.</p>
+        </div>
+        <button class="secondary no-print" type="button" id="resetListeningBtn">Reiniciar audición</button>
+      </div>
+
+      <div class="card listening-card">
+        <p class="small muted" id="listeningCounter">Audio 1 de 5</p>
+        <h3 id="listeningTitle">Cargando audio...</h3>
+        <div class="audio-task-box">
+          <p class="small muted" id="listeningInstruction">Escucha el audio local del autor y responde una pregunta sencilla.</p>
+          <audio id="listeningAudio" controls preload="metadata"></audio>
+          <p class="small muted" id="listeningAudioStatus" aria-live="polite">Los archivos de audio se añadirán en <code>assets/audio/</code>. La actividad no solicita grabaciones del alumnado.</p>
+        </div>
+        <details class="transcript-details">
+          <summary>Transcripción de apoyo docente</summary>
+          <p class="small muted">Úsala para revisar o preparar la grabación. En aula conviene escuchar primero antes de abrirla.</p>
+          <p lang="fr" id="listeningTranscript"></p>
+        </details>
+        <h3 id="listeningQuestion">Pregunta de comprensión</h3>
+        <div class="option-list" id="listeningOptions"></div>
+        <div class="feedback" id="listeningFeedback" aria-live="polite">Elige una respuesta.</div>
+        <div class="cta-row no-print">
+          <button class="primary" type="button" id="nextListeningBtn">Siguiente audio</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="emparejar">
+      <div class="section-head">
+        <div>
+          <span class="tag">Bloque 6</span>
           <h2>Empareja frase e intención</h2>
           <p class="muted">Selecciona primero una frase en francés y después su intención en español. Si te equivocas, el feedback te orienta sin penalización.</p>
         </div>
@@ -1832,7 +1901,7 @@
     <section id="situaciones">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 6</span>
+          <span class="tag">Bloque 7</span>
           <h2>Mini-situaciones comunicativas</h2>
           <p class="muted">Lee la situación y elige la frase más adecuada para responder.</p>
         </div>
@@ -1853,7 +1922,7 @@
     <section id="reto">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 7</span>
+          <span class="tag">Bloque 8</span>
           <h2>Reto final: presentarse y resolver una situación</h2>
           <p class="muted">Actividad final para hacer en parejas, en voz alta o por escrito. No se guarda en ningún servidor.</p>
         </div>
@@ -1927,7 +1996,7 @@
     <section id="informe">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 8</span>
+          <span class="tag">Bloque 9</span>
           <h2>Informe de práctica del alumno</h2>
           <p class="muted">Genera una ficha breve con el progreso local, resultados orientativos y texto del reto final. No se envía nada a ningún servidor.</p>
         </div>
@@ -1995,7 +2064,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.2 · Comprensión lectora A1 · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3 · Comprensión auditiva A1 preparada con audios locales propios · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2006,7 +2075,7 @@
     <div class="guided-toolbar__inner">
       <button class="secondary" type="button" id="guidedPrevBtn">Anterior</button>
       <div class="guided-status">
-        <strong id="guidedStatusText">Paso 1 de 7</strong>
+        <strong id="guidedStatusText">Paso 1 de 10</strong>
         <div class="guided-dots" id="guidedDots" aria-hidden="true"></div>
       </div>
       <button class="primary" type="button" id="guidedNextBtn">Siguiente</button>
@@ -2031,6 +2100,7 @@
         flashcards: false,
         gramatica: false,
         lectura: false,
+        audicion: false,
         emparejar: false,
         situaciones: false,
         reto: false
@@ -2040,6 +2110,7 @@
       matchDone: [],
       matchOrder: null,
       reading: { index: 0, score: 0, answered: false, selected: null },
+      listening: { index: 0, score: 0, answered: false, selected: null },
       scenario: { index: 0, score: 0, answered: false, selected: null },
       reto: {
         draft: "",
@@ -2063,6 +2134,7 @@
           started: { ...defaultState.started, ...(parsed.started || {}) },
           quiz: { ...defaultState.quiz, ...(parsed.quiz || {}) },
           reading: { ...defaultState.reading, ...(parsed.reading || {}) },
+          listening: { ...defaultState.listening, ...(parsed.listening || {}) },
           scenario: { ...defaultState.scenario, ...(parsed.scenario || {}) },
           reto: { ...defaultState.reto, ...(parsed.reto || {}) }
         };
@@ -2095,6 +2167,12 @@
     if (readingSection) {
       readingSection.addEventListener("click", () => markStarted("lectura"));
       readingSection.addEventListener("focusin", () => markStarted("lectura"));
+    }
+
+    const listeningSection = document.getElementById("audicion");
+    if (listeningSection) {
+      listeningSection.addEventListener("click", () => markStarted("audicion"));
+      listeningSection.addEventListener("focusin", () => markStarted("audicion"));
     }
 
     function setProgress(wrapId, barId, value) {
@@ -2136,6 +2214,7 @@
       { id: "flashcards", title: "Flashcards", help: "Practica una frase cada vez y repítela en voz alta." },
       { id: "gramatica", title: "Gramática útil", help: "Revisa estructuras A1 para presentarte, preguntar, negar y pedir con cortesía." },
       { id: "lectura", title: "Lectura A1", help: "Lee textos breves y busca información concreta antes de responder." },
+      { id: "audicion", title: "Audición A1", help: "Escucha audios locales del autor cuando estén añadidos. No se graba al alumnado." },
       { id: "emparejar", title: "Emparejar", help: "Relaciona cada frase con su intención comunicativa." },
       { id: "situaciones", title: "Situaciones", help: "Elige la frase más adecuada para cada caso." },
       { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
@@ -2557,6 +2636,146 @@
       state.reading = clone(defaultState.reading);
       saveState();
       renderReading();
+    });
+
+    const LISTENING_AUDIO_ENABLED = false;
+
+    const listeningTasks = [
+      {
+        title: "Saludo en clase",
+        file: "listen-01-saludo-clase.mp3",
+        transcript: "Bonjour. Je m'appelle Claire. J'habite à Las Palmas.",
+        q: "¿Dónde vive Claire?",
+        options: ["En París", "En Las Palmas", "En la estación", "En una tienda"],
+        answer: 1,
+        exp: "La pista es «J'habite à Las Palmas»."
+      },
+      {
+        title: "Hora del curso",
+        file: "listen-02-heure-cours.mp3",
+        transcript: "Le cours commence à neuf heures. Apportez votre cahier.",
+        q: "¿A qué hora empieza el curso?",
+        options: ["A las 8 h", "A las 9 h", "A las 10 h", "Por la tarde"],
+        answer: 1,
+        exp: "La pista es «commence à neuf heures»."
+      },
+      {
+        title: "Compra básica",
+        file: "listen-03-achat-pommes.mp3",
+        transcript: "Bonjour. Je voudrais un kilo de pommes, s'il vous plaît.",
+        q: "¿Qué quiere comprar la persona?",
+        options: ["Un café", "Un billete", "Un kilo de manzanas", "Un cuaderno"],
+        answer: 2,
+        exp: "La pista es «un kilo de pommes»."
+      },
+      {
+        title: "Transporte",
+        file: "listen-04-bus-gare.mp3",
+        transcript: "Excusez-moi, où est le bus pour la gare ?",
+        q: "¿Qué busca la persona?",
+        options: ["El bus para la estación", "La cuenta", "Una dirección de correo", "Una farmacia"],
+        answer: 0,
+        exp: "La pista es «le bus pour la gare»."
+      },
+      {
+        title: "Pedir repetición",
+        file: "listen-05-repeter.mp3",
+        transcript: "Je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+        q: "¿Qué pide la persona?",
+        options: ["Pagar", "Repetir", "Comprar fruta", "Cerrar la tienda"],
+        answer: 1,
+        exp: "La pista es «Pouvez-vous répéter ?»."
+      }
+    ];
+
+    function renderListening() {
+      const counter = document.getElementById("listeningCounter");
+      const title = document.getElementById("listeningTitle");
+      const audio = document.getElementById("listeningAudio");
+      const status = document.getElementById("listeningAudioStatus");
+      const transcript = document.getElementById("listeningTranscript");
+      const question = document.getElementById("listeningQuestion");
+      const options = document.getElementById("listeningOptions");
+      const feedback = document.getElementById("listeningFeedback");
+      const nextBtn = document.getElementById("nextListeningBtn");
+
+      options.innerHTML = "";
+      nextBtn.disabled = state.listening.index >= listeningTasks.length;
+
+      if (state.listening.index >= listeningTasks.length) {
+        counter.textContent = "Audición completada";
+        title.textContent = `Resultado orientativo: ${state.listening.score} de ${listeningTasks.length}`;
+        audio.hidden = true;
+        audio.removeAttribute("src");
+        audio.load();
+        transcript.textContent = "";
+        question.textContent = "Comprensión auditiva A1 finalizada";
+        status.textContent = "Actividad finalizada. No se ha grabado ni enviado audio.";
+        feedback.textContent = state.listening.score >= 3 ? "Buen trabajo. Has identificado información básica en mensajes orales breves." : "Conviene repetir los audios locales cuando estén disponibles y buscar palabras clave.";
+        nextBtn.textContent = "Finalizado";
+        return;
+      }
+
+      const item = listeningTasks[state.listening.index];
+      counter.textContent = `Audio ${state.listening.index + 1} de ${listeningTasks.length}`;
+      title.textContent = item.title;
+      question.textContent = item.q;
+      transcript.textContent = item.transcript;
+      feedback.textContent = state.listening.answered ? item.exp : "Elige una respuesta.";
+      nextBtn.textContent = "Siguiente audio";
+      nextBtn.disabled = false;
+
+      audio.src = `${AUDIO_BASE_PATH}${item.file}`;
+      audio.hidden = !LISTENING_AUDIO_ENABLED;
+      status.textContent = LISTENING_AUDIO_ENABLED
+        ? `Audio local previsto: ${item.file}. Si no se reproduce, revisa assets/audio/.`
+        : `Audio local previsto: ${item.file}. Añade el mp3 propio del autor y activa LISTENING_AUDIO_ENABLED para reproducirlo.`;
+
+      item.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.className = "option";
+        btn.type = "button";
+        btn.textContent = opt;
+
+        if (state.listening.answered) {
+          btn.disabled = true;
+          if (i === item.answer) btn.classList.add("correct");
+          if (i === state.listening.selected && state.listening.selected !== item.answer) btn.classList.add("wrong");
+        }
+
+        btn.addEventListener("click", () => answerListening(i));
+        options.appendChild(btn);
+      });
+    }
+
+    function answerListening(selected) {
+      if (state.listening.answered || state.listening.index >= listeningTasks.length) return;
+      markStarted("audicion");
+      const item = listeningTasks[state.listening.index];
+      if (selected === item.answer) state.listening.score += 1;
+      state.listening.answered = true;
+      state.listening.selected = selected;
+      saveState();
+      renderListening();
+    }
+
+    document.getElementById("nextListeningBtn").addEventListener("click", () => {
+      if (state.listening.index >= listeningTasks.length) return;
+      if (!state.listening.answered) {
+        document.getElementById("listeningFeedback").textContent = "Primero elige una respuesta. Escucha el audio local cuando esté disponible y busca una palabra clave.";
+        return;
+      }
+      state.listening.index += 1;
+      state.listening.answered = false;
+      state.listening.selected = null;
+      saveState();
+      renderListening();
+    });
+
+    document.getElementById("resetListeningBtn").addEventListener("click", () => {
+      state.listening = clone(defaultState.listening);
+      saveState();
+      renderListening();
     });
 
     const LOCAL_AUDIO_ENABLED = false;
@@ -3082,18 +3301,20 @@
       const startedTotal = Object.keys(state.started).length;
       const quizFinished = state.quiz.index >= quizQuestions.length;
       const readingFinished = state.reading.index >= readingTexts.length;
+      const listeningFinished = state.listening.index >= listeningTasks.length;
       const scenarioFinished = state.scenario.index >= scenarios.length;
       const checks = [0, 1, 2, 3].map((i) => Boolean(state.reto[`check${i}`]));
       const checkedCount = checks.filter(Boolean).length;
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.2",
+        version: "2.3",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
         flashcard: `${flashIndex + 1} / ${flashcards.length}: ${flashcards[flashIndex]?.fr || "No iniciado"}`,
         reading: readingFinished ? `${state.reading.score} de ${readingTexts.length}` : `En curso: texto ${Math.min(state.reading.index + 1, readingTexts.length)} de ${readingTexts.length}. Puntuación parcial: ${state.reading.score}.`,
+        listening: listeningFinished ? `${state.listening.score} de ${listeningTasks.length}` : `En curso: audio ${Math.min(state.listening.index + 1, listeningTasks.length)} de ${listeningTasks.length}. Puntuación parcial: ${state.listening.score}.`,
         match: `${matchedIds.size} de ${matchPairs.length} parejas completadas`,
         scenarios: scenarioFinished ? `${state.scenario.score} de ${scenarios.length}` : `En curso: situación ${Math.min(state.scenario.index + 1, scenarios.length)} de ${scenarios.length}. Puntuación parcial: ${state.scenario.score}.`,
         prompt: state.reto.prompt || document.getElementById("randomPrompt").textContent || "Sin reto aleatorio generado.",
@@ -3261,6 +3482,7 @@
       <tr><td>Autodiagnóstico A1</td><td>${escapeHtml(r.quiz)}<br><span class="muted">${escapeHtml(r.quizAdvice)}</span></td></tr>
       <tr><td>Flashcards</td><td>${escapeHtml(r.flashcard)}</td></tr>
       <tr><td>Comprensión lectora</td><td>${escapeHtml(r.reading)}</td></tr>
+      <tr><td>Comprensión auditiva</td><td>${escapeHtml(r.listening)}</td></tr>
       <tr><td>Emparejar frase e intención</td><td>${escapeHtml(r.match)}</td></tr>
       <tr><td>Mini-situaciones</td><td>${escapeHtml(r.scenarios)}</td></tr>
       <tr><td>Reto final</td><td>${escapeHtml(r.checkedCount)} de 4 elementos marcados en checklist.</td></tr>
@@ -3335,6 +3557,7 @@
     updateGlobalProgress();
     renderQuiz();
     renderReading();
+    renderListening();
     renderFlashcard();
     renderMatch();
     renderScenario();

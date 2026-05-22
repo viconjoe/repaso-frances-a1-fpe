@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "resourceVersion": "2.2",
+  "resourceVersion": "2.3",
   "language": {
     "code": "xx",
     "name": "Idioma",
@@ -55,6 +55,17 @@
       "options": ["Respuesta correcta", "Distractor 1", "Distractor 2", "Distractor 3"],
       "answer": 0,
       "exp": "Explicación breve indicando la palabra clave del texto."
+    }
+  ],
+  "listeningTasks": [
+    {
+      "title": "Título de audio breve",
+      "file": "audio-local-opcional.mp3",
+      "transcript": "Transcripción breve para preparar o revisar el audio.",
+      "q": "Pregunta de comprensión auditiva.",
+      "options": ["Respuesta correcta", "Distractor 1", "Distractor 2", "Distractor 3"],
+      "answer": 0,
+      "exp": "Explicación breve indicando la palabra clave escuchada."
     }
   ],
   "finalPrompts": [

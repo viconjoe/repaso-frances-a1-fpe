@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "resourceVersion": "2.2",
+  "resourceVersion": "2.3",
   "language": {
     "code": "fr",
     "name": "Francés",
@@ -23,7 +23,8 @@
     "trabajo y cita",
     "petición de ayuda, repetición y aclaración",
     "gramática funcional A1",
-    "comprensión lectora A1 con textos breves"
+    "comprensión lectora A1 con textos breves",
+    "comprensión auditiva A1 con audios locales propios del autor"
   ],
   "grammarNotes": [
     {
@@ -194,6 +195,53 @@
       "options": ["14 h 30", "16 h 30", "17 h", "A las 15 h"],
       "answer": 1,
       "exp": "El mensaje dice «part à 16 h 30»."
+    }
+  ],
+  "listeningTasks": [
+    {
+      "title": "Saludo en clase",
+      "file": "listen-01-saludo-clase.mp3",
+      "transcript": "Bonjour. Je m'appelle Claire. J'habite à Las Palmas.",
+      "q": "¿Dónde vive Claire?",
+      "options": ["En París", "En Las Palmas", "En la estación", "En una tienda"],
+      "answer": 1,
+      "exp": "La pista es J'habite à Las Palmas."
+    },
+    {
+      "title": "Hora del curso",
+      "file": "listen-02-heure-cours.mp3",
+      "transcript": "Le cours commence à neuf heures. Apportez votre cahier.",
+      "q": "¿A qué hora empieza el curso?",
+      "options": ["A las 8 h", "A las 9 h", "A las 10 h", "Por la tarde"],
+      "answer": 1,
+      "exp": "La pista es commence à neuf heures."
+    },
+    {
+      "title": "Compra básica",
+      "file": "listen-03-achat-pommes.mp3",
+      "transcript": "Bonjour. Je voudrais un kilo de pommes, s'il vous plaît.",
+      "q": "¿Qué quiere comprar la persona?",
+      "options": ["Un café", "Un billete", "Un kilo de manzanas", "Un cuaderno"],
+      "answer": 2,
+      "exp": "La pista es un kilo de pommes."
+    },
+    {
+      "title": "Transporte",
+      "file": "listen-04-bus-gare.mp3",
+      "transcript": "Excusez-moi, où est le bus pour la gare ?",
+      "q": "¿Qué busca la persona?",
+      "options": ["El bus para la estación", "La cuenta", "Una dirección de correo", "Una farmacia"],
+      "answer": 0,
+      "exp": "La pista es le bus pour la gare."
+    },
+    {
+      "title": "Pedir repetición",
+      "file": "listen-05-repeter.mp3",
+      "transcript": "Je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+      "q": "¿Qué pide la persona?",
+      "options": ["Pagar", "Repetir", "Comprar fruta", "Cerrar la tienda"],
+      "answer": 1,
+      "exp": "La pista es Pouvez-vous répéter ?"
     }
   ],
   "finalPrompts": [

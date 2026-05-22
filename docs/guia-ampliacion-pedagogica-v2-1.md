@@ -7,7 +7,7 @@
 **Tipo de documento:** criterio de ampliación de contenidos A1  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-> Nota de estado: esta guía documenta la fase histórica v2.1. El estado actual del recurso es **v2.2**, que ya incorpora comprensión lectora A1 con textos breves.
+> Nota de estado: esta guía documenta la fase histórica v2.1. El estado actual del recurso es **v2.3**, que ya incorpora comprensión lectora A1 y preparación de comprensión auditiva con audios locales propios del autor.
 
 ## 1. Finalidad
 
@@ -58,7 +58,7 @@ La versión 2.1 no añadía todavía:
 
 - comprensión lectora específica, incorporada después en v2.2;
 - audios humanos;
-- actividades de audición;
+- actividades de audición, preparadas después en v2.3;
 - backend;
 - login;
 - analítica;

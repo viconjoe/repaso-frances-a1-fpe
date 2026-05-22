@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.2
+**Versión de referencia:** 2.3
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -71,7 +71,7 @@ Se recomienda:
 
 La pronunciación automática, si está disponible, debe tratarse como apoyo aproximado, no como modelo único.
 
-Si en el futuro se incorporan audios locales propios del autor, pueden usarse como modelo adicional de pronunciación sin grabar al alumnado.
+Los audios locales propios del autor, cuando se añadan como archivos estáticos, pueden usarse como modelo adicional de pronunciación y comprensión auditiva sin grabar al alumnado.
 
 ### 4. Comprensión lectora breve · 5-7 minutos
 
@@ -86,6 +86,8 @@ Conviene pedir que busquen primero una palabra clave:
 - acción principal.
 
 ### 5. Emparejar y mini-situaciones · 8-10 minutos
+
+Antes de estas actividades puede añadirse una escucha breve si los audios locales del autor ya están disponibles. La pauta recomendada es escuchar, responder y revisar la pista; no se pide ni se graba voz del alumnado.
 
 Estas actividades sirven para pasar de reconocer frases a entender cuándo usarlas.
 
@@ -123,8 +125,9 @@ Para una sesión breve:
 1. Autodiagnóstico.
 2. Flashcards seleccionadas.
 3. Un texto breve de lectura.
-4. Una o dos mini-situaciones.
-5. Reto final oral sin informe.
+4. Un audio breve, si está disponible.
+5. Una o dos mini-situaciones.
+6. Reto final oral sin informe.
 
 ## 6. Variante autónoma
 
@@ -134,9 +137,10 @@ Si el alumnado usa el recurso fuera del aula, puede seguir este orden:
 2. Hacer el autodiagnóstico.
 3. Repasar las flashcards donde tenga dudas.
 4. Hacer el bloque de lectura A1.
-5. Completar emparejar y situaciones.
-6. Escribir una práctica breve.
-7. Borrar el progreso local si usa un equipo compartido.
+5. Hacer el bloque de audición A1 si los audios locales están disponibles.
+6. Completar emparejar y situaciones.
+7. Escribir una práctica breve.
+8. Borrar el progreso local si usa un equipo compartido.
 
 En móvil, el recorrido guiado y el selector **Ir a...** son la forma más cómoda de moverse.
 
@@ -191,3 +195,7 @@ Desde v2.1 el recurso incluye más contenido A1 y un bloque de gramática útil.
 ## 14. Nota sobre v2.2
 
 Desde v2.2 el recurso incorpora comprensión lectora A1 con textos breves y preguntas de información concreta. En aula conviene usarlo como transición entre reconocimiento de frases y situaciones comunicativas: leer, buscar una palabra clave, responder y justificar oralmente dónde aparece la pista en el texto.
+
+## 15. Nota sobre v2.3
+
+Desde v2.3 el recurso prepara comprensión auditiva A1 con audios locales propios del autor. Esta fase no graba alumnado ni solicita micrófono. Si todavía no se han añadido los `.mp3`, el bloque funciona como estructura preparada y guía de producción de audios.
