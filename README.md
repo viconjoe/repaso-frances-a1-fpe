@@ -4,7 +4,8 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.0
+**Versión actual:** 2.0.1
+
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
@@ -41,9 +42,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.0
+## Estado actual: v2.0.1
 
-La versión **2.0** consolida el recurso como **producto demostrativo completo** para portfolio docente: mantiene la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera, las capturas y la validación de v1.5, y añade un dossier de presentación profesional y una guía de adaptación a contextos FPE.
+La versión **2.0.1** consolida el recurso como **producto demostrativo completo** para portfolio docente y corrige dos detalles de UX detectados en revisión externa: orientación inicial del recorrido guiado y solapamiento visual en traducciones largas de flashcards.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -54,6 +55,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - vista **Ver todos los bloques** reorganizada como mapa de bloques;
 - selector móvil **Ir a...** para saltar a un bloque sin depender del menú horizontal;
 - barra inferior de navegación para avanzar, retroceder o volver al recorrido guiado;
+- indicación inicial explícita para usar los botones **Atrás/Siguiente** en la parte baja de la pantalla;
 - modo presentación independiente para uso en aula;
 - informe local de práctica, opcional y no oficial;
 - estructura `assets/lang/` para documentar contenidos lingüísticos reutilizables;
@@ -228,6 +230,12 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.0.1
+
+- Mejora de orientación inicial en móvil: se indica explícitamente el uso de **Atrás/Siguiente**.
+- Ajuste visual de flashcards para evitar solapamientos entre etiqueta, contador y traducciones largas.
+- Mantenimiento del enfoque estático, local, sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin recogida de datos personales.
 
 ### v2.0
 

@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.0
+    Versión: 2.0.1
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -107,6 +107,11 @@
     [v2.0] Cierre como producto demostrativo completo para portfolio docente.
     [v2.0] Se consolida el dossier de presentación, adaptación FPE y molde multidioma.
     [v2.0] Se mantiene: sin backend, sin login, sin analítica, sin formularios, sin IA/API, sin dependencias.
+
+    Cambios v2.0.1:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.0.1] Ajuste de UX móvil tras revisión externa: indicación explícita de uso de Atrás/Siguiente.
+    [v2.0.1] Corrección visual de flashcards para evitar solapamientos entre etiqueta, contador y traducciones largas.
   -->
 
   <style>
@@ -689,19 +694,25 @@
       border: 1px solid rgba(22, 79, 75, 0.18);
       background: linear-gradient(135deg, white, #f3fbf9);
       display: grid;
-      place-items: center;
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-rows: auto minmax(0, 1fr);
+      grid-template-areas:
+        "label counter"
+        "content content";
+      gap: 1rem;
+      align-items: start;
       text-align: center;
       padding: 1.2rem;
       cursor: pointer;
       user-select: none;
       position: relative;
+      overflow: hidden;
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.7);
     }
 
     .flashcard .label {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
+      grid-area: label;
+      justify-self: start;
       font-size: 0.78rem;
       font-weight: 800;
       color: var(--muted);
@@ -710,12 +721,21 @@
     }
 
     .flashcard .counter {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
+      grid-area: counter;
+      justify-self: end;
       font-size: 0.78rem;
       font-weight: 700;
       color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .flash-content {
+      grid-area: content;
+      align-self: center;
+      justify-self: stretch;
+      min-width: 0;
+      display: grid;
+      place-items: center;
     }
 
     .flash-main {
@@ -723,6 +743,9 @@
       color: var(--brand);
       font-weight: 850;
       line-height: 1.1;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      text-wrap: balance;
     }
 
     .flash-sub { margin-top: 0.6rem; color: var(--muted); font-size: 1rem; }
@@ -937,6 +960,13 @@
     }
 
     .guided-panel strong { color: var(--brand); }
+
+    .guided-panel .guided-panel-instruction {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--brand);
+      font-weight: 750;
+    }
 
     .guided-toolbar {
       position: fixed;
@@ -1173,7 +1203,12 @@
       }
 
       body.guided-mode:not(.presentation-mode) .flashcard {
-        min-height: 215px;
+        min-height: 260px;
+      }
+
+      body.guided-mode:not(.presentation-mode) .flash-main {
+        font-size: clamp(1.55rem, 7vw, 2.15rem);
+        line-height: 1.08;
       }
 
       .guided-toolbar__inner {
@@ -1303,6 +1338,20 @@
         padding-bottom: 6.8rem;
       }
 
+      .flashcard {
+        min-height: 290px;
+        padding: 1rem;
+      }
+
+      .flashcard .label,
+      .flashcard .counter {
+        font-size: 0.72rem;
+      }
+
+      .flash-main {
+        font-size: clamp(1.45rem, 6.6vw, 2.05rem);
+      }
+
       .block-map-grid {
         grid-template-columns: 1fr;
       }
@@ -1386,6 +1435,7 @@
     <div class="guided-panel no-print" id="guidedPanel" aria-live="polite">
       <strong id="guidedPanelTitle">Recorrido guiado</strong>
       <span class="small muted" id="guidedPanelText">Avanza bloque a bloque. Puedes volver a la vista completa cuando quieras.</span>
+      <span class="small guided-panel-instruction">Para empezar el repaso, usa los botones Atrás/Siguiente de la parte baja de la pantalla.</span>
     </div>
   </header>
 
@@ -1584,7 +1634,7 @@
           <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Tarjeta de vocabulario. Pulsa para girar.">
             <span class="label" id="flashLabel">Francés</span>
             <span class="counter" id="flashCounter" aria-live="polite">1 / 10</span>
-            <div>
+            <div class="flash-content">
               <div class="flash-main" id="flashMain">Bonjour</div>
               <div class="flash-sub" id="flashSub">Pulsa para ver la traducción</div>
               <div class="flash-actions no-print">
@@ -1810,7 +1860,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.0 · Producto demostrativo completo · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
+      <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.0.1 · Producto demostrativo completo · Preparada para GitHub Pages · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -1930,7 +1980,7 @@
     }
 
     const guidedSteps = [
-      { id: "objetivo", title: "Objetivo", help: "Lee la finalidad del recurso y el itinerario breve." },
+      { id: "objetivo", title: "Objetivo", help: "Lee la finalidad del recurso. Para avanzar, usa los botones Atrás/Siguiente de la parte baja de la pantalla." },
       { id: "diagnostico", title: "Autodiagnóstico", help: "Responde las preguntas para detectar qué conviene repasar." },
       { id: "flashcards", title: "Flashcards", help: "Practica una frase cada vez y repítela en voz alta." },
       { id: "emparejar", title: "Emparejar", help: "Relaciona cada frase con su intención comunicativa." },
@@ -2697,7 +2747,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.0",
+        version: "2.0.1",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",

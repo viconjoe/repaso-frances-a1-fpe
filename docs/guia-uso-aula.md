@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.0
+**Versión de referencia:** 2.0.1
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -167,3 +167,5 @@ Desde v1.5 existe una guía de validación y demo. Puede usarse para presentar e
 ## 12. Nota sobre v2.0
 
 Desde v2.0 el recurso cuenta con un dossier de producto demostrativo y una guía de adaptación a contextos FPE. Estos documentos sirven para presentar el proyecto con mayor claridad profesional, pero no cambian su uso en aula: sigue siendo un apoyo complementario, local, gratuito y no oficial.
+
+Desde v2.0.1, al iniciar el recorrido guiado se muestra una indicación más explícita para usar la barra inferior **Atrás/Siguiente**. Esto puede ayudar a alumnado o revisores que inicialmente toquen elementos informativos pensando que son navegación.
