@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3
+**Versión de referencia:** 2.3.1
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -50,7 +50,7 @@ Secuencia recomendada:
 2. Autodiagnóstico orientativo.
 3. Repaso con flashcards.
 4. Comprensión lectora breve.
-5. Comprensión auditiva breve, si los audios locales están disponibles.
+5. Comprensión auditiva breve con audios locales.
 6. Actividad de emparejar.
 7. Mini-situaciones comunicativas.
 8. Reto final oral o escrito.

@@ -4,7 +4,7 @@ Esta carpeta queda preparada para incorporar audios de pronunciación creados pr
 
 No está pensada para grabar al alumnado ni para recoger voces, nombres o datos personales.
 
-Estado del recurso: v2.3. La comprensión auditiva A1 queda preparada para audios locales propios del autor. El criterio no cambia: solo se contemplan audios locales incluidos como archivos estáticos, sin grabar al alumnado.
+Estado del recurso: v2.3.1. La comprensión auditiva A1 incorpora cinco audios locales propios del autor. El criterio no cambia: solo se contemplan audios locales incluidos como archivos estáticos, sin grabar al alumnado.
 
 ## Archivos previstos
 
@@ -31,9 +31,9 @@ Los nombres esperados por el recurso son:
 
 ## Activación en `index.html`
 
-El soporte está preparado en el código, pero desactivado mientras no existan audios reales.
+El soporte de comprensión auditiva está activado en el código porque ya existen los cinco audios MP3.
 
-En v2.3 se añade un bloque de comprensión auditiva con cinco archivos previstos:
+En v2.3.1 se incorporan estos archivos:
 
 - `listen-01-saludo-clase.mp3`
 - `listen-02-heure-cours.mp3`
@@ -41,7 +41,7 @@ En v2.3 se añade un bloque de comprensión auditiva con cinco archivos previsto
 - `listen-04-bus-gare.mp3`
 - `listen-05-repeter.mp3`
 
-Estos audios deben ser creados previamente por el autor y guardados en esta carpeta.
+Estos audios han sido preparados por el autor y guardados en esta carpeta.
 
 Cuando se incorporen todos los archivos, cambiar:
 
@@ -55,13 +55,7 @@ por:
 const LOCAL_AUDIO_ENABLED = true;
 ```
 
-Para activar los audios del bloque de comprensión auditiva, revisar también:
-
-```js
-const LISTENING_AUDIO_ENABLED = false;
-```
-
-y cambiarlo a:
+Los audios del bloque de comprensión auditiva están activados mediante:
 
 ```js
 const LISTENING_AUDIO_ENABLED = true;

@@ -1,5 +1,7 @@
 # Guía de comprensión auditiva v2.3
 
+> Nota de estado: en **v2.3.1** ya se incorporan los cinco archivos MP3 locales y la reproducción está activada.
+
 ## 1. Finalidad
 
 La versión **2.3** prepara un bloque de comprensión auditiva A1 basado en **audios locales propios del autor**.
@@ -39,15 +41,9 @@ No se contempla:
 
 ## 4. Estado técnico
 
-El bloque está preparado en `index.html`, pero la reproducción queda desactivada hasta que existan audios reales.
+El bloque está preparado en `index.html` y, desde v2.3.1, la reproducción queda activada porque ya existen los cinco audios MP3 locales.
 
-Cuando se añadan los archivos `.mp3`, se podrá activar la reproducción revisando:
-
-```js
-const LISTENING_AUDIO_ENABLED = false;
-```
-
-y cambiándolo a:
+La activación se controla con:
 
 ```js
 const LISTENING_AUDIO_ENABLED = true;

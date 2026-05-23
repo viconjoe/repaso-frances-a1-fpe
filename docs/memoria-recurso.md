@@ -352,7 +352,7 @@ Comprensión auditiva A1 con audios locales propios:
 - actualización de `assets/lang/fr-a1-content.json` y de la plantilla multidioma;
 - mantenimiento explícito de privacidad: sin micrófono, sin grabación del alumnado y sin subida de archivos.
 
-La reproducción queda preparada para cuando existan archivos reales en `assets/audio/`. Mientras no existan, el recurso informa con claridad y no muestra la actividad como recogida de voz.
+En v2.3.1 se incorporan los cinco archivos MP3 reales en `assets/audio/` y se activa la reproducción local. El recurso sigue sin solicitar micrófono ni recoger voz del alumnado.
 
 ## 12. Feedback recibido
 
@@ -379,7 +379,6 @@ El recurso tiene limitaciones deliberadas:
 - no ofrece seguimiento docente;
 - no recoge resultados en servidor;
 - no genera un PDF técnico con librería externa, sino una vista imprimible que el navegador guarda como PDF;
-- no incorpora todavía los archivos `.mp3` reales;
 - no desarrolla seguimiento docente de audición;
 - no sustituye práctica oral real;
 - no sustituye la evaluación docente;
@@ -392,7 +391,7 @@ Estas limitaciones son coherentes con el objetivo de mantener un recurso ligero,
 Las siguientes mejoras quedan para versiones posteriores:
 
 - pilotaje real documentado, si procede y si se autoriza;
-- incorporación real de los archivos `.mp3` propios del autor;
+- ampliación gradual de audios de flashcards, si se considera necesario;
 - creación de variantes de idioma a partir de la plantilla multidioma;
 - memoria de pilotaje tras uso real, si procede y si se autoriza.
 
@@ -429,4 +428,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **2.3** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1 y preparación de comprensión auditiva con audios locales propios del autor, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.3.1** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1 y comprensión auditiva con audios locales propios del autor, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

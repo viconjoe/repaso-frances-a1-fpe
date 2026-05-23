@@ -254,6 +254,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.1:** ampliación pedagógica de Francés A1 con más vocabulario funcional, gramática útil, situaciones y retos finales.
 - **v2.2:** incorporación de comprensión lectora A1 con textos breves, preguntas de localización de información y feedback formativo.
 - **v2.3:** preparación de comprensión auditiva A1 con audios locales propios del autor, sin micrófono ni grabación del alumnado.
+- **v2.3.1:** incorporación de los cinco MP3 locales y activación de la reproducción en el bloque de audición.
 
 ## 14. Limitaciones
 
@@ -261,7 +262,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - La pronunciación automática depende del navegador y puede sonar artificial.
 - El feedback del reto final es local y básico, no equivale a una corrección docente.
 - El informe PDF se guarda mediante el sistema de impresión del navegador, no mediante una librería PDF externa.
-- La estructura de audios locales está preparada; los audios deben ser archivos propios del autor y no grabaciones del alumnado.
+- La estructura de audios locales incluye los cinco MP3 de comprensión auditiva; cualquier audio adicional debe ser archivo propio del autor y no grabación del alumnado.
 - No está diseñado como LMS ni como sistema de seguimiento del alumnado.
 
 ## 15. Conclusión pedagógica

@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.3
+    Versión: 2.3.1
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -128,6 +128,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.3] Preparación de comprensión auditiva A1 con audios locales propios del autor.
     [v2.3] No se usa micrófono, no se graba alumnado y no se envía audio a servidores.
+
+    Cambios v2.3.1:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.3.1] Incorporación de cinco audios locales MP3 para comprensión auditiva A1.
+    [v2.3.1] Reproducción local activada, sin micrófono ni grabación del alumnado.
   -->
 
   <style>
@@ -2064,7 +2069,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3 · Comprensión auditiva A1 preparada con audios locales propios · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3.1 · Comprensión auditiva A1 con audios locales propios · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2638,7 +2643,7 @@
       renderReading();
     });
 
-    const LISTENING_AUDIO_ENABLED = false;
+    const LISTENING_AUDIO_ENABLED = true;
 
     const listeningTasks = [
       {
@@ -3308,7 +3313,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.3",
+        version: "2.3.1",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",

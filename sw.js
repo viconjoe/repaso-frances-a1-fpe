@@ -1,4 +1,4 @@
-const CACHE_NAME = "repaso-frances-a1-v2.3";
+const CACHE_NAME = "repaso-frances-a1-v2.3.1";
 
 const CORE_ASSETS = [
   "./",
@@ -13,6 +13,11 @@ const CORE_ASSETS = [
   "./assets/pictogramas/privacidad.svg",
   "./assets/pictogramas/responder.svg",
   "./assets/audio/audio-manifest.json",
+  "./assets/audio/listen-01-saludo-clase.mp3",
+  "./assets/audio/listen-02-heure-cours.mp3",
+  "./assets/audio/listen-03-achat-pommes.mp3",
+  "./assets/audio/listen-04-bus-gare.mp3",
+  "./assets/audio/listen-05-repeter.mp3",
   "./assets/lang/fr-a1-content.json",
   "./assets/lang/language-pack-template.json"
 ];

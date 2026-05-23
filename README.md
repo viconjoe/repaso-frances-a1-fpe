@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.3
+**Versión actual:** 2.3.1
 
 **Publicación:** GitHub Pages
 
@@ -42,9 +42,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.3
+## Estado actual: v2.3.1
 
-La versión **2.3** prepara un bloque de **comprensión auditiva A1** con audios locales propios del autor. La actividad queda lista para reproducir archivos estáticos en `assets/audio/`, sin usar micrófono, sin grabar alumnado y sin enviar audio a servidores. Mantiene la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
+La versión **2.3.1** incorpora cinco audios locales MP3 para el bloque de **comprensión auditiva A1**. La reproducción es local desde `assets/audio/`, sin usar micrófono, sin grabar alumnado y sin enviar audio a servidores. Mantiene la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -54,7 +54,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - recorrido guiado por bloques;
 - bloque **Gramática útil A1** con estructuras funcionales breves;
 - bloque **Comprensión lectora A1** con mensajes, avisos, notas y horarios sencillos;
-- bloque **Comprensión auditiva A1** preparado para audios locales propios del autor;
+- bloque **Comprensión auditiva A1** con audios locales propios del autor;
 - vista **Ver todos los bloques** reorganizada como mapa de bloques;
 - selector móvil **Ir a...** para saltar a un bloque sin depender del menú horizontal;
 - barra inferior de navegación para avanzar, retroceder o volver al recorrido guiado;
@@ -77,7 +77,7 @@ El recurso incluye estos bloques principales:
 3. **Flashcards de supervivencia**: 32 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
 4. **Gramática útil A1**: píldoras breves sobre presentación, preguntas, negación, cortesía y futuro próximo.
 5. **Comprensión lectora A1**: textos breves de uso cotidiano con preguntas de información concreta.
-6. **Comprensión auditiva A1**: tareas breves preparadas para audios locales propios del autor, sin grabar al alumnado.
+6. **Comprensión auditiva A1**: tareas breves con audios locales propios del autor, sin grabar al alumnado.
 7. **Empareja frase e intención**: actividad de asociación entre frases francesas y funciones comunicativas, con contador de parejas completadas.
 8. **Mini-situaciones comunicativas**: selección de respuestas adecuadas ante situaciones sencillas.
 9. **Reto final**: producción breve escrita u oral para presentarse y resolver una situación básica, con banco de frases de apoyo y orientación local.
@@ -204,7 +204,7 @@ repaso-frances-a1-fpe/
     └── roadmap-producto-multidioma.md
 ```
 
-La carpeta `assets/audio/` queda preparada para audios propios del autor. No incluye ni solicita grabaciones del alumnado.
+La carpeta `assets/audio/` incluye los cinco audios locales de comprensión auditiva A1 y mantiene el inventario de audios previstos para flashcards. No incluye ni solicita grabaciones del alumnado.
 
 ## Documentación complementaria
 
@@ -245,6 +245,13 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.3.1
+
+- Incorporación de cinco archivos MP3 locales para comprensión auditiva A1.
+- Activación de `LISTENING_AUDIO_ENABLED`.
+- Inclusión de audios en la caché PWA básica.
+- Mantenimiento de privacidad: sin micrófono, sin grabación del alumnado y sin envío de audio.
 
 ### v2.3
 

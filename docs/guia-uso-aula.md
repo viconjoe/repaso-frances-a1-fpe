@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3
+**Versión de referencia:** 2.3.1
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -198,4 +198,4 @@ Desde v2.2 el recurso incorpora comprensión lectora A1 con textos breves y preg
 
 ## 15. Nota sobre v2.3
 
-Desde v2.3 el recurso prepara comprensión auditiva A1 con audios locales propios del autor. Esta fase no graba alumnado ni solicita micrófono. Si todavía no se han añadido los `.mp3`, el bloque funciona como estructura preparada y guía de producción de audios.
+Desde v2.3 el recurso prepara comprensión auditiva A1 con audios locales propios del autor. Desde v2.3.1 ya incorpora los cinco MP3 locales y la reproducción está activada. Esta fase no graba alumnado ni solicita micrófono.

@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3
+**Versión de referencia:** 2.3.1
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -44,7 +44,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **2.3** se mantiene como recurso web estático e instalable:
+La versión **2.3.1** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -82,6 +82,8 @@ La versión **2.1** amplía el contenido pedagógico de Francés A1: aumenta voc
 La versión **2.2** añade comprensión lectora A1 mediante textos breves, preguntas de localización de información y feedback formativo. El recurso sigue siendo local, estático y sin recogida de datos personales.
 
 La versión **2.3** prepara comprensión auditiva A1 con audios locales propios del autor. No usa micrófono, no graba al alumnado, no sube archivos y no incorpora servicios externos.
+
+La versión **2.3.1** incorpora los cinco MP3 locales de comprensión auditiva y activa la reproducción desde `assets/audio/`.
 
 ## 5. Privacidad y prudencia
 
@@ -133,14 +135,14 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 2.3 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo preparación de comprensión auditiva A1 sin cambiar el modelo técnico local.
+La versión 2.3.1 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo comprensión auditiva A1 con audios locales sin cambiar el modelo técnico local.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 
 Las siguientes fases deberían centrarse en:
 
 - pilotaje real documentado, si procede y si existe autorización;
-- incorporación real de archivos `.mp3` propios del autor;
+- ampliación gradual de audios de flashcards, si se considera útil;
 - creación de variantes de idioma a partir de la plantilla multidioma.
 
 Debe mantenerse el principio de privacidad y evitar añadir backend, analítica, formularios, IA, APIs externas o recogida de datos personales.
