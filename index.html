@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.3.1
+    Versión: 2.3.2
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -133,6 +133,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.3.1] Incorporación de cinco audios locales MP3 para comprensión auditiva A1.
     [v2.3.1] Reproducción local activada, sin micrófono ni grabación del alumnado.
+
+    Cambios v2.3.2:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.3.2] Tarjetas iniciales del itinerario convertidas en accesos reales.
+    [v2.3.2] Ajuste UX basado en feedback: si parece tocable, debe navegar.
   -->
 
   <style>
@@ -612,14 +617,33 @@
     }
 
     .step-card {
+      appearance: none;
       display: grid;
+      width: 100%;
       grid-template-columns: auto 1fr;
       gap: 0.7rem;
       align-items: start;
+      text-align: left;
+      font: inherit;
+      color: inherit;
       background: #fffdf9;
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 0.9rem;
+      cursor: pointer;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    .step-card:hover,
+    .step-card:focus-visible {
+      border-color: rgba(15, 118, 110, 0.45);
+      box-shadow: var(--shadow);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .step-card:focus-visible {
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.18), var(--shadow);
     }
 
     .step-number {
@@ -1676,34 +1700,34 @@
       </div>
 
       <div class="lesson-flow" aria-label="Itinerario sugerido de uso">
-        <article class="step-card">
+        <button class="step-card" type="button" data-guided-step="1" aria-label="Abrir autodiagnóstico orientativo">
           <img class="step-icon" src="assets/pictogramas/responder.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>1.</span> Detectar</span></strong>
             <span class="small muted">Autodiagnóstico breve para saber qué conviene repasar.</span>
           </div>
-        </article>
-        <article class="step-card">
+        </button>
+        <button class="step-card" type="button" data-guided-step="2" aria-label="Abrir flashcards de repaso">
           <img class="step-icon" src="assets/pictogramas/comprender.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>2.</span> Repasar</span></strong>
             <span class="small muted">Flashcards y frases funcionales para practicar en voz alta.</span>
           </div>
-        </article>
-        <article class="step-card">
+        </button>
+        <button class="step-card" type="button" data-guided-step="4" aria-label="Abrir actividades de aplicación">
           <img class="step-icon" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>3.</span> Aplicar</span></strong>
             <span class="small muted">Leer, escuchar audios locales, emparejar, resolver situaciones y preparar el reto final.</span>
           </div>
-        </article>
-        <article class="step-card">
+        </button>
+        <button class="step-card" type="button" data-guided-step="9" aria-label="Abrir informe de práctica">
           <img class="step-icon" src="assets/pictogramas/evidencia.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>4.</span> Guardar evidencia</span></strong>
             <span class="small muted">Informe local opcional, orientativo y sin envío de datos.</span>
           </div>
-        </article>
+        </button>
       </div>
     </section>
 
@@ -2069,7 +2093,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3.1 · Comprensión auditiva A1 con audios locales propios · Instalable como PWA ligera · Sin dependencias externas · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3.2 · Itinerario inicial táctil · Comprensión auditiva A1 con audios locales propios · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -3313,7 +3337,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.3.1",
+        version: "2.3.2",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",

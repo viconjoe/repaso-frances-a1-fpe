@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.3
+**Versión:** 2.3.2
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -354,6 +354,14 @@ Comprensión auditiva A1 con audios locales propios:
 
 En v2.3.1 se incorporan los cinco archivos MP3 reales en `assets/audio/` y se activa la reproducción local. El recurso sigue sin solicitar micrófono ni recoger voz del alumnado.
 
+### v2.3.2
+
+Ajuste UX de tarjetas iniciales:
+
+- las tarjetas **Detectar**, **Repasar**, **Aplicar** y **Guardar evidencia** pasan a funcionar como accesos reales;
+- el cambio responde a feedback externo: varias personas percibían esas tarjetas como botones;
+- se mantiene el recorrido guiado y no se añade ninguna dependencia ni servicio externo.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -428,4 +436,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **2.3.1** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1 y comprensión auditiva con audios locales propios del autor, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.3.2** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor y mejora UX basada en feedback real, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

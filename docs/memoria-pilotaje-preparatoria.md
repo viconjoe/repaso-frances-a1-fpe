@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3.1
+**Versión de referencia:** 2.3.2
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -64,6 +64,7 @@ Durante un uso real podrían observarse, sin identificar a nadie, aspectos como:
 
 - si las instrucciones se entienden sin explicación adicional;
 - si el alumnado entiende la cabecera inicial;
+- si las tarjetas iniciales se perciben y usan correctamente como accesos;
 - si la cabecera móvil simplificada mejora la primera impresión;
 - si el recorrido guiado reduce la sensación de página larga;
 - si el mapa de bloques ayuda a orientarse;

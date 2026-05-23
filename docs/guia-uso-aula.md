@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3.1
+**Versión de referencia:** 2.3.2
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -40,6 +40,8 @@ Esta vista ayuda a:
 La opción **Ver todos los bloques** funciona como un **mapa de navegación**, no como una simple página larga. Permite ver la estructura general del recurso y elegir por dónde continuar.
 
 El selector móvil **Ir a...** ayuda a saltar directamente a un bloque concreto sin perderse ni depender de un menú horizontal desplazable.
+
+Las tarjetas iniciales **Detectar**, **Repasar**, **Aplicar** y **Guardar evidencia** funcionan como accesos directos. Si el alumnado las toca, el recurso abre el bloque correspondiente dentro del recorrido guiado.
 
 ## 4. Secuencia recomendada de 30-40 minutos
 
@@ -199,3 +201,7 @@ Desde v2.2 el recurso incorpora comprensión lectora A1 con textos breves y preg
 ## 15. Nota sobre v2.3
 
 Desde v2.3 el recurso prepara comprensión auditiva A1 con audios locales propios del autor. Desde v2.3.1 ya incorpora los cinco MP3 locales y la reproducción está activada. Esta fase no graba alumnado ni solicita micrófono.
+
+## 16. Nota sobre v2.3.2
+
+Desde v2.3.2 las tarjetas iniciales del itinerario son accesos reales. El ajuste responde a feedback de usuarios que las percibían como botones; se aprovecha esa expectativa para hacer la navegación más natural.

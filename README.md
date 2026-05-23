@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.3.1
+**Versión actual:** 2.3.2
 
 **Publicación:** GitHub Pages
 
@@ -42,9 +42,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.3.1
+## Estado actual: v2.3.2
 
-La versión **2.3.1** incorpora cinco audios locales MP3 para el bloque de **comprensión auditiva A1**. La reproducción es local desde `assets/audio/`, sin usar micrófono, sin grabar alumnado y sin enviar audio a servidores. Mantiene la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
+La versión **2.3.2** convierte las tarjetas iniciales del itinerario en accesos reales de navegación: detectar, repasar, aplicar y guardar evidencia. Mantiene los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -55,6 +55,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - bloque **Gramática útil A1** con estructuras funcionales breves;
 - bloque **Comprensión lectora A1** con mensajes, avisos, notas y horarios sencillos;
 - bloque **Comprensión auditiva A1** con audios locales propios del autor;
+- tarjetas iniciales del itinerario convertidas en accesos reales a bloques;
 - vista **Ver todos los bloques** reorganizada como mapa de bloques;
 - selector móvil **Ir a...** para saltar a un bloque sin depender del menú horizontal;
 - barra inferior de navegación para avanzar, retroceder o volver al recorrido guiado;
@@ -245,6 +246,12 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.3.2
+
+- Ajuste UX basado en feedback externo.
+- Las tarjetas **Detectar**, **Repasar**, **Aplicar** y **Guardar evidencia** pasan a funcionar como accesos reales.
+- Se mantiene el recorrido guiado y la barra inferior.
 
 ### v2.3.1
 
