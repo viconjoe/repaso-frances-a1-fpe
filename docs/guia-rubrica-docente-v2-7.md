@@ -4,6 +4,8 @@
 **Autor:** Joel Concepción Villanueva  
 **Estado:** apoyo documental y orientativo, no evaluativo oficial
 
+> Nota de estado: esta guía documenta la fase v2.7. El estado actual del recurso es **v2.8**, que añade grabación local opcional para autoescucha oral sin subir audio ni incorporarlo a la rúbrica o al informe.
+
 ## 1. Finalidad
 
 La versión v2.7 incorpora una **rúbrica docente/documental** para observar de forma cualitativa la práctica comunicativa del alumnado adulto de Francés A1.

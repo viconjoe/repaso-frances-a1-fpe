@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.7
+**Versión de referencia:** 2.8
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -76,6 +76,9 @@ Durante un uso real podrían observarse, sin identificar a nadie, aspectos como:
 - si el alumnado reconoce una misma función comunicativa en situaciones distintas.
 - si la expresión oral guiada se entiende como práctica sin grabación;
 - si el checklist oral ayuda a preparar el reto final sin generar ansiedad.
+- si la grabación local opcional se entiende como autoescucha voluntaria y no como obligación;
+- si el alumnado comprende que debe borrar el audio local al finalizar;
+- si el aviso de privacidad antes del micrófono resulta claro;
 - si la autoevaluación final se entiende como orientación y no como nota oficial;
 - si el perfil final ayuda al alumnado a decidir qué repasar.
 - si la rúbrica docente/documental ayuda a ordenar observaciones sin generar sensación de calificación;
@@ -166,3 +169,5 @@ La versión 1.5 añade capturas y una guía de demo que pueden ayudar a preparar
 La versión 2.0 añade un dossier de producto demostrativo y una guía de adaptación a contextos FPE. En un pilotaje futuro, estos documentos pueden ayudar a explicar mejor el alcance del recurso sin presentarlo como oficial ni como herramienta de evaluación.
 
 La versión 2.7 añade una rúbrica docente/documental. En un pilotaje futuro puede servir para ordenar observaciones cualitativas agregadas, siempre sin recoger datos personales y sin presentarla como evaluación oficial.
+
+La versión 2.8 añade grabación local opcional. En un pilotaje futuro conviene observar si el alumnado la percibe como apoyo útil para escucharse, si respeta las pautas de privacidad y si borra el audio local antes de terminar.

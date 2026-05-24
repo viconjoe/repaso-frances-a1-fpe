@@ -7,7 +7,7 @@
 **Tipo de documento:** criterio de experiencia de usuario móvil refinada  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-**Nota de estado:** esta guía documenta la fase histórica v1.2.4. El estado actual del recurso es v2.7, que conserva esta UX móvil, añade preparación de plantilla multidioma, experiencia instalable ligera, capturas de validación, producto demostrativo completo, ampliación pedagógica, comprensión lectora, comprensión auditiva con audios locales, variación comunicativa, expresión oral guiada sin grabación, autoevaluación final orientativa y rúbrica docente/documental.
+**Nota de estado:** esta guía documenta la fase histórica v1.2.4. El estado actual del recurso es v2.8, que conserva esta UX móvil, añade preparación de plantilla multidioma, experiencia instalable ligera, capturas de validación, producto demostrativo completo, ampliación pedagógica, comprensión lectora, comprensión auditiva con audios locales, variación comunicativa, expresión oral guiada con grabación local opcional, autoevaluación final orientativa y rúbrica docente/documental.
 
 ## 1. Finalidad
 
@@ -72,7 +72,7 @@ Se mantiene:
 - sin login;
 - sin analítica;
 - sin formularios externos;
-- sin grabación de voz del alumnado;
+- sin subida de voz del alumnado; la grabación local opcional de v2.8 es temporal y debe poder borrarse;
 - sin IA ni APIs externas;
 - sin dependencias externas.
 

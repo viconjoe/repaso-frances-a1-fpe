@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "resourceVersion": "2.7",
+  "resourceVersion": "2.8",
   "language": {
     "code": "xx",
     "name": "Idioma",
@@ -71,7 +71,7 @@
   "oralTasks": [
     {
       "title": "Título de práctica oral breve",
-      "task": "Situación oral guiada sin grabación.",
+      "task": "Situación oral guiada con grabación local opcional.",
       "model": "Modelo breve en el idioma meta.",
       "support": ["Frase de apoyo 1", "Frase de apoyo 2", "Frase de apoyo 3"]
     }
@@ -86,6 +86,11 @@
     "dimensions": ["comprensión", "interacción", "expresión", "autonomía"],
     "levels": ["Inicial", "En desarrollo", "Consolidado orientativo"]
   },
+  "localRecording": {
+    "purpose": "Grabación local opcional para que el alumnado pueda escucharse durante la práctica oral.",
+    "privacy": "No se sube audio, no se analiza, no se incluye en el informe y no se guarda en localStorage.",
+    "limits": ["uso opcional", "audio temporal", "borrado manual", "evitar datos personales"]
+  },
   "finalPrompts": [
     "Situación comunicativa breve adaptada al idioma y al nivel."
   ],
@@ -93,7 +98,7 @@
     "Mantener nivel inicial A1 o equivalente.",
     "Usar frases funcionales y memorizables.",
     "Combinar repetición de funciones clave con variaciones de contexto.",
-    "Incluir expresión oral guiada sin solicitar micrófono ni grabar voz.",
+    "Incluir expresión oral guiada y, si procede, grabación local opcional con aviso de privacidad.",
     "Presentar cualquier resultado final como orientación local no oficial.",
     "Usar rúbricas solo como apoyo docente/documental, no como certificación.",
     "Evitar datos personales reales.",

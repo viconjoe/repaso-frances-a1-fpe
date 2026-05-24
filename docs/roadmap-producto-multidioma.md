@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.7
+**Versión de referencia:** 2.8
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -103,6 +103,8 @@ La versión **2.6** añade autoevaluación final orientativa, manteniendo la sep
 
 La versión **2.7** añade una rúbrica docente/documental para observación cualitativa A1, manteniendo la separación entre apoyo pedagógico, portfolio y evaluación oficial.
 
+La versión **2.8** añade grabación local opcional para autoescucha oral, sin subida de audio, sin análisis automático, sin almacenamiento en `localStorage` y sin inclusión en el informe.
+
 ## 4. Visión de app empaquetada
 
 Una evolución natural sería convertir el recurso en una app empaquetada o instalable, manteniendo la simplicidad técnica.
@@ -194,6 +196,7 @@ Estado: completada como cierre demostrativo del proyecto.
 - variantes reales de otros idiomas iniciales;
 - pilotaje real documentado, si procede y si existe autorización;
 - uso de la rúbrica v2.7 para ordenar observaciones agregadas durante un pilotaje;
+- observación prudente del uso de grabación local opcional de v2.8;
 - mejora visual o empaquetado adicional solo si no compromete privacidad ni sencillez.
 
 ## 8. Riesgos a evitar
@@ -214,4 +217,4 @@ Una formulación prudente para portfolio o presentación sería:
 
 ## 10. Conclusión
 
-La etapa actual deja el proyecto consolidado como producto demostrativo de portfolio docente en versión **2.7**, con experiencia móvil refinada, estructura multidioma, opción de instalación ligera, capturas, guion de demostración, dossier profesional, guía de adaptación, ampliación A1, destrezas básicas, autoevaluación orientativa y rúbrica docente/documental. Los siguientes pasos razonables ya no requieren añadir muchas funciones, sino validar el recurso en uso real o crear variantes controladas para otros idiomas.
+La etapa actual deja el proyecto consolidado como producto demostrativo de portfolio docente en versión **2.8**, con experiencia móvil refinada, estructura multidioma, opción de instalación ligera, capturas, guion de demostración, dossier profesional, guía de adaptación, ampliación A1, destrezas básicas, autoevaluación orientativa, rúbrica docente/documental y grabación local opcional para autoescucha. Los siguientes pasos razonables ya no requieren añadir muchas funciones, sino validar el recurso en uso real o crear variantes controladas para otros idiomas.

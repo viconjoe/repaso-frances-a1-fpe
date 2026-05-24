@@ -1,6 +1,6 @@
 {
-  "version": "2.7",
-  "purpose": "Audios locales propios del autor para frases y tareas de comprensión auditiva de Francés A1. No se graba al alumnado.",
+  "version": "2.8",
+  "purpose": "Audios locales propios del autor para frases y tareas de comprensión auditiva de Francés A1. Las grabaciones orales opcionales del alumnado no se guardan en esta carpeta.",
   "enabledInIndex": true,
   "flashcardFiles": [
     { "phrase": "Bonjour", "file": "bonjour.mp3" },

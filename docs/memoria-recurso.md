@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.7
+**Versión:** 2.8
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -90,7 +90,7 @@ El recurso se organiza en estos bloques:
 - **Comprensión auditiva A1 preparada con audios locales propios del autor**.
 - **Empareja frase e intención**.
 - **Mini-situaciones comunicativas**.
-- **Expresión oral guiada sin grabación**.
+- **Expresión oral guiada con grabación local opcional**.
 - **Reto final**.
 - **Autoevaluación final orientativa**.
 - **Informe de práctica**.
@@ -127,6 +127,8 @@ En v2.6 se añade autoevaluación final orientativa. La síntesis combina datos 
 
 En v2.7 se añade una rúbrica docente/documental. La rúbrica permite ordenar observaciones cualitativas sobre comprensión, interacción, expresión y autonomía, sin generar nota oficial ni recoger datos personales.
 
+En v2.8 se añade grabación local opcional para autoescucha en el bloque oral. La grabación no se sube, no se analiza, no se guarda en `localStorage` y no se incorpora al informe.
+
 ## 8. Decisiones técnicas
 
 El recurso se ha construido como un único archivo `index.html`, con CSS y JavaScript integrados.
@@ -153,6 +155,8 @@ Tecnologías utilizadas:
 
 No se utilizan frameworks, backend, formularios, analítica, bases de datos, APIs externas de corrección, IA ni autenticación.
 
+Desde v2.8 se usa `MediaRecorder`, una API nativa del navegador, solo para grabación local opcional y temporal de práctica oral. No se utiliza como API externa ni envía audio a terceros.
+
 ## 9. Privacidad
 
 El recurso no solicita datos personales.
@@ -164,6 +168,8 @@ En el reto final se recomienda practicar con un nombre de pila o con un nombre f
 El texto que el alumnado escribe en el reto final se guarda únicamente en el navegador, para evitar pérdida accidental durante la sesión.
 
 El informe de práctica se genera en local. No se envía a ningún servidor.
+
+La grabación oral opcional se mantiene fuera del informe y de `localStorage`. Sirve únicamente para autoescucha temporal y debe borrarse desde la interfaz o desaparece al cerrar/recargar la página.
 
 En ordenadores compartidos se recomienda borrar el progreso local al terminar.
 
@@ -431,6 +437,17 @@ Rúbrica docente/documental:
 - se documenta su uso para portfolio, memoria de pilotaje u observación agregada;
 - se mantiene de forma explícita que no es evaluación oficial ni calificación.
 
+### v2.8
+
+Grabación local opcional:
+
+- se añade una opción de grabación dentro de la expresión oral guiada;
+- se solicita aceptación del aviso de privacidad antes de activar el micrófono;
+- el audio se reproduce localmente para autoescucha;
+- se permite borrar la grabación desde la interfaz;
+- se elimina al cambiar de práctica, reiniciar, cerrar o recargar la página;
+- no se sube audio, no se analiza, no se guarda en `localStorage` y no aparece en el informe.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -457,7 +474,7 @@ El recurso tiene limitaciones deliberadas:
 - no recoge resultados en servidor;
 - no genera un PDF técnico con librería externa, sino una vista imprimible que el navegador guarda como PDF;
 - no desarrolla seguimiento docente de audición;
-- no sustituye práctica oral real;
+- no sustituye práctica oral real ni observación docente;
 - no sustituye la evaluación docente;
 - la rúbrica docente/documental no certifica nivel ni genera calificación oficial;
 - no funciona como plataforma LMS.
@@ -506,4 +523,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **2.7** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada sin grabación, autoevaluación final orientativa, rúbrica docente/documental, variación comunicativa progresiva y mejoras UX basadas en feedback real, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.8** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, variación comunicativa progresiva y mejoras UX basadas en feedback real, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

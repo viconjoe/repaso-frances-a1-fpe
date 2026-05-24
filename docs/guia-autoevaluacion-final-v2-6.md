@@ -3,7 +3,7 @@
 **Versión de referencia:** 2.6  
 **Autor:** Joel Concepción Villanueva
 
-> Nota de estado: esta guía documenta la fase v2.6. El estado actual del recurso es **v2.7**, que añade una rúbrica docente/documental como apoyo cualitativo no oficial.
+> Nota de estado: esta guía documenta la fase v2.6. El estado actual del recurso es **v2.8**, que añade una rúbrica docente/documental como apoyo cualitativo no oficial y grabación local opcional para autoescucha oral.
 
 ## Finalidad
 
@@ -54,14 +54,14 @@ Estos perfiles ayudan a decidir qué repetir: flashcards, lectura, audición, si
 
 La autoevaluación funciona en el navegador, con `localStorage`. No usa backend, login, analítica, formularios externos ni IA/API.
 
-No solicita datos personales y no recoge voz del alumnado.
+No solicita datos personales y no incorpora voz del alumnado. La grabación local opcional de v2.8 no se usa para calcular la autoevaluación.
 
 ## Uso recomendado
 
 Puede utilizarse al final de una sesión de repaso:
 
 1. completar algunos bloques;
-2. practicar oralmente sin grabación;
+2. practicar oralmente, con o sin grabación local opcional;
 3. revisar el reto final;
 4. abrir la autoevaluación;
 5. leer la recomendación de repaso;

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "resourceVersion": "2.7",
+  "resourceVersion": "2.8",
   "language": {
     "code": "fr",
     "name": "Francés",
@@ -26,7 +26,7 @@
     "comprensión lectora A1 con textos breves",
     "comprensión auditiva A1 con audios locales propios del autor",
     "variación comunicativa progresiva A1",
-    "expresión oral guiada sin grabación",
+    "expresión oral guiada con grabación local opcional",
     "autoevaluación final orientativa",
     "rúbrica docente/documental"
   ],
@@ -363,6 +363,16 @@
       "autonomía y privacidad"
     ],
     "levels": ["Inicial", "En desarrollo", "Consolidado orientativo"]
+  },
+  "localRecording": {
+    "purpose": "Grabación local opcional para que el alumnado adulto pueda escucharse durante la práctica oral.",
+    "privacy": "No se sube audio, no se analiza, no se incluye en el informe y no se guarda en localStorage.",
+    "limits": [
+      "uso opcional",
+      "audio temporal en el navegador",
+      "eliminación manual desde la interfaz",
+      "evitar apellidos, DNI, teléfono, correo y datos sensibles"
+    ]
   },
   "finalPrompts": [
     "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",

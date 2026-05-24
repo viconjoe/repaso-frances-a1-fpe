@@ -4,7 +4,7 @@
 
 **Autor:** Joel Concepción Villanueva  
 **Versión histórica de referencia:** 1.0  
-**Estado actual del recurso:** 2.7
+**Estado actual del recurso:** 2.8
 **Tipo de documento:** checklist de publicación estable  
 **Carácter:** recurso complementario, gratuito, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -12,7 +12,7 @@
 
 Esta guía se conserva como documento histórico de cierre de la versión 1.0 y como checklist de publicación estable en GitHub Pages, portfolio docente o contexto de demostración.
 
-La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v2.7**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo, ampliación pedagógica de Francés A1, comprensión lectora A1, comprensión auditiva A1 con audios locales propios, expresión oral guiada sin grabación, autoevaluación final orientativa, rúbrica docente/documental, tarjetas iniciales táctiles, objetivos iniciales más claros y variación comunicativa progresiva.
+La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v2.8**, con UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo, ampliación pedagógica de Francés A1, comprensión lectora A1, comprensión auditiva A1 con audios locales propios, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, tarjetas iniciales táctiles, objetivos iniciales más claros y variación comunicativa progresiva.
 
 ## 2. Comprobaciones antes de publicar
 
@@ -27,6 +27,7 @@ Antes de publicar o actualizar la versión visible, revisar:
 - las flashcards funcionan;
 - la pronunciación experimental se muestra como apoyo aproximado;
 - el bloque de audición informa que los audios deben ser archivos locales propios del autor y no grabaciones del alumnado;
+- la grabación oral opcional informa de privacidad, no sube audio y permite borrar la grabación local;
 - el reto final recomienda usar nombre de pila o ficticio;
 - el informe local se genera sin enviar datos;
 - la estructura `assets/lang/` contiene inventario y plantilla de contenidos;
@@ -64,7 +65,7 @@ Formulación recomendada:
 - No sustituye materiales oficiales.
 - No realiza evaluación oficial.
 - No recoge datos personales.
-- No graba alumnado.
+- Solo permite grabación local opcional para autoescucha; no sube audio ni lo incorpora al informe.
 
 ## 6. Próximo ciclo
 
@@ -76,4 +77,5 @@ Estado de ciclos tras v1.0:
 - v1.4: PWA o experiencia instalable preparada;
 - v1.5: capturas, validación y demo preparadas;
 - v2.0: producto demostrativo completo adaptable a distintos idiomas, con dossier y guía de adaptación;
-- v2.7: rúbrica docente/documental de observación A1, sin valor evaluativo oficial.
+- v2.7: rúbrica docente/documental de observación A1, sin valor evaluativo oficial;
+- v2.8: grabación local opcional para autoescucha oral, sin subida de audio ni inclusión en informe.

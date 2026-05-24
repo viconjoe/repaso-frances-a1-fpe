@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.7
+**Versión actual:** 2.8
 
 **Publicación:** GitHub Pages
 
@@ -42,11 +42,11 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.7
+## Estado actual: v2.8
 
-La versión **2.7** incorpora una **rúbrica docente/documental** de observación A1. Sirve como apoyo cualitativo para documentar la práctica, preparar memoria de pilotaje o evidenciar decisiones pedagógicas, sin generar calificación oficial y sin sustituir la evaluación del curso.
+La versión **2.8** incorpora **grabación local opcional** en el bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
 
-Mantiene también la autoevaluación final orientativa de v2.6, la expresión oral guiada sin grabación de v2.5, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
+Mantiene también la rúbrica docente/documental de v2.7, la autoevaluación final orientativa de v2.6, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -57,7 +57,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - bloque **Gramática útil A1** con estructuras funcionales breves;
 - bloque **Comprensión lectora A1** con mensajes, avisos, notas y horarios sencillos;
 - bloque **Comprensión auditiva A1** con audios locales propios del autor;
-- bloque **Expresión oral guiada** sin grabación ni micrófono;
+- bloque **Expresión oral guiada** con grabación local opcional, temporal y sin subida;
 - bloque **Autoevaluación final orientativa** sin valor evaluativo oficial;
 - bloque **Rúbrica docente/documental** como apoyo cualitativo no oficial;
 - variación comunicativa progresiva: mismas funciones clave en contextos cercanos pero no idénticos;
@@ -88,7 +88,7 @@ El recurso incluye estos bloques principales:
 6. **Comprensión auditiva A1**: tareas breves con audios locales propios del autor, sin grabar al alumnado.
 7. **Empareja frase e intención**: actividad de asociación entre frases francesas y funciones comunicativas, con contador de parejas completadas.
 8. **Mini-situaciones comunicativas**: selección de respuestas adecuadas ante situaciones sencillas.
-9. **Expresión oral guiada**: práctica en voz alta con modelos, apoyo y checklist local, sin grabación.
+9. **Expresión oral guiada**: práctica en voz alta con modelos, apoyo, checklist local y grabación opcional temporal para escucharse.
 10. **Reto final**: producción breve escrita u oral para presentarse y resolver una situación básica, con banco de frases de apoyo y orientación local.
 11. **Autoevaluación final orientativa**: perfil local de práctica y recomendación de repaso, sin calificación oficial.
 12. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
@@ -102,7 +102,7 @@ El informe local resume:
 - progreso local por bloques iniciados;
 - resultado orientativo del autodiagnóstico ampliado;
 - avance en flashcards, comprensión lectora, comprensión auditiva, emparejar y situaciones;
-- práctica oral guiada marcada localmente, sin grabaciones;
+- práctica oral guiada marcada localmente; la grabación opcional no se incorpora al informe;
 - autoevaluación final orientativa local;
 - checklist del reto final;
 - texto escrito en el reto final;
@@ -129,9 +129,12 @@ El recurso:
 - no usa formularios externos;
 - no incorpora analítica;
 - no incorpora IA/API;
-- no recoge datos personales.
+- no recoge datos personales en servidores;
+- no guarda grabaciones orales en `localStorage` ni en el informe.
 
 En el reto final se recomienda usar solo un nombre de pila o un nombre ficticio para practicar la frase `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
+
+La grabación oral de v2.8 es opcional y temporal. Solo funciona si el usuario acepta el aviso de privacidad y concede permiso de micrófono al navegador. El audio queda en memoria local de la página para escucharlo, borrarlo o descargar una copia local. No se sube, no se analiza, no se añade al informe y desaparece al borrar, cambiar de práctica o cerrar/recargar la página.
 
 El progreso se guarda únicamente en el navegador del usuario mediante `localStorage`.
 
@@ -148,7 +151,7 @@ El progreso se guarda únicamente en el navegador del usuario mediante `localSto
 - Bloque de gramática funcional A1 sin teoría extensa.
 - Bloque de comprensión lectora A1 con textos breves integrados localmente.
 - Bloque de comprensión auditiva A1 preparado para audios estáticos locales.
-- Bloque de expresión oral guiada sin micrófono ni grabación.
+- Bloque de expresión oral guiada con grabación local opcional mediante MediaRecorder, si el navegador lo permite.
 - Bloque de autoevaluación final orientativa, sin valor evaluativo oficial.
 - Bloque de rúbrica docente/documental, sin valor de calificación oficial.
 - Modo presentación independiente para aula.
@@ -215,6 +218,7 @@ repaso-frances-a1-fpe/
     ├── guia-expresion-oral-guiada-v2-5.md
     ├── guia-autoevaluacion-final-v2-6.md
     ├── guia-rubrica-docente-v2-7.md
+    ├── guia-grabacion-local-opcional-v2-8.md
     ├── dossier-producto-demostrativo-v2.md
     ├── guia-adaptacion-contextos-fpe-v2.md
     ├── guia-visual-pictogramas.md
@@ -224,7 +228,7 @@ repaso-frances-a1-fpe/
     └── roadmap-producto-multidioma.md
 ```
 
-La carpeta `assets/audio/` incluye los cinco audios locales de comprensión auditiva A1 y mantiene el inventario de audios previstos para flashcards. No incluye ni solicita grabaciones del alumnado.
+La carpeta `assets/audio/` incluye los cinco audios locales de comprensión auditiva A1 y mantiene el inventario de audios previstos para flashcards. Las grabaciones orales opcionales de v2.8 no se guardan en esa carpeta ni forman parte del repositorio.
 
 ## Documentación complementaria
 
@@ -246,6 +250,7 @@ La carpeta `assets/audio/` incluye los cinco audios locales de comprensión audi
 - [Guía de expresión oral guiada v2.5](docs/guia-expresion-oral-guiada-v2-5.md)
 - [Guía de autoevaluación final v2.6](docs/guia-autoevaluacion-final-v2-6.md)
 - [Guía de rúbrica docente/documental v2.7](docs/guia-rubrica-docente-v2-7.md)
+- [Guía de grabación local opcional v2.8](docs/guia-grabacion-local-opcional-v2-8.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -269,6 +274,14 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.8
+
+- Incorporación de **grabación local opcional** en expresión oral guiada.
+- Aviso de privacidad antes de solicitar permiso de micrófono.
+- Reproducción del audio en la propia pantalla para autoescucha.
+- Borrado manual de la grabación local y eliminación automática al cambiar de práctica.
+- Sin subida de audio, sin análisis automático, sin IA/API, sin inclusión en informe y sin almacenamiento en `localStorage`.
 
 ### v2.7
 

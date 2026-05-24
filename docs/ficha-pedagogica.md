@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.7
+**Versión:** 2.8
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -81,7 +81,7 @@ La secuencia didáctica sigue una progresión sencilla:
 5. Comprensión auditiva breve con audios locales del autor, cuando estén disponibles.
 6. Asociación frase-intención.
 7. Resolución de mini-situaciones.
-8. Expresión oral guiada sin grabación.
+8. Expresión oral guiada con grabación local opcional y temporal.
 9. Producción breve final.
 10. Generación opcional de informe local de práctica.
 11. Revisar una autoevaluación final orientativa sin valor oficial.
@@ -142,7 +142,7 @@ Desde v2.4, algunas situaciones reutilizan funciones ya trabajadas en contextos 
 
 ### Bloque 8 · Expresión oral guiada
 
-Prácticas breves para hablar en voz alta con modelo y apoyo. No se solicita micrófono, no se graba voz y no se envía audio.
+Prácticas breves para hablar en voz alta con modelo y apoyo. Desde v2.8 puede activarse una grabación local opcional para autoescucha. El audio no se sube, no se analiza, no se incluye en el informe y puede borrarse desde la interfaz.
 
 ### Bloque 9 · Reto final
 
@@ -228,7 +228,7 @@ No pretende ser una auditoría WCAG completa, pero sí aplica criterios básicos
 
 ## 11. Privacidad y protección de datos
 
-El recurso no recoge datos personales.
+El recurso no recoge datos personales en servidores. La grabación oral opcional de v2.8 es local, temporal y no se incorpora al informe.
 
 No solicita:
 
@@ -281,6 +281,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.5:** expresión oral guiada sin grabación, con modelos, apoyo paso a paso y checklist oral local.
 - **v2.6:** autoevaluación final orientativa con perfil local de práctica, recomendación de repaso y sin calificación oficial.
 - **v2.7:** rúbrica docente/documental de observación A1, con niveles cualitativos y uso no oficial.
+- **v2.8:** grabación local opcional y temporal para autoescucha en expresión oral guiada, con aviso de privacidad.
 
 ## 14. Limitaciones
 
@@ -288,7 +289,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - La pronunciación automática depende del navegador y puede sonar artificial.
 - El feedback del reto final es local y básico, no equivale a una corrección docente.
 - El informe PDF se guarda mediante el sistema de impresión del navegador, no mediante una librería PDF externa.
-- La estructura de audios locales incluye los cinco MP3 de comprensión auditiva; cualquier audio adicional debe ser archivo propio del autor y no grabación del alumnado.
+- La estructura de audios locales incluye los cinco MP3 de comprensión auditiva; cualquier audio adicional estable debe ser archivo propio del autor. La grabación local opcional de v2.8 es temporal y no se incorpora al repositorio ni al informe.
 - No está diseñado como LMS ni como sistema de seguimiento del alumnado.
 
 ## 15. Conclusión pedagógica

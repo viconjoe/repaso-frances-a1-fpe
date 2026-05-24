@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.7
+**Versión de referencia:** 2.8
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -44,7 +44,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **2.7** se mantiene como recurso web estático e instalable:
+La versión **2.8** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -97,6 +97,8 @@ La versión **2.6** incorpora autoevaluación final orientativa: un perfil local
 
 La versión **2.7** incorpora una rúbrica docente/documental de observación A1. Su uso es cualitativo, prudente y no oficial: puede apoyar memoria de pilotaje, portfolio docente u observación agregada, pero no sustituye la evaluación del curso.
 
+La versión **2.8** incorpora grabación local opcional para práctica oral. El audio es temporal, queda en el navegador, no se sube, no se analiza, no se guarda en `localStorage` y no se incluye en el informe.
+
 ## 5. Privacidad y prudencia
 
 El proyecto se ha diseñado con criterio de minimización de datos. No recoge datos personales ni los envía a servidores externos.
@@ -138,6 +140,7 @@ La documentación principal del proyecto queda organizada en:
 - `docs/guia-expresion-oral-guiada-v2-5.md`: criterio de práctica oral guiada sin grabación;
 - `docs/guia-autoevaluacion-final-v2-6.md`: criterio de autoevaluación final orientativa sin calificación oficial;
 - `docs/guia-rubrica-docente-v2-7.md`: criterio de rúbrica docente/documental no oficial;
+- `docs/guia-grabacion-local-opcional-v2-8.md`: criterio de grabación local opcional y temporal;
 - `docs/dossier-producto-demostrativo-v2.md`: dossier de presentación del producto demostrativo;
 - `docs/guia-adaptacion-contextos-fpe-v2.md`: guía para adaptar el molde a otros idiomas o contextos FPE;
 - `docs/guia-visual-pictogramas.md`: descripción del apoyo visual SVG local;
@@ -150,7 +153,7 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 2.7 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo una rúbrica docente/documental no oficial a la autoevaluación final orientativa, la expresión oral guiada sin grabación, la variación comunicativa progresiva y los ajustes UX basados en feedback real sin cambiar el modelo técnico local.
+La versión 2.8 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo grabación local opcional y temporal a la expresión oral guiada, junto a la rúbrica docente/documental no oficial, la autoevaluación final orientativa, la variación comunicativa progresiva y los ajustes UX basados en feedback real.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 

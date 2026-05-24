@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.7
+    Versión: 2.8
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -163,6 +163,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.7] Rúbrica docente/documental de observación A1.
     [v2.7] Separación explícita entre rúbrica de apoyo y evaluación oficial.
+
+    Cambios v2.8:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.8] Grabación local opcional para práctica oral.
+    [v2.8] Aviso de privacidad y eliminación manual de audio temporal.
   -->
 
   <style>
@@ -1031,6 +1036,53 @@
 
     .oral-support .phrase {
       background: #f9fbfa;
+    }
+
+    .local-recorder {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .recorder-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    .recording-dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 999px;
+      background: #b7c8c4;
+      display: inline-block;
+    }
+
+    .recording-dot.is-recording {
+      background: #b42a2a;
+      box-shadow: 0 0 0 0.35rem rgba(180, 42, 42, 0.16);
+    }
+
+    .local-audio-player {
+      width: 100%;
+    }
+
+    .recorder-output[hidden] {
+      display: none;
+    }
+
+    .button-link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--line);
+      color: var(--brand);
+      font-weight: 800;
+      text-decoration: none;
+      background: white;
     }
 
     .self-assessment-grid {
@@ -2090,7 +2142,7 @@
         <div>
           <span class="tag">Bloque 8</span>
           <h2>Expresión oral guiada</h2>
-          <p class="muted">Practica una respuesta breve en voz alta. La herramienta no usa micrófono, no graba voz y no envía audio.</p>
+          <p class="muted">Practica una respuesta breve en voz alta. Si lo deseas, puedes grabarte de forma local y temporal para escucharte. No se envía audio.</p>
         </div>
         <button class="secondary no-print" type="button" id="resetOralBtn">Reiniciar</button>
       </div>
@@ -2114,12 +2166,12 @@
 
         <article class="card">
           <h3>Checklist oral</h3>
-          <p class="muted">Marca solo lo que hayas practicado en voz alta. No se guarda ninguna grabación.</p>
+          <p class="muted">Marca solo lo que hayas practicado en voz alta. La grabación local es opcional y no forma parte del informe.</p>
           <div class="privacy-callout small">
             <img src="assets/pictogramas/privacidad.svg" alt="" aria-hidden="true" />
             <div>
-              <strong>Sin grabación</strong>
-              <span>Este bloque sirve para preparar la expresión oral. No solicita micrófono ni almacena voz del alumnado.</span>
+              <strong>Privacidad</strong>
+              <span>La práctica puede hacerse sin grabarse. Si activas la grabación local, el audio queda solo en este navegador y puedes borrarlo.</span>
             </div>
           </div>
 
@@ -2136,6 +2188,26 @@
           </div>
 
           <div class="feedback" id="oralFeedback" aria-live="polite">Practica en voz alta y marca tu checklist.</div>
+        </article>
+
+        <article class="card local-recorder no-print">
+          <h3>Grabación local opcional</h3>
+          <p class="muted">Úsala solo si quieres escucharte antes de repetir la práctica. El audio no se sube, no se analiza y no se guarda en el informe.</p>
+          <label class="check-item">
+            <input id="recordingConsent" type="checkbox" />
+            Entiendo que la grabación es opcional, local y temporal. No diré apellidos, DNI, teléfono, correo ni datos sensibles.
+          </label>
+          <div class="recorder-controls">
+            <span class="recording-dot" id="recordingDot" aria-hidden="true"></span>
+            <button class="primary" type="button" id="startRecordingBtn">Grabar</button>
+            <button class="secondary" type="button" id="stopRecordingBtn" disabled>Detener</button>
+            <button class="secondary" type="button" id="deleteRecordingBtn" disabled>Borrar audio</button>
+          </div>
+          <div class="recorder-output" id="recordingOutput" hidden>
+            <audio class="local-audio-player" id="localRecordingPlayer" controls></audio>
+            <a class="button-link" id="downloadRecordingLink" href="#" download="practica-oral-local.webm">Descargar copia local</a>
+          </div>
+          <div class="feedback" id="recordingStatus" aria-live="polite">La grabación local está desactivada hasta que aceptes el aviso de privacidad.</div>
         </article>
       </div>
     </section>
@@ -2363,7 +2435,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.7 · Rúbrica docente/documental · Itinerario táctil · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.8 · Grabación local opcional · Itinerario táctil · Sin envío de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2539,7 +2611,7 @@
       { id: "audicion", title: "Audición A1", help: "Escucha audios locales del autor cuando estén añadidos. No se graba al alumnado." },
       { id: "emparejar", title: "Emparejar", help: "Relaciona cada frase con su intención comunicativa." },
       { id: "situaciones", title: "Situaciones", help: "Elige la frase más adecuada para cada caso." },
-      { id: "oral", title: "Oral guiado", help: "Practica una respuesta breve en voz alta. No se graba ni se usa micrófono." },
+      { id: "oral", title: "Oral guiado", help: "Practica una respuesta breve. La grabación local es opcional, temporal y no se envía." },
       { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
       { id: "autoevaluacion", title: "Autoevaluación", help: "Revisa tu perfil orientativo final. No es una nota oficial." },
       { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." },
@@ -3617,6 +3689,158 @@
       }
     ];
 
+    let oralRecorder = null;
+    let oralStream = null;
+    let oralChunks = [];
+    let oralAudioUrl = "";
+    let oralMaxTimer = null;
+
+    function getSupportedRecordingType() {
+      const candidates = [
+        "audio/webm;codecs=opus",
+        "audio/webm",
+        "audio/ogg;codecs=opus",
+        "audio/ogg"
+      ];
+      if (!window.MediaRecorder || !MediaRecorder.isTypeSupported) return "";
+      return candidates.find((type) => MediaRecorder.isTypeSupported(type)) || "";
+    }
+
+    function setRecordingStatus(message) {
+      const status = document.getElementById("recordingStatus");
+      if (status) status.textContent = message;
+    }
+
+    function setRecorderButtons({ recording = false, hasAudio = Boolean(oralAudioUrl) } = {}) {
+      const consent = document.getElementById("recordingConsent");
+      const startBtn = document.getElementById("startRecordingBtn");
+      const stopBtn = document.getElementById("stopRecordingBtn");
+      const deleteBtn = document.getElementById("deleteRecordingBtn");
+      const dot = document.getElementById("recordingDot");
+      const supported = Boolean(navigator.mediaDevices?.getUserMedia && window.MediaRecorder);
+
+      if (startBtn) startBtn.disabled = recording || !supported || !consent?.checked;
+      if (stopBtn) stopBtn.disabled = !recording;
+      if (deleteBtn) deleteBtn.disabled = recording || !hasAudio;
+      if (dot) dot.classList.toggle("is-recording", recording);
+
+      if (!supported) {
+        setRecordingStatus("Este navegador no permite grabación local con MediaRecorder. Puedes practicar en voz alta sin grabarte.");
+      } else if (!consent?.checked && !recording && !hasAudio) {
+        setRecordingStatus("La grabación local está desactivada hasta que aceptes el aviso de privacidad.");
+      }
+    }
+
+    function releaseOralStream() {
+      if (oralStream) {
+        oralStream.getTracks().forEach((track) => track.stop());
+        oralStream = null;
+      }
+    }
+
+    function clearOralRecording(message = "Grabación local borrada. No queda audio en esta pantalla.") {
+      if (oralRecorder && oralRecorder.state === "recording") {
+        oralRecorder.stop();
+      }
+      releaseOralStream();
+      if (oralMaxTimer) {
+        clearTimeout(oralMaxTimer);
+        oralMaxTimer = null;
+      }
+      if (oralAudioUrl) {
+        URL.revokeObjectURL(oralAudioUrl);
+        oralAudioUrl = "";
+      }
+      oralChunks = [];
+      const output = document.getElementById("recordingOutput");
+      const player = document.getElementById("localRecordingPlayer");
+      const link = document.getElementById("downloadRecordingLink");
+      if (player) {
+        player.removeAttribute("src");
+        player.load();
+      }
+      if (link) {
+        link.removeAttribute("href");
+      }
+      if (output) output.hidden = true;
+      setRecordingStatus(message);
+      setRecorderButtons({ recording: false, hasAudio: false });
+    }
+
+    async function startLocalRecording() {
+      const consent = document.getElementById("recordingConsent");
+      if (!consent?.checked) {
+        setRecordingStatus("Acepta primero el aviso de privacidad para activar el micrófono.");
+        return;
+      }
+      if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+        setRecorderButtons();
+        return;
+      }
+
+      clearOralRecording("Preparando grabación local...");
+
+      try {
+        oralStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const mimeType = getSupportedRecordingType();
+        oralRecorder = new MediaRecorder(oralStream, mimeType ? { mimeType } : undefined);
+        oralChunks = [];
+
+        oralRecorder.addEventListener("dataavailable", (event) => {
+          if (event.data && event.data.size > 0) oralChunks.push(event.data);
+        });
+
+        oralRecorder.addEventListener("stop", () => {
+          releaseOralStream();
+          if (oralMaxTimer) {
+            clearTimeout(oralMaxTimer);
+            oralMaxTimer = null;
+          }
+          if (!oralChunks.length) {
+            setRecordingStatus("No se ha generado audio. Puedes intentarlo de nuevo.");
+            setRecorderButtons({ recording: false, hasAudio: false });
+            return;
+          }
+          const blob = new Blob(oralChunks, { type: oralRecorder.mimeType || "audio/webm" });
+          oralAudioUrl = URL.createObjectURL(blob);
+          const output = document.getElementById("recordingOutput");
+          const player = document.getElementById("localRecordingPlayer");
+          const link = document.getElementById("downloadRecordingLink");
+          const extension = blob.type.includes("ogg") ? "ogg" : "webm";
+          if (player) {
+            player.src = oralAudioUrl;
+            player.load();
+          }
+          if (link) {
+            link.href = oralAudioUrl;
+            link.download = `practica-oral-local-${state.oral.index + 1}.${extension}`;
+          }
+          if (output) output.hidden = false;
+          setRecordingStatus("Grabación local lista para escuchar. Puedes borrarla antes de continuar.");
+          setRecorderButtons({ recording: false, hasAudio: true });
+        });
+
+        oralRecorder.start();
+        markStarted("oral");
+        setRecordingStatus("Grabando en este navegador. Máximo 60 segundos. No cierres esta pantalla si quieres escucharla.");
+        setRecorderButtons({ recording: true, hasAudio: false });
+        oralMaxTimer = setTimeout(() => {
+          if (oralRecorder?.state === "recording") oralRecorder.stop();
+        }, 60000);
+      } catch {
+        releaseOralStream();
+        setRecordingStatus("No se pudo activar el micrófono. Puedes continuar la práctica oral sin grabarte.");
+        setRecorderButtons({ recording: false, hasAudio: false });
+      }
+    }
+
+    function stopLocalRecording() {
+      if (oralRecorder?.state === "recording") {
+        oralRecorder.stop();
+        setRecordingStatus("Procesando audio local...");
+      }
+    }
+
     function renderOral() {
       const item = oralTasks[state.oral.index] || oralTasks[0];
       const done = new Set(state.oral.done || []);
@@ -3642,9 +3866,23 @@
         ? "Práctica marcada"
         : "Marcar práctica realizada";
       document.getElementById("oralFeedback").textContent = done.has(state.oral.index)
-        ? "Práctica oral marcada como realizada. No se ha grabado audio."
+        ? "Práctica oral marcada como realizada. La grabación local, si la usas, es opcional y temporal."
         : "Practica en voz alta y marca tu checklist.";
+      setRecorderButtons();
     }
+
+    document.getElementById("recordingConsent").addEventListener("change", () => {
+      setRecorderButtons();
+    });
+
+    document.getElementById("startRecordingBtn").addEventListener("click", startLocalRecording);
+    document.getElementById("stopRecordingBtn").addEventListener("click", stopLocalRecording);
+    document.getElementById("deleteRecordingBtn").addEventListener("click", () => clearOralRecording());
+
+    window.addEventListener("beforeunload", () => {
+      if (oralAudioUrl) URL.revokeObjectURL(oralAudioUrl);
+      releaseOralStream();
+    });
 
     document.querySelectorAll(".oralCheck").forEach((box, index) => {
       box.addEventListener("change", () => {
@@ -3665,12 +3903,14 @@
 
     document.getElementById("nextOralBtn").addEventListener("click", () => {
       markStarted("oral");
+      clearOralRecording("Grabación local borrada al cambiar de práctica.");
       state.oral.index = (state.oral.index + 1) % oralTasks.length;
       saveState();
       renderOral();
     });
 
     document.getElementById("resetOralBtn").addEventListener("click", () => {
+      clearOralRecording("Grabación local borrada al reiniciar la práctica oral.");
       state.oral = clone(defaultState.oral);
       saveState();
       renderOral();
@@ -3886,7 +4126,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.7",
+        version: "2.8",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
@@ -4081,7 +4321,7 @@
     <pre lang="fr">${escapeHtml(r.draft || "Sin texto escrito.")}</pre>
 
     <h2>4. Expresión oral guiada</h2>
-    <p>${escapeHtml(r.oral)} No se ha grabado ni enviado voz del alumnado.</p>
+    <p>${escapeHtml(r.oral)} La grabación local opcional, si se usa, no se incluye en este informe ni se envía a servidores.</p>
 
     <h2>5. Autoevaluación final orientativa</h2>
     <p><strong>${escapeHtml(r.assessment)}</strong></p>

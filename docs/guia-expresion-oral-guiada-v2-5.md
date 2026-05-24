@@ -3,13 +3,15 @@
 **Versión de referencia:** 2.5  
 **Autor:** Joel Concepción Villanueva
 
-> Nota de estado: esta guía documenta la fase v2.5. El estado actual del recurso es **v2.7**, que añade autoevaluación final orientativa y rúbrica docente/documental, ambas sin valor evaluativo oficial.
+> Nota de estado: esta guía documenta la fase v2.5. El estado actual del recurso es **v2.8**, que añade grabación local opcional para autoescucha, autoevaluación final orientativa y rúbrica docente/documental, sin valor evaluativo oficial.
 
 ## Finalidad
 
 La versión v2.5 incorpora un bloque de **expresión oral guiada sin grabación**.
 
 El objetivo es que el alumnado adulto practique producción oral breve de nivel A1 con apoyo visual, modelos sencillos y checklist, sin activar micrófono, sin grabar voz y sin enviar audio a ningún servidor.
+
+Desde v2.8 existe una opción de grabación local temporal. Esta opción no cambia el enfoque de la guía: la práctica oral puede realizarse sin grabarse, y si se usa la grabación local debe presentarse como autoescucha voluntaria, no como evaluación.
 
 ## Por qué no se graba
 

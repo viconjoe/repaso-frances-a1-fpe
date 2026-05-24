@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.7
+**Versión de referencia:** 2.8
 **Tipo de documento:** preparación de audios locales propios  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -61,9 +61,9 @@ Recomendaciones:
 
 El soporte de comprensión auditiva está activado en `index.html` desde v2.3.1 porque ya existen los cinco audios locales reales.
 
-La versión 2.7 mantiene la UX móvil refinada y no cambia este criterio: los audios locales son archivos estáticos del autor, no grabaciones del alumnado. La rúbrica docente/documental tampoco requiere audio ni recogida de datos. La estructura `assets/lang/` permite documentar nombres de audio previstos para futuras variantes de idioma.
+La versión 2.8 mantiene la UX móvil refinada y no cambia este criterio para `assets/audio/`: los audios locales de contenido son archivos estáticos del autor, no grabaciones del alumnado. La grabación oral opcional de v2.8 es temporal, queda en el navegador y no se incorpora a esta carpeta, al informe ni al repositorio.
 
-Si el recurso se instala como PWA, los audios solo deberían reproducirse como archivos locales estáticos incluidos en el repositorio. No se añade grabación ni subida de archivos.
+Si el recurso se instala como PWA, los audios de contenido solo deberían reproducirse como archivos locales estáticos incluidos en el repositorio. La grabación opcional de práctica oral no añade subida de archivos.
 
 Para los audios de flashcards, que siguen siendo opcionales, se puede activar cambiando:
 
@@ -81,8 +81,8 @@ Si no se activa, el recurso sigue usando la pronunciación experimental del nave
 
 ## 6. Privacidad
 
-No se recomienda grabar al alumnado dentro de este recurso.
+No se recomienda guardar grabaciones del alumnado dentro del repositorio ni incorporarlas al informe.
 
-La grabación de usuarios introduciría necesidades adicionales de consentimiento, almacenamiento, borrado, gestión de dispositivos compartidos y protección de datos.
+La grabación local opcional de v2.8 solo debe usarse como autoescucha temporal, con consentimiento explícito, borrado visible y sin subida de audio.
 
-Por coherencia con el proyecto, los audios deben ser únicamente archivos estáticos del autor, incluidos en el repositorio y reproducidos localmente por el navegador.
+Por coherencia con el proyecto, los audios de contenido deben ser únicamente archivos estáticos del autor, incluidos en el repositorio y reproducidos localmente por el navegador.
