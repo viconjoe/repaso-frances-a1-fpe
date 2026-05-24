@@ -7,7 +7,7 @@
 **Tipo de documento:** experiencia instalable ligera  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-**Nota de estado:** esta guía documenta la fase v1.4. El estado actual del recurso es v2.0, que conserva la PWA ligera, añade capturas, validación, guía de demo y dossier de producto demostrativo.
+**Nota de estado:** esta guía documenta la fase v1.4. El estado actual del recurso es v2.8, que conserva la PWA ligera, añade audios locales, comprensión lectora y auditiva, expresión oral guiada con grabación local opcional, autoevaluación, rúbrica docente/documental y revisión de auditoría con acceso a dos velocidades.
 
 ## 1. Finalidad
 
@@ -33,6 +33,8 @@ La fase v1.4 incorpora:
 - `assets/icons/icon-512.png`: icono PNG para instalación;
 - metadatos en `index.html` para `theme-color`, manifest e iconos;
 - registro prudente del service worker solo en `http` o `https`.
+
+La revisión v2.8 confirma que estos archivos existen en el repositorio. La instalación sigue siendo ligera y no añade backend, cuentas, analítica ni envío de datos.
 
 ## 3. Funcionamiento esperado
 

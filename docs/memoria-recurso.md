@@ -448,6 +448,15 @@ Grabación local opcional:
 - se elimina al cambiar de práctica, reiniciar, cerrar o recargar la página;
 - no se sube audio, no se analiza, no se guarda en `localStorage` y no aparece en el informe.
 
+Revisión de auditoría v2.8:
+
+- se separa el historial de versiones en `CHANGELOG.md`;
+- se corrige la coherencia documental del autodiagnóstico para reflejar sus 18 preguntas reales;
+- se verifica la presencia de `manifest.webmanifest`, `sw.js` e iconos locales de instalación;
+- se refuerzan marcas `lang="fr"` en contenidos franceses relevantes;
+- se incorpora una entrada a dos velocidades: repaso rápido de 20 minutos y recorrido completo de 60 minutos;
+- se añaden referencias prudentes al MCER A1, contexto FPE y Ley Orgánica 3/2022 sin presentar el recurso como oficial.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.

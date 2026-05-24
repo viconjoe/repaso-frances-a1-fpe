@@ -13,6 +13,13 @@ Esta guía propone una forma sencilla de usar el recurso en una sesión de repas
 
 El recurso puede utilizarse de forma autónoma, por parejas o con acompañamiento docente. Su finalidad es apoyar la práctica, no evaluar oficialmente al alumnado.
 
+Tras la revisión de auditoría v2.8, el recurso ofrece dos entradas:
+
+- **Repaso rápido (20 min):** útil para una sesión breve, cierre de clase o práctica previa a una presentación.
+- **Recorrido completo (60 min):** recomendable cuando se quiere revisar todos los bloques.
+
+La selección solo se recuerda en el navegador mediante `localStorage` y no se envía a ningún servidor.
+
 ## 2. Antes de empezar
 
 Conviene recordar al grupo:

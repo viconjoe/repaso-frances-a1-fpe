@@ -16,6 +16,8 @@ El proyecto está orientado a la formación de personas adultas en un contexto d
 
 No pretende ser un curso completo de Francés A1 ni sustituir la programación docente, los materiales oficiales o la evaluación establecida por la docente titular, el centro o la entidad responsable de la formación.
 
+Como marco de referencia pedagógica se consideran el nivel **A1 del MCER**, la formación de personas adultas en contexto FPE y el marco general de Formación Profesional regulado por la **Ley Orgánica 3/2022**. Estas referencias orientan el diseño, pero no suponen validación oficial ni vínculo institucional.
+
 ## 2. Finalidad pedagógica
 
 El recurso busca ofrecer una práctica breve, clara y accesible para:
@@ -99,6 +101,8 @@ La versión **2.7** incorpora una rúbrica docente/documental de observación A1
 
 La versión **2.8** incorpora grabación local opcional para práctica oral. El audio es temporal, queda en el navegador, no se sube, no se analiza, no se guarda en `localStorage` y no se incluye en el informe.
 
+La revisión de auditoría v2.8 añade una entrada **a dos velocidades**: repaso rápido de 20 minutos y recorrido completo de 60 minutos. También separa el historial de versiones en `CHANGELOG.md`, verifica los recursos PWA existentes, refuerza marcas semánticas de idioma francés y corrige la coherencia del autodiagnóstico de 18 preguntas.
+
 ## 5. Privacidad y prudencia
 
 El proyecto se ha diseñado con criterio de minimización de datos. No recoge datos personales ni los envía a servidores externos.
@@ -124,6 +128,7 @@ Si se usa en equipos compartidos, se recomienda borrar el progreso local al fina
 La documentación principal del proyecto queda organizada en:
 
 - `README.md`: presentación general, acceso, estructura, privacidad y evolución de versiones;
+- `CHANGELOG.md`: historial de versiones separado del HTML principal;
 - `LICENSE.md`: licencia del código y de los contenidos didácticos;
 - `docs/00-resumen-maestro-proyecto.md`: síntesis maestra y posicionamiento del proyecto;
 - `docs/ficha-pedagogica.md`: descripción didáctica y orientaciones de uso;

@@ -48,6 +48,13 @@ La versión **2.8** incorpora **grabación local opcional** en el bloque de expr
 
 Mantiene también la rúbrica docente/documental de v2.7, la autoevaluación final orientativa de v2.6, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
+Tras la revisión de auditoría v2.8, el recurso incorpora una experiencia **a dos velocidades**:
+
+- **Repaso rápido (20 min):** autodiagnóstico, flashcards, situaciones comunicativas, reto final e informe.
+- **Recorrido completo (60 min):** todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación, ficha docente y rúbrica.
+
+El modo elegido se guarda solo en el navegador mediante `localStorage` (`eij_velocidad`) y no se envía a ningún servidor.
+
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
 - portada móvil simplificada;
@@ -94,6 +101,10 @@ El recurso incluye estos bloques principales:
 12. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
 13. **Ficha docente integrada**: contextualiza el recurso como propuesta pedagógica complementaria.
 14. **Rúbrica docente/documental**: matriz cualitativa de observación A1, no oficial y sin valor de calificación.
+
+## Marco de referencia
+
+El diseño toma como referencia pedagógica general el nivel **A1 del MCER**, la formación de personas adultas en contexto FPE y el marco de Formación Profesional regulado por la **Ley Orgánica 3/2022**, siempre de forma prudente y documental. Estas referencias no implican validación oficial ni vinculación institucional directa con ICSE, SCE, SEPE u otra administración.
 
 ## Informe de práctica del alumno
 
@@ -232,6 +243,7 @@ La carpeta `assets/audio/` incluye los cinco audios locales de comprensión audi
 
 ## Documentación complementaria
 
+- [Historial de versiones](CHANGELOG.md)
 - [Resumen maestro del proyecto](docs/00-resumen-maestro-proyecto.md)
 - [Ficha pedagógica](docs/ficha-pedagogica.md)
 - [Guía de audios locales propios](docs/guia-audios-locales.md)
@@ -273,6 +285,10 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
+## Verificación PWA
+
+La revisión v2.8 confirma la existencia de los recursos básicos de instalación ligera: `manifest.webmanifest`, `assets/icons/icon.svg`, `assets/icons/icon-192.png`, `assets/icons/icon-512.png` y `sw.js`. La PWA no añade backend, cuentas, analítica ni envío de datos.
+
 ## Evolución de versiones
 
 ### v2.8
@@ -282,6 +298,7 @@ Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conse
 - Reproducción del audio en la propia pantalla para autoescucha.
 - Borrado manual de la grabación local y eliminación automática al cambiar de práctica.
 - Sin subida de audio, sin análisis automático, sin IA/API, sin inclusión en informe y sin almacenamiento en `localStorage`.
+- Correcciones de auditoría: historial separado en `CHANGELOG.md`, autodiagnóstico coherente con 18 preguntas, verificación de recursos PWA y recorrido a dos velocidades.
 
 ### v2.7
 

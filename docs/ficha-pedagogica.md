@@ -25,6 +25,17 @@ No tiene vínculo institucional directo con ICSE ni con el SCE.
 
 Su finalidad principal es reforzar contenidos comunicativos básicos mediante actividades breves, accesibles y de baja complejidad técnica.
 
+## 2.1. Marco de referencia prudente
+
+El recurso toma como referencia pedagógica general:
+
+- el nivel **A1 del Marco Común Europeo de Referencia para las Lenguas (MCER)**;
+- la formación de personas adultas en contexto de Formación Profesional para el Empleo;
+- el marco general de Formación Profesional regulado por la **Ley Orgánica 3/2022**;
+- la orientación funcional del programa formativo de Francés A1 en FPE.
+
+Estas referencias sirven para orientar el diseño didáctico y documental. No convierten la herramienta en recurso oficial, no implican validación institucional y no sustituyen los criterios de evaluación establecidos por el curso, la docente titular o el centro.
+
 ## 3. Finalidad pedagógica
 
 La finalidad del recurso es ayudar al alumnado adulto a repasar expresiones esenciales de comunicación básica en francés, especialmente en situaciones de presentación personal, cortesía, petición de ayuda y comprensión elemental.
@@ -40,6 +51,13 @@ El recurso busca que el alumnado pueda:
 - practicar una presentación breve;
 - generar un informe local de práctica como evidencia orientativa;
 - ganar seguridad antes de una situación oral o escrita básica.
+
+Tras la revisión de auditoría v2.8, el recurso ofrece dos itinerarios de uso:
+
+- **Repaso rápido (20 min):** para una práctica breve antes de cerrar el curso o preparar una presentación.
+- **Recorrido completo (60 min):** para revisar todos los bloques con más calma.
+
+Esta doble entrada reduce la sensación de herramienta larga en móvil y permite ajustar el uso a tiempos reales de aula o práctica autónoma.
 
 ## 4. Objetivos didácticos
 
