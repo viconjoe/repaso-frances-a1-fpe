@@ -1,6 +1,6 @@
 # Guía de comprensión auditiva v2.3
 
-> Nota de estado: en **v2.3.2** ya se incorporan los cinco archivos MP3 locales, la reproducción está activada y las tarjetas iniciales son accesos reales.
+> Nota de estado: en **v2.3.3** ya se incorporan los cinco archivos MP3 locales, la reproducción está activada, las tarjetas iniciales son accesos reales y los objetivos iniciales se muestran como lista informativa.
 
 ## 1. Finalidad
 

@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.3.2
+**Versión:** 2.3.3
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -256,6 +256,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.3:** preparación de comprensión auditiva A1 con audios locales propios del autor, sin micrófono ni grabación del alumnado.
 - **v2.3.1:** incorporación de los cinco MP3 locales y activación de la reproducción en el bloque de audición.
 - **v2.3.2:** tarjetas iniciales del itinerario convertidas en accesos reales tras feedback de uso.
+- **v2.3.3:** objetivos iniciales rediseñados como lista informativa para evitar confusión con botones.
 
 ## 14. Limitaciones
 

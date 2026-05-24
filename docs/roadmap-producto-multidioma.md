@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3.2
+**Versión de referencia:** 2.3.3
 **Tipo de documento:** visión de evolución a producto educativo gratuito  
 **Carácter actual:** recurso personal de portfolio docente, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -92,6 +92,8 @@ La versión **2.3** prepara comprensión auditiva A1 con audios locales propios 
 La versión **2.3.1** incorpora los cinco MP3 locales de comprensión auditiva y activa su reproducción en la app.
 
 La versión **2.3.2** ajusta la UX inicial convirtiendo las tarjetas del itinerario en accesos reales.
+
+La versión **2.3.3** separa visualmente objetivos pedagógicos y elementos navegables en el Bloque 0.
 
 ## 4. Visión de app empaquetada
 

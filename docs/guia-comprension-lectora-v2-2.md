@@ -1,6 +1,6 @@
 # Guía de comprensión lectora v2.2
 
-> Nota de estado: esta guía documenta la fase v2.2. El estado actual del recurso es **v2.3.2**, que añade comprensión auditiva A1 con audios locales propios del autor y mejora de acceso inicial.
+> Nota de estado: esta guía documenta la fase v2.2. El estado actual del recurso es **v2.3.3**, que añade comprensión auditiva A1 con audios locales propios del autor y mejora de acceso y claridad inicial.
 
 ## 1. Finalidad
 

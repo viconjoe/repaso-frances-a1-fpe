@@ -1,4 +1,4 @@
-const CACHE_NAME = "repaso-frances-a1-v2.3.2";
+const CACHE_NAME = "repaso-frances-a1-v2.3.3";
 
 const CORE_ASSETS = [
   "./",

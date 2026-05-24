@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.3.2
+    Versión: 2.3.3
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -138,6 +138,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.3.2] Tarjetas iniciales del itinerario convertidas en accesos reales.
     [v2.3.2] Ajuste UX basado en feedback: si parece tocable, debe navegar.
+
+    Cambios v2.3.3:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.3.3] Objetivos Comprender/Responder/Practicar rediseñados como lista informativa.
+    [v2.3.3] Reducción de ambigüedad visual en el Bloque 0.
   -->
 
   <style>
@@ -592,17 +597,43 @@
       margin-top: auto;
     }
 
-    .objective-card {
+    .objective-list {
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.85rem;
-      align-items: start;
+      gap: 0.6rem;
+      margin-top: 1rem;
+      padding: 0.85rem 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .pictogram {
-      width: 58px;
-      height: 58px;
-      flex: 0 0 auto;
+    .objective-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      padding: 0.4rem 0;
+    }
+
+    .objective-marker {
+      display: inline-grid;
+      place-items: center;
+      width: 1.65rem;
+      height: 1.65rem;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.09);
+      color: var(--brand);
+      font-weight: 900;
+      line-height: 1;
+      margin-top: 0.08rem;
+    }
+
+    .objective-item h3 {
+      margin: 0 0 0.15rem;
+      font-size: 1.02rem;
+    }
+
+    .objective-item p {
+      margin: 0;
     }
 
     .muted { color: var(--muted); }
@@ -1666,28 +1697,28 @@
         </div>
       </div>
 
-      <div class="grid">
-        <article class="card objective-card">
-          <img class="pictogram" src="assets/pictogramas/comprender.svg" alt="" aria-hidden="true" />
+      <div class="objective-list" aria-label="Capacidades trabajadas">
+        <div class="objective-item">
+          <span class="objective-marker" aria-hidden="true">1</span>
           <div>
             <h3>Comprender</h3>
-            <p>Reconocer saludos, datos personales, números básicos y frases cotidianas muy frecuentes.</p>
+            <p class="muted">Reconocer saludos, datos personales, números básicos y frases cotidianas muy frecuentes.</p>
           </div>
-        </article>
-        <article class="card objective-card">
-          <img class="pictogram" src="assets/pictogramas/responder.svg" alt="" aria-hidden="true" />
+        </div>
+        <div class="objective-item">
+          <span class="objective-marker" aria-hidden="true">2</span>
           <div>
             <h3>Responder</h3>
-            <p>Elegir respuestas simples para presentarse, pedir ayuda, comprar algo básico o preguntar información.</p>
+            <p class="muted">Elegir respuestas simples para presentarse, pedir ayuda, comprar algo básico o preguntar información.</p>
           </div>
-        </article>
-        <article class="card objective-card">
-          <img class="pictogram" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
+        </div>
+        <div class="objective-item">
+          <span class="objective-marker" aria-hidden="true">3</span>
           <div>
             <h3>Practicar</h3>
-            <p>Usar frases breves en voz alta, con apoyo visual y sin miedo al error, priorizando la comunicación básica.</p>
+            <p class="muted">Usar frases breves en voz alta, con apoyo visual y sin miedo al error, priorizando la comunicación básica.</p>
           </div>
-        </article>
+        </div>
       </div>
 
       <div class="pill-row" aria-label="Contenidos trabajados">
@@ -2093,7 +2124,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3.2 · Itinerario inicial táctil · Comprensión auditiva A1 con audios locales propios · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3.3 · Objetivos iniciales más claros · Itinerario táctil · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -3337,7 +3368,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.3.2",
+        version: "2.3.3",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
