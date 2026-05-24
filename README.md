@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.5
+**Versión actual:** 2.6
 
 **Publicación:** GitHub Pages
 
@@ -42,11 +42,11 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.5
+## Estado actual: v2.6
 
-La versión **2.5** incorpora un bloque de **expresión oral guiada sin grabación**. El alumnado puede practicar respuestas breves en voz alta con modelo, apoyo paso a paso y checklist oral, sin activar micrófono, sin grabar voz y sin enviar audio.
+La versión **2.6** incorpora una **autoevaluación final orientativa**. El alumnado puede revisar un perfil local de práctica A1, con recomendación de repaso, sin generar una calificación oficial y sin enviar datos.
 
-Mantiene también la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
+Mantiene también la expresión oral guiada sin grabación de v2.5, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -58,6 +58,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - bloque **Comprensión lectora A1** con mensajes, avisos, notas y horarios sencillos;
 - bloque **Comprensión auditiva A1** con audios locales propios del autor;
 - bloque **Expresión oral guiada** sin grabación ni micrófono;
+- bloque **Autoevaluación final orientativa** sin valor evaluativo oficial;
 - variación comunicativa progresiva: mismas funciones clave en contextos cercanos pero no idénticos;
 - tarjetas iniciales del itinerario convertidas en accesos reales a bloques;
 - objetivos iniciales rediseñados como lista informativa, sin apariencia de botón;
@@ -88,8 +89,9 @@ El recurso incluye estos bloques principales:
 8. **Mini-situaciones comunicativas**: selección de respuestas adecuadas ante situaciones sencillas.
 9. **Expresión oral guiada**: práctica en voz alta con modelos, apoyo y checklist local, sin grabación.
 10. **Reto final**: producción breve escrita u oral para presentarse y resolver una situación básica, con banco de frases de apoyo y orientación local.
-11. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
-12. **Ficha docente integrada**: contextualiza el recurso como propuesta pedagógica complementaria.
+11. **Autoevaluación final orientativa**: perfil local de práctica y recomendación de repaso, sin calificación oficial.
+12. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
+13. **Ficha docente integrada**: contextualiza el recurso como propuesta pedagógica complementaria.
 
 ## Informe de práctica del alumno
 
@@ -99,6 +101,7 @@ El informe local resume:
 - resultado orientativo del autodiagnóstico ampliado;
 - avance en flashcards, comprensión lectora, comprensión auditiva, emparejar y situaciones;
 - práctica oral guiada marcada localmente, sin grabaciones;
+- autoevaluación final orientativa local;
 - checklist del reto final;
 - texto escrito en el reto final;
 - orientación local del reto final.
@@ -144,6 +147,7 @@ El progreso se guarda únicamente en el navegador del usuario mediante `localSto
 - Bloque de comprensión lectora A1 con textos breves integrados localmente.
 - Bloque de comprensión auditiva A1 preparado para audios estáticos locales.
 - Bloque de expresión oral guiada sin micrófono ni grabación.
+- Bloque de autoevaluación final orientativa, sin valor evaluativo oficial.
 - Modo presentación independiente para aula.
 - Uso básico de accesibilidad: skip link, foco visible, `aria-live`, `lang="fr"`, botones táctiles y barras de progreso con atributos ARIA.
 - Persistencia local mediante `localStorage`.
@@ -206,6 +210,7 @@ repaso-frances-a1-fpe/
     ├── guia-comprension-auditiva-v2-3.md
     ├── guia-variacion-comunicativa-v2-4.md
     ├── guia-expresion-oral-guiada-v2-5.md
+    ├── guia-autoevaluacion-final-v2-6.md
     ├── dossier-producto-demostrativo-v2.md
     ├── guia-adaptacion-contextos-fpe-v2.md
     ├── guia-visual-pictogramas.md
@@ -235,6 +240,7 @@ La carpeta `assets/audio/` incluye los cinco audios locales de comprensión audi
 - [Guía de comprensión auditiva v2.3](docs/guia-comprension-auditiva-v2-3.md)
 - [Guía de variación comunicativa v2.4](docs/guia-variacion-comunicativa-v2-4.md)
 - [Guía de expresión oral guiada v2.5](docs/guia-expresion-oral-guiada-v2-5.md)
+- [Guía de autoevaluación final v2.6](docs/guia-autoevaluacion-final-v2-6.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -258,6 +264,14 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.6
+
+- Incorporación del bloque **Autoevaluación final orientativa**.
+- Perfil local de práctica con resultado sobre 100 como síntesis formativa.
+- Niveles orientativos: `Necesita repaso`, `Preparación inicial`, `Base A1 en desarrollo`, `Buen dominio orientativo A1`.
+- Inclusión de recomendación de repaso e informe local.
+- Sin calificación oficial, sin backend, sin login, sin analítica y sin envío de datos.
 
 ### v2.5
 

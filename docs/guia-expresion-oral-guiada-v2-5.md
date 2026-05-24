@@ -3,6 +3,8 @@
 **Versión de referencia:** 2.5  
 **Autor:** Joel Concepción Villanueva
 
+> Nota de estado: esta guía documenta la fase v2.5. El estado actual del recurso es **v2.6**, que añade autoevaluación final orientativa sin valor evaluativo oficial.
+
 ## Finalidad
 
 La versión v2.5 incorpora un bloque de **expresión oral guiada sin grabación**.

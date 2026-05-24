@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "resourceVersion": "2.5",
+  "resourceVersion": "2.6",
   "language": {
     "code": "xx",
     "name": "Idioma",
@@ -76,6 +76,11 @@
       "support": ["Frase de apoyo 1", "Frase de apoyo 2", "Frase de apoyo 3"]
     }
   ],
+  "finalSelfAssessment": {
+    "purpose": "Síntesis local y orientativa de práctica. No tiene valor evaluativo oficial.",
+    "levels": ["Necesita repaso", "Preparación inicial", "Base en desarrollo", "Buen dominio orientativo"],
+    "criteria": ["participación", "comprensión", "interacción", "expresión oral guiada", "autoobservación"]
+  },
   "finalPrompts": [
     "Situación comunicativa breve adaptada al idioma y al nivel."
   ],
@@ -84,6 +89,7 @@
     "Usar frases funcionales y memorizables.",
     "Combinar repetición de funciones clave con variaciones de contexto.",
     "Incluir expresión oral guiada sin solicitar micrófono ni grabar voz.",
+    "Presentar cualquier resultado final como orientación local no oficial.",
     "Evitar datos personales reales.",
     "Mantener enfoque adulto y no infantilizado.",
     "Revisar privacidad y límites institucionales."

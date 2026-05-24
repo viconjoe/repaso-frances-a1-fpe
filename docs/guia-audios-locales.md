@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.5
+**Versión de referencia:** 2.6
 **Tipo de documento:** preparación de audios locales propios  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 

@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.5
+**Versión:** 2.6
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -84,6 +84,7 @@ La secuencia didáctica sigue una progresión sencilla:
 8. Expresión oral guiada sin grabación.
 9. Producción breve final.
 10. Generación opcional de informe local de práctica.
+11. Revisar una autoevaluación final orientativa sin valor oficial.
 
 ## 6. UX móvil como accesibilidad práctica
 
@@ -146,7 +147,11 @@ Prácticas breves para hablar en voz alta con modelo y apoyo. No se solicita mic
 
 Producción breve escrita u oral. El alumnado puede construir una presentación sencilla y resolver una situación básica usando frases de apoyo. El feedback local es orientativo y no sustituye la corrección docente.
 
-### Bloque 10 · Informe de práctica
+### Bloque 10 · Autoevaluación final orientativa
+
+Síntesis local de práctica con perfil y recomendación de repaso. No constituye nota oficial ni sustituye evaluación docente.
+
+### Bloque 11 · Informe de práctica
 
 El recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto del reto final.
 
@@ -268,6 +273,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.3.3:** objetivos iniciales rediseñados como lista informativa para evitar confusión con botones.
 - **v2.4:** variación comunicativa progresiva para ampliar contextos sin perder repetición útil de nivel A1.
 - **v2.5:** expresión oral guiada sin grabación, con modelos, apoyo paso a paso y checklist oral local.
+- **v2.6:** autoevaluación final orientativa con perfil local de práctica, recomendación de repaso y sin calificación oficial.
 
 ## 14. Limitaciones
 

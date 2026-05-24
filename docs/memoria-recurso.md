@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.5
+**Versión:** 2.6
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -92,6 +92,7 @@ El recurso se organiza en estos bloques:
 - **Mini-situaciones comunicativas**.
 - **Expresión oral guiada sin grabación**.
 - **Reto final**.
+- **Autoevaluación final orientativa**.
 - **Informe de práctica**.
 - **Ficha docente**.
 
@@ -120,6 +121,8 @@ En v2.3 se prepara comprensión auditiva A1 mediante tareas breves asociadas a a
 En v2.4 se introduce una fase de **redundancia inteligente con variación progresiva**. Se mantienen funciones comunicativas esenciales, pero se amplían los contextos para evitar una repetición demasiado literal: entrevista, centro de formación, estación, confirmación de dirección y disponibilidad.
 
 En v2.5 se incorpora expresión oral guiada sin grabación. El alumnado practica en voz alta con modelos, apoyo paso a paso y checklist, pero la herramienta no solicita micrófono, no graba voz y no envía audio.
+
+En v2.6 se añade autoevaluación final orientativa. La síntesis combina datos locales de práctica y autoobservación para proponer un perfil de repaso, sin generar una calificación oficial.
 
 ## 8. Decisiones técnicas
 
@@ -402,6 +405,19 @@ Expresión oral guiada sin grabación:
 
 Esta fase permite trabajar la producción oral sin introducir riesgos de privacidad ni complejidad técnica.
 
+### v2.6
+
+Autoevaluación final orientativa:
+
+- se añade un bloque específico de síntesis final;
+- se calcula un perfil local de práctica sobre 100;
+- se muestran niveles orientativos de repaso;
+- se incorpora autoobservación del alumnado mediante checklist;
+- se incluye el resultado en el informe local;
+- se mantiene de forma explícita que no es evaluación oficial.
+
+La finalidad es reforzar la autonomía del alumnado adulto y ofrecer una lectura comprensible de su práctica sin convertir el recurso en una plataforma evaluativa.
+
 ## 12. Feedback recibido
 
 Durante el proceso se recogieron sugerencias de compañeros de aula y revisiones posteriores del recurso.
@@ -476,4 +492,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **2.5** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada sin grabación, variación comunicativa progresiva y mejoras UX basadas en feedback real, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **2.6** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada sin grabación, autoevaluación final orientativa, variación comunicativa progresiva y mejoras UX basadas en feedback real, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

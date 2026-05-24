@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "resourceVersion": "2.5",
+  "resourceVersion": "2.6",
   "language": {
     "code": "fr",
     "name": "Francés",
@@ -26,7 +26,8 @@
     "comprensión lectora A1 con textos breves",
     "comprensión auditiva A1 con audios locales propios del autor",
     "variación comunicativa progresiva A1",
-    "expresión oral guiada sin grabación"
+    "expresión oral guiada sin grabación",
+    "autoevaluación final orientativa"
   ],
   "grammarNotes": [
     {
@@ -333,6 +334,25 @@
       "support": ["Excusez-moi.", "Où est la salle 3 ?", "C'est bien cette adresse ?"]
     }
   ],
+  "finalSelfAssessment": {
+    "purpose": "Síntesis local y orientativa de práctica. No tiene valor evaluativo oficial.",
+    "levels": [
+      "Necesita repaso",
+      "Preparación inicial",
+      "Base A1 en desarrollo",
+      "Buen dominio orientativo A1"
+    ],
+    "criteria": [
+      "participación en bloques prácticos",
+      "autodiagnóstico",
+      "comprensión lectora",
+      "comprensión auditiva",
+      "emparejamiento de frase e intención",
+      "mini-situaciones comunicativas",
+      "expresión oral guiada",
+      "autoobservación final"
+    ]
+  },
   "finalPrompts": [
     "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
     "Estás en clase. Preséntate, di dónde vives y pide que repitan una frase.",

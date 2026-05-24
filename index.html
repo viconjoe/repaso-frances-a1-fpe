@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.5
+    Versión: 2.6
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -153,6 +153,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.5] Expresión oral guiada sin grabación ni uso de micrófono.
     [v2.5] Checklist oral local para preparar producción breve A1.
+
+    Cambios v2.6:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.6] Autoevaluación final orientativa local, no oficial.
+    [v2.6] Perfil final de práctica con recomendación de repaso.
   -->
 
   <style>
@@ -1023,6 +1028,38 @@
       background: #f9fbfa;
     }
 
+    .self-assessment-grid {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .assessment-summary {
+      display: grid;
+      gap: 0.75rem;
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      background: #f4faf8;
+      border: 1px solid #c6ddd8;
+    }
+
+    .assessment-level {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0.45rem 0.7rem;
+      color: #fff;
+      background: var(--brand);
+      font-weight: 800;
+    }
+
+    .assessment-score {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: var(--brand);
+      line-height: 1;
+    }
+
     .pill-row {
       display: flex;
       flex-wrap: wrap;
@@ -1626,6 +1663,7 @@
       <a href="#situaciones">Situaciones</a>
       <a href="#oral">Oral guiado</a>
       <a href="#reto">Reto final</a>
+      <a href="#autoevaluacion">Autoevaluación</a>
       <a href="#informe">Informe</a>
       <a href="#docente">Ficha docente</a>
     </div>
@@ -1645,6 +1683,7 @@
       <option value="situaciones">Situaciones</option>
       <option value="oral">Oral guiado</option>
       <option value="reto">Reto final</option>
+      <option value="autoevaluacion">Autoevaluación</option>
       <option value="informe">Informe</option>
     </select>
   </div>
@@ -1722,9 +1761,15 @@
         </article>
         <article class="block-map-card">
           <span class="step-number">10</span>
+          <h3>Autoevaluación</h3>
+          <p>Revisa tu perfil orientativo de práctica A1.</p>
+          <button class="secondary" type="button" data-guided-step="10">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">11</span>
           <h3>Informe</h3>
           <p>Genera una evidencia local si te resulta útil.</p>
-          <button class="secondary" type="button" data-guided-step="10">Abrir bloque</button>
+          <button class="secondary" type="button" data-guided-step="11">Abrir bloque</button>
         </article>
       </div>
     </section>
@@ -1793,7 +1838,7 @@
             <span class="small muted">Leer, escuchar audios locales, emparejar, resolver situaciones, practicar oralmente y preparar el reto final.</span>
           </div>
         </button>
-        <button class="step-card" type="button" data-guided-step="10" aria-label="Abrir informe de práctica">
+        <button class="step-card" type="button" data-guided-step="11" aria-label="Abrir informe de práctica">
           <img class="step-icon" src="assets/pictogramas/evidencia.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>4.</span> Guardar evidencia</span></strong>
@@ -2149,10 +2194,44 @@
       </div>
     </section>
 
+    <section id="autoevaluacion">
+        <div class="section-head">
+          <div>
+            <span class="tag">Bloque 10</span>
+            <h2>Autoevaluación final orientativa</h2>
+            <p class="muted">Síntesis local de práctica. No es una calificación oficial ni sustituye la evaluación del curso.</p>
+          </div>
+          <button class="secondary no-print" type="button" id="refreshAssessmentBtn">Actualizar</button>
+        </div>
+
+        <div class="grid two">
+          <article class="card self-assessment-grid">
+            <h3>Perfil de práctica</h3>
+            <div class="assessment-summary">
+            <span class="assessment-level" id="assessmentLevel">Pendiente</span>
+            <span class="assessment-score" id="assessmentScore">0 / 100</span>
+            <p id="assessmentMessage">Completa algunos bloques para generar una orientación final.</p>
+            <p class="small muted">No es una nota oficial.</p>
+          </div>
+            <div class="feedback" id="assessmentAdvice" aria-live="polite">La autoevaluación combina actividades realizadas, resultados orientativos y checklist personal.</div>
+          </article>
+
+          <article class="card">
+            <h3>Me observo</h3>
+            <p class="muted">Marca lo que sientes que puedes hacer al terminar la práctica. Es una autoobservación, no una nota.</p>
+            <div class="checklist">
+              <label class="check-item"><input class="assessmentCheck" type="checkbox" /> Puedo saludar y presentarme con apoyo.</label>
+              <label class="check-item"><input class="assessmentCheck" type="checkbox" /> Puedo entender información básica en textos o audios breves.</label>
+              <label class="check-item"><input class="assessmentCheck" type="checkbox" /> Puedo pedir ayuda, repetición o confirmar información.</label>
+              <label class="check-item"><input class="assessmentCheck" type="checkbox" /> Puedo preparar una situación breve sin datos personales.</label>
+            </div>
+            <p class="small muted">Resultado orientativo local. No tiene valor evaluativo oficial.</p>
+          </article>
+        </div>
     <section id="informe">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 10</span>
+          <span class="tag">Bloque 11</span>
           <h2>Informe de práctica del alumno</h2>
           <p class="muted">Genera una ficha breve con el progreso local, resultados orientativos y texto del reto final. No se envía nada a ningún servidor.</p>
         </div>
@@ -2220,7 +2299,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.5 · Expresión oral guiada sin grabación · Itinerario táctil · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.6 · Autoevaluación final orientativa · Itinerario táctil · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2260,7 +2339,8 @@
         emparejar: false,
         situaciones: false,
         oral: false,
-        reto: false
+        reto: false,
+        autoevaluacion: false
       },
       quiz: { index: 0, score: 0, answered: false, selected: null },
       flashIndex: 0,
@@ -2270,6 +2350,7 @@
       listening: { index: 0, score: 0, answered: false, selected: null },
       scenario: { index: 0, score: 0, answered: false, selected: null },
       oral: { index: 0, done: [], check0: false, check1: false, check2: false, check3: false },
+      autoevaluacion: { check0: false, check1: false, check2: false, check3: false },
       reto: {
         draft: "",
         prompt: "",
@@ -2295,6 +2376,7 @@
           listening: { ...defaultState.listening, ...(parsed.listening || {}) },
           scenario: { ...defaultState.scenario, ...(parsed.scenario || {}) },
           oral: { ...defaultState.oral, ...(parsed.oral || {}) },
+          autoevaluacion: { ...defaultState.autoevaluacion, ...(parsed.autoevaluacion || {}) },
           reto: { ...defaultState.reto, ...(parsed.reto || {}) }
         };
       } catch {
@@ -2307,6 +2389,11 @@
     function saveState() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       updateGlobalProgress();
+      try {
+        if (document.getElementById("assessmentScore")) renderAssessment();
+      } catch {
+        // La autoevaluación se renderiza al final de la carga inicial.
+      }
     }
 
     function markStarted(key) {
@@ -2338,6 +2425,12 @@
     if (oralSection) {
       oralSection.addEventListener("click", () => markStarted("oral"));
       oralSection.addEventListener("focusin", () => markStarted("oral"));
+    }
+
+    const assessmentSection = document.getElementById("autoevaluacion");
+    if (assessmentSection) {
+      assessmentSection.addEventListener("click", () => markStarted("autoevaluacion"));
+      assessmentSection.addEventListener("focusin", () => markStarted("autoevaluacion"));
     }
 
     function setProgress(wrapId, barId, value) {
@@ -2384,6 +2477,7 @@
       { id: "situaciones", title: "Situaciones", help: "Elige la frase más adecuada para cada caso." },
       { id: "oral", title: "Oral guiado", help: "Practica una respuesta breve en voz alta. No se graba ni se usa micrófono." },
       { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
+      { id: "autoevaluacion", title: "Autoevaluación", help: "Revisa tu perfil orientativo final. No es una nota oficial." },
       { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." }
     ];
 
@@ -3516,6 +3610,84 @@
       renderOral();
     });
 
+    function getAssessmentData() {
+      const startedDone = Object.values(state.started).filter(Boolean).length;
+      const startedTotal = Object.keys(state.started).length;
+      const practiceScore = Math.round((startedDone / startedTotal) * 20);
+      const quizScore = Math.round((state.quiz.score / quizQuestions.length) * 15) || 0;
+      const readingScore = Math.round((state.reading.score / readingTexts.length) * 15) || 0;
+      const listeningScore = Math.round((state.listening.score / listeningTasks.length) * 15) || 0;
+      const matchScore = Math.round((matchedIds.size / matchPairs.length) * 10) || 0;
+      const scenarioScore = Math.round((state.scenario.score / scenarios.length) * 10) || 0;
+      const oralDone = Array.isArray(state.oral.done) ? state.oral.done.length : 0;
+      const oralScore = Math.round((oralDone / oralTasks.length) * 10) || 0;
+      const assessmentChecks = [0, 1, 2, 3].map((i) => Boolean(state.autoevaluacion[`check${i}`]));
+      const confidenceScore = Math.round((assessmentChecks.filter(Boolean).length / assessmentChecks.length) * 5) || 0;
+      const total = Math.min(100, practiceScore + quizScore + readingScore + listeningScore + matchScore + scenarioScore + oralScore + confidenceScore);
+
+      let level = "Necesita repaso";
+      let message = "Conviene repetir los bloques básicos antes de cerrar el reto final.";
+      let advice = "Prioriza saludos, presentación, pedir repetición, lectura de palabras clave y práctica oral con modelo.";
+
+      if (total >= 75) {
+        level = "Buen dominio orientativo A1";
+        message = "Has reunido una práctica amplia y equilibrada para un repaso final A1.";
+        advice = "Puedes pasar al reto final y practicarlo en voz alta. Este resultado sigue sin valor evaluativo oficial.";
+      } else if (total >= 55) {
+        level = "Base A1 en desarrollo";
+        message = "Tienes una base funcional, pero aún conviene reforzar algunas destrezas.";
+        advice = "Repite una lectura, un audio y dos situaciones antes de generar el informe final.";
+      } else if (total >= 35) {
+        level = "Preparación inicial";
+        message = "Has iniciado varios bloques, pero falta consolidar comprensión y producción.";
+        advice = "Vuelve a flashcards, audición y oral guiado. Marca solo lo que realmente hayas practicado.";
+      }
+
+      return {
+        total,
+        level,
+        message,
+        advice,
+        assessmentChecks,
+        confidenceCount: assessmentChecks.filter(Boolean).length,
+        parts: {
+          practiceScore,
+          quizScore,
+          readingScore,
+          listeningScore,
+          matchScore,
+          scenarioScore,
+          oralScore,
+          confidenceScore
+        }
+      };
+    }
+
+    function renderAssessment() {
+      const data = getAssessmentData();
+      document.getElementById("assessmentLevel").textContent = data.level;
+      document.getElementById("assessmentScore").textContent = `${data.total} / 100`;
+      document.getElementById("assessmentMessage").textContent = data.message;
+      document.getElementById("assessmentAdvice").textContent = `${data.advice} Autoevaluación local, orientativa y no oficial.`;
+      document.querySelectorAll(".assessmentCheck").forEach((box, index) => {
+        box.checked = Boolean(state.autoevaluacion[`check${index}`]);
+      });
+    }
+
+    document.querySelectorAll(".assessmentCheck").forEach((box, index) => {
+      box.addEventListener("change", () => {
+        markStarted("autoevaluacion");
+        state.autoevaluacion[`check${index}`] = box.checked;
+        saveState();
+        renderAssessment();
+      });
+    });
+
+    document.getElementById("refreshAssessmentBtn").addEventListener("click", () => {
+      markStarted("autoevaluacion");
+      renderAssessment();
+    });
+
     const finalPrompts = [
       "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
       "Estás en clase. Preséntate, di dónde vives y pide que repitan una frase.",
@@ -3644,10 +3816,11 @@
       const checkedCount = checks.filter(Boolean).length;
       const oralChecks = [0, 1, 2, 3].map((i) => Boolean(state.oral[`check${i}`]));
       const oralDone = Array.isArray(state.oral.done) ? state.oral.done.length : 0;
+      const assessment = getAssessmentData();
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.5",
+        version: "2.6",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
@@ -3657,6 +3830,9 @@
         match: `${matchedIds.size} de ${matchPairs.length} parejas completadas`,
         scenarios: scenarioFinished ? `${state.scenario.score} de ${scenarios.length}` : `En curso: situación ${Math.min(state.scenario.index + 1, scenarios.length)} de ${scenarios.length}. Puntuación parcial: ${state.scenario.score}.`,
         oral: `${oralDone} de ${oralTasks.length} prácticas marcadas. Checklist oral: ${oralChecks.filter(Boolean).length} de ${oralChecks.length}.`,
+        assessment: `${assessment.level}: ${assessment.total} / 100`,
+        assessmentAdvice: assessment.advice,
+        assessmentConfidence: `${assessment.confidenceCount} de ${assessment.assessmentChecks.length} elementos de autoobservación marcados.`,
         prompt: state.reto.prompt || document.getElementById("randomPrompt").textContent || "Sin reto aleatorio generado.",
         draft: state.reto.draft || draft.value || "",
         checks,
@@ -3827,6 +4003,7 @@
       <tr><td>Emparejar frase e intención</td><td>${escapeHtml(r.match)}</td></tr>
       <tr><td>Mini-situaciones</td><td>${escapeHtml(r.scenarios)}</td></tr>
       <tr><td>Expresión oral guiada</td><td>${escapeHtml(r.oral)}</td></tr>
+      <tr><td>Autoevaluación final</td><td>${escapeHtml(r.assessment)}<br><span class="muted">${escapeHtml(r.assessmentConfidence)}</span></td></tr>
       <tr><td>Reto final</td><td>${escapeHtml(r.checkedCount)} de 4 elementos marcados en checklist.</td></tr>
     </table>
 
@@ -3840,16 +4017,21 @@
     <h2>4. Expresión oral guiada</h2>
     <p>${escapeHtml(r.oral)} No se ha grabado ni enviado voz del alumnado.</p>
 
-    <h2>5. Checklist del reto</h2>
+    <h2>5. Autoevaluación final orientativa</h2>
+    <p><strong>${escapeHtml(r.assessment)}</strong></p>
+    <p>${escapeHtml(r.assessmentAdvice)}</p>
+    <p class="muted">Resultado local y orientativo. No es una nota oficial ni sustituye la evaluación del curso.</p>
+
+    <h2>6. Checklist del reto</h2>
     <table>
       <tr><th>Elemento</th><th>Estado</th></tr>
       ${checkRows}
     </table>
 
-    <h2>6. Orientación local</h2>
+    <h2>7. Orientación local</h2>
     <p>${escapeHtml(r.feedback)}</p>
 
-    <h2>7. Privacidad y límites</h2>
+    <h2>8. Privacidad y límites</h2>
     <p>Este informe se ha generado en el navegador. Para el reto final se recomienda usar solo un nombre de pila o ficticio. El recurso no solicita apellidos, correos, teléfonos, DNI ni otros datos personales; no tiene login, no usa backend y no incorpora analítica.</p>
     <p class="muted">Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
   </main>
@@ -3907,6 +4089,7 @@
     renderMatch();
     renderScenario();
     renderOral();
+    renderAssessment();
     updateNavScrollHint();
 
     const initialHashIndex = getGuidedIndexById(location.hash.slice(1));

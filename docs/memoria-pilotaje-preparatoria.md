@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.5
+**Versión de referencia:** 2.6
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -76,6 +76,8 @@ Durante un uso real podrían observarse, sin identificar a nadie, aspectos como:
 - si el alumnado reconoce una misma función comunicativa en situaciones distintas.
 - si la expresión oral guiada se entiende como práctica sin grabación;
 - si el checklist oral ayuda a preparar el reto final sin generar ansiedad.
+- si la autoevaluación final se entiende como orientación y no como nota oficial;
+- si el perfil final ayuda al alumnado a decidir qué repasar.
 - si los textos de lectura A1 permiten localizar información concreta sin saturación;
 - si el feedback de comprensión lectora ayuda a justificar la respuesta;
 - si los audios locales del autor se escuchan con claridad suficiente;
