@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.6
+**Versión de referencia:** 2.7
 **Tipo de documento:** preparación de pilotaje, sin datos reales de alumnado  
 **Carácter del recurso:** complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -78,6 +78,8 @@ Durante un uso real podrían observarse, sin identificar a nadie, aspectos como:
 - si el checklist oral ayuda a preparar el reto final sin generar ansiedad.
 - si la autoevaluación final se entiende como orientación y no como nota oficial;
 - si el perfil final ayuda al alumnado a decidir qué repasar.
+- si la rúbrica docente/documental ayuda a ordenar observaciones sin generar sensación de calificación;
+- si las dimensiones de la rúbrica resultan comprensibles para documentar un pilotaje;
 - si los textos de lectura A1 permiten localizar información concreta sin saturación;
 - si el feedback de comprensión lectora ayuda a justificar la respuesta;
 - si los audios locales del autor se escuchan con claridad suficiente;
@@ -162,3 +164,5 @@ La versión 1.4 permite observar si la instalación en pantalla de inicio facili
 La versión 1.5 añade capturas y una guía de demo que pueden ayudar a preparar una explicación inicial clara antes de cualquier pilotaje.
 
 La versión 2.0 añade un dossier de producto demostrativo y una guía de adaptación a contextos FPE. En un pilotaje futuro, estos documentos pueden ayudar a explicar mejor el alcance del recurso sin presentarlo como oficial ni como herramienta de evaluación.
+
+La versión 2.7 añade una rúbrica docente/documental. En un pilotaje futuro puede servir para ordenar observaciones cualitativas agregadas, siempre sin recoger datos personales y sin presentarla como evaluación oficial.

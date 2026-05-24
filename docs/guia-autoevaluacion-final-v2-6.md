@@ -3,6 +3,8 @@
 **Versión de referencia:** 2.6  
 **Autor:** Joel Concepción Villanueva
 
+> Nota de estado: esta guía documenta la fase v2.6. El estado actual del recurso es **v2.7**, que añade una rúbrica docente/documental como apoyo cualitativo no oficial.
+
 ## Finalidad
 
 La versión v2.6 incorpora una **autoevaluación final orientativa**.

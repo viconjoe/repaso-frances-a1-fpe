@@ -1,6 +1,6 @@
 # Guía de comprensión auditiva v2.3
 
-> Nota de estado: en **v2.6** ya se incorporan los cinco archivos MP3 locales, la reproducción está activada, las tarjetas iniciales son accesos reales, los objetivos iniciales se muestran como lista informativa, el recurso aplica variación comunicativa progresiva, añade expresión oral guiada sin grabación e incorpora autoevaluación final orientativa.
+> Nota de estado: en **v2.7** ya se incorporan los cinco archivos MP3 locales, la reproducción está activada, las tarjetas iniciales son accesos reales, los objetivos iniciales se muestran como lista informativa, el recurso aplica variación comunicativa progresiva, añade expresión oral guiada sin grabación e incorpora autoevaluación final orientativa y rúbrica docente/documental.
 
 ## 1. Finalidad
 

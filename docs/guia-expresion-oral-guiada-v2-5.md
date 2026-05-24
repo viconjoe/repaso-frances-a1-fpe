@@ -3,7 +3,7 @@
 **Versión de referencia:** 2.5  
 **Autor:** Joel Concepción Villanueva
 
-> Nota de estado: esta guía documenta la fase v2.5. El estado actual del recurso es **v2.6**, que añade autoevaluación final orientativa sin valor evaluativo oficial.
+> Nota de estado: esta guía documenta la fase v2.5. El estado actual del recurso es **v2.7**, que añade autoevaluación final orientativa y rúbrica docente/documental, ambas sin valor evaluativo oficial.
 
 ## Finalidad
 

@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.6
+    Versión: 2.7
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -158,6 +158,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.6] Autoevaluación final orientativa local, no oficial.
     [v2.6] Perfil final de práctica con recomendación de repaso.
+
+    Cambios v2.7:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.7] Rúbrica docente/documental de observación A1.
+    [v2.7] Separación explícita entre rúbrica de apoyo y evaluación oficial.
   -->
 
   <style>
@@ -1666,6 +1671,7 @@
       <a href="#autoevaluacion">Autoevaluación</a>
       <a href="#informe">Informe</a>
       <a href="#docente">Ficha docente</a>
+      <a href="#rubrica">Rúbrica</a>
     </div>
   </nav>
 
@@ -1685,6 +1691,7 @@
       <option value="reto">Reto final</option>
       <option value="autoevaluacion">Autoevaluación</option>
       <option value="informe">Informe</option>
+      <option value="rubrica">Rúbrica docente</option>
     </select>
   </div>
 
@@ -1767,9 +1774,15 @@
         </article>
         <article class="block-map-card">
           <span class="step-number">11</span>
+          <h3>Rúbrica</h3>
+          <p>Consulta una observación docente/documental no oficial.</p>
+          <button class="secondary" type="button" data-guided-step="11">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">12</span>
           <h3>Informe</h3>
           <p>Genera una evidencia local si te resulta útil.</p>
-          <button class="secondary" type="button" data-guided-step="11">Abrir bloque</button>
+          <button class="secondary" type="button" data-guided-step="12">Abrir bloque</button>
         </article>
       </div>
     </section>
@@ -2228,6 +2241,8 @@
             <p class="small muted">Resultado orientativo local. No tiene valor evaluativo oficial.</p>
           </article>
         </div>
+    </section>
+
     <section id="informe">
       <div class="section-head">
         <div>
@@ -2296,10 +2311,52 @@
       </div>
     </section>
 
+    <section id="rubrica">
+      <div class="section-head">
+        <div>
+          <span class="tag">Rúbrica docente/documental</span>
+          <h2>Observación orientativa A1</h2>
+          <p class="muted">Apoyo para documentar práctica comunicativa. No es una calificación oficial ni sustituye los criterios de evaluación del curso.</p>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <article class="card">
+          <h3>Comprensión</h3>
+          <p><strong>Inicial:</strong> reconoce palabras sueltas con apoyo.</p>
+          <p><strong>En desarrollo:</strong> localiza datos concretos en textos o audios breves.</p>
+          <p><strong>Consolidado orientativo:</strong> identifica la información principal en situaciones A1 conocidas.</p>
+        </article>
+        <article class="card">
+          <h3>Interacción</h3>
+          <p><strong>Inicial:</strong> responde con frases memorizadas.</p>
+          <p><strong>En desarrollo:</strong> elige respuestas adecuadas y pide repetición o ayuda.</p>
+          <p><strong>Consolidado orientativo:</strong> mantiene una microinteracción sencilla con cortesía.</p>
+        </article>
+        <article class="card">
+          <h3>Expresión oral/escrita</h3>
+          <p><strong>Inicial:</strong> produce frases aisladas con modelo.</p>
+          <p><strong>En desarrollo:</strong> combina saludo, nombre, dato personal básico y petición.</p>
+          <p><strong>Consolidado orientativo:</strong> prepara una situación breve comprensible con apoyo.</p>
+        </article>
+        <article class="card">
+          <h3>Autonomía y privacidad</h3>
+          <p><strong>Inicial:</strong> necesita guía para avanzar y evitar datos personales.</p>
+          <p><strong>En desarrollo:</strong> usa el recorrido y el checklist con ayuda puntual.</p>
+          <p><strong>Consolidado orientativo:</strong> practica de forma autónoma y respeta las pautas de privacidad.</p>
+        </article>
+      </div>
+
+      <div class="card">
+        <h3>Uso documental recomendado</h3>
+        <p>La rúbrica puede servir para observaciones docentes agregadas, memoria de pilotaje o portfolio. Debe usarse como apoyo cualitativo, no como acta, nota ni certificación.</p>
+      </div>
+    </section>
+
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.6 · Autoevaluación final orientativa · Itinerario táctil · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.7 · Rúbrica docente/documental · Itinerario táctil · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2478,6 +2535,7 @@
       { id: "oral", title: "Oral guiado", help: "Practica una respuesta breve en voz alta. No se graba ni se usa micrófono." },
       { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
       { id: "autoevaluacion", title: "Autoevaluación", help: "Revisa tu perfil orientativo final. No es una nota oficial." },
+      { id: "rubrica", title: "Rúbrica docente", help: "Consulta los criterios cualitativos de observación. No es una calificación oficial." },
       { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." }
     ];
 
@@ -3820,7 +3878,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.6",
+        version: "2.7",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",

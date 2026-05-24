@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "resourceVersion": "2.6",
+  "resourceVersion": "2.7",
   "language": {
     "code": "xx",
     "name": "Idioma",
@@ -81,6 +81,11 @@
     "levels": ["Necesita repaso", "Preparación inicial", "Base en desarrollo", "Buen dominio orientativo"],
     "criteria": ["participación", "comprensión", "interacción", "expresión oral guiada", "autoobservación"]
   },
+  "teacherRubric": {
+    "purpose": "Rúbrica cualitativa de observación docente/documental. No tiene valor evaluativo oficial.",
+    "dimensions": ["comprensión", "interacción", "expresión", "autonomía"],
+    "levels": ["Inicial", "En desarrollo", "Consolidado orientativo"]
+  },
   "finalPrompts": [
     "Situación comunicativa breve adaptada al idioma y al nivel."
   ],
@@ -90,6 +95,7 @@
     "Combinar repetición de funciones clave con variaciones de contexto.",
     "Incluir expresión oral guiada sin solicitar micrófono ni grabar voz.",
     "Presentar cualquier resultado final como orientación local no oficial.",
+    "Usar rúbricas solo como apoyo docente/documental, no como certificación.",
     "Evitar datos personales reales.",
     "Mantener enfoque adulto y no infantilizado.",
     "Revisar privacidad y límites institucionales."

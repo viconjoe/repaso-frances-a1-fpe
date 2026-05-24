@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.6
+**Versión:** 2.7
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -85,6 +85,7 @@ La secuencia didáctica sigue una progresión sencilla:
 9. Producción breve final.
 10. Generación opcional de informe local de práctica.
 11. Revisar una autoevaluación final orientativa sin valor oficial.
+12. Consultar una rúbrica docente/documental de observación A1, sin valor de calificación oficial.
 
 ## 6. UX móvil como accesibilidad práctica
 
@@ -161,6 +162,10 @@ El informe no se envía a ningún servidor. Se abre en una vista limpia preparad
 
 Bloque informativo que contextualiza el recurso para tutoría, coordinación o portfolio docente.
 
+### Rúbrica docente/documental
+
+Matriz cualitativa de observación A1 para apoyar memoria de pilotaje, portfolio o revisión docente. No es una nota, no certifica nivel y no sustituye la evaluación oficial del curso.
+
 ## 8. Modalidades de uso
 
 ### Uso autónomo
@@ -199,6 +204,7 @@ Sí permite:
 - práctica guiada;
 - producción breve con orientación;
 - informe local de práctica como evidencia orientativa.
+- rúbrica docente/documental como apoyo cualitativo no oficial.
 
 Los resultados mostrados son orientativos y no deben utilizarse como calificación oficial salvo decisión expresa del equipo docente.
 
@@ -274,6 +280,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.4:** variación comunicativa progresiva para ampliar contextos sin perder repetición útil de nivel A1.
 - **v2.5:** expresión oral guiada sin grabación, con modelos, apoyo paso a paso y checklist oral local.
 - **v2.6:** autoevaluación final orientativa con perfil local de práctica, recomendación de repaso y sin calificación oficial.
+- **v2.7:** rúbrica docente/documental de observación A1, con niveles cualitativos y uso no oficial.
 
 ## 14. Limitaciones
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "resourceVersion": "2.6",
+  "resourceVersion": "2.7",
   "language": {
     "code": "fr",
     "name": "Francés",
@@ -27,7 +27,8 @@
     "comprensión auditiva A1 con audios locales propios del autor",
     "variación comunicativa progresiva A1",
     "expresión oral guiada sin grabación",
-    "autoevaluación final orientativa"
+    "autoevaluación final orientativa",
+    "rúbrica docente/documental"
   ],
   "grammarNotes": [
     {
@@ -352,6 +353,16 @@
       "expresión oral guiada",
       "autoobservación final"
     ]
+  },
+  "teacherRubric": {
+    "purpose": "Rúbrica cualitativa de observación docente/documental. No tiene valor evaluativo oficial.",
+    "dimensions": [
+      "comprensión",
+      "interacción",
+      "expresión oral/escrita",
+      "autonomía y privacidad"
+    ],
+    "levels": ["Inicial", "En desarrollo", "Consolidado orientativo"]
   },
   "finalPrompts": [
     "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
