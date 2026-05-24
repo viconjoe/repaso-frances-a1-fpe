@@ -1294,7 +1294,7 @@
     }
 
     body.guided-mode:not(.presentation-mode) #creditos,
-    body.guided-mode:not(.presentation-mode) #docente {
+    body.guided-mode:not(.presentation-mode) #creditos {
       display: none;
     }
 
@@ -1691,6 +1691,7 @@
       <option value="reto">Reto final</option>
       <option value="autoevaluacion">Autoevaluación</option>
       <option value="informe">Informe</option>
+      <option value="docente">Ficha docente</option>
       <option value="rubrica">Rúbrica docente</option>
     </select>
   </div>
@@ -1774,15 +1775,21 @@
         </article>
         <article class="block-map-card">
           <span class="step-number">11</span>
-          <h3>Rúbrica</h3>
-          <p>Consulta una observación docente/documental no oficial.</p>
+          <h3>Informe</h3>
+          <p>Genera una evidencia local si te resulta útil.</p>
           <button class="secondary" type="button" data-guided-step="11">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">12</span>
-          <h3>Informe</h3>
-          <p>Genera una evidencia local si te resulta útil.</p>
+          <h3>Ficha docente</h3>
+          <p>Contextualiza el recurso como evidencia de portfolio.</p>
           <button class="secondary" type="button" data-guided-step="12">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">13</span>
+          <h3>Rúbrica</h3>
+          <p>Consulta una observación docente/documental no oficial.</p>
+          <button class="secondary" type="button" data-guided-step="13">Abrir bloque</button>
         </article>
       </div>
     </section>
@@ -2535,8 +2542,9 @@
       { id: "oral", title: "Oral guiado", help: "Practica una respuesta breve en voz alta. No se graba ni se usa micrófono." },
       { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
       { id: "autoevaluacion", title: "Autoevaluación", help: "Revisa tu perfil orientativo final. No es una nota oficial." },
-      { id: "rubrica", title: "Rúbrica docente", help: "Consulta los criterios cualitativos de observación. No es una calificación oficial." },
-      { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." }
+      { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." },
+      { id: "docente", title: "Ficha docente", help: "Consulta el encuadre pedagógico y documental del recurso." },
+      { id: "rubrica", title: "Rúbrica docente", help: "Consulta los criterios cualitativos de observación. No es una calificación oficial." }
     ];
 
     let guidedIndex = 0;
