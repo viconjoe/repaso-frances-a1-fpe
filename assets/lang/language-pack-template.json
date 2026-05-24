@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "resourceVersion": "2.4",
+  "resourceVersion": "2.5",
   "language": {
     "code": "xx",
     "name": "Idioma",
@@ -68,6 +68,14 @@
       "exp": "Explicación breve indicando la palabra clave escuchada."
     }
   ],
+  "oralTasks": [
+    {
+      "title": "Título de práctica oral breve",
+      "task": "Situación oral guiada sin grabación.",
+      "model": "Modelo breve en el idioma meta.",
+      "support": ["Frase de apoyo 1", "Frase de apoyo 2", "Frase de apoyo 3"]
+    }
+  ],
   "finalPrompts": [
     "Situación comunicativa breve adaptada al idioma y al nivel."
   ],
@@ -75,6 +83,7 @@
     "Mantener nivel inicial A1 o equivalente.",
     "Usar frases funcionales y memorizables.",
     "Combinar repetición de funciones clave con variaciones de contexto.",
+    "Incluir expresión oral guiada sin solicitar micrófono ni grabar voz.",
     "Evitar datos personales reales.",
     "Mantener enfoque adulto y no infantilizado.",
     "Revisar privacidad y límites institucionales."

@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.4
+    Versión: 2.5
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -148,6 +148,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.4] Redundancia inteligente con variación progresiva en contenidos A1.
     [v2.4] Ampliación controlada de vocabulario, lectura, situaciones y reto final.
+
+    Cambios v2.5:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.5] Expresión oral guiada sin grabación ni uso de micrófono.
+    [v2.5] Checklist oral local para preparar producción breve A1.
   -->
 
   <style>
@@ -995,6 +1000,29 @@
       padding: 0.85rem;
     }
 
+    .oral-practice {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .oral-model {
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      background: #f4faf8;
+      border: 1px dashed #a7c8c2;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .oral-support {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .oral-support .phrase {
+      background: #f9fbfa;
+    }
+
     .pill-row {
       display: flex;
       flex-wrap: wrap;
@@ -1596,6 +1624,7 @@
       <a href="#audicion">Audición A1</a>
       <a href="#emparejar">Emparejar</a>
       <a href="#situaciones">Situaciones</a>
+      <a href="#oral">Oral guiado</a>
       <a href="#reto">Reto final</a>
       <a href="#informe">Informe</a>
       <a href="#docente">Ficha docente</a>
@@ -1614,6 +1643,7 @@
       <option value="audicion">Audición A1</option>
       <option value="emparejar">Emparejar</option>
       <option value="situaciones">Situaciones</option>
+      <option value="oral">Oral guiado</option>
       <option value="reto">Reto final</option>
       <option value="informe">Informe</option>
     </select>
@@ -1639,7 +1669,7 @@
         <article class="block-map-card">
           <span class="step-number">1</span>
           <h3>Autodiagnóstico</h3>
-          <p>15 preguntas rápidas con feedback orientativo.</p>
+          <p>18 preguntas rápidas con feedback orientativo.</p>
           <button class="primary" type="button" data-guided-step="1">Abrir bloque</button>
         </article>
         <article class="block-map-card">
@@ -1680,15 +1710,21 @@
         </article>
         <article class="block-map-card">
           <span class="step-number">8</span>
-          <h3>Reto final</h3>
-          <p>Prepara una presentación breve con apoyo.</p>
+          <h3>Oral guiado</h3>
+          <p>Practica una respuesta breve en voz alta sin grabarte.</p>
           <button class="secondary" type="button" data-guided-step="8">Abrir bloque</button>
         </article>
         <article class="block-map-card">
           <span class="step-number">9</span>
+          <h3>Reto final</h3>
+          <p>Prepara una presentación breve con apoyo.</p>
+          <button class="secondary" type="button" data-guided-step="9">Abrir bloque</button>
+        </article>
+        <article class="block-map-card">
+          <span class="step-number">10</span>
           <h3>Informe</h3>
           <p>Genera una evidencia local si te resulta útil.</p>
-          <button class="secondary" type="button" data-guided-step="9">Abrir bloque</button>
+          <button class="secondary" type="button" data-guided-step="10">Abrir bloque</button>
         </article>
       </div>
     </section>
@@ -1754,10 +1790,10 @@
           <img class="step-icon" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>3.</span> Aplicar</span></strong>
-            <span class="small muted">Leer, escuchar audios locales, emparejar, resolver situaciones y preparar el reto final.</span>
+            <span class="small muted">Leer, escuchar audios locales, emparejar, resolver situaciones, practicar oralmente y preparar el reto final.</span>
           </div>
         </button>
-        <button class="step-card" type="button" data-guided-step="9" aria-label="Abrir informe de práctica">
+        <button class="step-card" type="button" data-guided-step="10" aria-label="Abrir informe de práctica">
           <img class="step-icon" src="assets/pictogramas/evidencia.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>4.</span> Guardar evidencia</span></strong>
@@ -1984,10 +2020,65 @@
       </div>
     </section>
 
-    <section id="reto">
+    <section id="oral">
       <div class="section-head">
         <div>
           <span class="tag">Bloque 8</span>
+          <h2>Expresión oral guiada</h2>
+          <p class="muted">Practica una respuesta breve en voz alta. La herramienta no usa micrófono, no graba voz y no envía audio.</p>
+        </div>
+        <button class="secondary no-print" type="button" id="resetOralBtn">Reiniciar</button>
+      </div>
+
+      <div class="grid two">
+        <article class="card oral-practice">
+          <p class="small muted" id="oralCounter">Práctica oral 1 de 5</p>
+          <h3 id="oralTitle">Cargando práctica oral...</h3>
+          <p id="oralTask">Lee la situación y prepara una respuesta breve.</p>
+
+          <div class="oral-model">
+            <strong>Modelo posible:</strong>
+            <p lang="fr" id="oralModel"></p>
+          </div>
+
+          <details class="support-details">
+            <summary>Apoyo paso a paso</summary>
+            <div class="oral-support" id="oralSupport"></div>
+          </details>
+        </article>
+
+        <article class="card">
+          <h3>Checklist oral</h3>
+          <p class="muted">Marca solo lo que hayas practicado en voz alta. No se guarda ninguna grabación.</p>
+          <div class="privacy-callout small">
+            <img src="assets/pictogramas/privacidad.svg" alt="" aria-hidden="true" />
+            <div>
+              <strong>Sin grabación</strong>
+              <span>Este bloque sirve para preparar la expresión oral. No solicita micrófono ni almacena voz del alumnado.</span>
+            </div>
+          </div>
+
+          <div class="checklist">
+            <label class="check-item"><input class="oralCheck" type="checkbox" /> Saludé o inicié la interacción.</label>
+            <label class="check-item"><input class="oralCheck" type="checkbox" /> Usé una frase completa en francés.</label>
+            <label class="check-item"><input class="oralCheck" type="checkbox" /> Pronuncié despacio y de forma comprensible.</label>
+            <label class="check-item"><input class="oralCheck" type="checkbox" /> Pedí ayuda, repetición o confirmé información si era necesario.</label>
+          </div>
+
+          <div class="cta-row no-print">
+            <button class="primary" type="button" id="markOralDoneBtn">Marcar práctica realizada</button>
+            <button class="secondary" type="button" id="nextOralBtn">Siguiente práctica</button>
+          </div>
+
+          <div class="feedback" id="oralFeedback" aria-live="polite">Practica en voz alta y marca tu checklist.</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="reto">
+      <div class="section-head">
+        <div>
+          <span class="tag">Bloque 9</span>
           <h2>Reto final: presentarse y resolver una situación</h2>
           <p class="muted">Actividad final para hacer en parejas, en voz alta o por escrito. No se guarda en ningún servidor.</p>
         </div>
@@ -2061,7 +2152,7 @@
     <section id="informe">
       <div class="section-head">
         <div>
-          <span class="tag">Bloque 9</span>
+          <span class="tag">Bloque 10</span>
           <h2>Informe de práctica del alumno</h2>
           <p class="muted">Genera una ficha breve con el progreso local, resultados orientativos y texto del reto final. No se envía nada a ningún servidor.</p>
         </div>
@@ -2129,7 +2220,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.4 · Variación comunicativa A1 · Itinerario táctil · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.5 · Expresión oral guiada sin grabación · Itinerario táctil · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2168,6 +2259,7 @@
         audicion: false,
         emparejar: false,
         situaciones: false,
+        oral: false,
         reto: false
       },
       quiz: { index: 0, score: 0, answered: false, selected: null },
@@ -2177,6 +2269,7 @@
       reading: { index: 0, score: 0, answered: false, selected: null },
       listening: { index: 0, score: 0, answered: false, selected: null },
       scenario: { index: 0, score: 0, answered: false, selected: null },
+      oral: { index: 0, done: [], check0: false, check1: false, check2: false, check3: false },
       reto: {
         draft: "",
         prompt: "",
@@ -2201,6 +2294,7 @@
           reading: { ...defaultState.reading, ...(parsed.reading || {}) },
           listening: { ...defaultState.listening, ...(parsed.listening || {}) },
           scenario: { ...defaultState.scenario, ...(parsed.scenario || {}) },
+          oral: { ...defaultState.oral, ...(parsed.oral || {}) },
           reto: { ...defaultState.reto, ...(parsed.reto || {}) }
         };
       } catch {
@@ -2238,6 +2332,12 @@
     if (listeningSection) {
       listeningSection.addEventListener("click", () => markStarted("audicion"));
       listeningSection.addEventListener("focusin", () => markStarted("audicion"));
+    }
+
+    const oralSection = document.getElementById("oral");
+    if (oralSection) {
+      oralSection.addEventListener("click", () => markStarted("oral"));
+      oralSection.addEventListener("focusin", () => markStarted("oral"));
     }
 
     function setProgress(wrapId, barId, value) {
@@ -2282,6 +2382,7 @@
       { id: "audicion", title: "Audición A1", help: "Escucha audios locales del autor cuando estén añadidos. No se graba al alumnado." },
       { id: "emparejar", title: "Emparejar", help: "Relaciona cada frase con su intención comunicativa." },
       { id: "situaciones", title: "Situaciones", help: "Elige la frase más adecuada para cada caso." },
+      { id: "oral", title: "Oral guiado", help: "Practica una respuesta breve en voz alta. No se graba ni se usa micrófono." },
       { id: "reto", title: "Reto final", help: "Prepara una presentación o situación breve sin datos personales." },
       { id: "informe", title: "Informe", help: "Genera una evidencia local solo si te resulta útil." }
     ];
@@ -3303,6 +3404,118 @@
       renderScenario();
     });
 
+    const oralTasks = [
+      {
+        title: "Presentarse en clase",
+        task: "Saluda, di tu nombre de pila o ficticio y explica que estudias francés.",
+        model: "Bonjour. Je m'appelle Clara. J'étudie le français.",
+        support: [
+          ["Bonjour.", "Saludo inicial."],
+          ["Je m'appelle...", "Usa solo un nombre de pila o ficticio."],
+          ["J'étudie le français.", "Di una frase sencilla sobre ti."]
+        ]
+      },
+      {
+        title: "Pedir repetición",
+        task: "Imagina que no has entendido una instrucción. Pide que repitan con educación.",
+        model: "Excusez-moi. Je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+        support: [
+          ["Excusez-moi.", "Llama la atención de forma educada."],
+          ["Je ne comprends pas.", "Explica el problema."],
+          ["Pouvez-vous répéter, s'il vous plaît ?", "Pide repetición."]
+        ]
+      },
+      {
+        title: "Entrevista o cita",
+        task: "Llegas a recepción. Saluda, di tu nombre de pila o ficticio y explica que tienes una entrevista.",
+        model: "Bonjour. Je m'appelle Marc. J'ai un entretien à dix heures.",
+        support: [
+          ["Bonjour.", "Saludo formal sencillo."],
+          ["Je m'appelle...", "Nombre de pila o ficticio."],
+          ["J'ai un entretien.", "Explica la situación."]
+        ]
+      },
+      {
+        title: "Estación",
+        task: "Pide un billete y pregunta el precio.",
+        model: "Bonjour. Un billet, s'il vous plaît. Combien ça coûte ?",
+        support: [
+          ["Un billet, s'il vous plaît.", "Petición concreta."],
+          ["Combien ça coûte ?", "Pregunta el precio."],
+          ["Merci.", "Cierra con cortesía."]
+        ]
+      },
+      {
+        title: "Centro de formación",
+        task: "Pregunta dónde está una sala y confirma la dirección.",
+        model: "Excusez-moi. Où est la salle 3 ? C'est bien cette adresse ?",
+        support: [
+          ["Excusez-moi.", "Inicio educado."],
+          ["Où est la salle 3 ?", "Pregunta por un lugar."],
+          ["C'est bien cette adresse ?", "Confirma información."]
+        ]
+      }
+    ];
+
+    function renderOral() {
+      const item = oralTasks[state.oral.index] || oralTasks[0];
+      const done = new Set(state.oral.done || []);
+      document.getElementById("oralCounter").textContent = `Práctica oral ${state.oral.index + 1} de ${oralTasks.length}`;
+      document.getElementById("oralTitle").textContent = item.title;
+      document.getElementById("oralTask").textContent = item.task;
+      document.getElementById("oralModel").textContent = item.model;
+
+      const support = document.getElementById("oralSupport");
+      support.innerHTML = "";
+      item.support.forEach(([fr, es]) => {
+        const line = document.createElement("div");
+        line.className = "phrase";
+        line.innerHTML = `<strong lang="fr">${escapeHtml(fr)}</strong><span>${escapeHtml(es)}</span>`;
+        support.appendChild(line);
+      });
+
+      document.querySelectorAll(".oralCheck").forEach((box, index) => {
+        box.checked = Boolean(state.oral[`check${index}`]);
+      });
+
+      document.getElementById("markOralDoneBtn").textContent = done.has(state.oral.index)
+        ? "Práctica marcada"
+        : "Marcar práctica realizada";
+      document.getElementById("oralFeedback").textContent = done.has(state.oral.index)
+        ? "Práctica oral marcada como realizada. No se ha grabado audio."
+        : "Practica en voz alta y marca tu checklist.";
+    }
+
+    document.querySelectorAll(".oralCheck").forEach((box, index) => {
+      box.addEventListener("change", () => {
+        markStarted("oral");
+        state.oral[`check${index}`] = box.checked;
+        saveState();
+      });
+    });
+
+    document.getElementById("markOralDoneBtn").addEventListener("click", () => {
+      markStarted("oral");
+      const done = new Set(state.oral.done || []);
+      done.add(state.oral.index);
+      state.oral.done = [...done].sort((a, b) => a - b);
+      saveState();
+      renderOral();
+    });
+
+    document.getElementById("nextOralBtn").addEventListener("click", () => {
+      markStarted("oral");
+      state.oral.index = (state.oral.index + 1) % oralTasks.length;
+      saveState();
+      renderOral();
+    });
+
+    document.getElementById("resetOralBtn").addEventListener("click", () => {
+      state.oral = clone(defaultState.oral);
+      saveState();
+      renderOral();
+    });
+
     const finalPrompts = [
       "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
       "Estás en clase. Preséntate, di dónde vives y pide que repitan una frase.",
@@ -3429,10 +3642,12 @@
       const scenarioFinished = state.scenario.index >= scenarios.length;
       const checks = [0, 1, 2, 3].map((i) => Boolean(state.reto[`check${i}`]));
       const checkedCount = checks.filter(Boolean).length;
+      const oralChecks = [0, 1, 2, 3].map((i) => Boolean(state.oral[`check${i}`]));
+      const oralDone = Array.isArray(state.oral.done) ? state.oral.done.length : 0;
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.4",
+        version: "2.5",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
@@ -3441,9 +3656,11 @@
         listening: listeningFinished ? `${state.listening.score} de ${listeningTasks.length}` : `En curso: audio ${Math.min(state.listening.index + 1, listeningTasks.length)} de ${listeningTasks.length}. Puntuación parcial: ${state.listening.score}.`,
         match: `${matchedIds.size} de ${matchPairs.length} parejas completadas`,
         scenarios: scenarioFinished ? `${state.scenario.score} de ${scenarios.length}` : `En curso: situación ${Math.min(state.scenario.index + 1, scenarios.length)} de ${scenarios.length}. Puntuación parcial: ${state.scenario.score}.`,
+        oral: `${oralDone} de ${oralTasks.length} prácticas marcadas. Checklist oral: ${oralChecks.filter(Boolean).length} de ${oralChecks.length}.`,
         prompt: state.reto.prompt || document.getElementById("randomPrompt").textContent || "Sin reto aleatorio generado.",
         draft: state.reto.draft || draft.value || "",
         checks,
+        oralChecks,
         checkedCount,
         feedback: state.reto.feedback || document.getElementById("draftFeedback").textContent || "Sin revisión local realizada."
       };
@@ -3609,6 +3826,7 @@
       <tr><td>Comprensión auditiva</td><td>${escapeHtml(r.listening)}</td></tr>
       <tr><td>Emparejar frase e intención</td><td>${escapeHtml(r.match)}</td></tr>
       <tr><td>Mini-situaciones</td><td>${escapeHtml(r.scenarios)}</td></tr>
+      <tr><td>Expresión oral guiada</td><td>${escapeHtml(r.oral)}</td></tr>
       <tr><td>Reto final</td><td>${escapeHtml(r.checkedCount)} de 4 elementos marcados en checklist.</td></tr>
     </table>
 
@@ -3619,16 +3837,19 @@
     <p><strong>Texto de práctica escrito por el alumno/a:</strong></p>
     <pre lang="fr">${escapeHtml(r.draft || "Sin texto escrito.")}</pre>
 
-    <h2>4. Checklist del reto</h2>
+    <h2>4. Expresión oral guiada</h2>
+    <p>${escapeHtml(r.oral)} No se ha grabado ni enviado voz del alumnado.</p>
+
+    <h2>5. Checklist del reto</h2>
     <table>
       <tr><th>Elemento</th><th>Estado</th></tr>
       ${checkRows}
     </table>
 
-    <h2>5. Orientación local</h2>
+    <h2>6. Orientación local</h2>
     <p>${escapeHtml(r.feedback)}</p>
 
-    <h2>6. Privacidad y límites</h2>
+    <h2>7. Privacidad y límites</h2>
     <p>Este informe se ha generado en el navegador. Para el reto final se recomienda usar solo un nombre de pila o ficticio. El recurso no solicita apellidos, correos, teléfonos, DNI ni otros datos personales; no tiene login, no usa backend y no incorpora analítica.</p>
     <p class="muted">Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
   </main>
@@ -3685,6 +3906,7 @@
     renderFlashcard();
     renderMatch();
     renderScenario();
+    renderOral();
     updateNavScrollHint();
 
     const initialHashIndex = getGuidedIndexById(location.hash.slice(1));

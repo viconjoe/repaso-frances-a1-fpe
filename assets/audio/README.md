@@ -4,7 +4,7 @@ Esta carpeta queda preparada para incorporar audios de pronunciación creados pr
 
 No está pensada para grabar al alumnado ni para recoger voces, nombres o datos personales.
 
-Estado del recurso: v2.4. La comprensión auditiva A1 incorpora cinco audios locales propios del autor. El criterio no cambia: solo se contemplan audios locales incluidos como archivos estáticos, sin grabar al alumnado.
+Estado del recurso: v2.5. La comprensión auditiva A1 incorpora cinco audios locales propios del autor y la expresión oral guiada se realiza sin grabación. El criterio no cambia: solo se contemplan audios locales incluidos como archivos estáticos, sin grabar al alumnado.
 
 ## Archivos previstos
 

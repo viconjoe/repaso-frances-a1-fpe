@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "resourceVersion": "2.4",
+  "resourceVersion": "2.5",
   "language": {
     "code": "fr",
     "name": "Francés",
@@ -25,7 +25,8 @@
     "gramática funcional A1",
     "comprensión lectora A1 con textos breves",
     "comprensión auditiva A1 con audios locales propios del autor",
-    "variación comunicativa progresiva A1"
+    "variación comunicativa progresiva A1",
+    "expresión oral guiada sin grabación"
   ],
   "grammarNotes": [
     {
@@ -298,6 +299,38 @@
       "options": ["Pagar", "Repetir", "Comprar fruta", "Cerrar la tienda"],
       "answer": 1,
       "exp": "La pista es Pouvez-vous répéter ?"
+    }
+  ],
+  "oralTasks": [
+    {
+      "title": "Presentarse en clase",
+      "task": "Saluda, di tu nombre de pila o ficticio y explica que estudias francés.",
+      "model": "Bonjour. Je m'appelle Clara. J'étudie le français.",
+      "support": ["Bonjour.", "Je m'appelle...", "J'étudie le français."]
+    },
+    {
+      "title": "Pedir repetición",
+      "task": "Imagina que no has entendido una instrucción. Pide que repitan con educación.",
+      "model": "Excusez-moi. Je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+      "support": ["Excusez-moi.", "Je ne comprends pas.", "Pouvez-vous répéter, s'il vous plaît ?"]
+    },
+    {
+      "title": "Entrevista o cita",
+      "task": "Llegas a recepción. Saluda, di tu nombre de pila o ficticio y explica que tienes una entrevista.",
+      "model": "Bonjour. Je m'appelle Marc. J'ai un entretien à dix heures.",
+      "support": ["Bonjour.", "Je m'appelle...", "J'ai un entretien."]
+    },
+    {
+      "title": "Estación",
+      "task": "Pide un billete y pregunta el precio.",
+      "model": "Bonjour. Un billet, s'il vous plaît. Combien ça coûte ?",
+      "support": ["Un billet, s'il vous plaît.", "Combien ça coûte ?", "Merci."]
+    },
+    {
+      "title": "Centro de formación",
+      "task": "Pregunta dónde está una sala y confirma la dirección.",
+      "model": "Excusez-moi. Où est la salle 3 ? C'est bien cette adresse ?",
+      "support": ["Excusez-moi.", "Où est la salle 3 ?", "C'est bien cette adresse ?"]
     }
   ],
   "finalPrompts": [

@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.4
+**Versión:** 2.5
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -36,6 +36,7 @@ El recurso busca que el alumnado pueda:
 - identificar información básica en audios locales breves del autor;
 - asociar frases con funciones comunicativas;
 - responder a situaciones comunicativas simples;
+- practicar respuestas orales breves sin grabarse;
 - practicar una presentación breve;
 - generar un informe local de práctica como evidencia orientativa;
 - ganar seguridad antes de una situación oral o escrita básica.
@@ -80,8 +81,9 @@ La secuencia didáctica sigue una progresión sencilla:
 5. Comprensión auditiva breve con audios locales del autor, cuando estén disponibles.
 6. Asociación frase-intención.
 7. Resolución de mini-situaciones.
-8. Producción breve final.
-9. Generación opcional de informe local de práctica.
+8. Expresión oral guiada sin grabación.
+9. Producción breve final.
+10. Generación opcional de informe local de práctica.
 
 ## 6. UX móvil como accesibilidad práctica
 
@@ -136,11 +138,15 @@ Situaciones breves en español donde el alumnado debe elegir una respuesta adecu
 
 Desde v2.4, algunas situaciones reutilizan funciones ya trabajadas en contextos nuevos: entrevista, estación, centro de formación, disponibilidad y confirmación de dirección.
 
-### Bloque 8 · Reto final
+### Bloque 8 · Expresión oral guiada
+
+Prácticas breves para hablar en voz alta con modelo y apoyo. No se solicita micrófono, no se graba voz y no se envía audio.
+
+### Bloque 9 · Reto final
 
 Producción breve escrita u oral. El alumnado puede construir una presentación sencilla y resolver una situación básica usando frases de apoyo. El feedback local es orientativo y no sustituye la corrección docente.
 
-### Bloque 9 · Informe de práctica
+### Bloque 10 · Informe de práctica
 
 El recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto del reto final.
 
@@ -261,6 +267,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.3.2:** tarjetas iniciales del itinerario convertidas en accesos reales tras feedback de uso.
 - **v2.3.3:** objetivos iniciales rediseñados como lista informativa para evitar confusión con botones.
 - **v2.4:** variación comunicativa progresiva para ampliar contextos sin perder repetición útil de nivel A1.
+- **v2.5:** expresión oral guiada sin grabación, con modelos, apoyo paso a paso y checklist oral local.
 
 ## 14. Limitaciones
 

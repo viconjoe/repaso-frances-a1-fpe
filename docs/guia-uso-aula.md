@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.4
+**Versión de referencia:** 2.5
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -220,3 +220,17 @@ Desde v2.4 el recurso incorpora variación comunicativa progresiva. En aula conv
 - **aula / centro de formación / sala**.
 
 La recomendación no es hacerlo todo seguido, sino repetir una función clave en dos o tres contextos cercanos para consolidar sin saturar.
+
+## 19. Nota sobre v2.5
+
+Desde v2.5 el recurso incluye expresión oral guiada sin grabación.
+
+Uso recomendado:
+
+- elegir una práctica oral conectada con la sesión;
+- leer el modelo una vez;
+- practicar por parejas o individualmente en voz baja;
+- marcar el checklist solo como autoobservación;
+- recordar que no se graba voz ni se usa micrófono.
+
+Este bloque puede funcionar como puente entre las mini-situaciones y el reto final.
