@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.3.3
+**Versión actual:** 2.4
 
 **Publicación:** GitHub Pages
 
@@ -42,9 +42,11 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.3.3
+## Estado actual: v2.4
 
-La versión **2.3.3** rediseña los objetivos iniciales **Comprender**, **Responder** y **Practicar** como lista informativa para que no parezcan botones o enlaces. Mantiene las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
+La versión **2.4** incorpora una fase de **redundancia inteligente con variación progresiva**. Mantiene las funciones comunicativas esenciales de A1, pero amplía sus contextos para que el alumnado no practique siempre la misma situación literal: cita, entrevista, centro de formación, estación, dirección, disponibilidad, compra y petición de ayuda.
+
+Mantiene también los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece una experiencia más clara:
 
@@ -55,6 +57,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - bloque **Gramática útil A1** con estructuras funcionales breves;
 - bloque **Comprensión lectora A1** con mensajes, avisos, notas y horarios sencillos;
 - bloque **Comprensión auditiva A1** con audios locales propios del autor;
+- variación comunicativa progresiva: mismas funciones clave en contextos cercanos pero no idénticos;
 - tarjetas iniciales del itinerario convertidas en accesos reales a bloques;
 - objetivos iniciales rediseñados como lista informativa, sin apariencia de botón;
 - vista **Ver todos los bloques** reorganizada como mapa de bloques;
@@ -75,8 +78,8 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 El recurso incluye estos bloques principales:
 
 1. **Objetivo del recurso**: presenta la finalidad y los contenidos trabajados.
-2. **Autodiagnóstico orientativo A1**: test breve de 15 preguntas con feedback inmediato. No tiene valor evaluativo oficial.
-3. **Flashcards de supervivencia**: 32 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
+2. **Autodiagnóstico orientativo A1**: test breve de 18 preguntas con feedback inmediato. No tiene valor evaluativo oficial.
+3. **Flashcards de supervivencia**: 40 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
 4. **Gramática útil A1**: píldoras breves sobre presentación, preguntas, negación, cortesía y futuro próximo.
 5. **Comprensión lectora A1**: textos breves de uso cotidiano con preguntas de información concreta.
 6. **Comprensión auditiva A1**: tareas breves con audios locales propios del autor, sin grabar al alumnado.
@@ -197,6 +200,7 @@ repaso-frances-a1-fpe/
     ├── guia-ampliacion-pedagogica-v2-1.md
     ├── guia-comprension-lectora-v2-2.md
     ├── guia-comprension-auditiva-v2-3.md
+    ├── guia-variacion-comunicativa-v2-4.md
     ├── dossier-producto-demostrativo-v2.md
     ├── guia-adaptacion-contextos-fpe-v2.md
     ├── guia-visual-pictogramas.md
@@ -224,6 +228,7 @@ La carpeta `assets/audio/` incluye los cinco audios locales de comprensión audi
 - [Guía de ampliación pedagógica v2.1](docs/guia-ampliacion-pedagogica-v2-1.md)
 - [Guía de comprensión lectora v2.2](docs/guia-comprension-lectora-v2-2.md)
 - [Guía de comprensión auditiva v2.3](docs/guia-comprension-auditiva-v2-3.md)
+- [Guía de variación comunicativa v2.4](docs/guia-variacion-comunicativa-v2-4.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -247,6 +252,14 @@ Las capturas se incluyen como evidencia visual del recurso sin datos reales de a
 Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conservan como evidencia histórica de evolución.
 
 ## Evolución de versiones
+
+### v2.4
+
+- Redundancia inteligente con variación progresiva.
+- Se amplían vocabulario, lectura, emparejamientos, mini-situaciones y retos finales.
+- Nuevos contextos A1 adultos: entrevista, centro de formación, estación, confirmación de dirección y disponibilidad.
+- Se mantiene la comprensión auditiva con los cinco audios locales existentes, sin desincronizar archivos.
+- Sin nuevas dependencias, sin backend, sin login, sin analítica, sin formularios externos y sin recogida de datos personales.
 
 ### v2.3.3
 

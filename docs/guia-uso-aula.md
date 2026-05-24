@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3.3
+**Versión de referencia:** 2.4
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -209,3 +209,14 @@ Desde v2.3.2 las tarjetas iniciales del itinerario son accesos reales. El ajuste
 ## 17. Nota sobre v2.3.3
 
 Desde v2.3.3 los objetivos **Comprender**, **Responder** y **Practicar** se muestran como lista informativa, no como tarjetas. Esto separa mejor los objetivos pedagógicos de los accesos navegables.
+
+## 18. Nota sobre v2.4
+
+Desde v2.4 el recurso incorpora variación comunicativa progresiva. En aula conviene aprovecharla por ejes:
+
+- **cita / entrevista / disponibilidad**;
+- **ciudad / estación / dirección**;
+- **compra / cafetería / billete**;
+- **aula / centro de formación / sala**.
+
+La recomendación no es hacerlo todo seguido, sino repetir una función clave en dos o tres contextos cercanos para consolidar sin saturar.

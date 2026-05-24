@@ -1,5 +1,5 @@
 {
-  "version": "2.3.1",
+  "version": "2.4",
   "purpose": "Audios locales propios del autor para frases y tareas de comprensión auditiva de Francés A1. No se graba al alumnado.",
   "enabledInIndex": true,
   "flashcardFiles": [
@@ -34,7 +34,15 @@
     { "phrase": "Je ne comprends pas", "file": "je-ne-comprends-pas.mp3" },
     { "phrase": "Pouvez-vous répéter, s'il vous plaît ?", "file": "pouvez-vous-repeter.mp3" },
     { "phrase": "Pouvez-vous parler plus lentement ?", "file": "parler-plus-lentement.mp3" },
-    { "phrase": "Pouvez-vous m'aider ?", "file": "pouvez-vous-maider.mp3" }
+    { "phrase": "Pouvez-vous m'aider ?", "file": "pouvez-vous-maider.mp3" },
+    { "phrase": "J'ai un entretien", "file": "jai-un-entretien.mp3" },
+    { "phrase": "Je suis disponible demain", "file": "je-suis-disponible-demain.mp3" },
+    { "phrase": "C'est bien cette adresse ?", "file": "cest-bien-cette-adresse.mp3" },
+    { "phrase": "Je voudrais un café", "file": "je-voudrais-un-cafe.mp3" },
+    { "phrase": "Un billet, s'il vous plaît", "file": "un-billet-sil-vous-plait.mp3" },
+    { "phrase": "Je vais à la pharmacie", "file": "je-vais-a-la-pharmacie.mp3" },
+    { "phrase": "La salle est à gauche", "file": "la-salle-est-a-gauche.mp3" },
+    { "phrase": "Je dois partir", "file": "je-dois-partir.mp3" }
   ],
   "listeningFiles": [
     {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "resourceVersion": "2.3.3",
+  "resourceVersion": "2.4",
   "language": {
     "code": "xx",
     "name": "Idioma",
@@ -74,6 +74,7 @@
   "adaptationChecklist": [
     "Mantener nivel inicial A1 o equivalente.",
     "Usar frases funcionales y memorizables.",
+    "Combinar repetición de funciones clave con variaciones de contexto.",
     "Evitar datos personales reales.",
     "Mantener enfoque adulto y no infantilizado.",
     "Revisar privacidad y límites institucionales."

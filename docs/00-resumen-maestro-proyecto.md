@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.3.3
+**Versión de referencia:** 2.4
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -44,7 +44,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **2.3.3** se mantiene como recurso web estático e instalable:
+La versión **2.4** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - documentación en `/docs/`;
@@ -88,6 +88,8 @@ La versión **2.3.1** incorpora los cinco MP3 locales de comprensión auditiva y
 La versión **2.3.2** convierte las tarjetas iniciales del itinerario en accesos reales, aprovechando la expectativa de interacción detectada en revisiones de usuarios.
 
 La versión **2.3.3** rediseña los objetivos iniciales como lista informativa para reducir la ambigüedad visual en el Bloque 0.
+
+La versión **2.4** introduce redundancia inteligente con variación progresiva: se repiten funciones esenciales de A1, pero en contextos más variados como entrevista, centro de formación, estación, dirección y disponibilidad.
 
 ## 5. Privacidad y prudencia
 
@@ -139,7 +141,7 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 2.3.3 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo ajustes UX basados en feedback real sin cambiar el modelo técnico local.
+La versión 2.4 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo variación comunicativa progresiva y ajustes UX basados en feedback real sin cambiar el modelo técnico local.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 

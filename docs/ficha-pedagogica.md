@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.3.3
+**Versión:** 2.4
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -65,6 +65,7 @@ El recurso se apoya en una metodología práctica y formativa:
 - feedback inmediato;
 - progresión desde reconocimiento hasta producción guiada;
 - repetición funcional;
+- variación progresiva de contextos comunicativos;
 - uso autónomo o acompañado;
 - orientación a alumnado adulto;
 - baja carga técnica;
@@ -107,7 +108,7 @@ Presenta la finalidad general y los contenidos trabajados.
 
 ### Bloque 1 · Autodiagnóstico orientativo
 
-Actividad de 15 preguntas con feedback inmediato. Permite detectar qué conviene repasar. No tiene valor evaluativo oficial.
+Actividad de 18 preguntas con feedback inmediato. Permite detectar qué conviene repasar. No tiene valor evaluativo oficial.
 
 ### Bloque 2 · Flashcards
 
@@ -132,6 +133,8 @@ Actividad de asociación entre frases francesas e intenciones comunicativas en e
 ### Bloque 7 · Mini-situaciones comunicativas
 
 Situaciones breves en español donde el alumnado debe elegir una respuesta adecuada en francés.
+
+Desde v2.4, algunas situaciones reutilizan funciones ya trabajadas en contextos nuevos: entrevista, estación, centro de formación, disponibilidad y confirmación de dirección.
 
 ### Bloque 8 · Reto final
 
@@ -257,6 +260,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 - **v2.3.1:** incorporación de los cinco MP3 locales y activación de la reproducción en el bloque de audición.
 - **v2.3.2:** tarjetas iniciales del itinerario convertidas en accesos reales tras feedback de uso.
 - **v2.3.3:** objetivos iniciales rediseñados como lista informativa para evitar confusión con botones.
+- **v2.4:** variación comunicativa progresiva para ampliar contextos sin perder repetición útil de nivel A1.
 
 ## 14. Limitaciones
 

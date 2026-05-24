@@ -7,7 +7,7 @@
 **Tipo de documento:** criterio de ampliación de contenidos A1  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-> Nota de estado: esta guía documenta la fase histórica v2.1. El estado actual del recurso es **v2.3.3**, que ya incorpora comprensión lectora A1, comprensión auditiva con audios locales propios del autor y mejora UX de acceso y claridad inicial.
+> Nota de estado: esta guía documenta la fase histórica v2.1. El estado actual del recurso es **v2.4**, que ya incorpora comprensión lectora A1, comprensión auditiva con audios locales propios del autor, mejora UX de acceso y claridad inicial, y variación comunicativa progresiva.
 
 ## 1. Finalidad
 
@@ -31,12 +31,12 @@ Se priorizan contenidos que una persona adulta pueda necesitar en situaciones in
 
 La ampliación incorpora:
 
-- autodiagnóstico de 15 preguntas;
-- 32 flashcards de vocabulario y expresiones funcionales;
+- autodiagnóstico de 18 preguntas en el estado actual;
+- 40 flashcards de vocabulario y expresiones funcionales en el estado actual;
 - bloque nuevo **Gramática útil A1**;
 - 12 emparejamientos frase-intención;
-- 10 mini-situaciones comunicativas;
-- 8 retos finales aleatorios;
+- 14 mini-situaciones comunicativas en el estado actual;
+- 12 retos finales aleatorios en el estado actual;
 - inventario `assets/lang/fr-a1-content.json` actualizado.
 
 ## 4. Gramática funcional incluida

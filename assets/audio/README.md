@@ -4,7 +4,7 @@ Esta carpeta queda preparada para incorporar audios de pronunciación creados pr
 
 No está pensada para grabar al alumnado ni para recoger voces, nombres o datos personales.
 
-Estado del recurso: v2.3.1. La comprensión auditiva A1 incorpora cinco audios locales propios del autor. El criterio no cambia: solo se contemplan audios locales incluidos como archivos estáticos, sin grabar al alumnado.
+Estado del recurso: v2.4. La comprensión auditiva A1 incorpora cinco audios locales propios del autor. El criterio no cambia: solo se contemplan audios locales incluidos como archivos estáticos, sin grabar al alumnado.
 
 ## Archivos previstos
 
@@ -20,6 +20,8 @@ Los nombres esperados por el recurso son:
 - `ou-est.mp3`
 - `je-ne-comprends-pas.mp3`
 - `pouvez-vous-repeter.mp3`
+
+En v2.4 se añaden nuevas frases al inventario de flashcards. Sus audios de flashcard siguen siendo opcionales y no están activados hasta que existan todos los archivos correspondientes.
 
 ## Recomendación técnica
 

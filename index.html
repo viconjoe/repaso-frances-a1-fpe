@@ -18,7 +18,7 @@
   <!--
     Repaso Final Francés A1 · Kit interactivo
     Autor: Joel Concepción Villanueva
-    Versión: 2.3.3
+    Versión: 2.4
     Contexto: itinerario de habilitación docente FPE · prácticas 2026
     Uso previsto: propuesta pedagógica complementaria de repaso y evidencia de portfolio docente.
     Datos: no recoge nombres completos, emails, teléfonos ni información personal.
@@ -143,6 +143,11 @@
     ──────────────────────────────────────────────────────────────────────
     [v2.3.3] Objetivos Comprender/Responder/Practicar rediseñados como lista informativa.
     [v2.3.3] Reducción de ambigüedad visual en el Bloque 0.
+
+    Cambios v2.4:
+    ──────────────────────────────────────────────────────────────────────
+    [v2.4] Redundancia inteligente con variación progresiva en contenidos A1.
+    [v2.4] Ampliación controlada de vocabulario, lectura, situaciones y reto final.
   -->
 
   <style>
@@ -2124,7 +2129,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.3.3 · Objetivos iniciales más claros · Itinerario táctil · Sin recogida de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 2.4 · Variación comunicativa A1 · Itinerario táctil · Sin recogida de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2467,7 +2472,10 @@
       { q: "¿Qué palabra corresponde a 'lunes'?", options: ["Dimanche", "Lundi", "Mercredi", "Samedi"], answer: 1, exp: "«Lundi» significa lunes." },
       { q: "Elige una frase para pedir ayuda en la ciudad.", options: ["Je vais bien.", "Pouvez-vous m'aider ?", "Je suis espagnol.", "C'est mon cahier."], answer: 1, exp: "«Pouvez-vous m'aider ?» es una petición educada de ayuda." },
       { q: "¿Qué significa Je vais prendre le bus?", options: ["Voy a coger el bus", "Trabajo en el bus", "Busco el bus", "El bus cuesta caro"], answer: 0, exp: "«Je vais + infinitivo» expresa un plan próximo." },
-      { q: "¿Qué frase sirve en un restaurante?", options: ["L'addition, s'il vous plaît.", "Je suis à la retraite.", "C'est mon ordinateur.", "Il est mardi."], answer: 0, exp: "«L'addition, s'il vous plaît» significa «La cuenta, por favor»." }
+      { q: "¿Qué frase sirve en un restaurante?", options: ["L'addition, s'il vous plaît.", "Je suis à la retraite.", "C'est mon ordinateur.", "Il est mardi."], answer: 0, exp: "«L'addition, s'il vous plaît» significa «La cuenta, por favor»." },
+      { q: "¿Cómo dices que tienes una entrevista?", options: ["J'ai un entretien.", "Je prends un café.", "Il est fermé.", "Je suis perdu."], answer: 0, exp: "«J'ai un entretien» sirve para decir que tienes una entrevista." },
+      { q: "¿Qué frase sirve para confirmar una dirección?", options: ["C'est bien cette adresse ?", "Je voudrais une pomme.", "Je suis à la retraite.", "Il pleut beaucoup."], answer: 0, exp: "«C'est bien cette adresse ?» pregunta si esa dirección es correcta." },
+      { q: "¿Qué significa Je suis disponible demain ?", options: ["Estoy disponible mañana", "Estoy cerrado mañana", "Vivo mañana", "Compro mañana"], answer: 0, exp: "Es una frase útil para una cita, curso o entrevista." }
     ];
 
     function renderQuiz() {
@@ -2612,6 +2620,42 @@
         options: ["14 h 30", "16 h 30", "17 h", "A las 15 h"],
         answer: 1,
         exp: "El mensaje dice «part à 16 h 30»."
+      },
+      {
+        title: "Nota de entrevista",
+        text: [
+          "Bonjour Sofia,",
+          "Votre entretien est jeudi à 11 h.",
+          "Apportez votre CV et une pièce d'identité."
+        ],
+        q: "¿Qué debe llevar Sofia?",
+        options: ["Un café", "Su CV y un documento de identidad", "Un billete de bus", "Un menú"],
+        answer: 1,
+        exp: "La nota dice «Apportez votre CV et une pièce d'identité»."
+      },
+      {
+        title: "Mensaje de centro de formación",
+        text: [
+          "Le bureau est au premier étage.",
+          "La salle 3 est à droite.",
+          "L'accueil est ouvert de 9 h à 13 h."
+        ],
+        q: "¿Dónde está la sala 3?",
+        options: ["A la izquierda", "A la derecha", "En la estación", "En la tienda"],
+        answer: 1,
+        exp: "La pista es «La salle 3 est à droite»."
+      },
+      {
+        title: "Aviso de cita",
+        text: [
+          "Bonjour,",
+          "Je suis disponible demain matin.",
+          "Est-ce possible à 10 h ?"
+        ],
+        q: "¿Cuándo está disponible la persona?",
+        options: ["Esta tarde", "Mañana por la mañana", "El domingo", "A las 14 h"],
+        answer: 1,
+        exp: "El texto dice «demain matin»."
       }
     ];
 
@@ -2873,7 +2917,15 @@
       { fr: "Je ne comprends pas", es: "No entiendo", hint: "Pedir apoyo", audio: "je-ne-comprends-pas.mp3" },
       { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?", hint: "Pedir repetición", audio: "pouvez-vous-repeter.mp3" },
       { fr: "Pouvez-vous parler plus lentement ?", es: "¿Puede hablar más despacio?", hint: "Aclaración", audio: "parler-plus-lentement.mp3" },
-      { fr: "Pouvez-vous m'aider ?", es: "¿Puede ayudarme?", hint: "Solicitar ayuda", audio: "pouvez-vous-maider.mp3" }
+      { fr: "Pouvez-vous m'aider ?", es: "¿Puede ayudarme?", hint: "Solicitar ayuda", audio: "pouvez-vous-maider.mp3" },
+      { fr: "J'ai un entretien", es: "Tengo una entrevista", hint: "Trabajo y gestión", audio: "jai-un-entretien.mp3" },
+      { fr: "Je suis disponible demain", es: "Estoy disponible mañana", hint: "Cita y disponibilidad", audio: "je-suis-disponible-demain.mp3" },
+      { fr: "C'est bien cette adresse ?", es: "¿Es correcta esta dirección?", hint: "Confirmar información", audio: "cest-bien-cette-adresse.mp3" },
+      { fr: "Je voudrais un café", es: "Quisiera un café", hint: "Petición concreta", audio: "je-voudrais-un-cafe.mp3" },
+      { fr: "Un billet, s'il vous plaît", es: "Un billete, por favor", hint: "Transporte", audio: "un-billet-sil-vous-plait.mp3" },
+      { fr: "Je vais à la pharmacie", es: "Voy a la farmacia", hint: "Ciudad y necesidad cotidiana", audio: "je-vais-a-la-pharmacie.mp3" },
+      { fr: "La salle est à gauche", es: "La sala está a la izquierda", hint: "Centro de formación", audio: "la-salle-est-a-gauche.mp3" },
+      { fr: "Je dois partir", es: "Tengo que irme", hint: "Situación cotidiana", audio: "je-dois-partir.mp3" }
     ];
 
     let flashIndex = Number.isInteger(state.flashIndex) ? state.flashIndex : 0;
@@ -3047,7 +3099,11 @@
       { id: "repeat", fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "Pedir que repitan" },
       { id: "slow", fr: "Pouvez-vous parler plus lentement ?", es: "Pedir que hablen más despacio" },
       { id: "help", fr: "Excusez-moi", es: "Llamar la atención con educación" },
-      { id: "want", fr: "Je voudrais…", es: "Pedir algo de forma cortés" }
+      { id: "want", fr: "Je voudrais…", es: "Pedir algo de forma cortés" },
+      { id: "interview", fr: "J'ai un entretien", es: "Decir que tengo una entrevista" },
+      { id: "available", fr: "Je suis disponible demain", es: "Indicar disponibilidad" },
+      { id: "confirm-address", fr: "C'est bien cette adresse ?", es: "Confirmar una dirección" },
+      { id: "ticket", fr: "Un billet, s'il vous plaît", es: "Pedir un billete" }
     ];
 
     let selectedLeft = null;
@@ -3167,7 +3223,11 @@
       { s: "Tienes una cita en recepción y quieres decirlo.", options: ["J'ai rendez-vous", "Je vais prendre le bus", "Il fait chaud", "Je ne travaille pas"], answer: 0, exp: "«J'ai rendez-vous» significa que tienes una cita." },
       { s: "Quieres decir que vas a coger el autobús.", options: ["Je vais prendre le bus", "Je prends la pomme", "Je cherche la gare", "Je suis bus"], answer: 0, exp: "«Je vais + infinitivo» expresa un plan próximo." },
       { s: "La persona habla muy rápido y necesitas que vaya más despacio.", options: ["Pouvez-vous parler plus lentement ?", "Combien ça coûte ?", "Je suis espagnol", "C'est mon cahier"], answer: 0, exp: "Es una frase clave para interacción oral A1." },
-      { s: "En una tienda quieres pedir un kilo de manzanas.", options: ["Un kilo de pommes, s'il vous plaît", "Il est neuf heures", "Je m'appelle pommes", "Où est le bus ?"], answer: 0, exp: "La estructura cantidad + producto es útil en compras básicas." }
+      { s: "En una tienda quieres pedir un kilo de manzanas.", options: ["Un kilo de pommes, s'il vous plaît", "Il est neuf heures", "Je m'appelle pommes", "Où est le bus ?"], answer: 0, exp: "La estructura cantidad + producto es útil en compras básicas." },
+      { s: "Llegas a una entrevista y quieres explicar por qué estás allí.", options: ["J'ai un entretien", "Je voudrais une pomme", "Il pleut", "Je vais à la plage"], answer: 0, exp: "«J'ai un entretien» amplía la función de cita hacia contexto laboral." },
+      { s: "Te dan una dirección y quieres confirmar que es correcta.", options: ["C'est bien cette adresse ?", "Je suis disponible demain", "Un billet, s'il vous plaît", "Je ne travaille pas"], answer: 0, exp: "Confirmar información es una estrategia útil para evitar errores." },
+      { s: "En una estación quieres pedir un billete.", options: ["Un billet, s'il vous plaît", "L'addition, s'il vous plaît", "Je suis à la retraite", "C'est mon cahier"], answer: 0, exp: "«Un billet, s'il vous plaît» reutiliza la fórmula de cortesía en transporte." },
+      { s: "Te proponen una cita para mañana y puedes asistir.", options: ["Je suis disponible demain", "Je ne comprends pas", "Où est la gare ?", "Il est fermé"], answer: 0, exp: "La disponibilidad se expresa con «Je suis disponible...»." }
     ];
 
     function renderScenario() {
@@ -3251,7 +3311,11 @@
       "Conoces a una persona nueva. Saluda, di tu nombre, dónde vives y cómo estás.",
       "Tienes una cita. Saluda, di tu nombre y explica que tienes una cita.",
       "Vas a usar transporte. Di a dónde vas y que vas a coger el autobús.",
-      "Buscas empleo. Preséntate y di en una frase sencilla que buscas trabajo."
+      "Buscas empleo. Preséntate y di en una frase sencilla que buscas trabajo.",
+      "Llegas a una entrevista. Saluda, di tu nombre y explica que tienes una entrevista.",
+      "Estás en un centro de formación. Pregunta por una sala y confirma la dirección.",
+      "Estás en una estación. Saluda, pide un billete y pregunta el precio.",
+      "Necesitas cambiar una cita. Di que estás disponible mañana y pide que repitan la hora."
     ];
 
     document.getElementById("generatePromptBtn").addEventListener("click", () => {
@@ -3368,7 +3432,7 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "2.3.3",
+        version: "2.4",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
         quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
         quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
