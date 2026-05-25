@@ -12,6 +12,7 @@ Este historial resume la evolución del recurso didáctico digital complementari
 - Mantiene el recorrido completo con las 18 preguntas.
 - Actualiza textos de interfaz para distinguir repaso rápido y recorrido completo.
 - Actualiza caché PWA a `repaso-frances-a1-v3.1`.
+- Prepara sincronización del despliegue público histórico con v3.1, metadatos del recurso y redacción de privacidad más precisa.
 
 ## v3.0
 

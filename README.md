@@ -146,14 +146,14 @@ El recurso:
 - no usa formularios externos;
 - no incorpora analítica;
 - no incorpora IA/API;
-- no recoge datos personales en servidores;
+- no solicita ni transmite datos personales;
 - no guarda grabaciones orales en `localStorage` ni en el informe.
 
 En el reto final se recomienda usar solo un nombre de pila o un nombre ficticio para practicar la frase `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
 
 La grabación oral de v2.8 es opcional y temporal. Solo funciona si el usuario acepta el aviso de privacidad y concede permiso de micrófono al navegador. El audio queda en memoria local de la página para escucharlo, borrarlo o descargar una copia local. No se sube, no se analiza, no se añade al informe y desaparece al borrar, cambiar de práctica o cerrar/recargar la página.
 
-El progreso se guarda únicamente en el navegador del usuario mediante `localStorage`.
+Este recurso no solicita ni transmite datos personales. El progreso y el texto que escribas quedan únicamente en este navegador. Si usas un dispositivo compartido, borra el progreso local al terminar.
 
 ## Características técnicas
 
@@ -247,7 +247,7 @@ repaso-frances-a1-fpe/
     └── roadmap-producto-multidioma.md
 ```
 
-La carpeta `assets/audio/` incluye los cinco audios locales de comprensión auditiva A1 y mantiene el inventario de audios previstos para flashcards. Las grabaciones orales opcionales de v2.8 no se guardan en esa carpeta ni forman parte del repositorio.
+La carpeta `assets/audio/` incluye cinco audios locales reales de comprensión auditiva A1. Las flashcards mantienen referencias de inventario para posibles audios futuros, pero el botón de audio local de flashcards permanece oculto mientras esos MP3 no existan. Las grabaciones orales opcionales de v2.8 no se guardan en esa carpeta ni forman parte del repositorio.
 
 ## Documentación complementaria
 
