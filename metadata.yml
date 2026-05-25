@@ -1,13 +1,28 @@
-id: efj-001-frances-a1-repaso-final
-title: Repaso Final Frances A1 · Kit interactivo
-project: El Formador Junior
-linea: idiomas-basicos
-resource_type: app-interactiva
-audience: personas adultas
-level: inicial-a1
-status: publicado
-version: 3.1
-license_code: MIT
-license_content: CC BY-NC-SA 4.0
-data_privacy: No solicita ni transmite datos personales; usa almacenamiento local del navegador
-institutional_status: Recurso personal no oficial
+id: "efj-001-frances-a1-repaso-final"
+title: "Repaso Final Francés A1 · Kit interactivo"
+project: "El Formador Junior"
+linea: "idiomas-basicos"
+resource_type: "app-interactiva"
+audience: "personas adultas"
+level: "inicial-a1"
+status: "publicado"
+version: "3.1"
+public_url: "https://viconjoe.github.io/repaso-frances-a1-fpe/"
+repository_url: "https://github.com/viconjoe/repaso-frances-a1-fpe"
+historical_url: "https://elinversorjunior-lgtm.github.io/repaso-frances-a1-fpe/"
+historical_repository_url: "https://github.com/elinversorjunior-lgtm/repaso-frances-a1-fpe"
+license_code: "MIT"
+license_content: "CC BY-NC-SA 4.0"
+data_privacy: "No solicita ni transmite datos personales; usa almacenamiento local del navegador"
+institutional_status: "Recurso personal no oficial"
+official_status:
+  is_official: false
+  institution_links: "Sin vínculo institucional directo con ICSE ni con el SCE"
+  evaluation_status: "No sustituye programación, materiales ni evaluación oficial"
+technical_profile:
+  backend: false
+  login: false
+  analytics: false
+  external_forms: false
+  ai_api: false
+  external_data_submission: false

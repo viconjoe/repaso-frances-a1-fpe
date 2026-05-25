@@ -36,7 +36,7 @@ No se recomienda cambiar en una adaptacion basica:
 - ausencia de analitica;
 - ausencia de formularios externos;
 - ausencia de IA/API;
-- ausencia de recogida de datos personales;
+- ausencia de solicitud o transmisión de datos personales;
 - generacion local del informe;
 - uso de `localStorage` solo en navegador;
 - nota institucional de caracter no oficial.
@@ -131,5 +131,5 @@ Una adaptacion correcta debe producir un recurso:
 - usable desde movil;
 - documentado;
 - no oficial;
-- sin recogida de datos personales;
+- sin solicitud ni transmisión de datos personales;
 - reutilizable como evidencia de portfolio docente o como material complementario de aula.

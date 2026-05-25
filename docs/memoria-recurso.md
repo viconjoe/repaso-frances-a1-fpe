@@ -60,7 +60,7 @@ Reforzar contenidos básicos de Francés A1 mediante una herramienta digital int
 
 ### Simplicidad
 
-El recurso debe ser fácil de abrir, usar y entender. Se evita crear una aplicación compleja con login, backend o recogida de datos.
+El recurso debe ser fácil de abrir, usar y entender. Se evita crear una aplicación compleja con login, backend o solicitud y transmisión de datos personales.
 
 ### Utilidad pedagógica
 
@@ -159,7 +159,7 @@ Desde v2.8 se usa `MediaRecorder`, una API nativa del navegador, solo para graba
 
 ## 9. Privacidad
 
-El recurso no solicita datos personales.
+Este recurso no solicita ni transmite datos personales. El progreso y el texto que escribas quedan únicamente en este navegador. Si usas un dispositivo compartido, borra el progreso local al terminar.
 
 No pide nombre completo, email, teléfono, DNI, cuenta de usuario, contraseñas ni información sensible.
 
@@ -335,7 +335,7 @@ Corrección de UX tras revisión externa:
 Ampliación pedagógica de Francés A1:
 
 - autodiagnóstico ampliado de 10 a 15 preguntas;
-- flashcards ampliadas de 10 a 32 expresiones;
+- flashcards ampliadas progresivamente hasta 40 expresiones en v3.1;
 - incorporación de un bloque de gramática útil A1;
 - ampliación de emparejamientos frase-intención;
 - ampliación de mini-situaciones comunicativas;
@@ -524,7 +524,7 @@ El recurso demuestra:
 - despliegue en GitHub Pages;
 - mejora iterativa a partir de feedback;
 - documentación pedagógica asociada;
-- generación prudente de evidencia local sin servidor ni recogida de datos.
+- generación prudente de evidencia local sin servidor ni solicitud o transmisión de datos personales.
 
 Como portfolio docente, el recurso permite mostrar no solo el producto final, sino también un proceso de diseño, revisión, documentación y mejora.
 

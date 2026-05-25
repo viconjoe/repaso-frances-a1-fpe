@@ -64,7 +64,7 @@ La versión 2.1 no añadía todavía:
 - analítica;
 - formularios externos;
 - IA/API;
-- recogida de datos personales.
+- solicitud o transmisión de datos personales.
 
 Esos aspectos se reservan para fases posteriores.
 

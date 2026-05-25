@@ -175,7 +175,7 @@ El feedback es local, básico y orientativo.
 
 No debe usarse como calificación oficial salvo decisión expresa del equipo docente responsable.
 
-No incorpora backend, login, formularios externos, analítica, APIs externas, IA ni recogida de datos personales.
+No incorpora backend, login, formularios externos, analítica, APIs externas, IA ni solicitud o transmisión de datos personales.
 
 ## 9. Nota multidioma
 

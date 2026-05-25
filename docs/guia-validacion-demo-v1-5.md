@@ -42,7 +42,7 @@ Comprobaciones realizadas en local:
 - `manifest.webmanifest` es válido;
 - el manifest declara 3 iconos;
 - el service worker se registra en servidor local `http`;
-- la PWA conserva el enfoque sin backend, login, analítica, formularios externos, IA/API ni recogida de datos.
+- la PWA conserva el enfoque sin backend, login, analítica, formularios externos, IA/API ni solicitud o transmisión de datos personales.
 
 ## 4. Checklist antes de presentar
 
@@ -66,7 +66,7 @@ Duración sugerida: 60-90 segundos.
 
 Presentar el recurso:
 
-> Este es un recurso digital complementario de repaso de Francés A1 para alumnado adulto. Es una herramienta personal de portfolio docente, no oficial y sin recogida de datos personales.
+> Este es un recurso digital complementario de repaso de Francés A1 para alumnado adulto. Es una herramienta personal de portfolio docente, no oficial y sin solicitud o transmisión de datos personales.
 
 ### 10-25 segundos
 

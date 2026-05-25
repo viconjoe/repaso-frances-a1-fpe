@@ -293,7 +293,7 @@
       backdrop-filter: blur(10px);
       background: rgba(246, 243, 238, 0.82);
       border-bottom: 1px solid rgba(217, 209, 197, 0.65);
-      overflow: hidden;
+      overflow: visible;
     }
 
     nav::after {
@@ -305,7 +305,7 @@
       height: 100%;
       pointer-events: none;
       background: linear-gradient(90deg, rgba(246, 243, 238, 0), rgba(246, 243, 238, 0.95));
-      opacity: 1;
+      opacity: 0;
       transition: opacity 0.18s ease;
     }
 
@@ -316,8 +316,10 @@
       width: min(1120px, calc(100% - 2rem));
       margin: 0 auto;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 0.5rem;
-      overflow-x: auto;
+      overflow-x: visible;
       padding: 0.75rem 0;
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -1560,7 +1562,7 @@
 
         <span class="eyebrow desktop-eyebrow">🇫🇷 Francés A1 · Repaso final · Alumnado adulto</span>
         <h1 class="desktop-main-title">Repaso Final Francés A1</h1>
-        <p class="lead desktop-lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional, gramática útil y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin recogida de datos personales.</p>
+        <p class="lead desktop-lead">Kit interactivo para repasar expresiones básicas, vocabulario funcional, gramática útil y situaciones comunicativas del nivel A1. Diseñado como recurso complementario, sin solicitud ni transmisión de datos personales.</p>
 
         <div class="mobile-info-drawers no-print" aria-label="Información breve del recurso">
           <details class="info-drawer">
@@ -1864,7 +1866,7 @@
         <div class="flashcard-panel">
           <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Tarjeta de vocabulario. Pulsa para girar.">
             <span class="label" id="flashLabel">Francés</span>
-          <span class="counter" id="flashCounter" aria-live="polite">1 / 32</span>
+          <span class="counter" id="flashCounter" aria-live="polite">1 / 40</span>
             <div class="flash-content">
               <div class="flash-main" id="flashMain">Bonjour</div>
               <div class="flash-sub" id="flashSub">Pulsa para ver la traducción</div>

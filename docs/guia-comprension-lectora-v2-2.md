@@ -47,7 +47,7 @@ La persona docente puede pedir al grupo:
 
 ## 5. Privacidad y límites
 
-La comprensión lectora no solicita datos personales ni respuestas abiertas. Todo funciona en local, sin backend, sin login, sin analítica, sin formularios externos y sin IA/API.
+La comprensión lectora no solicita ni transmite datos personales ni respuestas abiertas. Todo funciona en local, sin backend, sin login, sin analítica, sin formularios externos y sin IA/API.
 
 El resultado aparece en el informe local solo como evidencia orientativa de práctica. No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 

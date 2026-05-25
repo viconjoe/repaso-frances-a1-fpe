@@ -134,7 +134,7 @@ Actividad con 12 preguntas en repaso rápido o 18 en recorrido completo, siempre
 
 ### Bloque 2 · Flashcards
 
-Tarjetas de frases útiles con traducción y apoyo de pronunciación experimental. Permiten repasar de forma autónoma. El banco de frases permite saltar directamente a una tarjeta concreta.
+40 tarjetas de frases útiles con traducción y apoyo de pronunciación experimental. Permiten repasar de forma autónoma. El banco de frases permite saltar directamente a una tarjeta concreta.
 
 ### Bloque 3 · Gramática útil A1
 
@@ -246,7 +246,7 @@ No pretende ser una auditoría WCAG completa, pero sí aplica criterios básicos
 
 ## 11. Privacidad y protección de datos
 
-El recurso no recoge datos personales en servidores. La grabación oral opcional de v2.8 es local, temporal y no se incorpora al informe.
+El recurso no solicita ni transmite datos personales. La grabación oral opcional de v2.8 es local, temporal y no se incorpora al informe.
 
 No solicita:
 

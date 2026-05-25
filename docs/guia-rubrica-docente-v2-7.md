@@ -26,7 +26,7 @@ La rúbrica:
 - no sustituye los criterios establecidos por la docente titular, el centro o la entidad responsable;
 - no tiene vínculo institucional directo con ICSE ni con el SCE;
 - no genera actas, certificados ni calificaciones oficiales;
-- no recoge datos personales;
+- no solicita ni transmite datos personales;
 - no envía información a servidores externos.
 
 Debe presentarse como una herramienta de **observación cualitativa** y de **documentación docente**, no como nota final.
