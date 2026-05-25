@@ -34,7 +34,7 @@ La fase v1.4 incorpora:
 - metadatos en `index.html` para `theme-color`, manifest e iconos;
 - registro prudente del service worker solo en `http` o `https`.
 
-La revisión v2.8 confirma que estos archivos existen en el repositorio. La instalación sigue siendo ligera y no añade backend, cuentas, analítica ni envío de datos.
+La revisión v3.1 confirma que estos archivos existen en el repositorio. La instalación sigue siendo ligera y no añade backend, cuentas, analítica ni envío de datos.
 
 ## 3. Funcionamiento esperado
 

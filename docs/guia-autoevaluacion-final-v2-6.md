@@ -3,7 +3,7 @@
 **Versión de referencia:** 2.6  
 **Autor:** Joel Concepción Villanueva
 
-> Nota de estado: esta guía documenta la fase v2.6. El estado actual del recurso es **v2.8**, que añade una rúbrica docente/documental como apoyo cualitativo no oficial y grabación local opcional para autoescucha oral.
+> Nota de estado: esta guía documenta la fase v2.6. El estado actual del recurso es **v3.1**, que mantiene la rúbrica docente/documental como apoyo cualitativo no oficial, la grabación local opcional para autoescucha oral, 40 flashcards, repaso rápido de 12 preguntas y recorrido completo de 18 preguntas.
 
 ## Finalidad
 

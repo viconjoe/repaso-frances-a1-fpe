@@ -4,7 +4,7 @@
 **Autor:** Joel Concepción Villanueva  
 **Estado:** apoyo documental y orientativo, no evaluativo oficial
 
-> Nota de estado: esta guía documenta la fase v2.7. El estado actual del recurso es **v2.8**, que añade grabación local opcional para autoescucha oral sin subir audio ni incorporarlo a la rúbrica o al informe.
+> Nota de estado: esta guía documenta la fase v2.7. El estado actual del recurso es **v3.1**, que mantiene grabación local opcional para autoescucha oral sin subir audio ni incorporarlo a la rúbrica o al informe, y consolida repaso rápido, recorrido completo, 40 flashcards y documentación de validación.
 
 ## 1. Finalidad
 

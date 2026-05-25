@@ -95,3 +95,27 @@
 - [ ] Validacion completada en movil.
 - [ ] Incidencias documentadas.
 - [ ] Capturas actualizadas si procede.
+
+## 10. Auditoria tecnica Codex 2026-05-25
+
+Verificado en repositorio local:
+
+- Version documental y tecnica alineada con v3.1.
+- URL activa documentada como `https://viconjoe.github.io/repaso-frances-a1-fpe/`.
+- URL `elinversorjunior-lgtm` tratada como historica o de continuidad.
+- Repaso rapido: 12 preguntas.
+- Recorrido completo: 18 preguntas.
+- Flashcards: 40 entradas.
+- Audicion: 5 tareas y 5 MP3 reales en `assets/audio/`.
+- `LOCAL_AUDIO_ENABLED = false`, por lo que el audio local de flashcards no se muestra mientras falten sus MP3.
+- `sw.js` usa `repaso-frances-a1-v3.1` e incluye `data-frances-a1.js`.
+- No se detectan `sessionStorage`, `indexedDB`, `sendBeacon`, `gtag`, formularios HTML ni analitica.
+- La grabacion oral opcional usa `getUserMedia` y `MediaRecorder` solo tras accion del usuario; no se guarda en `localStorage` ni se incorpora al informe.
+- El borrado local elimina las claves propias `STORAGE_KEY` y `SPEED_STORAGE_KEY`.
+
+Pendiente de validacion manual:
+
+- Revisar Cache Storage y service worker desde DevTools en navegador real.
+- Confirmar reproduccion de los cinco audios en navegador normal e incognito.
+- Confirmar navegacion completa por teclado y foco visible en navegador real.
+- Confirmar uso en movil real.
