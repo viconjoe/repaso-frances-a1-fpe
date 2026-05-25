@@ -6,7 +6,7 @@
 
 ## 1. Finalidad
 
-La versión v2.8 incorpora una **grabación local opcional** dentro del bloque de expresión oral guiada.
+La fase histórica v2.8 incorpora una **grabación local opcional** dentro del bloque de expresión oral guiada. El estado actual del recurso es v3.1.
 
 Su finalidad es que el alumnado adulto pueda escucharse después de practicar una respuesta breve de Francés A1 y decidir si quiere repetirla.
 
