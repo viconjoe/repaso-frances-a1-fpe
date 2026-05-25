@@ -93,6 +93,12 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 - dossier de producto demostrativo;
 - guía de adaptación prudente a contextos FPE y otros idiomas iniciales.
 
+## EFJ-001 · Recurso piloto estable
+
+La v3.1 se prepara como cierre del piloto **EFJ-001 · Repaso Final Francés A1 · Kit interactivo** dentro de El Formador Junior.
+
+Su uso recomendado es complementario: repaso guiado en aula, práctica autónoma, evidencia de portfolio técnico-docente y modelo reutilizable para futuros recursos de idiomas iniciales. Mantiene carácter no oficial, sin vínculo institucional directo con ICSE ni con el SCE, sin valor evaluativo oficial y sin sustitución de programación, materiales o evaluación del curso.
+
 ## Estructura del recurso
 
 El recurso incluye estos bloques principales:
@@ -244,6 +250,10 @@ repaso-frances-a1-fpe/
     ├── guia-grabacion-local-opcional-v2-8.md
     ├── auditoria-accesibilidad-basica-v3-1.md
     ├── checklist-validacion-v3-1.md
+    ├── checklist-cierre-v3.1.md
+    ├── caso-uso-aula-20-min.md
+    ├── evidencia-portfolio-efj001.md
+    ├── release-notes-v3.1.md
     ├── dossier-producto-demostrativo-v2.md
     ├── guia-adaptacion-contextos-fpe-v2.md
     ├── guia-visual-pictogramas.md
@@ -279,6 +289,10 @@ La carpeta `assets/audio/` incluye cinco audios locales reales de comprensión a
 - [Guía de grabación local opcional v2.8](docs/guia-grabacion-local-opcional-v2-8.md)
 - [Auditoría de accesibilidad básica v3.1](docs/auditoria-accesibilidad-basica-v3-1.md)
 - [Checklist de validación v3.1](docs/checklist-validacion-v3-1.md)
+- [Checklist de cierre v3.1](docs/checklist-cierre-v3.1.md)
+- [Caso de uso en aula 20-30 min](docs/caso-uso-aula-20-min.md)
+- [Evidencia de portfolio EFJ-001](docs/evidencia-portfolio-efj001.md)
+- [Release notes v3.1](docs/release-notes-v3.1.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)

@@ -7,6 +7,7 @@ Este historial resume la evolución del recurso didáctico digital complementari
 
 ## v3.1
 
+- Cierra la version como **EFJ-001 · piloto estable** de El Formador Junior.
 - Optimiza el repaso rápido para que sea más realista en una práctica breve.
 - Añade `EIJ_DIAGNOSTICO_RAPIDO` con 12 preguntas seleccionadas del autodiagnóstico completo.
 - Mantiene el recorrido completo con las 18 preguntas.
@@ -16,6 +17,7 @@ Este historial resume la evolución del recurso didáctico digital complementari
 - Prepara sincronización del despliegue público histórico con v3.1, metadatos del recurso y redacción de privacidad más precisa.
 - Alinea `metadata.yml` con URL activa, URL histórica, licencias y privacidad.
 - Añade auditoría básica de accesibilidad y checklist de validación v3.1 sin declarar cumplimiento WCAG formal.
+- Añade checklist de cierre, caso de uso en aula 20-30 min, evidencia de portfolio y notas de release v3.1.
 - Unifica la redacción de privacidad: no solicita ni transmite datos personales; el progreso queda en este navegador.
 
 ## v3.0
