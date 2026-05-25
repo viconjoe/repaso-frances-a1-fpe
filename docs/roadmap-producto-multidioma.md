@@ -79,7 +79,7 @@ La versión **2.0** cierra la fase de producto demostrativo completo:
 - dossier profesional de presentación;
 - guía de adaptación a contextos FPE y otros idiomas iniciales;
 - posicionamiento prudente para portfolio y demostraciones;
-- mantenimiento del enfoque gratuito, estático, instalable y sin recogida de datos personales.
+- mantenimiento del enfoque gratuito, estático, instalable y sin solicitud ni transmisión de datos personales.
 
 La versión **2.0.1** corrige dos detalles detectados en revisión externa antes de avanzar a nuevas variantes: orientación inicial del recorrido guiado y solapamiento visual en flashcards.
 
@@ -117,7 +117,7 @@ Opciones posibles:
 - plantilla clonable para otros idiomas;
 - versión demostrativa para portfolio profesional.
 
-La prioridad debería ser que funcione bien sin servidor, sin cuentas y sin recogida de datos personales.
+La prioridad debería ser que funcione bien sin servidor, sin cuentas y sin solicitud ni transmisión de datos personales.
 
 ## 5. Molde para otros idiomas
 
@@ -147,7 +147,7 @@ La evolución del producto debería mantener:
 - uso sin login;
 - ausencia de analítica invasiva;
 - ausencia de formularios externos;
-- no recogida de datos personales;
+- no solicitud ni transmisión de datos personales;
 - funcionamiento local o estático siempre que sea posible;
 - transparencia sobre límites pedagógicos;
 - separación clara entre recurso complementario y evaluación oficial.
@@ -213,7 +213,7 @@ Estado: completada como cierre demostrativo del proyecto.
 
 Una formulación prudente para portfolio o presentación sería:
 
-> Recurso didáctico digital gratuito, creado por Joel Concepción Villanueva, orientado al repaso de Francés A1 para alumnado adulto en contexto FPE. Actualmente funciona como herramienta complementaria y evidencia de competencia digital docente. A largo plazo, se proyecta como molde reutilizable para otros idiomas y como app educativa empaquetable, manteniendo privacidad, gratuidad y ausencia de recogida de datos personales.
+> Recurso didáctico digital gratuito, creado por Joel Concepción Villanueva, orientado al repaso de Francés A1 para alumnado adulto en contexto FPE. Actualmente funciona como herramienta complementaria y evidencia de competencia digital docente. A largo plazo, se proyecta como molde reutilizable para otros idiomas y como app educativa empaquetable, manteniendo privacidad, gratuidad y ausencia de solicitud o transmisión de datos personales.
 
 ## 10. Conclusión
 

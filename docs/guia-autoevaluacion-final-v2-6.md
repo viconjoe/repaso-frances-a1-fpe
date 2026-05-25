@@ -54,7 +54,7 @@ Estos perfiles ayudan a decidir qué repetir: flashcards, lectura, audición, si
 
 La autoevaluación funciona en el navegador, con `localStorage`. No usa backend, login, analítica, formularios externos ni IA/API.
 
-No solicita datos personales y no incorpora voz del alumnado. La grabación local opcional de v2.8 no se usa para calcular la autoevaluación.
+No solicita ni transmite datos personales y no incorpora voz del alumnado. La grabación local opcional de v2.8 no se usa para calcular la autoevaluación.
 
 ## Uso recomendado
 

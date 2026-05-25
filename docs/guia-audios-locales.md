@@ -31,20 +31,17 @@ Su función sería complementar:
 
 La carpeta preparada es `assets/audio/`.
 
-Los archivos previstos son:
+En v3.1 existen cinco audios locales reales para comprensión auditiva:
 
-- `bonjour.mp3`
-- `bonsoir.mp3`
-- `au-revoir.mp3`
-- `je-mappelle.mp3`
-- `jhabite-a.mp3`
-- `je-voudrais.mp3`
-- `combien-ca-coute.mp3`
-- `ou-est.mp3`
-- `je-ne-comprends-pas.mp3`
-- `pouvez-vous-repeter.mp3`
+- `listen-01-saludo-clase.mp3`
+- `listen-02-heure-cours.mp3`
+- `listen-03-achat-pommes.mp3`
+- `listen-04-bus-gare.mp3`
+- `listen-05-repeter.mp3`
 
-El inventario está descrito también en `assets/audio/audio-manifest.json`, separado entre audios de flashcards y audios de comprensión auditiva.
+Las flashcards mantienen un inventario técnico de 40 posibles audios, pero esos MP3 no están incorporados todavía. Por eso el botón **Escuchar audio local** de flashcards permanece oculto en v3.1 y se evita que el alumnado active archivos inexistentes.
+
+El inventario está descrito en `assets/audio/audio-manifest.json`, separado entre audios de flashcards y audios de comprensión auditiva.
 
 ## 4. Criterios de grabación
 
@@ -61,7 +58,7 @@ Recomendaciones:
 
 El soporte de comprensión auditiva está activado en `index.html` desde v2.3.1 porque ya existen los cinco audios locales reales.
 
-La versión 2.8 mantiene la UX móvil refinada y no cambia este criterio para `assets/audio/`: los audios locales de contenido son archivos estáticos del autor, no grabaciones del alumnado. La grabación oral opcional de v2.8 es temporal, queda en el navegador y no se incorpora a esta carpeta, al informe ni al repositorio.
+La versión 3.1 mantiene la UX móvil refinada y no cambia este criterio para `assets/audio/`: los audios locales de contenido son archivos estáticos del autor, no grabaciones del alumnado. La grabación oral opcional de v2.8 es temporal, queda en el navegador y no se incorpora a esta carpeta, al informe ni al repositorio.
 
 Si el recurso se instala como PWA, los audios de contenido solo deberían reproducirse como archivos locales estáticos incluidos en el repositorio. La grabación opcional de práctica oral no añade subida de archivos.
 

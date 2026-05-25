@@ -10,14 +10,18 @@ Este historial resume la evolución del recurso didáctico digital complementari
 - Optimiza el repaso rápido para que sea más realista en una práctica breve.
 - Añade `EIJ_DIAGNOSTICO_RAPIDO` con 12 preguntas seleccionadas del autodiagnóstico completo.
 - Mantiene el recorrido completo con las 18 preguntas.
+- Fija 40 flashcards como número oficial en los datos, la interfaz y la documentación.
 - Actualiza textos de interfaz para distinguir repaso rápido y recorrido completo.
 - Actualiza caché PWA a `repaso-frances-a1-v3.1`.
 - Prepara sincronización del despliegue público histórico con v3.1, metadatos del recurso y redacción de privacidad más precisa.
+- Alinea `metadata.yml` con URL activa, URL histórica, licencias y privacidad.
+- Añade auditoría básica de accesibilidad y checklist de validación v3.1 sin declarar cumplimiento WCAG formal.
+- Unifica la redacción de privacidad: no solicita ni transmite datos personales; el progreso queda en este navegador.
 
 ## v3.0
 
 - Consolida las correcciones de auditoría técnica y documental.
-- Añade nota operativa de despliegue: la URL publicada se mantiene en `elinversorjunior-lgtm` por continuidad, mientras `viconjoe/repaso-frances-a1-fpe` queda como copia activa de desarrollo.
+- Añade nota operativa de despliegue para distinguir la URL pública activa en `viconjoe.github.io` de la URL histórica en `elinversorjunior-lgtm`.
 - Separa los datos educativos en `data-frances-a1.js` sin usar módulos ES ni dependencias externas.
 - Mantiene la lógica principal en `index.html` referenciando los mismos nombres de datos.
 - Refuerza atributos `lang="fr"` en fragmentos franceses y ajusta opciones dinámicas según idioma detectado.

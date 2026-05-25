@@ -4,24 +4,13 @@ Esta carpeta queda preparada para incorporar audios de pronunciación creados pr
 
 No está pensada para grabar al alumnado ni para recoger voces, nombres o datos personales.
 
-Estado del recurso: v3.1. La comprensión auditiva A1 incorpora cinco audios locales propios del autor, la expresión oral guiada incluye grabación local opcional y temporal para autoescucha, la autoevaluación final es orientativa y la rúbrica docente/documental no requiere audio ni recogida de datos. El criterio para esta carpeta no cambia: solo se contemplan audios locales incluidos como archivos estáticos del autor, no grabaciones del alumnado.
+Estado del recurso: v3.1. La comprensión auditiva A1 incorpora cinco audios locales propios del autor, la expresión oral guiada incluye grabación local opcional y temporal para autoescucha, la autoevaluación final es orientativa y la rúbrica docente/documental no requiere audio ni solicitud o transmisión de datos personales. El criterio para esta carpeta no cambia: solo se contemplan audios locales incluidos como archivos estáticos del autor, no grabaciones del alumnado.
 
-## Archivos previstos
+## Audios de flashcards
 
-Los nombres esperados por el recurso son:
+Las flashcards mantienen un inventario técnico de 40 posibles archivos MP3, uno por frase. En v3.1 esos archivos no están incorporados todavía y el botón **Escuchar audio local** permanece oculto para evitar errores 404.
 
-- `bonjour.mp3`
-- `bonsoir.mp3`
-- `au-revoir.mp3`
-- `je-mappelle.mp3`
-- `jhabite-a.mp3`
-- `je-voudrais.mp3`
-- `combien-ca-coute.mp3`
-- `ou-est.mp3`
-- `je-ne-comprends-pas.mp3`
-- `pouvez-vous-repeter.mp3`
-
-En v2.4 se añaden nuevas frases al inventario de flashcards. Sus audios de flashcard siguen siendo opcionales y no están activados hasta que existan todos los archivos correspondientes.
+El inventario completo está en `assets/audio/audio-manifest.json` y en los datos del recurso. Los audios de flashcards siguen siendo opcionales y no deben activarse hasta que existan todos los archivos correspondientes o hasta que se implemente una comprobación archivo por archivo.
 
 ## Recomendación técnica
 
@@ -45,7 +34,7 @@ En v2.3.1 se incorporan estos archivos:
 
 Estos audios han sido preparados por el autor y guardados en esta carpeta.
 
-Cuando se incorporen todos los archivos, cambiar:
+Cuando se incorporen todos los archivos de flashcards, cambiar:
 
 ```js
 const LOCAL_AUDIO_ENABLED = false;

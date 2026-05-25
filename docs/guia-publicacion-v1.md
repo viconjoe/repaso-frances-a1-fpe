@@ -55,7 +55,7 @@ La página principal debe cargar `index.html`.
 
 Formulación recomendada:
 
-> Recurso didáctico digital gratuito y complementario para repaso de Francés A1, creado por Joel Concepción Villanueva como evidencia de competencia digital docente. Está orientado a alumnado adulto en contexto FPE, funciona sin backend ni recogida de datos personales y puede servir como base reutilizable para otros idiomas.
+> Recurso didáctico digital gratuito y complementario para repaso de Francés A1, creado por Joel Concepción Villanueva como evidencia de competencia digital docente. Está orientado a alumnado adulto en contexto FPE, funciona sin backend ni solicitud o transmisión de datos personales y puede servir como base reutilizable para otros idiomas.
 
 ## 5. Límites que deben comunicarse
 
@@ -64,7 +64,7 @@ Formulación recomendada:
 - No sustituye programación docente.
 - No sustituye materiales oficiales.
 - No realiza evaluación oficial.
-- No recoge datos personales.
+- No solicita ni transmite datos personales.
 - Solo permite grabación local opcional para autoescucha; no sube audio ni lo incorpora al informe.
 
 ## 6. Próximo ciclo

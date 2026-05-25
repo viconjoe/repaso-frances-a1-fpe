@@ -15,7 +15,7 @@ Esta guía documenta la evolución de la experiencia móvil del recurso hasta la
 
 La guía original nació en v1.1 para explicar el modo guiado móvil. Desde v1.2, el recurso incorpora una UX móvil más refinada, con portada compacta, mapa de bloques, selector **Ir a...** y cabecera móvil simplificada.
 
-El objetivo sigue siendo el mismo: facilitar el uso desde teléfonos sin añadir backend, login, analítica, formularios, IA/API ni recogida de datos personales.
+El objetivo sigue siendo el mismo: facilitar el uso desde teléfonos sin añadir backend, login, analítica, formularios, IA/API ni solicitud o transmisión de datos personales.
 
 ## 2. Problema detectado
 
@@ -64,7 +64,7 @@ No se copia la estética de ninguna aplicación concreta ni se incorporan elemen
 
 ## 6. Privacidad y límites
 
-La UX móvil refinada no añade recogida de datos.
+La UX móvil refinada no añade solicitud ni transmisión de datos personales.
 
 Se mantiene:
 

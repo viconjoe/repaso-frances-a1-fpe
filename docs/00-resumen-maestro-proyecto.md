@@ -72,7 +72,7 @@ El ciclo v1.2 consolidó una **UX móvil refinada**: portada compacta, descripci
 
 La versión **1.3** prepara la fase de plantilla multidioma mediante `assets/lang/`, con un inventario del contenido actual de Francés A1 y una plantilla base para adaptar el molde a otros idiomas iniciales.
 
-La versión **1.4** añade una experiencia instalable ligera tipo PWA, manteniendo la ausencia de backend, login, analítica, formularios, IA/API y recogida de datos personales.
+La versión **1.4** añade una experiencia instalable ligera tipo PWA, manteniendo la ausencia de backend, login, analítica, formularios, IA/API y solicitud o transmisión de datos personales.
 
 La versión **1.5** añade una fase de presentación profesional: capturas actuales, validación técnica ligera, checklist y guion breve de demo.
 
@@ -82,7 +82,7 @@ La versión **2.0.1** incorpora una corrección de UX tras revisión externa: a�
 
 La versión **2.1** amplía el contenido pedagógico de Francés A1: aumenta vocabulario, autodiagnóstico, emparejamientos, situaciones y retos, e incorpora un bloque de gramática útil A1.
 
-La versión **2.2** añade comprensión lectora A1 mediante textos breves, preguntas de localización de información y feedback formativo. El recurso sigue siendo local, estático y sin recogida de datos personales.
+La versión **2.2** añade comprensión lectora A1 mediante textos breves, preguntas de localización de información y feedback formativo. El recurso sigue siendo local, estático y sin solicitud ni transmisión de datos personales.
 
 La versión **2.3** prepara comprensión auditiva A1 con audios locales propios del autor. No usa micrófono, no graba al alumnado, no sube archivos y no incorpora servicios externos.
 
@@ -108,7 +108,7 @@ La versión **3.1** optimiza el repaso rápido: usa un autodiagnóstico reducido
 
 ## 5. Privacidad y prudencia
 
-El proyecto se ha diseñado con criterio de minimización de datos. No recoge datos personales ni los envía a servidores externos.
+El proyecto se ha diseñado con criterio de minimización de datos. Este recurso no solicita ni transmite datos personales. El progreso y el texto que escribas quedan únicamente en este navegador. Si usas un dispositivo compartido, borra el progreso local al terminar.
 
 En el reto final se recomienda que el alumnado use solo un **nombre de pila** o un **nombre ficticio** para practicar la frase `Je m'appelle...`.
 
@@ -171,4 +171,4 @@ Las siguientes fases deberían centrarse en:
 - ampliación gradual de audios de flashcards, si se considera útil;
 - creación de variantes de idioma a partir de la plantilla multidioma.
 
-Debe mantenerse el principio de privacidad y evitar añadir backend, analítica, formularios, IA, APIs externas o recogida de datos personales.
+Debe mantenerse el principio de privacidad y evitar añadir backend, analítica, formularios, IA, APIs externas o solicitud/transmisión de datos personales.

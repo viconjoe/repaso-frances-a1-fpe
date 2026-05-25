@@ -242,6 +242,8 @@ repaso-frances-a1-fpe/
     ├── guia-autoevaluacion-final-v2-6.md
     ├── guia-rubrica-docente-v2-7.md
     ├── guia-grabacion-local-opcional-v2-8.md
+    ├── auditoria-accesibilidad-basica-v3-1.md
+    ├── checklist-validacion-v3-1.md
     ├── dossier-producto-demostrativo-v2.md
     ├── guia-adaptacion-contextos-fpe-v2.md
     ├── guia-visual-pictogramas.md
@@ -275,6 +277,8 @@ La carpeta `assets/audio/` incluye cinco audios locales reales de comprensión a
 - [Guía de autoevaluación final v2.6](docs/guia-autoevaluacion-final-v2-6.md)
 - [Guía de rúbrica docente/documental v2.7](docs/guia-rubrica-docente-v2-7.md)
 - [Guía de grabación local opcional v2.8](docs/guia-grabacion-local-opcional-v2-8.md)
+- [Auditoría de accesibilidad básica v3.1](docs/auditoria-accesibilidad-basica-v3-1.md)
+- [Checklist de validación v3.1](docs/checklist-validacion-v3-1.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
 - [Memoria preparatoria de pilotaje](docs/memoria-pilotaje-preparatoria.md)
@@ -335,7 +339,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 - Matriz cualitativa de observación A1 con dimensiones de comprensión, interacción, expresión y autonomía.
 - Niveles descriptivos: `Inicial`, `En desarrollo` y `Consolidado orientativo`.
 - Uso previsto para portfolio, memoria de pilotaje y observación docente agregada.
-- Sin calificación oficial, sin recogida de datos, sin backend, sin login y sin envío de información.
+- Sin calificación oficial, sin solicitud ni transmisión de datos personales, sin backend, sin login y sin envío de información.
 
 ### v2.6
 
@@ -359,7 +363,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 - Se amplían vocabulario, lectura, emparejamientos, mini-situaciones y retos finales.
 - Nuevos contextos A1 adultos: entrevista, centro de formación, estación, confirmación de dirección y disponibilidad.
 - Se mantiene la comprensión auditiva con los cinco audios locales existentes, sin desincronizar archivos.
-- Sin nuevas dependencias, sin backend, sin login, sin analítica, sin formularios externos y sin recogida de datos personales.
+- Sin nuevas dependencias, sin backend, sin login, sin analítica, sin formularios externos y sin solicitud ni transmisión de datos personales.
 
 ### v2.3.3
 
@@ -401,7 +405,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 
 - Ampliación pedagógica de Francés A1.
 - Autodiagnóstico ampliado de 10 a 15 preguntas.
-- Flashcards ampliadas de 10 a 32 frases y expresiones.
+- Flashcards ampliadas progresivamente hasta 40 frases y expresiones en v3.1.
 - Nuevo bloque **Gramática útil A1**.
 - Más emparejamientos, mini-situaciones y retos finales.
 - Inventario `assets/lang/fr-a1-content.json` actualizado para facilitar futuras variantes.
@@ -411,7 +415,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 
 - Mejora de orientación inicial en móvil: se indica explícitamente el uso de **Atrás/Siguiente**.
 - Ajuste visual de flashcards para evitar solapamientos entre etiqueta, contador y traducciones largas.
-- Mantenimiento del enfoque estático, local, sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin recogida de datos personales.
+- Mantenimiento del enfoque estático, local, sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin solicitud ni transmisión de datos personales.
 
 ### v2.0
 
@@ -419,7 +423,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 - Dossier de presentación profesional del recurso.
 - Guía de adaptación prudente a contextos FPE y otros idiomas iniciales.
 - Cierre del molde gratuito, estático, instalable y reutilizable.
-- Mantenimiento del enfoque no oficial, sin vínculo institucional directo, sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin recogida de datos personales.
+- Mantenimiento del enfoque no oficial, sin vínculo institucional directo, sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin solicitud ni transmisión de datos personales.
 
 ### v1.5
 
@@ -436,7 +440,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 - Creación de `sw.js` con caché offline básica.
 - Creación de iconos locales en `assets/icons/`.
 - Registro prudente de service worker solo en `http` o `https`.
-- Mantenimiento del enfoque sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin recogida de datos personales.
+- Mantenimiento del enfoque sin backend, sin login, sin analítica, sin formularios, sin IA/API y sin solicitud ni transmisión de datos personales.
 
 ### v1.3
 

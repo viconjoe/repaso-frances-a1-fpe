@@ -83,7 +83,7 @@ Toda variante debe mantener:
 - sin analítica;
 - sin formularios externos;
 - sin IA/API;
-- sin recogida de datos personales;
+- sin solicitud ni transmisión de datos personales;
 - progreso local mediante `localStorage`;
 - recomendación de usar nombre de pila o ficticio en actividades de presentación.
 

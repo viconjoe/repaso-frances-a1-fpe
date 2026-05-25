@@ -11,7 +11,7 @@
 
 **Repaso Final Frances A1 · Kit interactivo** es un recurso didactico digital gratuito, estatico e instalable, orientado al repaso final de Frances A1 para alumnado adulto en contexto FPE.
 
-La version **2.0** consolida el proyecto como producto demostrativo completo: no lo convierte en plataforma, no incorpora backend y no abre recogida de datos. Su valor esta en mostrar un molde realista, reutilizable y prudente para crear recursos similares en otros idiomas iniciales.
+La version **2.0** consolida el proyecto como producto demostrativo completo: no lo convierte en plataforma, no incorpora backend y no abre solicitud ni transmisión de datos personales. Su valor esta en mostrar un molde realista, reutilizable y prudente para crear recursos similares en otros idiomas iniciales.
 
 ## 2. Problema que atiende
 
@@ -80,7 +80,7 @@ El recurso:
 - no usa formularios externos;
 - no incorpora IA/API;
 - no envia respuestas a servidores externos;
-- no recoge datos personales;
+- no solicita ni transmite datos personales;
 - guarda el progreso solo en el navegador mediante `localStorage`.
 
 En el reto final se recomienda usar un nombre de pila o ficticio. No deben introducirse apellidos, DNI, telefono, correo, direccion ni datos sensibles.
@@ -106,7 +106,7 @@ Una presentacion breve puede seguir esta secuencia:
 3. Enseñar una actividad breve y el mapa de bloques.
 4. Activar el modo presentacion para aula.
 5. Mostrar el informe local como evidencia formativa no oficial.
-6. Explicar privacidad: sin backend, sin login y sin recogida de datos personales.
+6. Explicar privacidad: sin backend, sin login y sin solicitud ni transmisión de datos personales.
 7. Cerrar con la idea de molde reutilizable para otros idiomas iniciales.
 
 ## 9. Encaje prudente con FPE y Canarias

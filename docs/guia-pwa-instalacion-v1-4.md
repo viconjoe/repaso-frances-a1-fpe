@@ -20,7 +20,7 @@ El objetivo es mejorar el acceso desde móvil o escritorio sin convertir el recu
 - no hay analítica;
 - no hay formularios externos;
 - no hay IA/API;
-- no hay recogida de datos personales.
+- no hay solicitud ni transmisión de datos personales.
 
 ## 2. Elementos añadidos
 

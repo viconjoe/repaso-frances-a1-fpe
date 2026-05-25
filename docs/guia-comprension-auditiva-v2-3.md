@@ -65,6 +65,6 @@ Secuencia breve:
 
 ## 6. Privacidad
 
-La actividad no solicita datos personales. El resultado queda solo en el navegador mediante `localStorage` y aparece en el informe local como evidencia orientativa.
+Este recurso no solicita ni transmite datos personales. El resultado queda solo en este navegador mediante `localStorage` y aparece en el informe local como evidencia orientativa.
 
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente responsable.
