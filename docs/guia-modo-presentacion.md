@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.8
+**Versión de referencia:** 3.0
 **Tipo de documento:** uso del modo presentación para aula  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -13,7 +13,7 @@ El modo presentación está pensado para proyectar el recurso en aula con una vi
 
 No cambia las actividades ni convierte el recurso en una herramienta de evaluación. Solo adapta la presentación visual para facilitar explicación, práctica guiada y trabajo grupal.
 
-En la versión 2.8, el modo presentación convive con la UX móvil refinada, la estructura de plantilla multidioma, la experiencia instalable ligera, las capturas de validación, el dossier de producto demostrativo, la autoevaluación orientativa, la rúbrica docente/documental y la grabación local opcional. Si se activa la presentación, el recurso prioriza la vista de aula proyectada y se mantiene independiente del modo guiado móvil.
+En la versión 3.0, el modo presentación convive con la UX móvil refinada, la estructura de plantilla multidioma, la experiencia instalable ligera, las capturas de validación, el dossier de producto demostrativo, la autoevaluación orientativa, la rúbrica docente/documental, la grabación local opcional y los datos didácticos separados. Si se activa la presentación, el recurso prioriza la vista de aula proyectada y se mantiene independiente del modo guiado móvil.
 
 ## 2. Cómo activarlo
 

@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 2.8
+**Versión de referencia:** 3.0
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -13,7 +13,7 @@ Esta guía propone una forma sencilla de usar el recurso en una sesión de repas
 
 El recurso puede utilizarse de forma autónoma, por parejas o con acompañamiento docente. Su finalidad es apoyar la práctica, no evaluar oficialmente al alumnado.
 
-Tras la revisión de auditoría v2.8, el recurso ofrece dos entradas:
+Tras la revisión de auditoría consolidada en v3.0, el recurso ofrece dos entradas:
 
 - **Repaso rápido (20 min):** útil para una sesión breve, cierre de clase o práctica previa a una presentación.
 - **Recorrido completo (60 min):** recomendable cuando se quiere revisar todos los bloques.

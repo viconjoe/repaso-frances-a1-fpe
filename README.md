@@ -4,17 +4,23 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 2.8
+**Versión actual:** 3.0
 
 **Publicación:** GitHub Pages
 
 ## Acceso al recurso
+
+> **Nota sobre el despliegue:** La versión publicada está alojada en la cuenta `elinversorjunior-lgtm` por continuidad con la documentación entregada durante el itinerario FPE. Este repositorio (`viconjoe/repaso-frances-a1-fpe`) es la copia activa de desarrollo y mantenimiento. Ambos repositorios contienen el mismo código. La URL de despliegue se actualizará cuando sea posible hacerlo sin romper referencias ya entregadas.
 
 Versión publicada:
 
 https://elinversorjunior-lgtm.github.io/repaso-frances-a1-fpe/
 
 Repositorio:
+
+https://github.com/viconjoe/repaso-frances-a1-fpe
+
+Repositorio de continuidad:
 
 https://github.com/elinversorjunior-lgtm/repaso-frances-a1-fpe
 
@@ -42,15 +48,15 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v2.8
+## Estado actual: v3.0
 
-La versión **2.8** incorpora **grabación local opcional** en el bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
+La versión **3.0** consolida las correcciones de auditoría, separa los datos educativos en `data-frances-a1.js` y mantiene la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
 
 Mantiene también la rúbrica docente/documental de v2.7, la autoevaluación final orientativa de v2.6, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
-Tras la revisión de auditoría v2.8, el recurso incorpora una experiencia **a dos velocidades**:
+Tras la revisión de auditoría consolidada en v3.0, el recurso incorpora una experiencia **a dos velocidades**:
 
-- **Repaso rápido (20 min):** autodiagnóstico, flashcards, situaciones comunicativas, reto final e informe.
+- **Repaso rápido (20 min):** objetivo breve, autodiagnóstico, flashcards, situaciones comunicativas, reto final e informe.
 - **Recorrido completo (60 min):** todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación, ficha docente y rúbrica.
 
 El modo elegido se guarda solo en el navegador mediante `localStorage` (`eij_velocidad`) y no se envía a ningún servidor.
@@ -170,6 +176,7 @@ El progreso se guarda únicamente en el navegador del usuario mediante `localSto
 - Persistencia local mediante `localStorage`.
 - Pronunciación experimental con Web Speech API, si el navegador la soporta.
 - Generación de informe local mediante ventana HTML imprimible y descarga alternativa con `Blob`.
+- Datos educativos principales separados en `data-frances-a1.js` para facilitar mantenimiento.
 - Carpeta `assets/lang/` con inventario de contenidos y plantilla de paquete lingüístico.
 - `manifest.webmanifest` para instalación como PWA ligera.
 - `sw.js` para caché offline básica en navegadores compatibles.
@@ -180,6 +187,7 @@ El progreso se guarda únicamente en el navegador del usuario mediante `localSto
 ```text
 repaso-frances-a1-fpe/
 ├── index.html
+├── data-frances-a1.js
 ├── LICENSE.md
 ├── README.md
 ├── manifest.webmanifest
@@ -287,9 +295,18 @@ Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conse
 
 ## Verificación PWA
 
-La revisión v2.8 confirma la existencia de los recursos básicos de instalación ligera: `manifest.webmanifest`, `assets/icons/icon.svg`, `assets/icons/icon-192.png`, `assets/icons/icon-512.png` y `sw.js`. La PWA no añade backend, cuentas, analítica ni envío de datos.
+La revisión v3.0 confirma la existencia de los recursos básicos de instalación ligera: `manifest.webmanifest`, `assets/icons/icon.svg`, `assets/icons/icon-192.png`, `assets/icons/icon-512.png`, `data-frances-a1.js` y `sw.js`. La PWA no añade backend, cuentas, analítica ni envío de datos.
 
 ## Evolución de versiones
+
+### v3.0
+
+- Consolidación de correcciones de auditoría técnica y documental.
+- Separación de datos educativos en `data-frances-a1.js` sin módulos ES ni dependencias externas.
+- Nota operativa de despliegue para mantener la URL pública en `elinversorjunior-lgtm` mientras `viconjoe` actúa como repositorio activo.
+- Refuerzo de `lang="fr"` en contenido francés.
+- Verificación de autodiagnóstico con 18 preguntas y recursos PWA.
+- Recorrido a dos velocidades: repaso rápido y recorrido completo.
 
 ### v2.8
 

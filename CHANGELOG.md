@@ -5,6 +5,17 @@ Autor: Joel Concepción Villanueva
 
 Este historial resume la evolución del recurso didáctico digital complementario de Francés A1. El proyecto se mantiene como herramienta personal de portafolio docente, sin carácter oficial, sin vínculo institucional directo con ICSE ni con el SCE, y sin sustituir programación, materiales ni evaluación oficial.
 
+## v3.0
+
+- Consolida las correcciones de auditoría técnica y documental.
+- Añade nota operativa de despliegue: la URL publicada se mantiene en `elinversorjunior-lgtm` por continuidad, mientras `viconjoe/repaso-frances-a1-fpe` queda como copia activa de desarrollo.
+- Separa los datos educativos en `data-frances-a1.js` sin usar módulos ES ni dependencias externas.
+- Mantiene la lógica principal en `index.html` referenciando los mismos nombres de datos.
+- Refuerza atributos `lang="fr"` en fragmentos franceses y ajusta opciones dinámicas según idioma detectado.
+- Verifica la coherencia del autodiagnóstico con 18 preguntas.
+- Verifica recursos PWA y añade `data-frances-a1.js` a la caché básica del service worker.
+- Consolida el recorrido a dos velocidades: repaso rápido y recorrido completo.
+
 ## v2.8
 
 - Incorpora grabación local opcional para práctica oral.
@@ -83,4 +94,3 @@ Este historial resume la evolución del recurso didáctico digital complementari
 ## v1.0
 
 - Versión estable/presentable del recurso.
-

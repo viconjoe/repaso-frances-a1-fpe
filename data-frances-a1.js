@@ -1,0 +1,320 @@
+// data-frances-a1.js
+// Datos de contenido educativo - Frances A1
+// Separado de index.html para facilitar mantenimiento y futuras adaptaciones.
+// No usa modulos ES ni dependencias externas.
+
+var EIJ_DIAGNOSTICO = [
+      { q: "¿Qué significa Bonjour?", options: ["Buenos días / Hola", "Adiós", "Gracias", "Buenas noches"], answer: 0, exp: "«Bonjour» es el saludo básico durante el día." },
+      { q: "Elige la frase para decir tu nombre.", options: ["Je voudrais…", "Je m'appelle…", "Où est… ?", "Combien ça coûte ?"], answer: 1, exp: "«Je m'appelle…» significa «Me llamo…»." },
+      { q: "¿Cómo preguntas el precio?", options: ["Où est la gare ?", "Combien ça coûte ?", "J'habite à Gáldar", "Au revoir"], answer: 1, exp: "«Combien ça coûte ?» significa «¿Cuánto cuesta?»." },
+      { q: "¿Qué frase sirve para pedir que repitan?", options: ["Je ne comprends pas", "Pouvez-vous répéter, s'il vous plaît ?", "Bonsoir", "Je travaille"], answer: 1, exp: "Es una fórmula útil y educada para pedir repetición." },
+      { q: "¿Qué significa J'habite à…?", options: ["Me llamo…", "Vivo en…", "Quisiera…", "No entiendo"], answer: 1, exp: "«J'habite à…» significa «Vivo en…»." },
+      { q: "¿Qué frase usarías para pedir algo con cortesía?", options: ["Je voudrais…", "Au revoir", "Comment ça va ?", "Où est… ?"], answer: 0, exp: "«Je voudrais…» equivale a «Quisiera…»." },
+      { q: "Elige una despedida.", options: ["Au revoir", "Bonjour", "Merci", "Je suis étudiant(e)"], answer: 0, exp: "«Au revoir» significa «adiós» o «hasta luego»." },
+      { q: "¿Qué significa Je ne comprends pas?", options: ["No entiendo", "No trabajo", "No cuesta", "No vivo"], answer: 0, exp: "Frase básica para expresar que no entiendes." },
+      { q: "¿Qué frase pregunta por ubicación?", options: ["Où est… ?", "Je voudrais…", "Bonsoir", "Ça coûte deux euros"], answer: 0, exp: "«Où est… ?» significa «¿Dónde está…?»." },
+      { q: "¿Qué frase significa Estoy jubilado/a?", options: ["Je suis à la retraite.", "Je cherche du travail.", "Je travaille.", "J'étudie le français."], answer: 0, exp: "«Je suis à la retraite» significa «Estoy jubilado/a»." },
+      { q: "¿Cómo dices 'Tengo una cita'?", options: ["J'ai rendez-vous.", "Je suis perdu.", "Il pleut.", "C'est fermé."], answer: 0, exp: "«J'ai rendez-vous» sirve para decir que tienes una cita." },
+      { q: "¿Qué palabra corresponde a 'lunes'?", options: ["Dimanche", "Lundi", "Mercredi", "Samedi"], answer: 1, exp: "«Lundi» significa lunes." },
+      { q: "Elige una frase para pedir ayuda en la ciudad.", options: ["Je vais bien.", "Pouvez-vous m'aider ?", "Je suis espagnol.", "C'est mon cahier."], answer: 1, exp: "«Pouvez-vous m'aider ?» es una petición educada de ayuda." },
+      { q: "¿Qué significa Je vais prendre le bus?", options: ["Voy a coger el bus", "Trabajo en el bus", "Busco el bus", "El bus cuesta caro"], answer: 0, exp: "«Je vais + infinitivo» expresa un plan próximo." },
+      { q: "¿Qué frase sirve en un restaurante?", options: ["L'addition, s'il vous plaît.", "Je suis à la retraite.", "C'est mon ordinateur.", "Il est mardi."], answer: 0, exp: "«L'addition, s'il vous plaît» significa «La cuenta, por favor»." },
+      { q: "¿Cómo dices que tienes una entrevista?", options: ["J'ai un entretien.", "Je prends un café.", "Il est fermé.", "Je suis perdu."], answer: 0, exp: "«J'ai un entretien» sirve para decir que tienes una entrevista." },
+      { q: "¿Qué frase sirve para confirmar una dirección?", options: ["C'est bien cette adresse ?", "Je voudrais une pomme.", "Je suis à la retraite.", "Il pleut beaucoup."], answer: 0, exp: "«C'est bien cette adresse ?» pregunta si esa dirección es correcta." },
+      { q: "¿Qué significa Je suis disponible demain ?", options: ["Estoy disponible mañana", "Estoy cerrado mañana", "Vivo mañana", "Compro mañana"], answer: 0, exp: "Es una frase útil para una cita, curso o entrevista." }
+    ];
+
+var EIJ_LECTURAS = [
+      {
+        title: "Mensaje de clase",
+        text: [
+          "Bonjour Marta,",
+          "Le cours de français commence à 9 h. Apporte ton cahier et un stylo.",
+          "À demain !"
+        ],
+        q: "¿A qué hora empieza el curso?",
+        options: ["A las 8 h", "A las 9 h", "A las 10 h", "Por la tarde"],
+        answer: 1,
+        exp: "El texto dice «commence à 9 h»."
+      },
+      {
+        title: "Aviso en una tienda",
+        text: [
+          "La boulangerie est ouverte du lundi au samedi.",
+          "Horaires : 8 h - 14 h.",
+          "Fermé le dimanche."
+        ],
+        q: "¿Qué día está cerrada la panadería?",
+        options: ["Lunes", "Sábado", "Domingo", "Viernes"],
+        answer: 2,
+        exp: "El aviso dice «Fermé le dimanche»."
+      },
+      {
+        title: "Correo breve",
+        text: [
+          "Bonjour,",
+          "J'ai rendez-vous mardi à 10 h avec Madame Dupont.",
+          "Merci beaucoup."
+        ],
+        q: "¿Cuándo es la cita?",
+        options: ["Lunes a las 10 h", "Martes a las 10 h", "Martes a las 9 h", "Domingo"],
+        answer: 1,
+        exp: "El correo dice «mardi à 10 h»."
+      },
+      {
+        title: "Nota de restaurante",
+        text: [
+          "Menu du jour : soupe, poulet avec riz, dessert.",
+          "Prix : 12 euros.",
+          "Eau incluse."
+        ],
+        q: "¿Cuánto cuesta el menú?",
+        options: ["10 euros", "12 euros", "15 euros", "20 euros"],
+        answer: 1,
+        exp: "La nota indica «Prix : 12 euros»."
+      },
+      {
+        title: "Mensaje de transporte",
+        text: [
+          "Le bus pour la gare part à 16 h 30.",
+          "Arrêt : Place Centrale.",
+          "Billet : 1,50 euro."
+        ],
+        q: "¿A qué hora sale el bus?",
+        options: ["14 h 30", "16 h 30", "17 h", "A las 15 h"],
+        answer: 1,
+        exp: "El mensaje dice «part à 16 h 30»."
+      },
+      {
+        title: "Nota de entrevista",
+        text: [
+          "Bonjour Sofia,",
+          "Votre entretien est jeudi à 11 h.",
+          "Apportez votre CV et une pièce d'identité."
+        ],
+        q: "¿Qué debe llevar Sofia?",
+        options: ["Un café", "Su CV y un documento de identidad", "Un billete de bus", "Un menú"],
+        answer: 1,
+        exp: "La nota dice «Apportez votre CV et une pièce d'identité»."
+      },
+      {
+        title: "Mensaje de centro de formación",
+        text: [
+          "Le bureau est au premier étage.",
+          "La salle 3 est à droite.",
+          "L'accueil est ouvert de 9 h à 13 h."
+        ],
+        q: "¿Dónde está la sala 3?",
+        options: ["A la izquierda", "A la derecha", "En la estación", "En la tienda"],
+        answer: 1,
+        exp: "La pista es «La salle 3 est à droite»."
+      },
+      {
+        title: "Aviso de cita",
+        text: [
+          "Bonjour,",
+          "Je suis disponible demain matin.",
+          "Est-ce possible à 10 h ?"
+        ],
+        q: "¿Cuándo está disponible la persona?",
+        options: ["Esta tarde", "Mañana por la mañana", "El domingo", "A las 14 h"],
+        answer: 1,
+        exp: "El texto dice «demain matin»."
+      }
+    ];
+
+var EIJ_AUDICIONES = [
+      {
+        title: "Saludo en clase",
+        file: "listen-01-saludo-clase.mp3",
+        transcript: "Bonjour. Je m'appelle Claire. J'habite à Las Palmas.",
+        q: "¿Dónde vive Claire?",
+        options: ["En París", "En Las Palmas", "En la estación", "En una tienda"],
+        answer: 1,
+        exp: "La pista es «J'habite à Las Palmas»."
+      },
+      {
+        title: "Hora del curso",
+        file: "listen-02-heure-cours.mp3",
+        transcript: "Le cours commence à neuf heures. Apportez votre cahier.",
+        q: "¿A qué hora empieza el curso?",
+        options: ["A las 8 h", "A las 9 h", "A las 10 h", "Por la tarde"],
+        answer: 1,
+        exp: "La pista es «commence à neuf heures»."
+      },
+      {
+        title: "Compra básica",
+        file: "listen-03-achat-pommes.mp3",
+        transcript: "Bonjour. Je voudrais un kilo de pommes, s'il vous plaît.",
+        q: "¿Qué quiere comprar la persona?",
+        options: ["Un café", "Un billete", "Un kilo de manzanas", "Un cuaderno"],
+        answer: 2,
+        exp: "La pista es «un kilo de pommes»."
+      },
+      {
+        title: "Transporte",
+        file: "listen-04-bus-gare.mp3",
+        transcript: "Excusez-moi, où est le bus pour la gare ?",
+        q: "¿Qué busca la persona?",
+        options: ["El bus para la estación", "La cuenta", "Una dirección de correo", "Una farmacia"],
+        answer: 0,
+        exp: "La pista es «le bus pour la gare»."
+      },
+      {
+        title: "Pedir repetición",
+        file: "listen-05-repeter.mp3",
+        transcript: "Je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+        q: "¿Qué pide la persona?",
+        options: ["Pagar", "Repetir", "Comprar fruta", "Cerrar la tienda"],
+        answer: 1,
+        exp: "La pista es «Pouvez-vous répéter ?»."
+      }
+    ];
+
+var EIJ_FLASHCARDS = [
+      { fr: "Bonjour", es: "Buenos días / Hola", hint: "Saludo básico durante el día", audio: "bonjour.mp3" },
+      { fr: "Bonsoir", es: "Buenas noches / Buenas tardes (tarde-noche)", hint: "Saludo al final del día, desde el atardecer", audio: "bonsoir.mp3" },
+      { fr: "Au revoir", es: "Adiós / Hasta luego", hint: "Despedida", audio: "au-revoir.mp3" },
+      { fr: "Merci beaucoup", es: "Muchas gracias", hint: "Agradecimiento", audio: "merci-beaucoup.mp3" },
+      { fr: "Excusez-moi", es: "Disculpe / Perdón", hint: "Cortesía para llamar la atención", audio: "excusez-moi.mp3" },
+      { fr: "Je m'appelle…", es: "Me llamo…", hint: "Presentación", audio: "je-mappelle.mp3" },
+      { fr: "J'habite à…", es: "Vivo en…", hint: "Lugar de residencia", audio: "jhabite-a.mp3" },
+      { fr: "Je suis espagnol(e)", es: "Soy español/a", hint: "Nacionalidad", audio: "je-suis-espagnol.mp3" },
+      { fr: "Je suis étudiant(e)", es: "Soy estudiante", hint: "Situación personal", audio: "je-suis-etudiant.mp3" },
+      { fr: "Je travaille", es: "Trabajo", hint: "Actividad laboral", audio: "je-travaille.mp3" },
+      { fr: "Je cherche du travail", es: "Busco trabajo", hint: "Empleo", audio: "je-cherche-du-travail.mp3" },
+      { fr: "Je voudrais…", es: "Quisiera…", hint: "Petición educada", audio: "je-voudrais.mp3" },
+      { fr: "Combien ça coûte ?", es: "¿Cuánto cuesta?", hint: "Compra básica", audio: "combien-ca-coute.mp3" },
+      { fr: "L'addition, s'il vous plaît", es: "La cuenta, por favor", hint: "Restaurante", audio: "addition-sil-vous-plait.mp3" },
+      { fr: "Où est la gare ?", es: "¿Dónde está la estación?", hint: "Ciudad y transporte", audio: "ou-est-la-gare.mp3" },
+      { fr: "À gauche", es: "A la izquierda", hint: "Direcciones", audio: "a-gauche.mp3" },
+      { fr: "À droite", es: "A la derecha", hint: "Direcciones", audio: "a-droite.mp3" },
+      { fr: "Je vais prendre le bus", es: "Voy a coger el bus", hint: "Transporte y futuro próximo", audio: "je-vais-prendre-le-bus.mp3" },
+      { fr: "J'ai rendez-vous", es: "Tengo una cita", hint: "Cita o gestión", audio: "jai-rendez-vous.mp3" },
+      { fr: "Il est neuf heures", es: "Son las nueve", hint: "Hora", audio: "il-est-neuf-heures.mp3" },
+      { fr: "Aujourd'hui", es: "Hoy", hint: "Tiempo", audio: "aujourdhui.mp3" },
+      { fr: "Demain", es: "Mañana", hint: "Tiempo", audio: "demain.mp3" },
+      { fr: "Lundi", es: "Lunes", hint: "Día de la semana", audio: "lundi.mp3" },
+      { fr: "Il pleut", es: "Llueve", hint: "Meteorología", audio: "il-pleut.mp3" },
+      { fr: "Il fait chaud", es: "Hace calor", hint: "Meteorología / sensación", audio: "il-fait-chaud.mp3" },
+      { fr: "Mon cahier", es: "Mi cuaderno", hint: "Objeto de aula y posesivo", audio: "mon-cahier.mp3" },
+      { fr: "Votre adresse", es: "Su dirección", hint: "Dato personal básico", audio: "votre-adresse.mp3" },
+      { fr: "Un kilo de pommes", es: "Un kilo de manzanas", hint: "Cantidad y compra", audio: "un-kilo-de-pommes.mp3" },
+      { fr: "Je ne comprends pas", es: "No entiendo", hint: "Pedir apoyo", audio: "je-ne-comprends-pas.mp3" },
+      { fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "¿Puede repetir, por favor?", hint: "Pedir repetición", audio: "pouvez-vous-repeter.mp3" },
+      { fr: "Pouvez-vous parler plus lentement ?", es: "¿Puede hablar más despacio?", hint: "Aclaración", audio: "parler-plus-lentement.mp3" },
+      { fr: "Pouvez-vous m'aider ?", es: "¿Puede ayudarme?", hint: "Solicitar ayuda", audio: "pouvez-vous-maider.mp3" },
+      { fr: "J'ai un entretien", es: "Tengo una entrevista", hint: "Trabajo y gestión", audio: "jai-un-entretien.mp3" },
+      { fr: "Je suis disponible demain", es: "Estoy disponible mañana", hint: "Cita y disponibilidad", audio: "je-suis-disponible-demain.mp3" },
+      { fr: "C'est bien cette adresse ?", es: "¿Es correcta esta dirección?", hint: "Confirmar información", audio: "cest-bien-cette-adresse.mp3" },
+      { fr: "Je voudrais un café", es: "Quisiera un café", hint: "Petición concreta", audio: "je-voudrais-un-cafe.mp3" },
+      { fr: "Un billet, s'il vous plaît", es: "Un billete, por favor", hint: "Transporte", audio: "un-billet-sil-vous-plait.mp3" },
+      { fr: "Je vais à la pharmacie", es: "Voy a la farmacia", hint: "Ciudad y necesidad cotidiana", audio: "je-vais-a-la-pharmacie.mp3" },
+      { fr: "La salle est à gauche", es: "La sala está a la izquierda", hint: "Centro de formación", audio: "la-salle-est-a-gauche.mp3" },
+      { fr: "Je dois partir", es: "Tengo que irme", hint: "Situación cotidiana", audio: "je-dois-partir.mp3" }
+    ];
+
+var EIJ_EMPAREJAR = [
+      { id: "name", fr: "Je m'appelle…", es: "Decir mi nombre" },
+      { id: "live", fr: "J'habite à…", es: "Decir dónde vivo" },
+      { id: "nationality", fr: "Je suis espagnol(e)", es: "Decir mi nacionalidad" },
+      { id: "job", fr: "Je cherche du travail", es: "Hablar de empleo" },
+      { id: "price", fr: "Combien ça coûte ?", es: "Preguntar precio" },
+      { id: "restaurant", fr: "L'addition, s'il vous plaît", es: "Pedir la cuenta" },
+      { id: "place", fr: "Où est la gare ?", es: "Preguntar por un lugar" },
+      { id: "appointment", fr: "J'ai rendez-vous", es: "Decir que tengo una cita" },
+      { id: "repeat", fr: "Pouvez-vous répéter, s'il vous plaît ?", es: "Pedir que repitan" },
+      { id: "slow", fr: "Pouvez-vous parler plus lentement ?", es: "Pedir que hablen más despacio" },
+      { id: "help", fr: "Excusez-moi", es: "Llamar la atención con educación" },
+      { id: "want", fr: "Je voudrais…", es: "Pedir algo de forma cortés" },
+      { id: "interview", fr: "J'ai un entretien", es: "Decir que tengo una entrevista" },
+      { id: "available", fr: "Je suis disponible demain", es: "Indicar disponibilidad" },
+      { id: "confirm-address", fr: "C'est bien cette adresse ?", es: "Confirmar una dirección" },
+      { id: "ticket", fr: "Un billet, s'il vous plaît", es: "Pedir un billete" }
+    ];
+
+var EIJ_SITUACIONES = [
+      { s: "Llegas a clase y saludas al grupo por la mañana.", options: ["Au revoir", "Combien ça coûte ?", "Bonjour", "Je ne comprends pas"], answer: 2, exp: "«Bonjour» es el saludo básico durante el día." },
+      { s: "No has entendido la explicación y quieres pedir que repitan.", options: ["J'habite à Gáldar", "Pouvez-vous répéter, s'il vous plaît ?", "Je voudrais un café", "Ça coûte deux euros"], answer: 1, exp: "Pedir repetición con cortesía ayuda mucho en A1." },
+      { s: "Estás comprando y quieres saber el precio.", options: ["Comment ça va ?", "Où est la gare ?", "Je m'appelle Ana", "Combien ça coûte ?"], answer: 3, exp: "«Combien ça coûte ?» es la pregunta básica para precio." },
+      { s: "Te preguntan tu nombre.", options: ["Je m'appelle Carlos", "J'habite à Paris", "Je ne comprends pas", "Bonsoir"], answer: 0, exp: "«Je m'appelle…» sirve para decir el nombre." },
+      { s: "Quieres preguntar dónde está la estación.", options: ["Je voudrais la gare", "La gare coûte combien ?", "Où est la gare ?", "Je suis gare"], answer: 2, exp: "«Où est… ?» pregunta por ubicación. «La gare» es la estación." },
+      { s: "Estás en un restaurante y quieres pedir la cuenta.", options: ["L'addition, s'il vous plaît", "Je suis à la retraite", "Où est mon cahier ?", "Il pleut"], answer: 0, exp: "«L'addition, s'il vous plaît» es una fórmula útil en restaurante." },
+      { s: "Tienes una cita en recepción y quieres decirlo.", options: ["J'ai rendez-vous", "Je vais prendre le bus", "Il fait chaud", "Je ne travaille pas"], answer: 0, exp: "«J'ai rendez-vous» significa que tienes una cita." },
+      { s: "Quieres decir que vas a coger el autobús.", options: ["Je vais prendre le bus", "Je prends la pomme", "Je cherche la gare", "Je suis bus"], answer: 0, exp: "«Je vais + infinitivo» expresa un plan próximo." },
+      { s: "La persona habla muy rápido y necesitas que vaya más despacio.", options: ["Pouvez-vous parler plus lentement ?", "Combien ça coûte ?", "Je suis espagnol", "C'est mon cahier"], answer: 0, exp: "Es una frase clave para interacción oral A1." },
+      { s: "En una tienda quieres pedir un kilo de manzanas.", options: ["Un kilo de pommes, s'il vous plaît", "Il est neuf heures", "Je m'appelle pommes", "Où est le bus ?"], answer: 0, exp: "La estructura cantidad + producto es útil en compras básicas." },
+      { s: "Llegas a una entrevista y quieres explicar por qué estás allí.", options: ["J'ai un entretien", "Je voudrais une pomme", "Il pleut", "Je vais à la plage"], answer: 0, exp: "«J'ai un entretien» amplía la función de cita hacia contexto laboral." },
+      { s: "Te dan una dirección y quieres confirmar que es correcta.", options: ["C'est bien cette adresse ?", "Je suis disponible demain", "Un billet, s'il vous plaît", "Je ne travaille pas"], answer: 0, exp: "Confirmar información es una estrategia útil para evitar errores." },
+      { s: "En una estación quieres pedir un billete.", options: ["Un billet, s'il vous plaît", "L'addition, s'il vous plaît", "Je suis à la retraite", "C'est mon cahier"], answer: 0, exp: "«Un billet, s'il vous plaît» reutiliza la fórmula de cortesía en transporte." },
+      { s: "Te proponen una cita para mañana y puedes asistir.", options: ["Je suis disponible demain", "Je ne comprends pas", "Où est la gare ?", "Il est fermé"], answer: 0, exp: "La disponibilidad se expresa con «Je suis disponible...»." }
+    ];
+
+var EIJ_ORAL_GUIADO = [
+      {
+        title: "Presentarse en clase",
+        task: "Saluda, di tu nombre de pila o ficticio y explica que estudias francés.",
+        model: "Bonjour. Je m'appelle Clara. J'étudie le français.",
+        support: [
+          ["Bonjour.", "Saludo inicial."],
+          ["Je m'appelle...", "Usa solo un nombre de pila o ficticio."],
+          ["J'étudie le français.", "Di una frase sencilla sobre ti."]
+        ]
+      },
+      {
+        title: "Pedir repetición",
+        task: "Imagina que no has entendido una instrucción. Pide que repitan con educación.",
+        model: "Excusez-moi. Je ne comprends pas. Pouvez-vous répéter, s'il vous plaît ?",
+        support: [
+          ["Excusez-moi.", "Llama la atención de forma educada."],
+          ["Je ne comprends pas.", "Explica el problema."],
+          ["Pouvez-vous répéter, s'il vous plaît ?", "Pide repetición."]
+        ]
+      },
+      {
+        title: "Entrevista o cita",
+        task: "Llegas a recepción. Saluda, di tu nombre de pila o ficticio y explica que tienes una entrevista.",
+        model: "Bonjour. Je m'appelle Marc. J'ai un entretien à dix heures.",
+        support: [
+          ["Bonjour.", "Saludo formal sencillo."],
+          ["Je m'appelle...", "Nombre de pila o ficticio."],
+          ["J'ai un entretien.", "Explica la situación."]
+        ]
+      },
+      {
+        title: "Estación",
+        task: "Pide un billete y pregunta el precio.",
+        model: "Bonjour. Un billet, s'il vous plaît. Combien ça coûte ?",
+        support: [
+          ["Un billet, s'il vous plaît.", "Petición concreta."],
+          ["Combien ça coûte ?", "Pregunta el precio."],
+          ["Merci.", "Cierra con cortesía."]
+        ]
+      },
+      {
+        title: "Centro de formación",
+        task: "Pregunta dónde está una sala y confirma la dirección.",
+        model: "Excusez-moi. Où est la salle 3 ? C'est bien cette adresse ?",
+        support: [
+          ["Excusez-moi.", "Inicio educado."],
+          ["Où est la salle 3 ?", "Pregunta por un lugar."],
+          ["C'est bien cette adresse ?", "Confirma información."]
+        ]
+      }
+    ];
+
+var EIJ_RETO_FINAL_PROMPTS = [
+      "Estás en una cafetería. Saluda, di tu nombre y pide un café de forma educada.",
+      "Estás en clase. Preséntate, di dónde vives y pide que repitan una frase.",
+      "Estás en una tienda. Saluda, pregunta el precio y pide un kilo de fruta.",
+      "Estás en la calle. Pregunta dónde está la estación y pide ayuda con cortesía.",
+      "Conoces a una persona nueva. Saluda, di tu nombre, dónde vives y cómo estás.",
+      "Tienes una cita. Saluda, di tu nombre y explica que tienes una cita.",
+      "Vas a usar transporte. Di a dónde vas y que vas a coger el autobús.",
+      "Buscas empleo. Preséntate y di en una frase sencilla que buscas trabajo.",
+      "Llegas a una entrevista. Saluda, di tu nombre y explica que tienes una entrevista.",
+      "Estás en un centro de formación. Pregunta por una sala y confirma la dirección.",
+      "Estás en una estación. Saluda, pide un billete y pregunta el precio.",
+      "Necesitas cambiar una cita. Di que estás disponible mañana y pide que repitan la hora."
+    ];
+

@@ -2,7 +2,7 @@
 
 Esta carpeta prepara la fase **v1.3 · Plantilla multidioma**.
 
-Estado actual del recurso: **v2.8**. La ampliación pedagógica incorpora más vocabulario, situaciones, notas de gramática funcional, comprensión lectora A1, comprensión auditiva con cinco audios locales propios del autor, expresión oral guiada con grabación local opcional y temporal, autoevaluación final orientativa, rúbrica docente/documental, mejoras UX de acceso y claridad inicial, y una fase de variación comunicativa progresiva, sin cargar datos externos ni añadir servicios.
+Estado actual del recurso: **v3.0**. La ampliación pedagógica incorpora más vocabulario, situaciones, notas de gramática funcional, comprensión lectora A1, comprensión auditiva con cinco audios locales propios del autor, expresión oral guiada con grabación local opcional y temporal, autoevaluación final orientativa, rúbrica docente/documental, mejoras UX de acceso y claridad inicial, y una fase de variación comunicativa progresiva, sin cargar datos externos ni añadir servicios.
 
 Los archivos de esta carpeta documentan cómo separar progresivamente los datos lingüísticos de la interfaz sin añadir backend, dependencias, login, analítica, formularios externos ni IA/API.
 

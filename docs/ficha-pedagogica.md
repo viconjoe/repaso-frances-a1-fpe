@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 2.8
+**Versión:** 3.0
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -52,7 +52,7 @@ El recurso busca que el alumnado pueda:
 - generar un informe local de práctica como evidencia orientativa;
 - ganar seguridad antes de una situación oral o escrita básica.
 
-Tras la revisión de auditoría v2.8, el recurso ofrece dos itinerarios de uso:
+Tras la revisión de auditoría consolidada en v3.0, el recurso ofrece dos itinerarios de uso:
 
 - **Repaso rápido (20 min):** para una práctica breve antes de cerrar el curso o preparar una presentación.
 - **Recorrido completo (60 min):** para revisar todos los bloques con más calma.

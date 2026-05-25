@@ -1,8 +1,9 @@
-const CACHE_NAME = "repaso-frances-a1-v2.8";
+const CACHE_NAME = "repaso-frances-a1-v3.0";
 
 const CORE_ASSETS = [
   "./",
   "./index.html",
+  "./data-frances-a1.js",
   "./manifest.webmanifest",
   "./assets/icons/icon.svg",
   "./assets/icons/icon-192.png",
