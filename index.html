@@ -1527,7 +1527,7 @@
           </details>
           <details class="info-drawer">
             <summary>Nota de uso y privacidad</summary>
-            <p>Propuesta pedagógica complementaria para portfolio docente FPE. No es un recurso oficial de ICSE ni del SCE, no sustituye la programación ni la evaluación del centro y no recoge datos personales.</p>
+            <p>Propuesta pedagógica complementaria para portfolio docente FPE. No es un recurso oficial de ICSE ni del SCE, no sustituye la programación ni la evaluación del centro. Este recurso no solicita ni transmite datos personales. El progreso y el texto que escribas quedan únicamente en este navegador. Si usas un dispositivo compartido, borra el progreso local al terminar.</p>
           </details>
         </div>
 
@@ -1548,7 +1548,7 @@
         <p><strong>Autor:</strong> Joel Concepción Villanueva</p>
         <p><strong>Contexto:</strong> propuesta complementaria para prácticas FPE 2026.</p>
         <p><strong>Uso:</strong> repaso final, autoevaluación formativa y actividad guiada en aula.</p>
-        <p><strong>Privacidad:</strong> no pide nombres ni datos personales; el progreso queda solo en este navegador.</p>
+        <p><strong>Privacidad:</strong> este recurso no solicita ni transmite datos personales. El progreso y el texto que escribas quedan únicamente en este navegador. Si usas un dispositivo compartido, borra el progreso local al terminar.</p>
         <div class="progress-wrap" id="globalProgressWrap" role="progressbar" aria-label="Progreso general de uso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
           <div class="progress-bar" id="globalProgress"></div>
         </div>
@@ -1822,7 +1822,7 @@
                 <p id="flashSpeakStatus" class="small muted flash-speak-status" aria-live="polite"></p>
                 <p id="flashSpeakNote" class="small muted flash-speak-note" hidden>La pronunciación es generada por el navegador y puede sonar robótica según el sistema. Úsala como referencia aproximada. Practica siempre en voz alta.</p>
                 <p id="flashSpeakUnavailable" class="small muted flash-speak-status" hidden>La pronunciación automática no está disponible en este navegador.</p>
-                <p id="localAudioNote" class="small muted audio-prep-note" hidden>Los audios locales están preparados para archivos del autor en <code>assets/audio/</code>. No graban ni solicitan voz del alumnado.</p>
+                <p id="localAudioNote" class="small muted audio-prep-note" hidden>Los audios locales de flashcards no están incorporados todavía. Usa la pronunciación experimental del navegador como apoyo aproximado; no graba ni solicita voz del alumnado.</p>
               </div>
             </div>
           </div>
@@ -2231,7 +2231,7 @@
         </article>
         <article class="card">
           <h3>Privacidad y límites</h3>
-          <p>No solicita datos personales. No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. No sustituye la programación docente ni la evaluación oficial. Es un recurso complementario de repaso.</p>
+          <p>Este recurso no solicita ni transmite datos personales. El progreso y el texto que escribas quedan únicamente en este navegador. Si usas un dispositivo compartido, borra el progreso local al terminar. No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. No sustituye la programación docente ni la evaluación oficial. Es un recurso complementario de repaso.</p>
         </article>
       </div>
 
@@ -4015,6 +4015,7 @@
       const ok = confirm("¿Borrar todo el progreso local de este navegador?");
       if (!ok) return;
       localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(SPEED_STORAGE_KEY);
       location.reload();
     });
 
