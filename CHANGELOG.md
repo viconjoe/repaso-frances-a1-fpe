@@ -5,6 +5,14 @@ Autor: Joel Concepción Villanueva
 
 Este historial resume la evolución del recurso didáctico digital complementario de Francés A1. El proyecto se mantiene como herramienta personal de portafolio docente, sin carácter oficial, sin vínculo institucional directo con ICSE ni con el SCE, y sin sustituir programación, materiales ni evaluación oficial.
 
+## v3.1
+
+- Optimiza el repaso rápido para que sea más realista en una práctica breve.
+- Añade `EIJ_DIAGNOSTICO_RAPIDO` con 12 preguntas seleccionadas del autodiagnóstico completo.
+- Mantiene el recorrido completo con las 18 preguntas.
+- Actualiza textos de interfaz para distinguir repaso rápido y recorrido completo.
+- Actualiza caché PWA a `repaso-frances-a1-v3.1`.
+
 ## v3.0
 
 - Consolida las correcciones de auditoría técnica y documental.

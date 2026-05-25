@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 3.0
+**Versión actual:** 3.1
 
 **Publicación:** GitHub Pages
 
@@ -48,16 +48,16 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v3.0
+## Estado actual: v3.1
 
-La versión **3.0** consolida las correcciones de auditoría, separa los datos educativos en `data-frances-a1.js` y mantiene la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
+La versión **3.1** optimiza el repaso rápido con un autodiagnóstico reducido de 12 preguntas. Mantiene las correcciones de auditoría, los datos educativos separados en `data-frances-a1.js` y la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
 
 Mantiene también la rúbrica docente/documental de v2.7, la autoevaluación final orientativa de v2.6, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
-Tras la revisión de auditoría consolidada en v3.0, el recurso incorpora una experiencia **a dos velocidades**:
+El recurso incorpora una experiencia **a dos velocidades**:
 
-- **Repaso rápido (20 min):** objetivo breve, autodiagnóstico, flashcards, situaciones comunicativas, reto final e informe.
-- **Recorrido completo (60 min):** todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación, ficha docente y rúbrica.
+- **Repaso rápido (20-30 min):** objetivo breve, autodiagnóstico reducido de 12 preguntas, flashcards, situaciones comunicativas, reto final e informe.
+- **Recorrido completo (60 min):** autodiagnóstico completo de 18 preguntas y todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación, ficha docente y rúbrica.
 
 El modo elegido se guarda solo en el navegador mediante `localStorage` (`eij_velocidad`) y no se envía a ningún servidor.
 
@@ -94,7 +94,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 El recurso incluye estos bloques principales:
 
 1. **Objetivo del recurso**: presenta la finalidad y los contenidos trabajados.
-2. **Autodiagnóstico orientativo A1**: test breve de 18 preguntas con feedback inmediato. No tiene valor evaluativo oficial.
+2. **Autodiagnóstico orientativo A1**: test breve de 12 preguntas en repaso rápido o 18 en recorrido completo, con feedback inmediato. No tiene valor evaluativo oficial.
 3. **Flashcards de supervivencia**: 40 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
 4. **Gramática útil A1**: píldoras breves sobre presentación, preguntas, negación, cortesía y futuro próximo.
 5. **Comprensión lectora A1**: textos breves de uso cotidiano con preguntas de información concreta.
@@ -295,9 +295,17 @@ Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conse
 
 ## Verificación PWA
 
-La revisión v3.0 confirma la existencia de los recursos básicos de instalación ligera: `manifest.webmanifest`, `assets/icons/icon.svg`, `assets/icons/icon-192.png`, `assets/icons/icon-512.png`, `data-frances-a1.js` y `sw.js`. La PWA no añade backend, cuentas, analítica ni envío de datos.
+La revisión v3.1 confirma la existencia de los recursos básicos de instalación ligera: `manifest.webmanifest`, `assets/icons/icon.svg`, `assets/icons/icon-192.png`, `assets/icons/icon-512.png`, `data-frances-a1.js` y `sw.js`. La PWA no añade backend, cuentas, analítica ni envío de datos.
 
 ## Evolución de versiones
+
+### v3.1
+
+- Optimización del **Repaso rápido** para una duración más realista de 20-30 minutos.
+- Creación de `EIJ_DIAGNOSTICO_RAPIDO` con 12 preguntas seleccionadas.
+- Mantenimiento del recorrido completo con autodiagnóstico de 18 preguntas.
+- Ajuste de mensajes de interfaz e informe para usar el conjunto de preguntas activo.
+- Actualización de caché PWA a `repaso-frances-a1-v3.1`.
 
 ### v3.0
 

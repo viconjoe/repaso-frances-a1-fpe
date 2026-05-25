@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 3.0
+**Versión de referencia:** 3.1
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -46,7 +46,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **3.0** se mantiene como recurso web estático e instalable:
+La versión **3.1** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - un archivo `data-frances-a1.js` con datos educativos reutilizables;
@@ -102,7 +102,9 @@ La versión **2.7** incorpora una rúbrica docente/documental de observación A1
 
 La versión **2.8** incorpora grabación local opcional para práctica oral. El audio es temporal, queda en el navegador, no se sube, no se analiza, no se guarda en `localStorage` y no se incluye en el informe.
 
-La versión **3.0** consolida la revisión de auditoría y añade una entrada **a dos velocidades**: repaso rápido de 20 minutos y recorrido completo de 60 minutos. También separa los datos educativos en `data-frances-a1.js`, verifica los recursos PWA existentes, refuerza marcas semánticas de idioma francés y corrige la coherencia del autodiagnóstico de 18 preguntas.
+La versión **3.0** consolida la revisión de auditoría y añade una entrada **a dos velocidades**. También separa los datos educativos en `data-frances-a1.js`, verifica los recursos PWA existentes, refuerza marcas semánticas de idioma francés y corrige la coherencia del autodiagnóstico.
+
+La versión **3.1** optimiza el repaso rápido: usa un autodiagnóstico reducido de 12 preguntas y mantiene el recorrido completo con las 18 preguntas.
 
 ## 5. Privacidad y prudencia
 
@@ -159,7 +161,7 @@ También se incluyen capturas de referencia en `assets/capturas/`, pictogramas S
 
 ## 7. Criterio de continuidad
 
-La versión 3.0 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo datos didácticos separados, dos velocidades de recorrido, grabación local opcional y temporal a la expresión oral guiada, junto a la rúbrica docente/documental no oficial, la autoevaluación final orientativa, la variación comunicativa progresiva y los ajustes UX basados en feedback real.
+La versión 3.1 mantiene el proyecto como recurso didáctico digital prudente, documentado, instalable y coherente para portfolio docente, añadiendo repaso rápido optimizado, datos didácticos separados, dos velocidades de recorrido, grabación local opcional y temporal a la expresión oral guiada, junto a la rúbrica docente/documental no oficial, la autoevaluación final orientativa, la variación comunicativa progresiva y los ajustes UX basados en feedback real.
 
 A largo plazo, el proyecto puede evolucionar hacia una app educativa empaquetable y gratuita, adaptable a contextos de formación para el empleo en Canarias y reutilizable como molde para otros idiomas, siempre sin presentarse como recurso oficial del SCE ni de ninguna entidad sin autorización expresa.
 

@@ -24,6 +24,21 @@ var EIJ_DIAGNOSTICO = [
       { q: "¿Qué significa Je suis disponible demain ?", options: ["Estoy disponible mañana", "Estoy cerrado mañana", "Vivo mañana", "Compro mañana"], answer: 0, exp: "Es una frase útil para una cita, curso o entrevista." }
     ];
 
+var EIJ_DIAGNOSTICO_RAPIDO = [
+      EIJ_DIAGNOSTICO[0],
+      EIJ_DIAGNOSTICO[1],
+      EIJ_DIAGNOSTICO[2],
+      EIJ_DIAGNOSTICO[3],
+      EIJ_DIAGNOSTICO[4],
+      EIJ_DIAGNOSTICO[5],
+      EIJ_DIAGNOSTICO[6],
+      EIJ_DIAGNOSTICO[8],
+      EIJ_DIAGNOSTICO[10],
+      EIJ_DIAGNOSTICO[12],
+      EIJ_DIAGNOSTICO[15],
+      EIJ_DIAGNOSTICO[17]
+    ];
+
 var EIJ_LECTURAS = [
       {
         title: "Mensaje de clase",
@@ -317,4 +332,3 @@ var EIJ_RETO_FINAL_PROMPTS = [
       "Estás en una estación. Saluda, pide un billete y pregunta el precio.",
       "Necesitas cambiar una cita. Di que estás disponible mañana y pide que repitan la hora."
     ];
-

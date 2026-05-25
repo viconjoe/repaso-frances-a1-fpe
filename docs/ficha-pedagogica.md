@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 3.0
+**Versión:** 3.1
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -52,9 +52,9 @@ El recurso busca que el alumnado pueda:
 - generar un informe local de práctica como evidencia orientativa;
 - ganar seguridad antes de una situación oral o escrita básica.
 
-Tras la revisión de auditoría consolidada en v3.0, el recurso ofrece dos itinerarios de uso:
+Desde v3.1, el recurso ofrece dos itinerarios de uso:
 
-- **Repaso rápido (20 min):** para una práctica breve antes de cerrar el curso o preparar una presentación.
+- **Repaso rápido (20-30 min):** para una práctica breve antes de cerrar el curso o preparar una presentación, con autodiagnóstico reducido de 12 preguntas.
 - **Recorrido completo (60 min):** para revisar todos los bloques con más calma.
 
 Esta doble entrada reduce la sensación de herramienta larga en móvil y permite ajustar el uso a tiempos reales de aula o práctica autónoma.
@@ -130,7 +130,7 @@ Presenta la finalidad general y los contenidos trabajados.
 
 ### Bloque 1 · Autodiagnóstico orientativo
 
-Actividad de 18 preguntas con feedback inmediato. Permite detectar qué conviene repasar. No tiene valor evaluativo oficial.
+Actividad con 12 preguntas en repaso rápido o 18 en recorrido completo, siempre con feedback inmediato. Permite detectar qué conviene repasar. No tiene valor evaluativo oficial.
 
 ### Bloque 2 · Flashcards
 

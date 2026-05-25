@@ -4,7 +4,7 @@
 
 **Autor:** Joel Concepción Villanueva  
 **Versión histórica de referencia:** 1.0  
-**Estado actual del recurso:** 3.0
+**Estado actual del recurso:** 3.1
 **Tipo de documento:** checklist de publicación estable  
 **Carácter:** recurso complementario, gratuito, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -12,7 +12,7 @@
 
 Esta guía se conserva como documento histórico de cierre de la versión 1.0 y como checklist de publicación estable en GitHub Pages, portfolio docente o contexto de demostración.
 
-La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v3.0**, con datos didácticos separados, auditoría técnica consolidada, UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo, ampliación pedagógica de Francés A1, comprensión lectora A1, comprensión auditiva A1 con audios locales propios, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, tarjetas iniciales táctiles, objetivos iniciales más claros y variación comunicativa progresiva.
+La versión 1.0 consolidó el recurso, la documentación, la licencia y la presentación pública. El estado actual del código, según `index.html`, es **v3.1**, con datos didácticos separados, auditoría técnica consolidada, UX móvil refinada, estructura de plantilla multidioma, experiencia instalable ligera, capturas de validación, dossier de producto demostrativo, ampliación pedagógica de Francés A1, comprensión lectora A1, comprensión auditiva A1 con audios locales propios, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, tarjetas iniciales táctiles, objetivos iniciales más claros y variación comunicativa progresiva.
 
 ## 2. Comprobaciones antes de publicar
 
@@ -80,3 +80,4 @@ Estado de ciclos tras v1.0:
 - v2.7: rúbrica docente/documental de observación A1, sin valor evaluativo oficial;
 - v2.8: grabación local opcional para autoescucha oral, sin subida de audio ni inclusión en informe.
 - v3.0: datos educativos separados, auditoría técnica consolidada y nota operativa de despliegue.
+- v3.1: repaso rápido optimizado con autodiagnóstico reducido de 12 preguntas.

@@ -18,7 +18,7 @@
   <!--
     Repaso Final Frances A1 - Kit interactivo
     Autor: Joel Concepcion Villanueva
-    Version: 3.0
+    Version: 3.1
     Historial completo: CHANGELOG.md
   -->
 
@@ -1533,7 +1533,7 @@
 
         <p class="notice small desktop-notice"><strong>Nota de uso:</strong> propuesta pedagógica complementaria creada para portfolio docente FPE. No es un recurso oficial de ICSE, no tiene vínculo institucional directo con ICSE ni con el SCE, y no sustituye la programación, los materiales ni la evaluación establecidos por la docente titular o el centro.</p>
         <div class="cta-row no-print" aria-label="Accesos principales">
-          <a class="button primary hero-main" id="startQuickBtn" href="#diagnostico">Repaso rápido (20 min)</a>
+          <a class="button primary hero-main" id="startQuickBtn" href="#diagnostico">Repaso rápido (20-30 min)</a>
           <a class="button secondary hero-main" id="startFullBtn" href="#diagnostico">Recorrido completo (60 min)</a>
           <button class="secondary hero-main" type="button" id="viewBlocksBtn">Ver todos los bloques</button>
           <a class="button secondary hero-extra" href="#flashcards">Repasar frases</a>
@@ -1623,7 +1623,7 @@
         <article class="block-map-card">
           <span class="step-number">1</span>
           <h3>Autodiagnóstico</h3>
-          <p>18 preguntas rápidas con feedback orientativo.</p>
+          <p>12 preguntas en repaso rápido o 18 en recorrido completo.</p>
           <button class="primary" type="button" data-guided-id="diagnostico">Abrir bloque</button>
         </article>
         <article class="block-map-card">
@@ -1780,7 +1780,7 @@
         <div>
           <span class="tag">Bloque 1</span>
           <h2>Autodiagnóstico orientativo A1</h2>
-          <p class="muted">Responde 18 preguntas. El objetivo no es obtener una nota oficial, sino detectar qué conviene repasar.</p>
+          <p class="muted" id="quizIntroText">Responde 12 preguntas en repaso rápido o 18 en recorrido completo. El objetivo no es obtener una nota oficial, sino detectar qué conviene repasar.</p>
         </div>
         <button class="secondary no-print" type="button" id="resetQuizBtn">Reiniciar autodiagnóstico</button>
       </div>
@@ -1789,7 +1789,7 @@
         <div class="progress-wrap" id="quizProgressWrap" role="progressbar" aria-label="Progreso del autodiagnóstico" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
           <div class="progress-bar" id="quizProgress"></div>
         </div>
-        <p class="small muted" id="quizCounter">Pregunta 1 de 18</p>
+        <p class="small muted" id="quizCounter">Pregunta 1</p>
         <h3 id="quizQuestion">Cargando pregunta…</h3>
         <div class="option-list" id="quizOptions"></div>
         <div class="feedback" id="quizFeedback" aria-live="polite">Elige una respuesta para ver una explicación breve.</div>
@@ -2290,7 +2290,7 @@
     <section id="creditos">
       <h2>Créditos y nota de uso</h2>
       <p>Recurso creado por Joel Concepción Villanueva como propuesta de material pedagógico digital para prácticas de habilitación docente FPE. Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
-        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 3.0 · Datos didácticos separados · Dos velocidades · Sin envío de datos personales.</p>
+        <p class="muted">No es un recurso oficial de ICSE ni tiene vínculo institucional directo con ICSE o con el SCE. Versión 3.1 · Repaso rápido optimizado · Datos didácticos separados · Sin envío de datos personales.</p>
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
@@ -2500,9 +2500,11 @@
     function setGuidedSpeed(speed, { remember = true } = {}) {
       guidedSpeed = speed === "rapido" ? "rapido" : "completo";
       guidedSteps = getGuidedSteps();
+      quizQuestions = getActiveQuizQuestions();
       guidedIndex = Math.max(0, Math.min(guidedSteps.length - 1, guidedIndex));
       if (remember) localStorage.setItem(SPEED_STORAGE_KEY, guidedSpeed);
       updateSpeedButtons();
+      if (document.getElementById("quizCounter")) renderQuiz();
     }
 
     function updateSpeedButtons() {
@@ -2701,11 +2703,24 @@
       }
     });
 
-    const quizQuestions = EIJ_DIAGNOSTICO;
+    function getActiveQuizQuestions() {
+      return guidedSpeed === "rapido" ? EIJ_DIAGNOSTICO_RAPIDO : EIJ_DIAGNOSTICO;
+    }
+
+    function getQuizModeLabel() {
+      return guidedSpeed === "rapido" ? "Repaso rápido" : "Recorrido completo";
+    }
+
+    function getQuizDisplayScore() {
+      return Math.min(state.quiz.score, quizQuestions.length);
+    }
+
+    let quizQuestions = getActiveQuizQuestions();
 
     function renderQuiz() {
       const finished = state.quiz.index >= quizQuestions.length;
       const counter = document.getElementById("quizCounter");
+      const intro = document.getElementById("quizIntroText");
       const question = document.getElementById("quizQuestion");
       const options = document.getElementById("quizOptions");
       const feedback = document.getElementById("quizFeedback");
@@ -2714,11 +2729,14 @@
       setProgress("quizProgressWrap", "quizProgress", (state.quiz.index / quizQuestions.length) * 100);
       options.innerHTML = "";
       nextBtn.disabled = finished;
+      if (intro) {
+        intro.textContent = `${getQuizModeLabel()}: responde ${quizQuestions.length} preguntas. El objetivo no es obtener una nota oficial, sino detectar qué conviene repasar.`;
+      }
 
       if (finished) {
         counter.textContent = "Autodiagnóstico completado";
-        question.textContent = `Resultado orientativo: ${state.quiz.score} de ${quizQuestions.length}`;
-        feedback.textContent = getQuizAdvice(state.quiz.score);
+        question.textContent = `Resultado orientativo: ${getQuizDisplayScore()} de ${quizQuestions.length}`;
+        feedback.textContent = getQuizAdvice(getQuizDisplayScore());
         setProgress("quizProgressWrap", "quizProgress", 100);
         nextBtn.textContent = "Finalizado";
         return;
@@ -2761,8 +2779,9 @@
     }
 
     function getQuizAdvice(score) {
-      if (score >= 8) return "Buen repaso orientativo. Conviene practicar en voz alta y hacer el reto final. Este resultado no tiene valor evaluativo oficial.";
-      if (score >= 5) return "Base suficiente, pero conviene repasar frases de supervivencia y mini-situaciones. Este resultado es solo orientativo.";
+      const ratio = quizQuestions.length ? score / quizQuestions.length : 0;
+      if (ratio >= 0.7) return "Buen repaso orientativo. Conviene practicar en voz alta y hacer el reto final. Este resultado no tiene valor evaluativo oficial.";
+      if (ratio >= 0.45) return "Base suficiente, pero conviene repasar frases de supervivencia y mini-situaciones. Este resultado es solo orientativo.";
       return "Conviene volver a saludos, presentación personal, números básicos y frases de ayuda antes del reto final. Este resultado no tiene valor evaluativo oficial.";
     }
 
@@ -3545,7 +3564,7 @@
       const startedDone = Object.values(state.started).filter(Boolean).length;
       const startedTotal = Object.keys(state.started).length;
       const practiceScore = Math.round((startedDone / startedTotal) * 20);
-      const quizScore = Math.round((state.quiz.score / quizQuestions.length) * 15) || 0;
+      const quizScore = Math.round((getQuizDisplayScore() / quizQuestions.length) * 15) || 0;
       const readingScore = Math.round((state.reading.score / readingTexts.length) * 15) || 0;
       const listeningScore = Math.round((state.listening.score / listeningTasks.length) * 15) || 0;
       const matchScore = Math.round((matchedIds.size / matchPairs.length) * 10) || 0;
@@ -3738,10 +3757,10 @@
 
       return {
         date: new Date().toLocaleString("es-ES"),
-        version: "3.0",
+        version: "3.1",
         progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
-        quiz: quizFinished ? `${state.quiz.score} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${state.quiz.score}.`,
-        quizAdvice: quizFinished ? getQuizAdvice(state.quiz.score) : "Autodiagnóstico no finalizado todavía.",
+        quiz: quizFinished ? `${getQuizDisplayScore()} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${getQuizDisplayScore()}.`,
+        quizAdvice: quizFinished ? getQuizAdvice(getQuizDisplayScore()) : "Autodiagnóstico no finalizado todavía.",
         flashcard: `${flashIndex + 1} / ${flashcards.length}: ${flashcards[flashIndex]?.fr || "No iniciado"}`,
         reading: readingFinished ? `${state.reading.score} de ${readingTexts.length}` : `En curso: texto ${Math.min(state.reading.index + 1, readingTexts.length)} de ${readingTexts.length}. Puntuación parcial: ${state.reading.score}.`,
         listening: listeningFinished ? `${state.listening.score} de ${listeningTasks.length}` : `En curso: audio ${Math.min(state.listening.index + 1, listeningTasks.length)} de ${listeningTasks.length}. Puntuación parcial: ${state.listening.score}.`,
