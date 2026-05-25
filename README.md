@@ -10,17 +10,21 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 ## Acceso al recurso
 
-> **Nota sobre el despliegue:** La versión publicada está alojada en la cuenta `elinversorjunior-lgtm` por continuidad con la documentación entregada durante el itinerario FPE. Este repositorio (`viconjoe/repaso-frances-a1-fpe`) es la copia activa de desarrollo y mantenimiento. Ambos repositorios contienen el mismo código. La URL de despliegue se actualizará cuando sea posible hacerlo sin romper referencias ya entregadas.
+> **Nota sobre el despliegue:** La versión publicada y mantenida actualmente está alojada en `viconjoe.github.io`. La URL anterior en `elinversorjunior-lgtm` se conserva solo como referencia histórica de continuidad con materiales ya compartidos, pero puede no reflejar la versión activa.
 
-Versión publicada:
+Versión publicada actual:
 
-https://elinversorjunior-lgtm.github.io/repaso-frances-a1-fpe/
+https://viconjoe.github.io/repaso-frances-a1-fpe/
 
 Repositorio:
 
 https://github.com/viconjoe/repaso-frances-a1-fpe
 
-Repositorio de continuidad:
+URL histórica de continuidad:
+
+https://elinversorjunior-lgtm.github.io/repaso-frances-a1-fpe/
+
+Repositorio histórico de continuidad:
 
 https://github.com/elinversorjunior-lgtm/repaso-frances-a1-fpe
 
@@ -311,7 +315,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 
 - Consolidación de correcciones de auditoría técnica y documental.
 - Separación de datos educativos en `data-frances-a1.js` sin módulos ES ni dependencias externas.
-- Nota operativa de despliegue para mantener la URL pública en `elinversorjunior-lgtm` mientras `viconjoe` actúa como repositorio activo.
+- Nota operativa de despliegue para distinguir la URL pública activa en `viconjoe.github.io` de la URL histórica en `elinversorjunior-lgtm`.
 - Refuerzo de `lang="fr"` en contenido francés.
 - Verificación de autodiagnóstico con 18 preguntas y recursos PWA.
 - Recorrido a dos velocidades: repaso rápido y recorrido completo.
