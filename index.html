@@ -1091,6 +1091,38 @@
       font-weight: 750;
     }
 
+    .guided-speed-switch {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      margin-top: 0.8rem;
+    }
+
+    .guided-speed-option {
+      min-height: 48px;
+      border-radius: 999px;
+      padding: 0.62rem 0.8rem;
+      border: 1px solid rgba(22, 79, 75, 0.22);
+      background: #fff;
+      color: var(--brand);
+      font-weight: 800;
+      box-shadow: none;
+    }
+
+    .guided-speed-option[aria-pressed="true"] {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(22, 79, 75, 0.16);
+    }
+
+    .guided-speed-option span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 650;
+      opacity: 0.84;
+    }
+
     .guided-toolbar {
       position: fixed;
       left: 0;
@@ -1431,6 +1463,16 @@
         min-width: 0;
       }
 
+      .guided-speed-switch {
+        grid-template-columns: 1fr;
+      }
+
+      .guided-speed-option {
+        border-radius: 18px;
+        justify-content: flex-start;
+        text-align: left;
+      }
+
       body.guided-mode:not(.presentation-mode) .mobile-hero-compact {
         width: 100%;
         margin-bottom: 0;
@@ -1559,6 +1601,16 @@
     <div class="guided-panel no-print" id="guidedPanel" aria-live="polite">
       <strong id="guidedPanelTitle">Recorrido guiado</strong>
       <span class="small muted" id="guidedPanelText">Avanza bloque a bloque. Puedes volver a la vista completa cuando quieras.</span>
+      <div class="guided-speed-switch" aria-label="Elegir duración del recorrido">
+        <button class="guided-speed-option" type="button" id="guidedQuickBtn" aria-pressed="false">
+          Repaso rápido
+          <span>20-30 min · 6 pasos</span>
+        </button>
+        <button class="guided-speed-option" type="button" id="guidedFullBtn" aria-pressed="false">
+          Recorrido completo
+          <span>60 min · 14 pasos</span>
+        </button>
+      </div>
       <span class="small guided-panel-instruction">Para empezar el repaso, usa los botones Atrás/Siguiente de la parte baja de la pantalla.</span>
     </div>
   </header>
@@ -2498,20 +2550,27 @@
     }
 
     function setGuidedSpeed(speed, { remember = true } = {}) {
+      const currentStepId = guidedSteps[guidedIndex]?.id;
       guidedSpeed = speed === "rapido" ? "rapido" : "completo";
       guidedSteps = getGuidedSteps();
       quizQuestions = getActiveQuizQuestions();
-      guidedIndex = Math.max(0, Math.min(guidedSteps.length - 1, guidedIndex));
+      const matchingIndex = currentStepId ? guidedSteps.findIndex((step) => step.id === currentStepId) : -1;
+      guidedIndex = matchingIndex >= 0 ? matchingIndex : 0;
       if (remember) localStorage.setItem(SPEED_STORAGE_KEY, guidedSpeed);
       updateSpeedButtons();
       if (document.getElementById("quizCounter")) renderQuiz();
+      updateGuidedView({ scroll: false });
     }
 
     function updateSpeedButtons() {
       const quickBtn = document.getElementById("startQuickBtn");
       const fullBtn = document.getElementById("startFullBtn");
+      const guidedQuickBtn = document.getElementById("guidedQuickBtn");
+      const guidedFullBtn = document.getElementById("guidedFullBtn");
       if (quickBtn) quickBtn.setAttribute("aria-pressed", guidedSpeed === "rapido" ? "true" : "false");
       if (fullBtn) fullBtn.setAttribute("aria-pressed", guidedSpeed === "completo" ? "true" : "false");
+      if (guidedQuickBtn) guidedQuickBtn.setAttribute("aria-pressed", guidedSpeed === "rapido" ? "true" : "false");
+      if (guidedFullBtn) guidedFullBtn.setAttribute("aria-pressed", guidedSpeed === "completo" ? "true" : "false");
     }
 
     function getGuidedIndexById(id) {
@@ -2603,6 +2662,16 @@
 
     document.getElementById("guidedToggle").addEventListener("click", () => {
       setGuidedMode(!document.body.classList.contains("guided-mode"));
+    });
+
+    document.getElementById("guidedQuickBtn").addEventListener("click", () => {
+      setGuidedSpeed("rapido");
+      setGuidedMode(true, { scroll: false });
+    });
+
+    document.getElementById("guidedFullBtn").addEventListener("click", () => {
+      setGuidedSpeed("completo");
+      setGuidedMode(true, { scroll: false });
     });
 
     document.getElementById("guidedPrevBtn").addEventListener("click", () => {
