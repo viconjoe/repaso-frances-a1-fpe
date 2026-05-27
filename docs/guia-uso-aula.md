@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 3.1
+**Versión de referencia:** 3.2 provisional
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -16,7 +16,7 @@ El recurso puede utilizarse de forma autónoma, por parejas o con acompañamient
 Desde v3.1, el recurso ofrece dos entradas:
 
 - **Repaso rápido (20-30 min):** útil para una sesión breve, cierre de clase o práctica previa a una presentación. Usa 12 preguntas de autodiagnóstico.
-- **Recorrido completo (60 min):** recomendable cuando se quiere revisar todos los bloques.
+- **Repaso exhaustivo (60 min):** recomendable cuando se quiere revisar todos los bloques.
 
 La selección solo se recuerda en el navegador mediante `localStorage` y no se envía a ningún servidor.
 
@@ -48,7 +48,7 @@ La opción **Ver todos los bloques** funciona como un **mapa de navegación**, n
 
 El selector móvil **Ir a...** ayuda a saltar directamente a un bloque concreto sin perderse ni depender de un menú horizontal desplazable.
 
-Las tarjetas iniciales **Detectar**, **Repasar**, **Aplicar** y **Guardar evidencia** funcionan como accesos directos. Si el alumnado las toca, el recurso abre el bloque correspondiente dentro del recorrido guiado.
+Las tarjetas iniciales **Detectar**, **Repasar**, **Aplicar** y **Guardar informe de evaluación** funcionan como accesos directos. Si el alumnado las toca, el recurso abre el bloque correspondiente dentro del recorrido guiado.
 
 ## 4. Secuencia recomendada de 30-40 minutos
 
@@ -63,7 +63,7 @@ Explicar que se van a repasar frases útiles de comunicación básica:
 - pedir repetición;
 - preguntar precio o ubicación.
 
-### 2. Autodiagnóstico orientativo · 5-8 minutos
+### 2. Autoevaluación orientativa · 5-8 minutos
 
 El alumnado responde las preguntas individualmente.
 
@@ -106,7 +106,7 @@ Puede hacerse:
 - por parejas;
 - en grupo con proyección.
 
-### 6. Reto final · 8-12 minutos
+### 6. Situación comunicativa · 8-12 minutos
 
 El alumnado prepara una presentación breve:
 
@@ -131,12 +131,12 @@ En equipos compartidos, se recomienda borrar el progreso local al finalizar.
 
 Para una sesión breve:
 
-1. Autodiagnóstico.
+1. Autoevaluación.
 2. Flashcards seleccionadas.
 3. Un texto breve de lectura.
 4. Un audio breve, si está disponible.
 5. Una o dos mini-situaciones.
-6. Reto final oral sin informe.
+6. Situación comunicativa oral sin informe.
 
 ## 6. Variante autónoma
 
