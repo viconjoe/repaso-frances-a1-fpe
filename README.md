@@ -52,9 +52,9 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v3.2 provisional
+## Estado actual: v3.2
 
-La versión **3.2 provisional** incorpora ajustes tras feedback docente: lenguaje más directo para alumnado adulto, autoevaluación en lugar de autodiagnóstico visible, recorrido completo para el modo largo, situación comunicativa en lugar de reto final, CTA de preguntas más claro y un informe que distingue bloques realizados, pendientes y no incluidos en el modo rápido. Mantiene las correcciones de auditoría, los datos educativos separados en `data-frances-a1.js` y la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
+La versión **3.2** incorpora ajustes tras feedback docente: lenguaje más directo para alumnado adulto, autoevaluación en lugar de autodiagnóstico visible, recorrido completo para el modo largo, situación comunicativa en lugar de reto final, CTA de preguntas más claro y un informe que distingue bloques realizados, pendientes y no incluidos en el modo rápido. Mantiene las correcciones de auditoría, los datos educativos separados en `data-frances-a1.js` y la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
 
 Mantiene también la rúbrica docente/documental de v2.7, la autoevaluación final orientativa de v2.6, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
@@ -95,7 +95,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 
 ## EFJ-001 · Recurso piloto estable
 
-La v3.2 provisional se prepara como ajuste posterior al feedback docente del piloto **EFJ-001 · Repaso Final Francés A1 · Kit interactivo** dentro de El Formador Junior.
+La v3.2 se prepara como ajuste posterior al feedback docente del piloto **EFJ-001 · Repaso Final Francés A1 · Kit interactivo** dentro de El Formador Junior.
 
 Su uso recomendado es complementario: repaso guiado en aula, práctica autónoma, evidencia de portfolio técnico-docente y modelo reutilizable para futuros recursos de idiomas iniciales. Mantiene carácter no oficial, sin vínculo institucional directo con ICSE ni con el SCE, sin valor evaluativo oficial y sin sustitución de programación, materiales o evaluación del curso.
 
@@ -126,14 +126,14 @@ El diseño toma como referencia pedagógica general el nivel **A1 del MCER**, la
 
 El informe local resume:
 
-- progreso local por bloques iniciados;
-- resultado orientativo del autodiagnóstico ampliado;
+- progreso local por práctica realizada;
+- resultado orientativo de la autoevaluación;
 - avance en flashcards, comprensión lectora, comprensión auditiva, emparejar y situaciones;
 - práctica oral guiada marcada localmente; la grabación opcional no se incorpora al informe;
 - autoevaluación final orientativa local;
-- checklist del reto final;
-- texto escrito en el reto final;
-- orientación local del reto final.
+- checklist de la situación comunicativa;
+- texto escrito en la situación comunicativa;
+- orientación local de la situación comunicativa.
 
 El informe:
 
@@ -321,14 +321,14 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 
 ## Evolución de versiones
 
-### v3.2 provisional
+### v3.2 · Ajustes tras feedback docente
 
 - Ajustes de microcopy tras feedback docente: autoevaluación, recorrido completo, situación comunicativa y revisión de texto.
 - Reparto más variado de la posición de las respuestas correctas en actividades de opción múltiple.
 - Informe diferenciado para repaso rápido y recorrido completo.
 - CTA de preguntas más claro: comprobar respuesta antes de avanzar.
 - Informe local ajustado para no atribuir como evaluados bloques no realizados o no incluidos en repaso rápido.
-- Actualización de caché PWA a `repaso-frances-a1-v3.2`.
+- Actualización de caché PWA a `repaso-frances-a1-v3.2.1`.
 
 ### v3.1
 
