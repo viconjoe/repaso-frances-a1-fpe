@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 3.1
+**Versión:** 3.2 provisional
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -82,8 +82,8 @@ El tono, el diseño y las actividades se han planteado para adultos, evitando in
 
 El recurso se organiza en estos bloques:
 
-- **Objetivo del recurso**.
-- **Autodiagnóstico orientativo A1**.
+- **Cómo usar esta app**.
+- **Autoevaluación orientativa: Francés A1**.
 - **Flashcards de supervivencia**.
 - **Gramática útil A1**.
 - **Comprensión lectora A1**.
@@ -91,7 +91,7 @@ El recurso se organiza en estos bloques:
 - **Empareja frase e intención**.
 - **Mini-situaciones comunicativas**.
 - **Expresión oral guiada con grabación local opcional**.
-- **Reto final**.
+- **Situación comunicativa**.
 - **Autoevaluación final orientativa**.
 - **Informe de práctica**.
 - **Ficha docente**.
@@ -375,7 +375,7 @@ En v2.3.1 se incorporan los cinco archivos MP3 reales en `assets/audio/` y se ac
 
 Ajuste UX de tarjetas iniciales:
 
-- las tarjetas **Detectar**, **Repasar**, **Aplicar** y **Guardar evidencia** pasan a funcionar como accesos reales;
+- las tarjetas **Detectar**, **Repasar**, **Aplicar** y **Guardar informe de evaluación** pasan a funcionar como accesos reales;
 - el cambio responde a feedback externo: varias personas percibían esas tarjetas como botones;
 - se mantiene el recorrido guiado y no se añade ninguna dependencia ni servicio externo.
 
@@ -532,4 +532,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **3.1** se considera adecuada para publicación en GitHub Pages y para ser mostrada como producto demostrativo de portfolio docente con ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, variación comunicativa progresiva, repaso rápido optimizado, datos didácticos separados y mejoras UX basadas en feedback real, siempre con la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **3.2 provisional** incorpora ajustes tras feedback docente para mejorar claridad, lenguaje de interfaz, flujo de respuesta y salida del informe. Se considera adecuada como candidata a revisión antes de publicarse como ajuste menor de GitHub Pages, manteniendo ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, variación comunicativa progresiva, repaso rápido optimizado, datos didácticos separados y la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

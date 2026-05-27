@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 3.1
+**Versión:** 3.2 provisional
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -55,7 +55,7 @@ El recurso busca que el alumnado pueda:
 Desde v3.1, el recurso ofrece dos itinerarios de uso:
 
 - **Repaso rápido (20-30 min):** para una práctica breve antes de cerrar el curso o preparar una presentación, con autodiagnóstico reducido de 12 preguntas.
-- **Recorrido completo (60 min):** para revisar todos los bloques con más calma.
+- **Repaso exhaustivo (60 min):** para revisar todos los bloques con más calma.
 
 Esta doble entrada reduce la sensación de herramienta larga en móvil y permite ajustar el uso a tiempos reales de aula o práctica autónoma.
 
@@ -93,7 +93,7 @@ El recurso se apoya en una metodología práctica y formativa:
 La secuencia didáctica sigue una progresión sencilla:
 
 1. Presentación del objetivo.
-2. Autodiagnóstico orientativo.
+2. Autoevaluación orientativa.
 3. Repaso de frases.
 4. Comprensión lectora breve.
 5. Comprensión auditiva breve con audios locales del autor, cuando estén disponibles.
@@ -124,11 +124,11 @@ La intención no es infantilizar la experiencia ni convertirla en juego, sino ha
 
 ## 7. Descripción de actividades
 
-### Bloque 0 · Objetivo del recurso
+### Bloque 0 · Cómo usar esta app
 
 Presenta la finalidad general y los contenidos trabajados.
 
-### Bloque 1 · Autodiagnóstico orientativo
+### Bloque 1 · Autoevaluación orientativa
 
 Actividad con 12 preguntas en repaso rápido o 18 en recorrido completo, siempre con feedback inmediato. Permite detectar qué conviene repasar. No tiene valor evaluativo oficial.
 
@@ -162,7 +162,7 @@ Desde v2.4, algunas situaciones reutilizan funciones ya trabajadas en contextos 
 
 Prácticas breves para hablar en voz alta con modelo y apoyo. Desde v2.8 puede activarse una grabación local opcional para autoescucha. El audio no se sube, no se analiza, no se incluye en el informe y puede borrarse desde la interfaz.
 
-### Bloque 9 · Reto final
+### Bloque 9 · Situación comunicativa
 
 Producción breve escrita u oral. El alumnado puede construir una presentación sencilla y resolver una situación básica usando frases de apoyo. El feedback local es orientativo y no sustituye la corrección docente.
 

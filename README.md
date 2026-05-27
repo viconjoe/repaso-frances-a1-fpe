@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 3.1
+**Versión actual:** 3.2 provisional
 
 **Publicación:** GitHub Pages
 
@@ -52,16 +52,16 @@ No sustituye la programación docente del curso.
 No sustituye los materiales oficiales ni la evaluación establecida por la docente titular o el centro.  
 No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
-## Estado actual: v3.1
+## Estado actual: v3.2 provisional
 
-La versión **3.1** optimiza el repaso rápido con un autodiagnóstico reducido de 12 preguntas. Mantiene las correcciones de auditoría, los datos educativos separados en `data-frances-a1.js` y la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
+La versión **3.2 provisional** incorpora ajustes tras feedback docente: lenguaje más directo para alumnado adulto, autoevaluación en lugar de autodiagnóstico visible, repaso exhaustivo en lugar de recorrido completo, situación comunicativa en lugar de reto final, CTA de preguntas más claro y un informe que distingue bloques realizados, pendientes y no incluidos en el modo rápido. Mantiene las correcciones de auditoría, los datos educativos separados en `data-frances-a1.js` y la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
 
 Mantiene también la rúbrica docente/documental de v2.7, la autoevaluación final orientativa de v2.6, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso incorpora una experiencia **a dos velocidades**:
 
-- **Repaso rápido (20-30 min):** objetivo breve, autodiagnóstico reducido de 12 preguntas, flashcards, situaciones comunicativas, reto final e informe.
-- **Recorrido completo (60 min):** autodiagnóstico completo de 18 preguntas y todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación, ficha docente y rúbrica.
+- **Repaso rápido (20-30 min):** uso breve de la app, autoevaluación reducida de 12 preguntas, flashcards, situaciones comunicativas, situación comunicativa final e informe.
+- **Repaso exhaustivo (60 min):** autoevaluación completa de 18 preguntas y todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación final, ficha docente y rúbrica.
 
 El modo elegido se guarda solo en el navegador mediante `localStorage` (`eij_velocidad`) y no se envía a ningún servidor.
 
@@ -95,7 +95,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 
 ## EFJ-001 · Recurso piloto estable
 
-La v3.1 se prepara como cierre del piloto **EFJ-001 · Repaso Final Francés A1 · Kit interactivo** dentro de El Formador Junior.
+La v3.2 provisional se prepara como ajuste posterior al feedback docente del piloto **EFJ-001 · Repaso Final Francés A1 · Kit interactivo** dentro de El Formador Junior.
 
 Su uso recomendado es complementario: repaso guiado en aula, práctica autónoma, evidencia de portfolio técnico-docente y modelo reutilizable para futuros recursos de idiomas iniciales. Mantiene carácter no oficial, sin vínculo institucional directo con ICSE ni con el SCE, sin valor evaluativo oficial y sin sustitución de programación, materiales o evaluación del curso.
 
@@ -103,8 +103,8 @@ Su uso recomendado es complementario: repaso guiado en aula, práctica autónoma
 
 El recurso incluye estos bloques principales:
 
-1. **Objetivo del recurso**: presenta la finalidad y los contenidos trabajados.
-2. **Autodiagnóstico orientativo A1**: test breve de 12 preguntas en repaso rápido o 18 en recorrido completo, con feedback inmediato. No tiene valor evaluativo oficial.
+1. **Cómo usar esta app**: presenta la finalidad y los contenidos trabajados.
+2. **Autoevaluación orientativa: Francés A1**: test breve de 12 preguntas en repaso rápido o 18 en repaso exhaustivo, con feedback inmediato. No tiene valor evaluativo oficial.
 3. **Flashcards de supervivencia**: 40 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
 4. **Gramática útil A1**: píldoras breves sobre presentación, preguntas, negación, cortesía y futuro próximo.
 5. **Comprensión lectora A1**: textos breves de uso cotidiano con preguntas de información concreta.
@@ -112,7 +112,7 @@ El recurso incluye estos bloques principales:
 7. **Empareja frase e intención**: actividad de asociación entre frases francesas y funciones comunicativas, con contador de parejas completadas.
 8. **Mini-situaciones comunicativas**: selección de respuestas adecuadas ante situaciones sencillas.
 9. **Expresión oral guiada**: práctica en voz alta con modelos, apoyo, checklist local y grabación opcional temporal para escucharse.
-10. **Reto final**: producción breve escrita u oral para presentarse y resolver una situación básica, con banco de frases de apoyo y orientación local.
+10. **Situación comunicativa**: producción breve escrita u oral para presentarse y resolver una situación básica, con banco de frases de apoyo y revisión local.
 11. **Autoevaluación final orientativa**: perfil local de práctica y recomendación de repaso, sin calificación oficial.
 12. **Informe de práctica del alumno**: vista local preparada para guardar como PDF o descargar como HTML, sin envío de datos a servidores externos.
 13. **Ficha docente integrada**: contextualiza el recurso como propuesta pedagógica complementaria.
@@ -304,7 +304,7 @@ La carpeta `assets/audio/` incluye cinco audios locales reales de comprensión a
 Las capturas se incluyen como evidencia visual del recurso sin datos reales de alumnado:
 
 - [Portada y objetivo](assets/capturas/01-portada-objetivo.png)
-- [Reto final y privacidad](assets/capturas/02-reto-final-privacidad.png)
+- [Situación comunicativa y privacidad](assets/capturas/02-reto-final-privacidad.png)
 - [Informe y ficha docente](assets/capturas/03-informe-ficha-docente.png)
 - [Modo presentación](assets/capturas/04-modo-presentacion.png)
 - [Modo guiado móvil](assets/capturas/05-modo-guiado-movil.png)
@@ -320,6 +320,13 @@ Las capturas 06-09 corresponden a la fase v1.5. Las capturas anteriores se conse
 La revisión v3.1 confirma la existencia de los recursos básicos de instalación ligera: `manifest.webmanifest`, `assets/icons/icon.svg`, `assets/icons/icon-192.png`, `assets/icons/icon-512.png`, `data-frances-a1.js` y `sw.js`. La PWA no añade backend, cuentas, analítica ni envío de datos.
 
 ## Evolución de versiones
+
+### v3.2 provisional
+
+- Ajustes de microcopy tras feedback docente: autoevaluación, repaso exhaustivo, situación comunicativa y revisión de texto.
+- CTA de preguntas más claro: comprobar respuesta antes de avanzar.
+- Informe local ajustado para no atribuir como evaluados bloques no realizados o no incluidos en repaso rápido.
+- Actualización de caché PWA a `repaso-frances-a1-v3.2`.
 
 ### v3.1
 
