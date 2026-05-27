@@ -54,14 +54,14 @@ No tiene valor evaluativo oficial salvo decisión expresa del equipo docente.
 
 ## Estado actual: v3.2 provisional
 
-La versión **3.2 provisional** incorpora ajustes tras feedback docente: lenguaje más directo para alumnado adulto, autoevaluación en lugar de autodiagnóstico visible, repaso exhaustivo en lugar de recorrido completo, situación comunicativa en lugar de reto final, CTA de preguntas más claro y un informe que distingue bloques realizados, pendientes y no incluidos en el modo rápido. Mantiene las correcciones de auditoría, los datos educativos separados en `data-frances-a1.js` y la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
+La versión **3.2 provisional** incorpora ajustes tras feedback docente: lenguaje más directo para alumnado adulto, autoevaluación en lugar de autodiagnóstico visible, recorrido completo para el modo largo, situación comunicativa en lugar de reto final, CTA de preguntas más claro y un informe que distingue bloques realizados, pendientes y no incluidos en el modo rápido. Mantiene las correcciones de auditoría, los datos educativos separados en `data-frances-a1.js` y la **grabación local opcional** incorporada en v2.8 dentro del bloque de expresión oral guiada. El alumnado puede grabarse solo si acepta el aviso de privacidad, escucharse en el propio navegador y borrar el audio. La grabación no se sube, no se analiza, no se incluye en el informe y no se guarda en `localStorage`.
 
 Mantiene también la rúbrica docente/documental de v2.7, la autoevaluación final orientativa de v2.6, la variación comunicativa progresiva de v2.4, los objetivos iniciales claros de v2.3.3, las tarjetas táctiles del itinerario de v2.3.2, los cinco audios locales MP3 de v2.3.1, la comprensión lectora de v2.2, la ampliación pedagógica de v2.1, la UX móvil refinada, la estructura multidioma, la experiencia instalable ligera y el dossier demostrativo.
 
 El recurso incorpora una experiencia **a dos velocidades**:
 
 - **Repaso rápido (20-30 min):** uso breve de la app, autoevaluación reducida de 12 preguntas, flashcards, situaciones comunicativas, situación comunicativa final e informe.
-- **Repaso exhaustivo (60 min):** autoevaluación completa de 18 preguntas y todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación final, ficha docente y rúbrica.
+- **Recorrido completo (60 min):** autoevaluación completa de 18 preguntas y todos los bloques del recurso, incluida gramática, lectura, audición, oral guiado, autoevaluación final, ficha docente y rúbrica.
 
 El modo elegido se guarda solo en el navegador mediante `localStorage` (`eij_velocidad`) y no se envía a ningún servidor.
 
@@ -104,7 +104,7 @@ Su uso recomendado es complementario: repaso guiado en aula, práctica autónoma
 El recurso incluye estos bloques principales:
 
 1. **Cómo usar esta app**: presenta la finalidad y los contenidos trabajados.
-2. **Autoevaluación orientativa: Francés A1**: test breve de 12 preguntas en repaso rápido o 18 en repaso exhaustivo, con feedback inmediato. No tiene valor evaluativo oficial.
+2. **Autoevaluación orientativa: Francés A1**: test breve de 12 preguntas en repaso rápido o 18 en recorrido completo, con feedback inmediato. No tiene valor evaluativo oficial.
 3. **Flashcards de supervivencia**: 40 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
 4. **Gramática útil A1**: píldoras breves sobre presentación, preguntas, negación, cortesía y futuro próximo.
 5. **Comprensión lectora A1**: textos breves de uso cotidiano con preguntas de información concreta.
@@ -323,7 +323,9 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 
 ### v3.2 provisional
 
-- Ajustes de microcopy tras feedback docente: autoevaluación, repaso exhaustivo, situación comunicativa y revisión de texto.
+- Ajustes de microcopy tras feedback docente: autoevaluación, recorrido completo, situación comunicativa y revisión de texto.
+- Reparto más variado de la posición de las respuestas correctas en actividades de opción múltiple.
+- Informe diferenciado para repaso rápido y recorrido completo.
 - CTA de preguntas más claro: comprobar respuesta antes de avanzar.
 - Informe local ajustado para no atribuir como evaluados bloques no realizados o no incluidos en repaso rápido.
 - Actualización de caché PWA a `repaso-frances-a1-v3.2`.

@@ -16,7 +16,7 @@ El recurso puede utilizarse de forma autónoma, por parejas o con acompañamient
 Desde v3.1, el recurso ofrece dos entradas:
 
 - **Repaso rápido (20-30 min):** útil para una sesión breve, cierre de clase o práctica previa a una presentación. Usa 12 preguntas de autodiagnóstico.
-- **Repaso exhaustivo (60 min):** recomendable cuando se quiere revisar todos los bloques.
+- **Recorrido completo (60 min):** recomendable cuando se quiere revisar todos los bloques.
 
 La selección solo se recuerda en el navegador mediante `localStorage` y no se envía a ningún servidor.
 

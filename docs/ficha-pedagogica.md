@@ -55,7 +55,7 @@ El recurso busca que el alumnado pueda:
 Desde v3.1, el recurso ofrece dos itinerarios de uso:
 
 - **Repaso rápido (20-30 min):** para una práctica breve antes de cerrar el curso o preparar una presentación, con autodiagnóstico reducido de 12 preguntas.
-- **Repaso exhaustivo (60 min):** para revisar todos los bloques con más calma.
+- **Recorrido completo (60 min):** para revisar todos los bloques con más calma.
 
 Esta doble entrada reduce la sensación de herramienta larga en móvil y permite ajustar el uso a tiempos reales de aula o práctica autónoma.
 

@@ -164,6 +164,38 @@
       color: var(--brand);
     }
 
+    .global-progress-dock {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 28;
+      border-top: 1px solid rgba(217, 209, 197, 0.9);
+      background: rgba(255, 253, 249, 0.96);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 -8px 22px rgba(31, 41, 51, 0.08);
+      padding: 0.55rem max(1rem, env(safe-area-inset-left)) calc(0.55rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-right));
+    }
+
+    .global-progress-dock__inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto minmax(8rem, 1fr) auto;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .global-progress-dock strong {
+      color: var(--brand);
+      white-space: nowrap;
+    }
+
+    .global-progress-dock p {
+      margin: 0;
+      white-space: nowrap;
+    }
+
     .notice {
       margin-top: 1rem;
       border-left: 4px solid var(--brand-2);
@@ -380,7 +412,7 @@
       font-weight: 700;
     }
 
-    main { padding: 1.5rem 0 3rem; }
+    main { padding: 1.5rem 0 6rem; }
 
     section {
       scroll-margin-top: 5.5rem;
@@ -1235,7 +1267,7 @@
     }
 
     body.guided-mode:not(.presentation-mode) main {
-      padding-bottom: 6.5rem;
+      padding-bottom: 10rem;
     }
 
     body.guided-mode:not(.presentation-mode) nav {
@@ -1245,6 +1277,10 @@
     body.guided-mode:not(.presentation-mode) .guided-panel,
     body.guided-mode:not(.presentation-mode) .guided-toolbar {
       display: block;
+    }
+
+    body.guided-mode:not(.presentation-mode) .global-progress-dock {
+      bottom: 4.95rem;
     }
 
     body.guided-mode:not(.presentation-mode) main > section {
@@ -1554,6 +1590,19 @@
       .unguided-toolbar__inner {
         grid-template-columns: 1fr 0.75fr;
       }
+
+      .global-progress-dock {
+        bottom: 4.95rem;
+      }
+
+      .global-progress-dock__inner {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+
+      .global-progress-dock p {
+        white-space: normal;
+      }
     }
 
     @media print {
@@ -1591,7 +1640,7 @@
         <div class="mobile-info-drawers no-print" aria-label="Información breve del recurso">
           <details class="info-drawer">
             <summary>¿Qué voy a practicar?</summary>
-            <p>Expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1: saludos, presentación personal, aula, números, tiempo, ciudad, compras, transporte, trabajo y un reto final breve.</p>
+            <p>Expresiones básicas, vocabulario funcional y situaciones comunicativas del nivel A1: saludos, presentación personal, aula, números, tiempo, ciudad, compras, transporte, trabajo y una situación comunicativa breve.</p>
           </details>
           <details class="info-drawer">
             <summary>Privacidad y límites</summary>
@@ -1602,7 +1651,7 @@
         <p class="notice small desktop-notice"><strong>Privacidad y límites:</strong> app personal de repaso para Francés A1. No guarda datos personales, no envía respuestas y no sustituye las actividades ni la evaluación del curso.</p>
         <div class="cta-row no-print" aria-label="Accesos principales">
           <a class="button primary hero-main" id="startQuickBtn" href="#diagnostico">Repaso rápido (20-30 min)</a>
-          <a class="button secondary hero-main" id="startFullBtn" href="#diagnostico">Repaso exhaustivo (60 min)</a>
+          <a class="button secondary hero-main" id="startFullBtn" href="#diagnostico">Recorrido completo (60 min)</a>
           <button class="secondary hero-main" type="button" id="viewBlocksBtn">Ver todos los bloques</button>
           <a class="button secondary hero-extra" href="#flashcards">Repasar frases</a>
           <button class="ghost guided-toggle hero-extra" type="button" id="guidedToggle" aria-pressed="false">Recorrido guiado</button>
@@ -1617,13 +1666,6 @@
         <p><strong>Contexto:</strong> propuesta complementaria para prácticas FPE 2026.</p>
         <p><strong>Uso:</strong> repaso final, autoevaluación formativa y actividad guiada en aula.</p>
         <p><strong>Privacidad:</strong> tus respuestas y tu texto quedan solo en este navegador. Si usas un equipo compartido, borra el progreso local al terminar.</p>
-        <div class="progress-panel" aria-label="Mi progreso">
-          <h3>Mi progreso</h3>
-          <div class="progress-wrap" id="globalProgressWrap" role="progressbar" aria-label="Progreso general de uso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div class="progress-bar" id="globalProgress"></div>
-          </div>
-          <p class="small muted"><span id="progressText">0%</span> de bloques prácticos iniciados en este navegador.</p>
-        </div>
       </aside>
     </div>
 
@@ -1636,13 +1678,23 @@
           <span>20-30 min · 6 pasos</span>
         </button>
         <button class="guided-speed-option" type="button" id="guidedFullBtn" aria-pressed="false">
-          Repaso exhaustivo
+          Recorrido completo
           <span>60 min · 14 pasos</span>
         </button>
       </div>
       <span class="small guided-panel-instruction">Para empezar el repaso, usa los botones Atrás/Siguiente de la parte baja de la pantalla.</span>
     </div>
   </header>
+
+  <div class="global-progress-dock no-print" aria-label="Mi progreso">
+    <div class="global-progress-dock__inner">
+      <strong>Mi progreso</strong>
+      <div class="progress-wrap" id="globalProgressWrap" role="progressbar" aria-label="Progreso general de uso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-bar" id="globalProgress"></div>
+      </div>
+      <p class="small muted"><span id="progressText">0%</span> de bloques iniciados</p>
+    </div>
+  </div>
 
   <nav aria-label="Navegación del recurso">
     <div class="nav-inner">
@@ -1843,7 +1895,7 @@
           <img class="step-icon" src="assets/pictogramas/practicar.svg" alt="" aria-hidden="true" />
           <div>
             <strong><span class="step-label"><span>3.</span> Aplicar</span></strong>
-            <span class="small muted">Leer, escuchar audios locales, emparejar, resolver situaciones, practicar oralmente y preparar el reto final.</span>
+            <span class="small muted">Leer, escuchar audios locales, emparejar, resolver situaciones, practicar oralmente y preparar la situación comunicativa.</span>
           </div>
         </button>
         <button class="step-card" type="button" data-guided-id="informe" aria-label="Abrir informe de práctica">
@@ -1861,7 +1913,7 @@
         <div>
           <span class="tag">Bloque 1</span>
           <h2>Autoevaluación orientativa: Francés A1</h2>
-          <p class="muted" id="quizIntroText">Responde 12 preguntas en repaso rápido o 18 en repaso exhaustivo. El objetivo no es obtener una nota oficial, sino detectar qué conviene repasar.</p>
+          <p class="muted" id="quizIntroText">Responde 12 preguntas en repaso rápido o 18 en recorrido completo. El objetivo no es obtener una nota oficial, sino detectar qué conviene repasar.</p>
         </div>
         <button class="secondary no-print" type="button" id="resetQuizBtn">Reiniciar autoevaluación</button>
       </div>
@@ -2318,7 +2370,7 @@
 
       <div class="card">
         <h3>Secuencia breve recomendada</h3>
-        <p>Inicio con autodiagnóstico, repaso de frases clave, práctica por parejas en mini-situaciones y cierre con reto final oral o escrito. El informe local solo se usa si aporta una evidencia útil y se respetan las indicaciones de privacidad.</p>
+        <p>Inicio con autoevaluación, repaso de frases clave, práctica por parejas en mini-situaciones y cierre con situación comunicativa oral o escrita. El informe local solo se usa si aporta una evidencia útil y se respetan las indicaciones de privacidad.</p>
         <h3>Evidencias generadas</h3>
         <p>Recurso HTML estático, ficha pedagógica, posible QR de acceso, capturas de uso, informe local de práctica y breve memoria de pilotaje si la tutora lo autoriza.</p>
         <h3>Competencias docentes demostradas</h3>
@@ -2642,7 +2694,7 @@
 
       if (prevBtn) prevBtn.disabled = guidedIndex === 0;
       if (nextBtn) nextBtn.textContent = guidedIndex === guidedSteps.length - 1 ? "Ver todos los bloques" : "Siguiente";
-      const speedLabel = guidedSpeed === "rapido" ? "Repaso rápido" : "Repaso exhaustivo";
+      const speedLabel = guidedSpeed === "rapido" ? "Repaso rápido" : "Recorrido completo";
       if (status) status.textContent = `Paso ${guidedIndex + 1} de ${guidedSteps.length}: ${step.title}`;
       if (panelTitle) panelTitle.textContent = active ? `Recorrido guiado · ${step.title}` : "Recorrido guiado";
       if (panelText) panelText.textContent = active ? `${speedLabel}. ${step.help}` : "Avanza bloque a bloque. Puedes volver a la vista completa cuando quieras.";
@@ -2806,7 +2858,7 @@
     }
 
     function getQuizModeLabel() {
-      return guidedSpeed === "rapido" ? "Repaso rápido" : "Repaso exhaustivo";
+      return guidedSpeed === "rapido" ? "Repaso rápido" : "Recorrido completo";
     }
 
     function getQuizDisplayScore() {
@@ -2820,6 +2872,14 @@
       marker.className = "option-result";
       marker.textContent = label;
       button.appendChild(marker);
+    }
+
+    function getStableOptionOrder(item, itemIndex, salt = 0) {
+      const preferredPositions = [2, 0, 3, 1];
+      const target = preferredPositions[(itemIndex + salt) % preferredPositions.length];
+      const order = item.options.map((_, index) => index).filter((index) => index !== item.answer);
+      order.splice(Math.min(target, order.length), 0, item.answer);
+      return order;
     }
 
     function renderQuiz() {
@@ -2858,31 +2918,32 @@
       nextBtn.textContent = state.quiz.answered ? "Siguiente" : "Comprobar respuesta";
       nextBtn.disabled = false;
 
-      item.options.forEach((opt, i) => {
+      getStableOptionOrder(item, state.quiz.index, 0).forEach((originalIndex) => {
+        const opt = item.options[originalIndex];
         const btn = document.createElement("button");
         btn.className = "option";
         btn.type = "button";
         setTextLanguage(btn, opt);
         btn.textContent = opt;
-        btn.setAttribute("aria-pressed", String(state.quiz.selected === i));
+        btn.setAttribute("aria-pressed", String(state.quiz.selected === originalIndex));
 
-        if (!state.quiz.answered && state.quiz.selected === i) {
+        if (!state.quiz.answered && state.quiz.selected === originalIndex) {
           btn.classList.add("selected");
         }
 
         if (state.quiz.answered) {
           btn.disabled = true;
-          if (i === item.answer) {
+          if (originalIndex === item.answer) {
             btn.classList.add("correct");
             addOptionResultLabel(btn, "Correcta");
           }
-          if (i === state.quiz.selected && state.quiz.selected !== item.answer) {
+          if (originalIndex === state.quiz.selected && state.quiz.selected !== item.answer) {
             btn.classList.add("wrong");
             addOptionResultLabel(btn, "Revisa esta opción");
           }
         }
 
-        btn.addEventListener("click", () => selectQuizOption(i));
+        btn.addEventListener("click", () => selectQuizOption(originalIndex));
         options.appendChild(btn);
       });
     }
@@ -2908,9 +2969,9 @@
 
     function getQuizAdvice(score) {
       const ratio = quizQuestions.length ? score / quizQuestions.length : 0;
-      if (ratio >= 0.7) return "Buen repaso orientativo. Conviene practicar en voz alta y hacer el reto final. Este resultado no tiene valor evaluativo oficial.";
+      if (ratio >= 0.7) return "Buen repaso orientativo. Conviene practicar en voz alta y hacer la situación comunicativa. Este resultado no tiene valor evaluativo oficial.";
       if (ratio >= 0.45) return "Base suficiente, pero conviene repasar frases de supervivencia y mini-situaciones. Este resultado es solo orientativo.";
-      return "Conviene volver a saludos, presentación personal, números básicos y frases de ayuda antes del reto final. Este resultado no tiene valor evaluativo oficial.";
+      return "Conviene volver a saludos, presentación personal, números básicos y frases de ayuda antes de la situación comunicativa. Este resultado no tiene valor evaluativo oficial.";
     }
 
     document.getElementById("nextQuizBtn").addEventListener("click", () => {
@@ -2976,30 +3037,31 @@
       nextBtn.textContent = state.reading.answered ? "Siguiente texto" : "Comprobar respuesta";
       nextBtn.disabled = false;
 
-      item.options.forEach((opt, i) => {
+      getStableOptionOrder(item, state.reading.index, 1).forEach((originalIndex) => {
+        const opt = item.options[originalIndex];
         const btn = document.createElement("button");
         btn.className = "option";
         btn.type = "button";
         btn.textContent = opt;
-        btn.setAttribute("aria-pressed", String(state.reading.selected === i));
+        btn.setAttribute("aria-pressed", String(state.reading.selected === originalIndex));
 
-        if (!state.reading.answered && state.reading.selected === i) {
+        if (!state.reading.answered && state.reading.selected === originalIndex) {
           btn.classList.add("selected");
         }
 
         if (state.reading.answered) {
           btn.disabled = true;
-          if (i === item.answer) {
+          if (originalIndex === item.answer) {
             btn.classList.add("correct");
             addOptionResultLabel(btn, "Correcta");
           }
-          if (i === state.reading.selected && state.reading.selected !== item.answer) {
+          if (originalIndex === state.reading.selected && state.reading.selected !== item.answer) {
             btn.classList.add("wrong");
             addOptionResultLabel(btn, "Revisa esta opción");
           }
         }
 
-        btn.addEventListener("click", () => selectReadingOption(i));
+        btn.addEventListener("click", () => selectReadingOption(originalIndex));
         options.appendChild(btn);
       });
     }
@@ -3095,30 +3157,31 @@
         ? `Audio local previsto: ${item.file}. Si no se reproduce, revisa assets/audio/.`
         : `Audio local previsto: ${item.file}. Añade el mp3 propio del autor y activa LISTENING_AUDIO_ENABLED para reproducirlo.`;
 
-      item.options.forEach((opt, i) => {
+      getStableOptionOrder(item, state.listening.index, 2).forEach((originalIndex) => {
+        const opt = item.options[originalIndex];
         const btn = document.createElement("button");
         btn.className = "option";
         btn.type = "button";
         btn.textContent = opt;
-        btn.setAttribute("aria-pressed", String(state.listening.selected === i));
+        btn.setAttribute("aria-pressed", String(state.listening.selected === originalIndex));
 
-        if (!state.listening.answered && state.listening.selected === i) {
+        if (!state.listening.answered && state.listening.selected === originalIndex) {
           btn.classList.add("selected");
         }
 
         if (state.listening.answered) {
           btn.disabled = true;
-          if (i === item.answer) {
+          if (originalIndex === item.answer) {
             btn.classList.add("correct");
             addOptionResultLabel(btn, "Correcta");
           }
-          if (i === state.listening.selected && state.listening.selected !== item.answer) {
+          if (originalIndex === state.listening.selected && state.listening.selected !== item.answer) {
             btn.classList.add("wrong");
             addOptionResultLabel(btn, "Revisa esta opción");
           }
         }
 
-        btn.addEventListener("click", () => selectListeningOption(i));
+        btn.addEventListener("click", () => selectListeningOption(originalIndex));
         options.appendChild(btn);
       });
     }
@@ -3451,7 +3514,7 @@
       if (state.scenario.index >= scenarios.length) {
         counter.textContent = "Situaciones completadas";
         text.textContent = `Resultado orientativo: ${state.scenario.score} de ${scenarios.length}`;
-        feedback.textContent = state.scenario.score >= 4 ? "Buen desempeño orientativo. Puedes pasar al reto final." : "Conviene repasar flashcards y volver a estas situaciones.";
+        feedback.textContent = state.scenario.score >= 4 ? "Buen desempeño orientativo. Puedes pasar a la situación comunicativa." : "Conviene repasar flashcards y volver a estas situaciones.";
         nextBtn.textContent = "Finalizado";
         return;
       }
@@ -3467,31 +3530,32 @@
       nextBtn.textContent = state.scenario.answered ? "Siguiente situación" : "Comprobar respuesta";
       nextBtn.disabled = false;
 
-      item.options.forEach((opt, i) => {
+      getStableOptionOrder(item, state.scenario.index, 3).forEach((originalIndex) => {
+        const opt = item.options[originalIndex];
         const btn = document.createElement("button");
         btn.className = "option";
         btn.type = "button";
         setTextLanguage(btn, opt);
         btn.textContent = opt;
-        btn.setAttribute("aria-pressed", String(state.scenario.selected === i));
+        btn.setAttribute("aria-pressed", String(state.scenario.selected === originalIndex));
 
-        if (!state.scenario.answered && state.scenario.selected === i) {
+        if (!state.scenario.answered && state.scenario.selected === originalIndex) {
           btn.classList.add("selected");
         }
 
         if (state.scenario.answered) {
           btn.disabled = true;
-          if (i === item.answer) {
+          if (originalIndex === item.answer) {
             btn.classList.add("correct");
             addOptionResultLabel(btn, "Correcta");
           }
-          if (i === state.scenario.selected && state.scenario.selected !== item.answer) {
+          if (originalIndex === state.scenario.selected && state.scenario.selected !== item.answer) {
             btn.classList.add("wrong");
             addOptionResultLabel(btn, "Revisa esta opción");
           }
         }
 
-        btn.addEventListener("click", () => selectScenarioOption(i));
+        btn.addEventListener("click", () => selectScenarioOption(originalIndex));
         options.appendChild(btn);
       });
     }
@@ -3781,13 +3845,13 @@
       const total = Math.min(100, practiceScore + quizScore + readingScore + listeningScore + matchScore + scenarioScore + oralScore + confidenceScore);
 
       let level = "Necesita repaso";
-      let message = "Conviene repetir los bloques básicos antes de cerrar el reto final.";
+      let message = "Conviene repetir los bloques básicos antes de cerrar la situación comunicativa.";
       let advice = "Prioriza saludos, presentación, pedir repetición, lectura de palabras clave y práctica oral con modelo.";
 
       if (total >= 75) {
         level = "Buen dominio orientativo A1";
         message = "Has reunido una práctica amplia y equilibrada para un repaso final A1.";
-        advice = "Puedes pasar al reto final y practicarlo en voz alta. Este resultado sigue sin valor evaluativo oficial.";
+        advice = "Puedes pasar a la situación comunicativa y practicarla en voz alta. Este resultado sigue sin valor evaluativo oficial.";
       } else if (total >= 55) {
         level = "Base A1 en desarrollo";
         message = "Tienes una base funcional, pero aún conviene reforzar algunas destrezas.";
@@ -3956,9 +4020,19 @@
       return started ? value : pending;
     }
 
+    function getReportProgressText() {
+      if (guidedSpeed !== "rapido") {
+        const startedCount = Object.values(state.started).filter(Boolean).length;
+        const startedTotal = Object.keys(state.started).length;
+        return `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`;
+      }
+
+      const quickPracticeIds = quickGuidedStepIds.filter((id) => id !== "objetivo" && id !== "informe");
+      const quickStarted = quickPracticeIds.filter((id) => state.started[id]).length;
+      return `${Math.round((quickStarted / quickPracticeIds.length) * 100)}% (${quickStarted}/${quickPracticeIds.length} bloques del repaso rápido iniciados)`;
+    }
+
     function getReportData() {
-      const startedCount = Object.values(state.started).filter(Boolean).length;
-      const startedTotal = Object.keys(state.started).length;
       const quizFinished = state.quiz.index >= quizQuestions.length;
       const readingFinished = state.reading.index >= readingTexts.length;
       const listeningFinished = state.listening.index >= listeningTasks.length;
@@ -3973,7 +4047,10 @@
         date: new Date().toLocaleString("es-ES"),
         version: "3.2 provisional",
         mode: getQuizModeLabel(),
-        progress: `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`,
+        progress: getReportProgressText(),
+        reportScope: guidedSpeed === "rapido"
+          ? "Informe del repaso rápido: resume solo los bloques previstos en este modo y los bloques extra que hayas abierto voluntariamente."
+          : "Informe del recorrido completo: resume todos los bloques principales del recurso.",
         quiz: reportStatusForBlock("diagnostico", quizFinished ? `Realizado: ${getQuizDisplayScore()} de ${quizQuestions.length}` : `En curso: pregunta ${Math.min(state.quiz.index + 1, quizQuestions.length)} de ${quizQuestions.length}. Puntuación parcial: ${getQuizDisplayScore()}.`),
         quizAdvice: state.started.diagnostico ? (quizFinished ? getQuizAdvice(getQuizDisplayScore()) : "Autoevaluación no finalizada todavía.") : "Autoevaluación pendiente.",
         flashcard: reportStatusForBlock("flashcards", `Realizado: tarjeta ${flashIndex + 1} / ${flashcards.length}: ${flashcards[flashIndex]?.fr || "No iniciado"}`),
@@ -3994,6 +4071,33 @@
       };
     }
 
+    function getReportRows(r) {
+      const rows = [
+        { id: "diagnostico", label: "Autoevaluación A1", value: `${escapeHtml(r.quiz)}<br><span class="muted">${escapeHtml(r.quizAdvice)}</span>` },
+        { id: "flashcards", label: "Flashcards", value: escapeHtml(r.flashcard) },
+        { id: "situaciones", label: "Mini-situaciones", value: escapeHtml(r.scenarios) },
+        { id: "reto", label: "Situación comunicativa", value: state.started.reto ? `${escapeHtml(r.checkedCount)} de 4 elementos marcados en checklist.` : "Pendiente: situación comunicativa no realizada." }
+      ];
+
+      const completeRows = [
+        { id: "lectura", label: "Comprensión lectora", value: escapeHtml(r.reading) },
+        { id: "audicion", label: "Comprensión auditiva", value: escapeHtml(r.listening) },
+        { id: "emparejar", label: "Emparejar frase e intención", value: escapeHtml(r.match) },
+        { id: "oral", label: "Expresión oral guiada", value: escapeHtml(r.oral) },
+        { id: "autoevaluacion", label: "Autoevaluación final", value: `${escapeHtml(r.assessment)}<br><span class="muted">${escapeHtml(r.assessmentConfidence)}</span>` }
+      ];
+
+      if (guidedSpeed !== "rapido") {
+        rows.splice(2, 0, ...completeRows);
+        return rows;
+      }
+
+      completeRows.forEach((row) => {
+        if (state.started[row.id]) rows.splice(rows.length - 1, 0, row);
+      });
+      return rows;
+    }
+
     function buildStudentReportHtml() {
       const r = getReportData();
       const checkLabels = [
@@ -4002,6 +4106,10 @@
         "Añadí una frase sencilla sobre mí.",
         "Usé una petición útil y educada."
       ];
+
+      const resultRows = getReportRows(r).map((row) => {
+        return `<tr><td>${escapeHtml(row.label)}</td><td>${row.value}</td></tr>`;
+      }).join("");
 
       const checkRows = checkLabels.map((label, index) => {
         const mark = r.checks[index] ? "Sí" : "Pendiente";
@@ -4137,6 +4245,10 @@
       <strong>Nota institucional:</strong> este informe es orientativo, local y no oficial. No sustituye la evaluación de la docente titular ni del centro. No se ha enviado información a ningún servidor.
     </div>
 
+    <div class="notice">
+      <strong>Tipo de informe:</strong> ${escapeHtml(r.reportScope)}
+    </div>
+
     <h2>1. Datos del recurso</h2>
     <div class="meta">
       <div class="box"><strong>Autor:</strong><br>Joel Concepción Villanueva</div>
@@ -4149,15 +4261,7 @@
     <h2>2. Resultados orientativos</h2>
     <table>
       <tr><th>Bloque</th><th>Estado / resultado</th></tr>
-      <tr><td>Autoevaluación A1</td><td>${escapeHtml(r.quiz)}<br><span class="muted">${escapeHtml(r.quizAdvice)}</span></td></tr>
-      <tr><td>Flashcards</td><td>${escapeHtml(r.flashcard)}</td></tr>
-      <tr><td>Comprensión lectora</td><td>${escapeHtml(r.reading)}</td></tr>
-      <tr><td>Comprensión auditiva</td><td>${escapeHtml(r.listening)}</td></tr>
-      <tr><td>Emparejar frase e intención</td><td>${escapeHtml(r.match)}</td></tr>
-      <tr><td>Mini-situaciones</td><td>${escapeHtml(r.scenarios)}</td></tr>
-      <tr><td>Expresión oral guiada</td><td>${escapeHtml(r.oral)}</td></tr>
-      <tr><td>Autoevaluación final</td><td>${escapeHtml(r.assessment)}<br><span class="muted">${escapeHtml(r.assessmentConfidence)}</span></td></tr>
-      <tr><td>Situación comunicativa</td><td>${state.started.reto ? `${escapeHtml(r.checkedCount)} de 4 elementos marcados en checklist.` : "Pendiente: situación comunicativa no realizada."}</td></tr>
+      ${resultRows}
     </table>
 
     <h2>3. Situación comunicativa</h2>
@@ -4185,7 +4289,7 @@
     <p>${escapeHtml(r.feedback)}</p>
 
     <h2>8. Privacidad y límites</h2>
-    <p>Este informe se ha generado en el navegador. Para el reto final se recomienda usar solo un nombre de pila o ficticio. El recurso no solicita apellidos, correos, teléfonos, DNI ni otros datos personales; no tiene login, no usa backend y no incorpora analítica.</p>
+    <p>Este informe se ha generado en el navegador. Para la situación comunicativa se recomienda usar solo un nombre de pila o ficticio. El recurso no solicita apellidos, correos, teléfonos, DNI ni otros datos personales; no tiene login, no usa backend y no incorpora analítica.</p>
     <p class="muted">Uso educativo, complementario y no evaluativo salvo decisión expresa del equipo docente.</p>
   </main>
 </body>
