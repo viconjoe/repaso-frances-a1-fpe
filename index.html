@@ -181,7 +181,7 @@
       width: min(1120px, 100%);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: auto minmax(8rem, 1fr) auto;
+      grid-template-columns: auto minmax(8rem, 1fr) auto auto;
       gap: 0.75rem;
       align-items: center;
     }
@@ -193,6 +193,12 @@
 
     .global-progress-dock p {
       margin: 0;
+      white-space: nowrap;
+    }
+
+    .global-progress-dock button {
+      min-height: 38px;
+      padding: 0.55rem 0.75rem;
       white-space: nowrap;
     }
 
@@ -412,7 +418,7 @@
       font-weight: 700;
     }
 
-    main { padding: 1.5rem 0 6rem; }
+    main { padding: 1.5rem 0 10rem; }
 
     section {
       scroll-margin-top: 5.5rem;
@@ -1267,7 +1273,7 @@
     }
 
     body.guided-mode:not(.presentation-mode) main {
-      padding-bottom: 10rem;
+      padding-bottom: 11.5rem;
     }
 
     body.guided-mode:not(.presentation-mode) nav {
@@ -1562,7 +1568,7 @@
       }
 
       body:not(.guided-mode):not(.presentation-mode) main {
-        padding-bottom: 6.8rem;
+        padding-bottom: 11.5rem;
       }
 
       .flashcard {
@@ -1692,7 +1698,8 @@
       <div class="progress-wrap" id="globalProgressWrap" role="progressbar" aria-label="Progreso general de uso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
         <div class="progress-bar" id="globalProgress"></div>
       </div>
-      <p class="small muted"><span id="progressText">0%</span> de bloques iniciados</p>
+      <p class="small muted"><span id="progressText">0%</span> de práctica realizada</p>
+      <button class="ghost" type="button" id="resetAllDockBtn">Borrar progreso</button>
     </div>
   </div>
 
@@ -2427,7 +2434,7 @@
       <button class="ghost no-print" type="button" id="resetAllBtn">Borrar progreso local</button>
     </section>
 
-    <p class="footer-note">Repaso Final Francés A1 · Recurso pedagógico digital complementario · Joel Concepción Villanueva</p>
+    <p class="footer-note">Repaso Final Francés A1 · Recurso pedagógico digital complementario</p>
   </main>
 
   <div class="guided-toolbar no-print" id="guidedToolbar" aria-label="Navegación del modo guiado">
@@ -2537,36 +2544,6 @@
       }
     }
 
-    const grammarSection = document.getElementById("gramatica");
-    if (grammarSection) {
-      grammarSection.addEventListener("click", () => markStarted("gramatica"));
-      grammarSection.addEventListener("focusin", () => markStarted("gramatica"));
-    }
-
-    const readingSection = document.getElementById("lectura");
-    if (readingSection) {
-      readingSection.addEventListener("click", () => markStarted("lectura"));
-      readingSection.addEventListener("focusin", () => markStarted("lectura"));
-    }
-
-    const listeningSection = document.getElementById("audicion");
-    if (listeningSection) {
-      listeningSection.addEventListener("click", () => markStarted("audicion"));
-      listeningSection.addEventListener("focusin", () => markStarted("audicion"));
-    }
-
-    const oralSection = document.getElementById("oral");
-    if (oralSection) {
-      oralSection.addEventListener("click", () => markStarted("oral"));
-      oralSection.addEventListener("focusin", () => markStarted("oral"));
-    }
-
-    const assessmentSection = document.getElementById("autoevaluacion");
-    if (assessmentSection) {
-      assessmentSection.addEventListener("click", () => markStarted("autoevaluacion"));
-      assessmentSection.addEventListener("focusin", () => markStarted("autoevaluacion"));
-    }
-
     function setProgress(wrapId, barId, value) {
       const percent = Math.max(0, Math.min(100, Math.round(value)));
       const wrap = document.getElementById(wrapId);
@@ -2575,9 +2552,24 @@
       if (wrap) wrap.setAttribute("aria-valuenow", String(percent));
     }
 
+    function isBlockPracticed(key) {
+      if (key === "diagnostico") return state.quiz.index > 0 || state.quiz.answered || state.quiz.selected !== null || state.quiz.score > 0;
+      if (key === "flashcards") return Boolean(state.started.flashcards) || Number(state.flashIndex || 0) > 0;
+      if (key === "gramatica") return false;
+      if (key === "lectura") return state.reading.index > 0 || state.reading.answered || state.reading.selected !== null || state.reading.score > 0;
+      if (key === "audicion") return state.listening.index > 0 || state.listening.answered || state.listening.selected !== null || state.listening.score > 0;
+      if (key === "emparejar") return matchedIds.size > 0;
+      if (key === "situaciones") return state.scenario.index > 0 || state.scenario.answered || state.scenario.selected !== null || state.scenario.score > 0;
+      if (key === "oral") return (Array.isArray(state.oral.done) && state.oral.done.length > 0) || [0, 1, 2, 3].some((i) => Boolean(state.oral[`check${i}`]));
+      if (key === "reto") return Boolean((state.reto.draft || "").trim() || state.reto.prompt || state.reto.feedback || [0, 1, 2, 3].some((i) => state.reto[`check${i}`]));
+      if (key === "autoevaluacion") return [0, 1, 2, 3].some((i) => Boolean(state.autoevaluacion[`check${i}`]));
+      return false;
+    }
+
     function updateGlobalProgress() {
-      const total = Object.keys(state.started).length;
-      const done = Object.values(state.started).filter(Boolean).length;
+      const trackedBlocks = Object.keys(state.started).filter((key) => key !== "gramatica");
+      const total = trackedBlocks.length;
+      const done = trackedBlocks.filter(isBlockPracticed).length;
       const percent = Math.round((done / total) * 100);
       setProgress("globalProgressWrap", "globalProgress", percent);
       document.getElementById("progressText").textContent = `${percent}%`;
@@ -2991,6 +2983,7 @@
 
     document.getElementById("resetQuizBtn").addEventListener("click", () => {
       state.quiz = clone(defaultState.quiz);
+      state.started.diagnostico = false;
       saveState();
       renderQuiz();
     });
@@ -3102,6 +3095,7 @@
 
     document.getElementById("resetReadingBtn").addEventListener("click", () => {
       state.reading = clone(defaultState.reading);
+      state.started.lectura = false;
       saveState();
       renderReading();
     });
@@ -3222,6 +3216,7 @@
 
     document.getElementById("resetListeningBtn").addEventListener("click", () => {
       state.listening = clone(defaultState.listening);
+      state.started.audicion = false;
       saveState();
       renderListening();
     });
@@ -3494,6 +3489,7 @@
       rightOrder = shuffle(matchPairs);
       state.matchDone = [];
       state.matchOrder = rightOrder.map((pair) => pair.id);
+      state.started.emparejar = false;
       saveState();
       document.getElementById("matchFeedback").textContent = "Empieza seleccionando una frase en francés.";
       renderMatch();
@@ -3596,6 +3592,7 @@
 
     document.getElementById("resetScenarioBtn").addEventListener("click", () => {
       state.scenario = clone(defaultState.scenario);
+      state.started.situaciones = false;
       saveState();
       renderScenario();
     });
@@ -3825,14 +3822,14 @@
     document.getElementById("resetOralBtn").addEventListener("click", () => {
       clearOralRecording("Grabación local borrada al reiniciar la práctica oral.");
       state.oral = clone(defaultState.oral);
+      state.started.oral = false;
       saveState();
       renderOral();
     });
 
     function getAssessmentData() {
-      const startedDone = Object.values(state.started).filter(Boolean).length;
-      const startedTotal = Object.keys(state.started).length;
-      const practiceScore = Math.round((startedDone / startedTotal) * 20);
+      const practicedBlocks = Object.keys(state.started).filter((key) => key !== "gramatica");
+      const practiceScore = Math.round((practicedBlocks.filter(isBlockPracticed).length / practicedBlocks.length) * 20);
       const quizScore = Math.round((getQuizDisplayScore() / quizQuestions.length) * 15) || 0;
       const readingScore = Math.round((state.reading.score / readingTexts.length) * 15) || 0;
       const listeningScore = Math.round((state.listening.score / listeningTasks.length) * 15) || 0;
@@ -3903,7 +3900,6 @@
     });
 
     document.getElementById("refreshAssessmentBtn").addEventListener("click", () => {
-      markStarted("autoevaluacion");
       renderAssessment();
     });
 
@@ -3997,6 +3993,7 @@
         box.checked = false;
         state.reto[`check${index}`] = false;
       });
+      state.started.reto = false;
       saveState();
       document.getElementById("draftFeedback").textContent = "Puedes escribir tu respuesta y pulsar “Revisar texto”. La revisión es local, orientativa y no corrige oficialmente el francés.";
       document.getElementById("draftStatus").textContent = "Texto y checklist borrados de este navegador.";
@@ -4012,24 +4009,24 @@
     }
 
     function isBlockIncludedInCurrentMode(id) {
-      return guidedSpeed !== "rapido" || quickGuidedStepIds.includes(id) || Boolean(state.started[id]);
+      return guidedSpeed !== "rapido" || quickGuidedStepIds.includes(id) || isBlockPracticed(id);
     }
 
-    function reportStatusForBlock(id, value, { started = state.started[id], pending = "Pendiente: bloque no realizado.", notIncluded = "No incluido en este modo de repaso." } = {}) {
+    function reportStatusForBlock(id, value, { started = isBlockPracticed(id), pending = "Pendiente: bloque no realizado.", notIncluded = "No incluido en este modo de repaso." } = {}) {
       if (!isBlockIncludedInCurrentMode(id)) return notIncluded;
       return started ? value : pending;
     }
 
     function getReportProgressText() {
       if (guidedSpeed !== "rapido") {
-        const startedCount = Object.values(state.started).filter(Boolean).length;
-        const startedTotal = Object.keys(state.started).length;
-        return `${Math.round((startedCount / startedTotal) * 100)}% (${startedCount}/${startedTotal} bloques iniciados)`;
+        const trackedBlocks = Object.keys(state.started).filter((key) => key !== "gramatica");
+        const practicedCount = trackedBlocks.filter(isBlockPracticed).length;
+        return `${Math.round((practicedCount / trackedBlocks.length) * 100)}% (${practicedCount}/${trackedBlocks.length} bloques practicados)`;
       }
 
       const quickPracticeIds = quickGuidedStepIds.filter((id) => id !== "objetivo" && id !== "informe");
-      const quickStarted = quickPracticeIds.filter((id) => state.started[id]).length;
-      return `${Math.round((quickStarted / quickPracticeIds.length) * 100)}% (${quickStarted}/${quickPracticeIds.length} bloques del repaso rápido iniciados)`;
+      const quickPracticed = quickPracticeIds.filter(isBlockPracticed).length;
+      return `${Math.round((quickPracticed / quickPracticeIds.length) * 100)}% (${quickPracticed}/${quickPracticeIds.length} bloques del repaso rápido practicados)`;
     }
 
     function getReportData() {
@@ -4331,13 +4328,16 @@
     document.getElementById("reportBtn2").addEventListener("click", openStudentReport);
     document.getElementById("downloadHtmlReportBtn").addEventListener("click", downloadStudentReportHtml);
 
-    document.getElementById("resetAllBtn").addEventListener("click", () => {
+    function resetAllLocalProgress() {
       const ok = confirm("¿Borrar todo el progreso local de este navegador?");
       if (!ok) return;
       localStorage.removeItem(STORAGE_KEY);
       localStorage.removeItem(SPEED_STORAGE_KEY);
       location.reload();
-    });
+    }
+
+    document.getElementById("resetAllBtn").addEventListener("click", resetAllLocalProgress);
+    document.getElementById("resetAllDockBtn").addEventListener("click", resetAllLocalProgress);
 
     updateSpeedButtons();
     updateGlobalProgress();
