@@ -5,7 +5,7 @@ Autor: Joel Concepción Villanueva
 
 Este historial resume la evolución del recurso didáctico digital complementario de Francés A1. El proyecto se mantiene como herramienta personal de portafolio docente, sin carácter oficial, sin vínculo institucional directo con ICSE ni con el SCE, y sin sustituir programación, materiales ni evaluación oficial.
 
-## v3.2 provisional
+## v3.2 · Ajustes tras feedback docente
 
 - Incorpora ajustes prudentes tras feedback docente de tutor de prácticas.
 - Cambia microcopy visible para alumnado: **Autoevaluación**, **Recorrido completo**, **Situación comunicativa**, **Revisar texto**, **Guardar informe de evaluación** y **Cómo usar esta app**.
@@ -15,7 +15,7 @@ Este historial resume la evolución del recurso didáctico digital complementari
 - Refuerza respuestas correcta/incorrecta con color más visible y etiquetas textuales.
 - Añade leyenda **Mi progreso** en la ficha breve.
 - Ajusta el informe para diferenciar bloques realizados, pendientes y no incluidos en el modo de repaso rápido.
-- Actualiza caché PWA a `repaso-frances-a1-v3.2`.
+- Actualiza caché PWA a `repaso-frances-a1-v3.2.1`.
 - Reparte de forma estable la posición de las respuestas correctas y separa el informe del repaso rápido del informe del recorrido completo.
 
 ## v3.1
