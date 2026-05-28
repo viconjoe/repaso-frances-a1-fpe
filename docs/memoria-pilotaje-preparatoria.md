@@ -170,4 +170,4 @@ La versión 2.0 añade un dossier de producto demostrativo y una guía de adapta
 
 La versión 2.7 añade una rúbrica docente/documental. En un pilotaje futuro puede servir para ordenar observaciones cualitativas agregadas, siempre sin recoger datos personales y sin presentarla como evaluación oficial.
 
-La fase histórica v2.8 añade grabación local opcional. En el estado actual v3.1, durante un pilotaje futuro conviene observar si el alumnado la percibe como apoyo útil para escucharse, si respeta las pautas de privacidad y si borra el audio local antes de terminar.
+La fase histórica v2.8 añade grabación local opcional. En el estado actual v3.2, durante un pilotaje futuro conviene observar si el alumnado la percibe como apoyo útil para escucharse, si respeta las pautas de privacidad y si borra el audio local antes de terminar.

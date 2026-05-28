@@ -1,6 +1,6 @@
 # Guía de comprensión auditiva v2.3
 
-> Nota de estado: el estado actual del recurso es **v3.1**. Ya incorpora los cinco archivos MP3 locales, reproducción activada, tarjetas iniciales como accesos reales, objetivos iniciales como lista informativa, variación comunicativa progresiva, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, repaso rápido de 12 preguntas y recorrido completo de 18 preguntas.
+> Nota de estado: el estado actual del recurso es **v3.2**. Ya incorpora los cinco archivos MP3 locales, reproducción activada, tarjetas iniciales como accesos reales, objetivos iniciales como lista informativa, variación comunicativa progresiva, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, repaso rápido de 12 preguntas y recorrido completo de 18 preguntas.
 
 ## 1. Finalidad
 

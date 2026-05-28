@@ -141,7 +141,7 @@ La documentación principal del proyecto queda organizada en:
 - `docs/guia-modo-presentacion.md`: uso del modo presentación para aula;
 - `docs/guia-pwa-instalacion-v1-4.md`: guía de instalación PWA ligera;
 - `docs/guia-plantilla-multidioma-v1-3.md`: guía para adaptar el molde a otros idiomas;
-- `docs/guia-publicacion-v1.md`: checklist histórico de publicación estable v1.0, con nota de estado actual v2.0;
+- `docs/guia-publicacion-v1.md`: checklist histórico de publicación estable v1.0, con nota de estado actual v3.2;
 - `docs/guia-ux-movil-v1-2-4.md`: criterio y funcionamiento de la experiencia móvil refinada;
 - `docs/guia-validacion-demo-v1-5.md`: checklist de validación y guion breve de demostración;
 - `docs/guia-ampliacion-pedagogica-v2-1.md`: criterio de ampliación de vocabulario y gramática A1;

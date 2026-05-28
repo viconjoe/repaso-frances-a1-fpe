@@ -1,6 +1,6 @@
 # Guía de comprensión lectora v2.2
 
-> Nota de estado: esta guía documenta la fase v2.2. El estado actual del recurso es **v3.1**, que incorpora comprensión auditiva A1 con cinco audios locales propios del autor, mejora de acceso y claridad inicial, variación comunicativa progresiva, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, 40 flashcards y doble recorrido.
+> Nota de estado: esta guía documenta la fase v2.2. El estado actual del recurso es **v3.2**, que incorpora comprensión auditiva A1 con cinco audios locales propios del autor, mejora de acceso y claridad inicial, variación comunicativa progresiva, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, 40 flashcards y doble recorrido.
 
 ## 1. Finalidad
 

@@ -7,7 +7,7 @@
 **Tipo de documento:** criterio de ampliación de contenidos A1  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-> Nota de estado: esta guía documenta la fase histórica v2.1. El estado actual del recurso es **v3.1**, que ya incorpora comprensión lectora A1, comprensión auditiva con cinco audios locales propios del autor, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, mejora UX de acceso y claridad inicial, variación comunicativa progresiva, 40 flashcards y doble recorrido.
+> Nota de estado: esta guía documenta la fase histórica v2.1. El estado actual del recurso es **v3.2**, que ya incorpora comprensión lectora A1, comprensión auditiva con cinco audios locales propios del autor, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, mejora UX de acceso y claridad inicial, variación comunicativa progresiva, 40 flashcards y doble recorrido.
 
 ## 1. Finalidad
 
