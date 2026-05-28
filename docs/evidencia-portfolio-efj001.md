@@ -64,6 +64,7 @@ El repositorio incluye:
 - guia PWA;
 - auditoria de accesibilidad basica;
 - checklist de validacion v3.1;
+- capturas v3.2 de movil y ordenador;
 - roadmap multidioma;
 - dossier de producto demostrativo;
 - guias de fases pedagogicas.
@@ -82,3 +83,5 @@ Las capturas existentes sirven como evidencia historica y de presentacion. Para 
 - rubrica docente/documental.
 
 No deben incluir datos reales de alumnado.
+
+La seleccion estable de capturas v3.2 queda documentada en `docs/capturas/v3.2/`.

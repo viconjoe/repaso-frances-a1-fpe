@@ -72,3 +72,5 @@ Para presentar el caso en portfolio conviene conservar:
 - checklist de cierre v3.2;
 - capturas actualizadas;
 - notas de release v3.2.
+
+La seleccion de capturas de movil y ordenador se conserva en `docs/capturas/v3.2/`.
