@@ -40,13 +40,13 @@ No debe presentarse como plataforma oficial, examen, prueba certificadora ni her
    Explicar que el recurso es complementario, local y no oficial. Recordar que no deben introducir apellidos, DNI, telefono, correo ni datos sensibles.
 
 2. **Repaso rapido** (8-10 min)  
-   Usar el modo **Repaso rapido (20-30 min)** con el autodiagnostico reducido de 12 preguntas.
+   Usar el modo **Repaso rapido (20-30 min)** con la autoevaluacion reducida de 12 preguntas.
 
 3. **Practica dirigida** (6-8 min)  
    Trabajar algunas flashcards, una mini-situacion o un audio breve, segun necesidad del grupo.
 
 4. **Cierre** (4-6 min)  
-   Usar el reto final o el informe local solo como orientacion formativa, no como nota oficial.
+   Usar la situacion comunicativa o el informe local solo como orientacion formativa, no como nota oficial.
 
 ## Partes recomendadas en directo
 
@@ -55,7 +55,7 @@ No debe presentarse como plataforma oficial, examen, prueba certificadora ni her
 - Flashcards seleccionadas.
 - Una situacion comunicativa.
 - Un audio local de comprension auditiva.
-- Reto final breve, si el tiempo lo permite.
+- Situacion comunicativa breve, si el tiempo lo permite.
 
 ## Partes para practica autonoma
 

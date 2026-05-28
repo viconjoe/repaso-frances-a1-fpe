@@ -4,7 +4,7 @@
 
 **Título:** Repaso Final Francés A1 · Kit interactivo  
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 3.2 provisional
+**Versión:** 3.2
 **Formato:** recurso web estático HTML/CSS/JavaScript  
 **Modalidad de uso:** autónoma, guiada o proyectada en aula  
 **Contexto:** prácticas de habilitación docente FPE · 2026  
@@ -54,7 +54,7 @@ El recurso busca que el alumnado pueda:
 
 Desde v3.1, el recurso ofrece dos itinerarios de uso:
 
-- **Repaso rápido (20-30 min):** para una práctica breve antes de cerrar el curso o preparar una presentación, con autodiagnóstico reducido de 12 preguntas.
+- **Repaso rápido (20-30 min):** para una práctica breve antes de cerrar el curso o preparar una presentación, con autoevaluación reducida de 12 preguntas.
 - **Recorrido completo (60 min):** para revisar todos los bloques con más calma.
 
 Esta doble entrada reduce la sensación de herramienta larga en móvil y permite ajustar el uso a tiempos reales de aula o práctica autónoma.
@@ -172,7 +172,7 @@ Síntesis local de práctica con perfil y recomendación de repaso. No constituy
 
 ### Bloque 11 · Informe de práctica
 
-El recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto del reto final.
+El recurso incorpora un bloque para preparar un informe local del alumno/a. El informe resume progreso, resultados orientativos, checklist y texto de la situación comunicativa.
 
 El informe no se envía a ningún servidor. Se abre en una vista limpia preparada para A4 y se guarda como PDF mediante el sistema de impresión del navegador. También se ofrece descarga alternativa en formato HTML.
 
@@ -194,7 +194,7 @@ El alumnado accede mediante enlace o QR y trabaja a su ritmo. En móvil se recom
 
 La persona docente puede proyectar el recurso, resolver actividades con el grupo o usarlo por parejas.
 
-Para una sesión breve se recomienda iniciar con el autodiagnóstico, seleccionar algunas flashcards, hacer uno o dos textos breves de lectura, practicar un audio local cuando esté disponible, hacer una o dos mini-situaciones y cerrar con el reto final oral o escrito.
+Para una sesión breve se recomienda iniciar con la autoevaluación, seleccionar algunas flashcards, hacer uno o dos textos breves de lectura, practicar un audio local cuando esté disponible, hacer una o dos mini-situaciones y cerrar con la situación comunicativa oral o escrita.
 
 ### Uso como repaso final
 
@@ -257,7 +257,7 @@ No solicita:
 - cuenta de usuario;
 - información sensible.
 
-En el reto final se recomienda utilizar solo un nombre de pila o un nombre ficticio para practicar la estructura `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
+En la situación comunicativa se recomienda utilizar solo un nombre de pila o un nombre ficticio para practicar la estructura `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
 
 El progreso y el texto escrito se guardan únicamente en el navegador mediante `localStorage`.
 
@@ -305,7 +305,7 @@ No se utilizan dependencias externas, backend, formularios, analítica, IA/API n
 
 - No corrige todos los errores lingüísticos del alumnado.
 - La pronunciación automática depende del navegador y puede sonar artificial.
-- El feedback del reto final es local y básico, no equivale a una corrección docente.
+- El feedback de la situación comunicativa es local y básico, no equivale a una corrección docente.
 - El informe PDF se guarda mediante el sistema de impresión del navegador, no mediante una librería PDF externa.
 - La estructura de audios locales incluye los cinco MP3 de comprensión auditiva; cualquier audio adicional estable debe ser archivo propio del autor. La grabación local opcional de v2.8 es temporal y no se incorpora al repositorio ni al informe.
 - No está diseñado como LMS ni como sistema de seguimiento del alumnado.

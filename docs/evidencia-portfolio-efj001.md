@@ -2,7 +2,7 @@
 
 **Recurso:** Repaso Final Frances A1 · Kit interactivo  
 **Identificador:** EFJ-001  
-**Version:** v3.1  
+**Version:** v3.2
 **Autor:** Joel Concepcion Villanueva  
 **Proyecto:** El Formador Junior
 
@@ -16,7 +16,7 @@ https://github.com/viconjoe/repaso-frances-a1-fpe
 
 ## Resumen del recurso
 
-Repaso Final Frances A1 es una herramienta web estatica para repasar contenidos basicos de Frances A1 con alumnado adulto. Integra autodiagnostico, flashcards, gramatica funcional, comprension lectora, comprension auditiva con audios locales, emparejamientos, mini-situaciones, expresion oral guiada, reto final, autoevaluacion orientativa, informe local y rubrica docente/documental.
+Repaso Final Frances A1 es una herramienta web estatica para repasar contenidos basicos de Frances A1 con alumnado adulto. Integra autoevaluacion orientativa, flashcards, gramatica funcional, comprension lectora, comprension auditiva con audios locales, emparejamientos, mini-situaciones, expresion oral guiada, situacion comunicativa, informe local y rubrica docente/documental.
 
 El recurso esta pensado como complemento didactico y evidencia de competencia digital docente. No es oficial de ICSE ni del SCE y no sustituye programacion, materiales ni evaluacion oficial.
 
@@ -29,6 +29,7 @@ El recurso esta pensado como complemento didactico y evidencia de competencia di
 - Practica con redundancia inteligente y variacion progresiva.
 - Comprension auditiva con cinco audios locales propios del autor.
 - Autoevaluacion final orientativa sin valor oficial.
+- Informe diferenciado para repaso rapido y recorrido completo.
 - Rubrica docente/documental para observacion cualitativa.
 
 ## Valor tecnico
