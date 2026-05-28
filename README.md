@@ -4,7 +4,7 @@ Recurso pedagógico digital complementario de repaso para alumnado adulto de **F
 
 **Autor:** Joel Concepción Villanueva  
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
-**Versión actual:** 3.2 provisional
+**Versión actual:** 3.2
 
 **Publicación:** GitHub Pages
 
@@ -95,7 +95,7 @@ El recurso mantiene el funcionamiento estático y local, pero en móvil ofrece u
 
 ## EFJ-001 · Recurso piloto estable
 
-La v3.2 se prepara como ajuste posterior al feedback docente del piloto **EFJ-001 · Repaso Final Francés A1 · Kit interactivo** dentro de El Formador Junior.
+La v3.2 cierra el ajuste posterior al feedback docente del piloto **EFJ-001 · Repaso Final Francés A1 · Kit interactivo** dentro de El Formador Junior.
 
 Su uso recomendado es complementario: repaso guiado en aula, práctica autónoma, evidencia de portfolio técnico-docente y modelo reutilizable para futuros recursos de idiomas iniciales. Mantiene carácter no oficial, sin vínculo institucional directo con ICSE ni con el SCE, sin valor evaluativo oficial y sin sustitución de programación, materiales o evaluación del curso.
 
@@ -159,7 +159,7 @@ El recurso:
 - no solicita ni transmite datos personales;
 - no guarda grabaciones orales en `localStorage` ni en el informe.
 
-En el reto final se recomienda usar solo un nombre de pila o un nombre ficticio para practicar la frase `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
+En la situación comunicativa se recomienda usar solo un nombre de pila o un nombre ficticio para practicar la frase `Je m'appelle...`. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
 
 La grabación oral de v2.8 es opcional y temporal. Solo funciona si el usuario acepta el aviso de privacidad y concede permiso de micrófono al navegador. El audio queda en memoria local de la página para escucharlo, borrarlo o descargar una copia local. No se sube, no se analiza, no se añade al informe y desaparece al borrar, cambiar de práctica o cerrar/recargar la página.
 
@@ -292,6 +292,9 @@ La carpeta `assets/audio/` incluye cinco audios locales reales de comprensión a
 - [Checklist de cierre v3.1](docs/checklist-cierre-v3.1.md)
 - [Caso de uso en aula 20-30 min](docs/caso-uso-aula-20-min.md)
 - [Evidencia de portfolio EFJ-001](docs/evidencia-portfolio-efj001.md)
+- [Ficha de caso EFJ-001](docs/ficha-caso-efj-001.md)
+- [Checklist de cierre v3.2](docs/checklist-cierre-v3.2.md)
+- [Notas de release v3.2](docs/release-notes-v3.2.md)
 - [Release notes v3.1](docs/release-notes-v3.1.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)

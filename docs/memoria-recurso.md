@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión:** 3.2 provisional
+**Versión:** 3.2
 **Contexto:** Habilitación docente FPE · Prácticas 2026  
 **Formato:** HTML/CSS/JavaScript estático  
 **Publicación:** GitHub Pages
@@ -97,7 +97,7 @@ El recurso se organiza en estos bloques:
 - **Ficha docente**.
 - **Rúbrica docente/documental**.
 
-El informe permite preparar una vista limpia con resultados orientativos, checklist y texto del reto final. Puede guardarse como PDF desde el diálogo de impresión del navegador o descargarse como HTML.
+El informe permite preparar una vista limpia con resultados orientativos, checklist y texto de la situación comunicativa. Puede guardarse como PDF desde el diálogo de impresión del navegador o descargarse como HTML.
 
 ## 7. Decisiones lingüísticas
 
@@ -113,7 +113,7 @@ Se han incluido frases como:
 
 Aunque algunas estructuras podrían analizarse gramaticalmente en niveles superiores, se presentan como **expresiones funcionales memorizables**, adecuadas para un alumno A1 que necesita desenvolverse en situaciones reales.
 
-La prioridad es la comunicación básica, no el análisis gramatical exhaustivo.
+La prioridad es la comunicación básica, no el análisis gramatical detallado.
 
 En v2.2 se incorpora comprensión lectora A1 mediante textos muy breves y cotidianos. La actividad se centra en localizar información concreta: hora, día, precio, lugar o acción principal.
 
@@ -163,9 +163,9 @@ Este recurso no solicita ni transmite datos personales. El progreso y el texto q
 
 No pide nombre completo, email, teléfono, DNI, cuenta de usuario, contraseñas ni información sensible.
 
-En el reto final se recomienda practicar con un nombre de pila o con un nombre ficticio. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
+En la situación comunicativa se recomienda practicar con un nombre de pila o con un nombre ficticio. No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales.
 
-El texto que el alumnado escribe en el reto final se guarda únicamente en el navegador, para evitar pérdida accidental durante la sesión.
+El texto que el alumnado escribe en la situación comunicativa se guarda únicamente en el navegador, para evitar pérdida accidental durante la sesión.
 
 El informe de práctica se genera en local. No se envía a ningún servidor.
 
@@ -465,7 +465,7 @@ Entre las mejoras aceptadas se incluyeron:
 
 - facilitar la navegación entre flashcards;
 - reducir desplazamientos innecesarios;
-- mejorar el campo del reto final;
+- mejorar el campo de la situación comunicativa;
 - corregir el botón de limpiar;
 - mejorar la salida del informe para que no imprima toda la página;
 - incorporar pictogramas SVG propios;
@@ -532,4 +532,4 @@ Como portfolio docente, el recurso permite mostrar no solo el producto final, si
 
 **Repaso Final Francés A1 · Kit interactivo** es un recurso complementario, prudente y funcional para repaso final de Francés A1. Su principal valor está en combinar sencillez técnica, claridad pedagógica, utilidad práctica para alumnado adulto, mejora progresiva de experiencia móvil, preparación multidioma, experiencia instalable ligera, evidencias visuales y respeto por la privacidad.
 
-La versión **3.2 provisional** incorpora ajustes tras feedback docente para mejorar claridad, lenguaje de interfaz, flujo de respuesta y salida del informe. Se considera adecuada como candidata a revisión antes de publicarse como ajuste menor de GitHub Pages, manteniendo ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, variación comunicativa progresiva, repaso rápido optimizado, datos didácticos separados y la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.
+La versión **3.2** incorpora ajustes tras feedback docente para mejorar claridad, lenguaje de interfaz, flujo de respuesta, progreso local y salida del informe. Se cierra como ajuste menor estable de GitHub Pages, manteniendo ampliación pedagógica inicial, comprensión lectora A1, comprensión auditiva con audios locales propios del autor, expresión oral guiada con grabación local opcional, autoevaluación final orientativa, rúbrica docente/documental, variación comunicativa progresiva, repaso rápido optimizado, datos didácticos separados y la nota explícita de que no es un recurso oficial ni sustituye la programación o evaluación del curso.

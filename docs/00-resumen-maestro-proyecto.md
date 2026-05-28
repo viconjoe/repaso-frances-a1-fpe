@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 3.1
+**Versión de referencia:** 3.2
 **Tipo de recurso:** herramienta web estática complementaria  
 **Ámbito:** Francés A1 para alumnado adulto en contexto FPE  
 **Uso principal:** portfolio docente y evidencia de competencia digital aplicada
@@ -46,7 +46,7 @@ Debe presentarse siempre como herramienta complementaria de repaso y como eviden
 
 ## 4. Estado actual del recurso
 
-La versión **3.1** se mantiene como recurso web estático e instalable:
+La versión **3.2** se mantiene como recurso web estático e instalable:
 
 - un archivo principal `index.html`;
 - un archivo `data-frances-a1.js` con datos educativos reutilizables;
@@ -106,11 +106,13 @@ La versión **3.0** consolida la revisión de auditoría y añade una entrada **
 
 La versión **3.1** optimiza el repaso rápido: usa un autodiagnóstico reducido de 12 preguntas y mantiene el recorrido completo con las 18 preguntas.
 
+La versión **3.2** incorpora los ajustes posteriores al feedback docente del tutor de prácticas: lenguaje visible más directo, autoevaluación como término principal, recorrido completo como modo largo, situación comunicativa final, flujo de comprobar respuesta y avanzar, informe diferenciado por modo de uso, progreso basado en práctica realizada y barra fija de progreso compacta en móvil.
+
 ## 5. Privacidad y prudencia
 
 El proyecto se ha diseñado con criterio de minimización de datos. Este recurso no solicita ni transmite datos personales. El progreso y el texto que escribas quedan únicamente en este navegador. Si usas un dispositivo compartido, borra el progreso local al terminar.
 
-En el reto final se recomienda que el alumnado use solo un **nombre de pila** o un **nombre ficticio** para practicar la frase `Je m'appelle...`.
+En la situación comunicativa se recomienda que el alumnado use solo un **nombre de pila** o un **nombre ficticio** para practicar la frase `Je m'appelle...`.
 
 No deben escribirse:
 

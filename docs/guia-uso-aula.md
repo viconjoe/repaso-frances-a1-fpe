@@ -3,7 +3,7 @@
 ## Repaso Final Francés A1 · Kit interactivo
 
 **Autor:** Joel Concepción Villanueva  
-**Versión de referencia:** 3.2 provisional
+**Versión de referencia:** 3.2
 **Uso:** recurso complementario de repaso para alumnado adulto de Francés A1  
 **Carácter:** no oficial, sin vínculo institucional directo con ICSE ni con el SCE
 
@@ -15,7 +15,7 @@ El recurso puede utilizarse de forma autónoma, por parejas o con acompañamient
 
 Desde v3.1, el recurso ofrece dos entradas:
 
-- **Repaso rápido (20-30 min):** útil para una sesión breve, cierre de clase o práctica previa a una presentación. Usa 12 preguntas de autodiagnóstico.
+- **Repaso rápido (20-30 min):** útil para una sesión breve, cierre de clase o práctica previa a una presentación. Usa 12 preguntas de autoevaluación.
 - **Recorrido completo (60 min):** recomendable cuando se quiere revisar todos los bloques.
 
 La selección solo se recuerda en el navegador mediante `localStorage` y no se envía a ningún servidor.
@@ -28,7 +28,7 @@ Conviene recordar al grupo:
 - que los resultados son orientativos;
 - que no sustituye materiales oficiales ni evaluación docente;
 - que no deben introducir datos personales;
-- que en el reto final se recomienda usar solo un nombre de pila o un nombre ficticio.
+- que en la situación comunicativa se recomienda usar solo un nombre de pila o un nombre ficticio.
 
 No deben escribirse apellidos, DNI, teléfono, correo electrónico, dirección completa ni otros datos personales o sensibles.
 
@@ -143,7 +143,7 @@ Para una sesión breve:
 Si el alumnado usa el recurso fuera del aula, puede seguir este orden:
 
 1. Leer el objetivo.
-2. Hacer el autodiagnóstico.
+2. Hacer la autoevaluación.
 3. Repasar las flashcards donde tenga dudas.
 4. Hacer el bloque de lectura A1.
 5. Hacer el bloque de audición A1 si los audios locales están disponibles.
@@ -199,7 +199,7 @@ Desde v2.0.1, al iniciar el recorrido guiado se muestra una indicación más exp
 
 ## 13. Nota sobre v2.1
 
-Desde v2.1 el recurso incluye más contenido A1 y un bloque de gramática útil. En aula conviene seleccionar una parte del contenido, no recorrerlo todo de una vez: autodiagnóstico, 6-8 flashcards, una o dos píldoras gramaticales, varias situaciones y un reto final breve.
+Desde v2.1 el recurso incluye más contenido A1 y un bloque de gramática útil. En aula conviene seleccionar una parte del contenido, no recorrerlo todo de una vez: autoevaluación, 6-8 flashcards, una o dos píldoras gramaticales, varias situaciones y una situación comunicativa breve.
 
 ## 14. Nota sobre v2.2
 
@@ -240,7 +240,7 @@ Uso recomendado:
 - marcar el checklist solo como autoobservación;
 - recordar que en v2.5 no se grababa voz; desde v2.8 la grabación local es opcional y debe borrarse al finalizar.
 
-Este bloque puede funcionar como puente entre las mini-situaciones y el reto final.
+Este bloque puede funcionar como puente entre las mini-situaciones y la situación comunicativa.
 
 ## 20. Nota sobre v2.6
 
@@ -254,7 +254,7 @@ Conviene presentarla al alumnado así:
 - no se envía a ningún servidor;
 - puede aparecer en el informe local como evidencia formativa.
 
-En aula, se recomienda abrirla al final, después del reto final o antes de generar el informe.
+En aula, se recomienda abrirla al final, después de la situación comunicativa o antes de generar el informe.
 
 ## 21. Nota sobre v2.7
 
