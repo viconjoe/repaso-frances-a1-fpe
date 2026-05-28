@@ -295,6 +295,7 @@ La carpeta `assets/audio/` incluye cinco audios locales reales de comprensión a
 - [Ficha de caso EFJ-001](docs/ficha-caso-efj-001.md)
 - [Checklist de cierre v3.2](docs/checklist-cierre-v3.2.md)
 - [Notas de release v3.2](docs/release-notes-v3.2.md)
+- [Capturas v3.2](docs/capturas/v3.2/README.md)
 - [Release notes v3.1](docs/release-notes-v3.1.md)
 - [Dossier de producto demostrativo v2.0](docs/dossier-producto-demostrativo-v2.md)
 - [Guía de adaptación a contextos FPE v2.0](docs/guia-adaptacion-contextos-fpe-v2.md)
