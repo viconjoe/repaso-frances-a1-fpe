@@ -7,7 +7,7 @@
 **Tipo de documento:** experiencia instalable ligera  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-**Nota de estado:** esta guía documenta la fase v1.4. El estado actual del recurso es v3.1, que conserva la PWA ligera, añade audios locales, comprensión lectora y auditiva, expresión oral guiada con grabación local opcional, autoevaluación, rúbrica docente/documental y revisión de auditoría con acceso a dos velocidades.
+**Nota de estado:** esta guía documenta la fase v1.4. El estado actual del recurso es v3.2, que conserva la PWA ligera, añade audios locales, comprensión lectora y auditiva, expresión oral guiada con grabación local opcional, autoevaluación, rúbrica docente/documental y revisión de auditoría con acceso a dos velocidades.
 
 ## 1. Finalidad
 

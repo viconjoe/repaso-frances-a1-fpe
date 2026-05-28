@@ -3,7 +3,7 @@
 **Versión de referencia:** 2.5  
 **Autor:** Joel Concepción Villanueva
 
-> Nota de estado: esta guía documenta la fase v2.5. El estado actual del recurso es **v3.1**, que mantiene la grabación local opcional para autoescucha, autoevaluación final orientativa, rúbrica docente/documental, 40 flashcards, repaso rápido de 12 preguntas y recorrido completo de 18 preguntas.
+> Nota de estado: esta guía documenta la fase v2.5. El estado actual del recurso es **v3.2**, que mantiene la grabación local opcional para autoescucha, autoevaluación final orientativa, rúbrica docente/documental, 40 flashcards, repaso rápido de 12 preguntas y recorrido completo de 18 preguntas.
 
 ## Finalidad
 

@@ -7,7 +7,7 @@
 **Tipo de documento:** validación ligera, capturas y guion de demostración  
 **Carácter:** recurso complementario, no oficial y sin vínculo institucional directo con ICSE ni con el SCE
 
-**Nota de estado:** esta guía documenta la fase v1.5. El estado actual del recurso es v2.0, que conserva estas capturas y añade un dossier de producto demostrativo y una guía de adaptación a contextos FPE.
+**Nota de estado:** esta guía documenta la fase v1.5. El estado actual del recurso es v3.2, que conserva estas capturas y añade un dossier de producto demostrativo y una guía de adaptación a contextos FPE.
 
 ## 1. Finalidad
 
