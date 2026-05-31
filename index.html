@@ -3246,12 +3246,15 @@
 
     const LOCAL_AUDIO_ENABLED = false;
     const AUDIO_BASE_PATH = "assets/audio/";
+    const SPEECH_VOICE_WAIT_MS = 1200;
+    const SPEECH_START_WAIT_MS = 1800;
 
     const flashcards = EIJ_FLASHCARDS;
 
     let flashIndex = Number.isInteger(state.flashIndex) ? state.flashIndex : 0;
     let flashFlipped = false;
     const speechAvailable = "speechSynthesis" in window;
+    let speechVoiceWaitTimer = null;
 
     function renderFlashcard() {
       const item = flashcards[flashIndex];
@@ -3341,7 +3344,32 @@
       renderFlashcard();
     });
 
-    function speakFrench(text) {
+    function chooseFrenchVoice(voices) {
+      return voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
+    }
+
+    function waitForSpeechVoices() {
+      if (!speechAvailable) return Promise.resolve([]);
+
+      const voices = window.speechSynthesis.getVoices();
+      if (voices.length > 0) return Promise.resolve(voices);
+
+      return new Promise((resolve) => {
+        const finish = () => {
+          if (speechVoiceWaitTimer) {
+            clearTimeout(speechVoiceWaitTimer);
+            speechVoiceWaitTimer = null;
+          }
+          window.speechSynthesis.onvoiceschanged = null;
+          resolve(window.speechSynthesis.getVoices());
+        };
+
+        window.speechSynthesis.onvoiceschanged = finish;
+        speechVoiceWaitTimer = window.setTimeout(finish, SPEECH_VOICE_WAIT_MS);
+      });
+    }
+
+    function speakFrench(text, voices = []) {
       if (!speechAvailable) return;
       window.speechSynthesis.cancel();
 
@@ -3350,20 +3378,42 @@
       utterance.lang = "fr-FR";
       utterance.rate = 0.85;
 
-      const voices = window.speechSynthesis.getVoices();
-      const frVoice = voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr"));
+      const frVoice = chooseFrenchVoice(voices);
       if (frVoice) {
         utterance.voice = frVoice;
         status.textContent = "Reproduciendo pronunciación aproximada en francés.";
       } else {
-        status.textContent = "No se encontró una voz francesa; se usará la voz disponible del navegador.";
+        status.textContent = voices.length > 0
+          ? "No se encontró una voz francesa; se usará la voz disponible del navegador."
+          : "Este navegador no ha entregado voces. Intentando reproducción por defecto...";
       }
 
+      let speechStarted = false;
+      const startTimer = window.setTimeout(() => {
+        if (!speechStarted && !window.speechSynthesis.speaking) {
+          status.textContent = "No se pudo iniciar la pronunciación en este navegador. Usa Chrome, Edge o audios locales del autor.";
+        }
+      }, SPEECH_START_WAIT_MS);
+
+      utterance.onstart = () => {
+        speechStarted = true;
+        clearTimeout(startTimer);
+        status.textContent = frVoice
+          ? "Reproduciendo pronunciación aproximada en francés."
+          : "Reproduciendo con la voz disponible del navegador.";
+      };
+      utterance.onend = () => {
+        clearTimeout(startTimer);
+      };
       utterance.onerror = () => {
-        status.textContent = "No se pudo reproducir. Intenta en Chrome, Edge o con una voz francesa instalada.";
+        clearTimeout(startTimer);
+        status.textContent = "No se pudo reproducir en este navegador. Usa Chrome, Edge o audios locales del autor.";
       };
 
       window.speechSynthesis.speak(utterance);
+      window.setTimeout(() => {
+        if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+      }, 0);
     }
 
     function getVoicesAndSpeak(text) {
@@ -3372,16 +3422,8 @@
       const note = document.getElementById("flashSpeakNote");
       if (note) note.hidden = false;
 
-      const voices = window.speechSynthesis.getVoices();
-      if (voices.length > 0) {
-        speakFrench(text);
-      } else {
-        document.getElementById("flashSpeakStatus").textContent = "Cargando voces del navegador…";
-        window.speechSynthesis.onvoiceschanged = () => {
-          speakFrench(text);
-          window.speechSynthesis.onvoiceschanged = null;
-        };
-      }
+      document.getElementById("flashSpeakStatus").textContent = "Preparando pronunciación del navegador...";
+      waitForSpeechVoices().then((voices) => speakFrench(text, voices));
     }
 
     document.getElementById("flashSpeakBtn").addEventListener("click", (ev) => {

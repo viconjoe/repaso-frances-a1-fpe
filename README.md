@@ -332,7 +332,7 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 - Informe diferenciado para repaso rápido y recorrido completo.
 - CTA de preguntas más claro: comprobar respuesta antes de avanzar.
 - Informe local ajustado para no atribuir como evaluados bloques no realizados o no incluidos en repaso rápido.
-- Actualización de caché PWA a `repaso-frances-a1-v3.2.1`.
+- Actualización de caché PWA a `repaso-frances-a1-v3.2.2`.
 
 ### v3.1
 
