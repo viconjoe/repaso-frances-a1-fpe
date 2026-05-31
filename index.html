@@ -3254,6 +3254,10 @@
     let flashIndex = Number.isInteger(state.flashIndex) ? state.flashIndex : 0;
     let flashFlipped = false;
     const speechAvailable = "speechSynthesis" in window;
+    const isOperaBrowser = /(?:Opera|OPR)\//.test(window.navigator.userAgent);
+    const isBraveBrowser = Boolean(window.navigator.brave);
+    const speechBlockedBrowser = isOperaBrowser || isBraveBrowser;
+    const speechUsable = speechAvailable && !speechBlockedBrowser;
     let speechVoiceWaitTimer = null;
 
     function renderFlashcard() {
@@ -3272,10 +3276,15 @@
       const localAudioBtn = document.getElementById("localAudioBtn");
       const localAudioNote = document.getElementById("localAudioNote");
       const unavailable = document.getElementById("flashSpeakUnavailable");
-      if (speakBtn) speakBtn.hidden = flashFlipped || !speechAvailable;
+      if (speakBtn) speakBtn.hidden = flashFlipped || !speechUsable;
       if (localAudioBtn) localAudioBtn.hidden = flashFlipped || !LOCAL_AUDIO_ENABLED || !item.audio;
       if (localAudioNote) localAudioNote.hidden = LOCAL_AUDIO_ENABLED;
-      if (unavailable) unavailable.hidden = speechAvailable;
+      if (unavailable) {
+        unavailable.hidden = flashFlipped || speechUsable;
+        unavailable.textContent = speechBlockedBrowser
+          ? "La pronunciación experimental se desactiva en Brave y Opera porque puede usar una voz incorrecta. Usa Chrome o Edge hasta incorporar audios locales."
+          : "La pronunciación automática no está disponible en este navegador. Usa Chrome o Edge hasta incorporar audios locales.";
+      }
 
       if (flashFlipped) document.getElementById("flashSpeakStatus").textContent = "";
 
@@ -3417,7 +3426,10 @@
     }
 
     function getVoicesAndSpeak(text) {
-      if (!speechAvailable) return;
+      if (!speechUsable) {
+        document.getElementById("flashSpeakStatus").textContent = "Pronunciación experimental desactivada en este navegador. Usa Chrome o Edge hasta incorporar audios locales.";
+        return;
+      }
 
       const note = document.getElementById("flashSpeakNote");
       if (note) note.hidden = false;
