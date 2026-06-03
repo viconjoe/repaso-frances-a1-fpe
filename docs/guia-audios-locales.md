@@ -39,7 +39,7 @@ En v3.1 existen cinco audios locales reales para comprensión auditiva:
 - `listen-04-bus-gare.mp3`
 - `listen-05-repeter.mp3`
 
-Las flashcards mantienen un inventario técnico de 40 posibles audios, pero esos MP3 no están incorporados todavía. Por eso el botón **Escuchar audio local** de flashcards permanece oculto en v3.1 y se evita que el alumnado active archivos inexistentes.
+Las flashcards incorporan 40 audios locales reales en formato `.m4a`, uno por tarjeta. El botón **Escuchar audio local** queda activado para usar esos archivos estáticos del autor y evitar depender de la pronunciación experimental del navegador.
 
 El inventario está descrito en `assets/audio/audio-manifest.json`, separado entre audios de flashcards y audios de comprensión auditiva.
 
@@ -58,23 +58,17 @@ Recomendaciones:
 
 El soporte de comprensión auditiva está activado en `index.html` desde v2.3.1 porque ya existen los cinco audios locales reales.
 
-La versión 3.1 mantiene la UX móvil refinada y no cambia este criterio para `assets/audio/`: los audios locales de contenido son archivos estáticos del autor, no grabaciones del alumnado. La grabación oral opcional de v2.8 es temporal, queda en el navegador y no se incorpora a esta carpeta, al informe ni al repositorio.
+La versión 3.2.4 mantiene este criterio para `assets/audio/`: los audios locales de contenido son archivos estáticos del autor, no grabaciones del alumnado. La grabación oral opcional de v2.8 es temporal, queda en el navegador y no se incorpora a esta carpeta, al informe ni al repositorio.
 
 Si el recurso se instala como PWA, los audios de contenido solo deberían reproducirse como archivos locales estáticos incluidos en el repositorio. La grabación opcional de práctica oral no añade subida de archivos.
 
-Para los audios de flashcards, que siguen siendo opcionales, se puede activar cambiando:
-
-```js
-const LOCAL_AUDIO_ENABLED = false;
-```
-
-por:
+Los audios de flashcards quedan activados en `index.html` mediante:
 
 ```js
 const LOCAL_AUDIO_ENABLED = true;
 ```
 
-Si no se activa, el recurso sigue usando la pronunciación experimental del navegador cuando esté disponible.
+La pronunciación experimental del navegador queda como apoyo secundario de desarrollo, pero la experiencia principal de flashcards usa audios locales.
 
 ## 6. Privacidad
 

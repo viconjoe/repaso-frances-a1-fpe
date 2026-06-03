@@ -1985,7 +1985,7 @@
                 <p id="flashSpeakStatus" class="small muted flash-speak-status" aria-live="polite"></p>
                 <p id="flashSpeakNote" class="small muted flash-speak-note" hidden>La pronunciación es generada por el navegador y puede sonar robótica según el sistema. Úsala como referencia aproximada. Practica siempre en voz alta.</p>
                 <p id="flashSpeakUnavailable" class="small muted flash-speak-status" hidden>La pronunciación automática no está disponible en este navegador.</p>
-                <p id="localAudioNote" class="small muted audio-prep-note" hidden>Los audios locales de flashcards no están incorporados todavía. Usa la pronunciación experimental del navegador como apoyo aproximado; no graba ni solicita voz del alumnado.</p>
+                <p id="localAudioNote" class="small muted audio-prep-note" hidden>Audios locales de flashcards disponibles. No graba ni solicita voz del alumnado.</p>
               </div>
             </div>
           </div>
@@ -3244,7 +3244,7 @@
       renderListening();
     });
 
-    const LOCAL_AUDIO_ENABLED = false;
+    const LOCAL_AUDIO_ENABLED = true;
     const AUDIO_BASE_PATH = "assets/audio/";
     const SPEECH_VOICE_WAIT_MS = 1200;
     const SPEECH_START_WAIT_MS = 1800;
@@ -3276,11 +3276,11 @@
       const localAudioBtn = document.getElementById("localAudioBtn");
       const localAudioNote = document.getElementById("localAudioNote");
       const unavailable = document.getElementById("flashSpeakUnavailable");
-      if (speakBtn) speakBtn.hidden = flashFlipped || !speechUsable;
+      if (speakBtn) speakBtn.hidden = flashFlipped || LOCAL_AUDIO_ENABLED || !speechUsable;
       if (localAudioBtn) localAudioBtn.hidden = flashFlipped || !LOCAL_AUDIO_ENABLED || !item.audio;
       if (localAudioNote) localAudioNote.hidden = LOCAL_AUDIO_ENABLED;
       if (unavailable) {
-        unavailable.hidden = flashFlipped || speechUsable;
+        unavailable.hidden = flashFlipped || LOCAL_AUDIO_ENABLED || speechUsable;
         unavailable.textContent = speechBlockedBrowser
           ? "La pronunciación experimental se desactiva en Brave y Opera porque puede usar una voz incorrecta. Usa Chrome o Edge hasta incorporar audios locales."
           : "La pronunciación automática no está disponible en este navegador. Usa Chrome o Edge hasta incorporar audios locales.";

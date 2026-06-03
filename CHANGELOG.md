@@ -8,6 +8,7 @@ Este historial resume la evolución del recurso didáctico digital complementari
 ## v3.2 · Ajustes tras feedback docente
 
 - Incorpora ajustes prudentes tras feedback docente de tutor de prácticas.
+- Incorpora 40 audios locales `.m4a` para flashcards y activa **Escuchar audio local** como reproducción principal.
 - Mejora la pronunciación experimental de flashcards: evita quedarse esperando voces del navegador indefinidamente, intenta una voz por defecto y muestra un aviso claro si Brave, Opera u otro navegador no inicia la síntesis.
 - Desactiva la pronunciación experimental en Brave y Opera para evitar voces incorrectas; la interfaz recomienda usar Chrome o Edge hasta incorporar audios locales.
 - Cambia microcopy visible para alumnado: **Autoevaluación**, **Recorrido completo**, **Situación comunicativa**, **Revisar texto**, **Guardar informe de evaluación** y **Cómo usar esta app**.
@@ -17,7 +18,7 @@ Este historial resume la evolución del recurso didáctico digital complementari
 - Refuerza respuestas correcta/incorrecta con color más visible y etiquetas textuales.
 - Añade leyenda **Mi progreso** en la ficha breve.
 - Ajusta el informe para diferenciar bloques realizados, pendientes y no incluidos en el modo de repaso rápido.
-- Actualiza caché PWA a `repaso-frances-a1-v3.2.3`.
+- Actualiza caché PWA a `repaso-frances-a1-v3.2.4`.
 - Reparte de forma estable la posición de las respuestas correctas y separa el informe del repaso rápido del informe del recorrido completo.
 
 ## v3.1

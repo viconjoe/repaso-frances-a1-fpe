@@ -1,48 +1,168 @@
 {
-  "version": "3.1",
+  "version": "3.2.4",
   "purpose": "Audios locales propios del autor para frases y tareas de comprensión auditiva de Francés A1. Las grabaciones orales opcionales del alumnado no se guardan en esta carpeta.",
   "enabledInIndex": true,
   "flashcardFiles": [
-    { "phrase": "Bonjour", "file": "bonjour.mp3" },
-    { "phrase": "Bonsoir", "file": "bonsoir.mp3" },
-    { "phrase": "Au revoir", "file": "au-revoir.mp3" },
-    { "phrase": "Merci beaucoup", "file": "merci-beaucoup.mp3" },
-    { "phrase": "Excusez-moi", "file": "excusez-moi.mp3" },
-    { "phrase": "Je m'appelle...", "file": "je-mappelle.mp3" },
-    { "phrase": "J'habite à...", "file": "jhabite-a.mp3" },
-    { "phrase": "Je suis espagnol(e)", "file": "je-suis-espagnol.mp3" },
-    { "phrase": "Je suis étudiant(e)", "file": "je-suis-etudiant.mp3" },
-    { "phrase": "Je travaille", "file": "je-travaille.mp3" },
-    { "phrase": "Je cherche du travail", "file": "je-cherche-du-travail.mp3" },
-    { "phrase": "Je voudrais...", "file": "je-voudrais.mp3" },
-    { "phrase": "Combien ça coûte ?", "file": "combien-ca-coute.mp3" },
-    { "phrase": "L'addition, s'il vous plaît", "file": "addition-sil-vous-plait.mp3" },
-    { "phrase": "Où est la gare ?", "file": "ou-est-la-gare.mp3" },
-    { "phrase": "À gauche", "file": "a-gauche.mp3" },
-    { "phrase": "À droite", "file": "a-droite.mp3" },
-    { "phrase": "Je vais prendre le bus", "file": "je-vais-prendre-le-bus.mp3" },
-    { "phrase": "J'ai rendez-vous", "file": "jai-rendez-vous.mp3" },
-    { "phrase": "Il est neuf heures", "file": "il-est-neuf-heures.mp3" },
-    { "phrase": "Aujourd'hui", "file": "aujourdhui.mp3" },
-    { "phrase": "Demain", "file": "demain.mp3" },
-    { "phrase": "Lundi", "file": "lundi.mp3" },
-    { "phrase": "Il pleut", "file": "il-pleut.mp3" },
-    { "phrase": "Il fait chaud", "file": "il-fait-chaud.mp3" },
-    { "phrase": "Mon cahier", "file": "mon-cahier.mp3" },
-    { "phrase": "Votre adresse", "file": "votre-adresse.mp3" },
-    { "phrase": "Un kilo de pommes", "file": "un-kilo-de-pommes.mp3" },
-    { "phrase": "Je ne comprends pas", "file": "je-ne-comprends-pas.mp3" },
-    { "phrase": "Pouvez-vous répéter, s'il vous plaît ?", "file": "pouvez-vous-repeter.mp3" },
-    { "phrase": "Pouvez-vous parler plus lentement ?", "file": "parler-plus-lentement.mp3" },
-    { "phrase": "Pouvez-vous m'aider ?", "file": "pouvez-vous-maider.mp3" },
-    { "phrase": "J'ai un entretien", "file": "jai-un-entretien.mp3" },
-    { "phrase": "Je suis disponible demain", "file": "je-suis-disponible-demain.mp3" },
-    { "phrase": "C'est bien cette adresse ?", "file": "cest-bien-cette-adresse.mp3" },
-    { "phrase": "Je voudrais un café", "file": "je-voudrais-un-cafe.mp3" },
-    { "phrase": "Un billet, s'il vous plaît", "file": "un-billet-sil-vous-plait.mp3" },
-    { "phrase": "Je vais à la pharmacie", "file": "je-vais-a-la-pharmacie.mp3" },
-    { "phrase": "La salle est à gauche", "file": "la-salle-est-a-gauche.mp3" },
-    { "phrase": "Je dois partir", "file": "je-dois-partir.mp3" }
+    {
+      "phrase": "Bonjour",
+      "file": "bonjour.m4a"
+    },
+    {
+      "phrase": "Bonsoir",
+      "file": "bonsoir.m4a"
+    },
+    {
+      "phrase": "Au revoir",
+      "file": "au-revoir.m4a"
+    },
+    {
+      "phrase": "Merci beaucoup",
+      "file": "merci-beaucoup.m4a"
+    },
+    {
+      "phrase": "Excusez-moi",
+      "file": "excusez-moi.m4a"
+    },
+    {
+      "phrase": "Je m'appelle...",
+      "file": "je-mappelle.m4a"
+    },
+    {
+      "phrase": "J'habite à...",
+      "file": "jhabite-a.m4a"
+    },
+    {
+      "phrase": "Je suis espagnol(e)",
+      "file": "je-suis-espagnol.m4a"
+    },
+    {
+      "phrase": "Je suis étudiant(e)",
+      "file": "je-suis-etudiant.m4a"
+    },
+    {
+      "phrase": "Je travaille",
+      "file": "je-travaille.m4a"
+    },
+    {
+      "phrase": "Je cherche du travail",
+      "file": "je-cherche-du-travail.m4a"
+    },
+    {
+      "phrase": "Je voudrais...",
+      "file": "je-voudrais.m4a"
+    },
+    {
+      "phrase": "Combien ça coûte ?",
+      "file": "combien-ca-coute.m4a"
+    },
+    {
+      "phrase": "L'addition, s'il vous plaît",
+      "file": "addition-sil-vous-plait.m4a"
+    },
+    {
+      "phrase": "Où est la gare ?",
+      "file": "ou-est-la-gare.m4a"
+    },
+    {
+      "phrase": "À gauche",
+      "file": "a-gauche.m4a"
+    },
+    {
+      "phrase": "À droite",
+      "file": "a-droite.m4a"
+    },
+    {
+      "phrase": "Je vais prendre le bus",
+      "file": "je-vais-prendre-le-bus.m4a"
+    },
+    {
+      "phrase": "J'ai rendez-vous",
+      "file": "jai-rendez-vous.m4a"
+    },
+    {
+      "phrase": "Il est neuf heures",
+      "file": "il-est-neuf-heures.m4a"
+    },
+    {
+      "phrase": "Aujourd'hui",
+      "file": "aujourdhui.m4a"
+    },
+    {
+      "phrase": "Demain",
+      "file": "demain.m4a"
+    },
+    {
+      "phrase": "Lundi",
+      "file": "lundi.m4a"
+    },
+    {
+      "phrase": "Il pleut",
+      "file": "il-pleut.m4a"
+    },
+    {
+      "phrase": "Il fait chaud",
+      "file": "il-fait-chaud.m4a"
+    },
+    {
+      "phrase": "Mon cahier",
+      "file": "mon-cahier.m4a"
+    },
+    {
+      "phrase": "Votre adresse",
+      "file": "votre-adresse.m4a"
+    },
+    {
+      "phrase": "Un kilo de pommes",
+      "file": "un-kilo-de-pommes.m4a"
+    },
+    {
+      "phrase": "Je ne comprends pas",
+      "file": "je-ne-comprends-pas.m4a"
+    },
+    {
+      "phrase": "Pouvez-vous répéter, s'il vous plaît ?",
+      "file": "pouvez-vous-repeter.m4a"
+    },
+    {
+      "phrase": "Pouvez-vous parler plus lentement ?",
+      "file": "parler-plus-lentement.m4a"
+    },
+    {
+      "phrase": "Pouvez-vous m'aider ?",
+      "file": "pouvez-vous-maider.m4a"
+    },
+    {
+      "phrase": "J'ai un entretien",
+      "file": "jai-un-entretien.m4a"
+    },
+    {
+      "phrase": "Je suis disponible demain",
+      "file": "je-suis-disponible-demain.m4a"
+    },
+    {
+      "phrase": "C'est bien cette adresse ?",
+      "file": "cest-bien-cette-adresse.m4a"
+    },
+    {
+      "phrase": "Je voudrais un café",
+      "file": "je-voudrais-un-cafe.m4a"
+    },
+    {
+      "phrase": "Un billet, s'il vous plaît",
+      "file": "un-billet-sil-vous-plait.m4a"
+    },
+    {
+      "phrase": "Je vais à la pharmacie",
+      "file": "je-vais-a-la-pharmacie.m4a"
+    },
+    {
+      "phrase": "La salle est à gauche",
+      "file": "la-salle-est-a-gauche.m4a"
+    },
+    {
+      "phrase": "Je dois partir",
+      "file": "je-dois-partir.m4a"
+    }
   ],
   "listeningFiles": [
     {

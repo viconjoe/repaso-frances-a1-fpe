@@ -30,9 +30,9 @@
 
 - [ ] Confirmar que el contador de flashcards muestra 40 tarjetas.
 - [ ] Confirmar que el banco de frases permite saltar a una tarjeta.
-- [ ] Confirmar que el boton de pronunciacion experimental funciona solo si el navegador soporta Web Speech API.
-- [ ] Confirmar que el boton de audio local de flashcards no aparece mientras `LOCAL_AUDIO_ENABLED` sea `false`.
-- [ ] Confirmar que no hay intento visible de cargar `bonjour.mp3`, `bonsoir.mp3` u otros MP3 de flashcards inexistentes.
+- [ ] Confirmar que el boton de audio local de flashcards aparece con `LOCAL_AUDIO_ENABLED = true`.
+- [ ] Confirmar que las flashcards cargan los 40 audios locales `.m4a` desde `assets/audio/`.
+- [ ] Confirmar que la pronunciacion experimental no sustituye al audio local de flashcards.
 
 ## 4. Audios de comprension auditiva
 
@@ -107,7 +107,7 @@ Verificado en repositorio local:
 - Recorrido completo: 18 preguntas.
 - Flashcards: 40 entradas.
 - Audicion: 5 tareas y 5 MP3 reales en `assets/audio/`.
-- `LOCAL_AUDIO_ENABLED = false`, por lo que el audio local de flashcards no se muestra mientras falten sus MP3.
+- `LOCAL_AUDIO_ENABLED = true`, por lo que el audio local de flashcards se muestra y usa los 40 archivos `.m4a`.
 - `sw.js` usa `repaso-frances-a1-v3.1` e incluye `data-frances-a1.js`.
 - No se detectan `sessionStorage`, `indexedDB`, `sendBeacon`, `gtag`, formularios HTML ni analitica.
 - La grabacion oral opcional usa `getUserMedia` y `MediaRecorder` solo tras accion del usuario; no se guarda en `localStorage` ni se incorpora al informe.

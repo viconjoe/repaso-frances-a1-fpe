@@ -105,7 +105,7 @@ El recurso incluye estos bloques principales:
 
 1. **Cómo usar esta app**: presenta la finalidad y los contenidos trabajados.
 2. **Autoevaluación orientativa: Francés A1**: test breve de 12 preguntas en repaso rápido o 18 en recorrido completo, con feedback inmediato. No tiene valor evaluativo oficial.
-3. **Flashcards de supervivencia**: 40 tarjetas de frases útiles en francés con traducción, navegación directa y pronunciación experimental mediante Web Speech API.
+3. **Flashcards de supervivencia**: 40 tarjetas de frases útiles en francés con traducción, navegación directa y audios locales del autor.
 4. **Gramática útil A1**: píldoras breves sobre presentación, preguntas, negación, cortesía y futuro próximo.
 5. **Comprensión lectora A1**: textos breves de uso cotidiano con preguntas de información concreta.
 6. **Comprensión auditiva A1**: tareas breves con audios locales propios del autor, sin grabar al alumnado.
@@ -184,7 +184,7 @@ Este recurso no solicita ni transmite datos personales. El progreso y el texto q
 - Modo presentación independiente para aula.
 - Uso básico de accesibilidad: skip link, foco visible, `aria-live`, `lang="fr"`, botones táctiles y barras de progreso con atributos ARIA.
 - Persistencia local mediante `localStorage`.
-- Pronunciación experimental con Web Speech API, si el navegador la soporta.
+- Audios locales del autor para las 40 flashcards.
 - Generación de informe local mediante ventana HTML imprimible y descarga alternativa con `Blob`.
 - Datos educativos principales separados en `data-frances-a1.js` para facilitar mantenimiento.
 - Carpeta `assets/lang/` con inventario de contenidos y plantilla de paquete lingüístico.
@@ -332,8 +332,9 @@ La revisión v3.1 confirma la existencia de los recursos básicos de instalació
 - Informe diferenciado para repaso rápido y recorrido completo.
 - CTA de preguntas más claro: comprobar respuesta antes de avanzar.
 - Informe local ajustado para no atribuir como evaluados bloques no realizados o no incluidos en repaso rápido.
+- Incorporación de 40 audios locales `.m4a` para flashcards.
 - Desactivación de la pronunciación experimental en Brave y Opera para evitar voces incorrectas.
-- Actualización de caché PWA a `repaso-frances-a1-v3.2.3`.
+- Actualización de caché PWA a `repaso-frances-a1-v3.2.4`.
 
 ### v3.1
 
