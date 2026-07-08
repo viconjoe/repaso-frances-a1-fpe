@@ -45,6 +45,12 @@ No se incluyen datos reales de alumnado. Las capturas son demostrativas y corres
 | `ordenador/09-ordenador-ficha-docente.png` | Ficha docente integrada. |
 | `ordenador/10-ordenador-rubrica-observacion.png` | Rubrica de observacion orientativa. |
 
+## Imagen para LinkedIn
+
+| Archivo | Uso |
+| --- | --- |
+| `linkedin/efj-001-linkedin-v3.2.png` | Imagen cuadrada de presentacion para publicacion en LinkedIn. |
+
 ## Uso recomendado en portfolio
 
 Para una presentacion breve, usar 6-8 capturas: inicio, autoevaluacion con feedback, flashcards, audio local, grabacion opcional, informe y ficha docente.
